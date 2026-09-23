@@ -1,0 +1,24 @@
+{
+  "mode": "search3", "start": 1000000000000000, "count": 300,
+  "A_naive":    {"sec": 0.7917, "primes": 722, "factorizations": 722},
+  "B_legendre": {"sec": 0.4414, "primes": 722, "factorizations": 376},
+  "C_earlyexit":{"sec": 0.3927, "primes": 722, "factorizations": 300, "modexps_small_ell": 402},
+  "speedup_A_over_B": 1.794, "speedup_A_over_C": 2.016, "speedup_B_over_C": 1.124,
+  "factorizations_saved_vs_B": 0.2021
+}
+{
+  "mode": "search3", "start": 1000000000000000, "count": 300,
+  "A_naive":    {"sec": 0.8925, "primes": 722, "factorizations": 722},
+  "B_legendre": {"sec": 0.4450, "primes": 722, "factorizations": 376},
+  "C_earlyexit":{"sec": 0.3968, "primes": 722, "factorizations": 300, "modexps_small_ell": 402},
+  "speedup_A_over_B": 2.006, "speedup_A_over_C": 2.249, "speedup_B_over_C": 1.121,
+  "factorizations_saved_vs_B": 0.2021
+}
+{
+  "mode": "search3", "start": 1000000000000000, "count": 300,
+  "A_naive":    {"sec": 0.8823, "primes": 722, "factorizations": 722},
+  "B_legendre": {"sec": 0.4398, "primes": 722, "factorizations": 376},
+  "C_earlyexit":{"sec": 0.3898, "primes": 722, "factorizations": 300, "modexps_small_ell": 402},
+  "speedup_A_over_B": 2.006, "speedup_A_over_C": 2.263, "speedup_B_over_C": 1.128,
+  "factorizations_saved_vs_B": 0.2021
+}

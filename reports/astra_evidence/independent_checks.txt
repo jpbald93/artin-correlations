@@ -1,0 +1,9 @@
+SMALL CHANNELS PASS BUT LARGE CHANNEL FAILS: 137 factorization= {2: 3, 17: 1} order= 8
+SEARCH COUNTS 722 376 300 402 300 1000000000027097
+timing ratios 1.9524375743162905 2.2431693989071038 1.1489071038251366 time saving fraction 0.12960760998810927
+EXPLICIT GAP 23 43 -1 1 product -1
+D=1 examples [(3, 2, 2), (5, 4, 4), (11, 10, 10), (29, 28, 28), (53, 52, 52)]
+p=2 triple [(3, True), (5, True), (15, True)]
+SMALL GENERAL PAIR/TRIPLE violations 0 0
+undefined refs set() duplicate labels [] undefined citations set() unused bib {'Lenstra1977', 'Kimmel2024', 'Sgobba2025', 'Artin1965', 'FanPollack2025', 'PeruccaShparlinski2025'}
+source hash d4992d400b3a5f1e8da4191e24f43cce00006ca844b889de146a6830f7916b69

@@ -1,0 +1,209 @@
+%% ===================== NEW FRONT MATTER (consolidated paper) =====================
+\title[Correlations of Artin status among primes]{Correlations of Artin status among primes:\\ consecutive-prime anticorrelation, cross-base entanglement,\\ and an elementary decomposition}
+
+\author{Josh Bald}
+\address{Ontario, Canada}
+\email{jpbald93@gmail.com}
+\thanks{\textbf{Corresponding author.} Josh Bald, Independent Researcher.
+	Email: \texttt{jpbald93@gmail.com}. ORCID: \texttt{0009-0002-1317-6489}.}
+
+\subjclass[2020]{Primary 11A07; Secondary 11N05, 11N13, 11Y16, 11Y60}
+\keywords{Artin's primitive root conjecture, primitive roots, consecutive primes,
+	Lemke Oliver--Soundararajan bias, entanglement, quadratic characters,
+	Legendre symbol, full reptend primes, computational number theory}
+
+\date{September 2026}
+
+\begin{abstract}
+	Say a prime $p$ is \emph{Artin base $a$} if $a$ is a primitive root modulo $p$.
+	This paper studies correlations of Artin status along two axes --- \emph{consecutive
+	primes} at a fixed base, and \emph{several bases} at a fixed prime --- for all primes up to $10^9$ (with $50{,}847{,}531$ of them, $p\ge 7$, in the
+	consecutive census), and then asks what, if anything, such correlations are
+	computationally worth.
+
+	Along the first axis, Artin statuses of consecutive primes are measurably
+	\emph{anticorrelated} at base $10$: $P(\Art_{n+1}\mid\Art_n)=0.36514$ against
+	$P(\Art_{n+1}\mid\lnot\Art_n)=0.37928$, a deficit $\delta=-0.01414$
+	(Pearson $10{,}167$ on one degree of freedom; signed square root $-100.8$ under a
+	nominal independent-status reference, over $50{,}847{,}530$ pairs). The dependence
+	has strong gap structure and contains one deterministic component, an elementary
+	\emph{exclusion law}: if $p,p+g>5$ are prime with $g\equiv 20 \pmod{40}$, then $10$
+	is a quadratic residue modulo exactly one of them, so the two can never both be
+	Artin; among $2{,}195{,}882$ pairs at gaps $20$ and $60$ there is no doubly-Artin
+	pair, and an independent recomputation extends this to $194{,}296{,}748$ such pairs
+	below $10^{11}$, again with none. Conversely $g \equiv 0 \pmod{40}$ forces equal
+	quadratic-residue status and strong positive dependence ($P(\Art_{n+1}\mid\Art_n)=0.899$
+	at $g=40$). Conditioning on the joint residues of $(p_n,p_{n+1})$ modulo $120$ or
+	$840$ accounts for $96.1\%$ and $97.8\%$ of the global deficit through joint-residue cell
+	composition rather than within-cell association (an exact within/between decomposition). As an intermediate link we report the apparently unreported
+	anticorrelation $r(\omega(p_n-1),\omega(p_{n+1}-1))=-0.041$.
+
+	Along the second axis we record a second exclusion law: writing $d=\sqf(ab)$ for the
+	squarefree part of $ab$, no prime with $\bigl(\tfrac{d}{p}\bigr)=-1$ is simultaneously
+	Artin for $a$ and for $b$; whenever $a$ and $b$ have different squarefree parts this
+	bars half of all primes, and it implies a triple form --- if $\sqf(c)=\sqf(ab)$ then no
+	odd prime is Artin for $a,b,c$ at once (e.g.\ $2,5,10$). Across the $66$ base pairs of
+	$\{2,3,5,6,7,10,11,13,15,17,21,29\}$ the measured same-prime correlation $\phi(a,b)$ is
+	positive for $64$ pairs (mean $0.0352$); conditioning on $\omega(p-1)$ removes only
+	$55\%$ of it, while conditioning on a fine signature of $p-1$ removes $95\%$. The
+	residual is concentrated on the fifteen pairs whose product class completes a triple
+	and lies in the quadratic-character channel. Joint densities predicted by the
+	Matthews--Moree--Stevenhagen Kummer-degree heuristic match the measured densities to a
+	mean relative error of $0.012\%$ with no fitted parameters.
+
+	Finally we \emph{audit the computational content} of these correlations. In a resubstitution diagnostic the consecutive-prime correlation carries $0.000009$ nats
+	($1.3\times10^{-5}$ bits) of conditional-entropy reduction beyond the elementary
+	joint-residue baseline, which itself carries $0.4195$ nats; under a held-out test it shows
+	\emph{no} gain at all (both held-out comparisons are negative).
+Both exclusion laws are computationally redundant: the gap law from quadratic reciprocity
+	together with multiplicativity, the same-prime law from multiplicativity alone. The one genuinely usable filter --- a primitive root must be a
+quadratic non-residue --- is elementary, is exactly what the observed conductor-$40$
+channel expresses, and halves the factorizations of $p-1$ in a scanning search; ordering
+	the small prime channels of $p-1$ before the full factorization is about $13\%$ faster
+	again.
+We conclude that these correlations describe arithmetic structure rather than supply
+algorithms, and we state precisely what would have to change for that verdict to change.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}
+\label{sec:intro}
+
+Artin's conjecture on primitive roots, communicated to Hasse in 1927 (see
+\cite{Artin1965}), concerns one base at a time: for non-square
+$a \ne 0, \pm 1$ the set of primes $p$ for which $a$ is a primitive root mod $p$
+should have positive density, a multiple of Artin's constant
+$C = \prod_q \bigl(1 - \tfrac{1}{q(q-1)}\bigr) \approx 0.3739558$; for base $10$ no
+correction factor applies, so the conjectural density is exactly $C$. Hooley~\cite{Hooley1967}
+proved this under GRH; unconditionally, Gupta--Murty~\cite{GuptaMurty1984} and
+Heath-Brown~\cite{HeathBrown1986} showed the conjecture can fail for at most two prime
+bases, and Klurman--Shparlinski--Ter\"av\"ainen~\cite{KlurmanShparlinskiTeravainen2025}
+established the predicted asymptotic on average over almost all small bases; recent work
+has sharpened the analytic understanding for individual primes, with Fan and Pollack
+\cite{FanPollack2025} proving a version uniform in the base and Perucca and Shparlinski
+\cite{PeruccaShparlinski2025} giving uniform upper and lower bounds for the Artin density.
+Moree's survey~\cite{Moree2012} is the standard account. For $a=10$ the property has a classical
+meaning: $10$ is a primitive root mod $p$ exactly when the decimal expansion of $1/p$ has
+maximal period $p-1$ --- the \emph{full reptend} primes~\cite[pp.~166--171]{ConwayGuy1996}.
+
+Three further strands meet here. The first is the bias discovered numerically by
+Knapowski--Tur\'an, Ko and Ash--Beltis--Gross--Sinnott and quantitatively treated by
+Lemke Oliver and Soundararajan~\cite{LOS2016}: consecutive primes in the same reduced
+residue class modulo $q$ occur markedly less often than equidistribution predicts, a
+phenomenon explained conjecturally by the Hardy--Littlewood $k$-tuple
+conjectures~\cite{HardyLittlewood1923}. Since the Artin property of $p$ is governed by the
+factorisation of $p-1$, and since residues of consecutive primes modulo small $q$ are
+correlated by~\cite{LOS2016}, one expects \emph{some} induced dependence between the Artin
+indicators of consecutive primes. The second is the joint behaviour \emph{across bases} at
+a fixed prime, computed under GRH by Matthews~\cite{Matthews1976} and systematically by
+Moree--Stevenhagen~\cite{MoreeStevenhagen2014}, with the qualitative message that
+$\Acal_a$ and $\Acal_b$ are \emph{not} independent and that the deviation is governed by
+entanglement of the associated Kummer--Galois extensions. The framework remains active:
+Lenstra's Galois-theoretic setting~\cite{Lenstra1977}, the unified Artin-type treatment of
+J\"arviniemi--Perucca--Sgobba~\cite{JarviniemiPeruccaSgobba2025}, unconditional results in
+cases where GRH can be circumvented~\cite{Sgobba2025}, and number-field variants
+\cite{Kimmel2024}. The third is the question of
+which primes at a fixed shift can \emph{both} be Artin: Tinkov\'a--Waxman--Zindulka
+\cite{TinkovaWaxmanZindulka2023} identify shift--base pairs admitting no such prime, and
+our Theorem~\ref{thm:exclusion} is the base-$10$ instance of that phenomenon; we claim no
+priority for it.
+
+The present paper asks the \emph{statistical} question along both axes --- how Artin
+statuses of consecutive primes are correlated on average, and how Artin statuses of several
+bases are correlated at the same prime --- and then asks a question we have not seen posed
+in this literature: \emph{what is such a correlation computationally worth?}\footnote{An
+earlier version of parts of this work appeared as the preprints \emph{Correlations between
+primitive root statuses of consecutive primes} (Zenodo,
+\href{https://doi.org/10.5281/zenodo.22863946}{doi:10.5281/zenodo.22863946}) and
+\emph{Cross-base correlations of Artin primes} (Zenodo,
+\href{https://doi.org/10.5281/zenodo.22878204}{doi:10.5281/zenodo.22878204}). This paper
+consolidates those two preprints and adds the audit of \S\ref{sec:content}; it supersedes
+them, and the preprints are retained for the record.} The answer we give is a measured
+negative, and we regard it as part of the result rather than a failure of it.
+
+Two comparisons should be made explicit. Garcia--Kahoro--Luca~\cite{GarciaKahoroLuca2019}
+(see also~\cite{GarciaLucaShiUdell2020}) compare the \emph{number} of primitive roots,
+$\varphi(p-1)$ versus $\varphi(p+1)$, for twin pairs; Pollack~\cite{Pollack2014} and
+Baker--Pollack~\cite{BakerPollack2016} prove existence of runs of consecutive primes each
+having a prescribed primitive root. Those are existence results, produced by sieves that
+select rare favourable configurations; they say nothing about the typical joint behaviour
+along the sequence of primes. The questions studied here are complementary: the average
+correlation, its decomposition, and its computational content.
+
+\section{Summary of results}
+\label{sec:summary}
+
+Throughout, \emph{Artin prime} means Artin prime for base $10$ unless stated otherwise,
+$p_n$ denotes the $n$-th prime, $\omega(m)$ the number of distinct prime factors of $m$,
+and $\sqf(m)$ the squarefree part of $m$.
+
+\begin{enumerate}
+	\item \textbf{Consecutive-prime exclusion law} (Theorem~\ref{thm:exclusion}). If $p$ and
+	$p+g$ are primes with $p,p+g>5$ and $g\equiv 20 \pmod{40}$, then
+	$\Lsym{10}{p+g}=-\Lsym{10}{p}$; consequently at most one of the two is Artin base $10$.
+	If instead $g\equiv 0 \pmod{40}$ then $\Lsym{10}{p+g}=\Lsym{10}{p}$.
+	\item \textbf{Same-prime exclusion law} (Theorem~\ref{thm:pair}). With $d=\sqf(ab)$, no
+	prime with $\Lsym{d}{p}=-1$ is Artin for both $a$ and $b$. If $\sqf(c)=\sqf(ab)$ then no
+	odd prime is Artin for $a$, $b$ and $c$ simultaneously (Theorem~\ref{thm:triple}).
+	\item \textbf{Consecutive-prime anticorrelation} (\S\ref{sec:global}). Across all
+	$50{,}847{,}530$ consecutive pairs up to $10^9$,
+	$\delta = P(\Art_{n+1}\mid\Art_n)-P(\Art_{n+1}\mid\lnot\Art_n) = -0.01414$, with
+	Pearson $\chi^2 = 10{,}167$ on one degree of freedom.
+	\item \textbf{Gap structure} (\S\ref{sec:gaps}). $\delta(g)$ ranges from $-0.592$ at
+	$g=60$, where the theorem forces exclusion, to $+0.643$ at $g=40$.
+	\item \textbf{Residue conditioning} (\S\ref{sec:decomposition}). Conditioning on the
+	joint residues of $(p_n,p_{n+1})$ modulo $120$ and $840$ gives an exact within/between split
+	of the global deficit in which $96.1\%$ and $97.8\%$ respectively is attributable to cell
+	composition rather than within-cell association; the residual within-cell association
+	($-0.000545$, $-0.000310$) is consistent with further small-modulus channels but has not
+	been shown to vanish.
+	\item \textbf{$\omega$ repulsion} (\S\ref{sec:omega}).
+	$r(\omega(p_n-1),\omega(p_{n+1}-1)) = -0.0410$.
+	\item \textbf{Cross-base correlation} (\S\ref{sec:measurement}). Over the $66$ pairs of
+	the base set, $\phi(a,b)$ is positive for $64$ pairs (mean $0.0352$); the only negative
+	pairs are $(2,10)$ and $(3,15)$.
+	\item \textbf{Decomposition of the cross-base correlation} (\S\ref{sec:decomposition_crossbase}).
+	Conditioning on $\omega(p-1)$ removes $55\%$ of the mean signed correlation; conditioning
+	on the fine signature $\mathrm{sig}(p)$ removes $95\%$ of it.
+	\item \textbf{Residual localisation} (\S\ref{sec:entanglement}). The surviving residual
+	is concentrated on the triple-completing pairs and lies in the quadratic-character
+	channel.
+	\item \textbf{Kummer-degree densities} (\S\ref{sec:model}). The
+	Matthews--Moree--Stevenhagen predictions match the measured joint densities to a mean
+	relative error of $0.012\%$, with no fitted parameters.
+	\item \textbf{Computational content: a measured negative} (\S\ref{sec:content}). The
+	consecutive-prime correlation carries $0.000009$ nats of conditional-entropy reduction
+	beyond the elementary joint-residue baseline and shows no held-out gain; both exclusion
+	laws are consequences of character multiplicativity and hence computationally redundant;
+	the only usable filter is the elementary non-residue test, which the conductor-$40$
+	channel expresses.
+\end{enumerate}
+
+\section{Preliminaries and notation}
+\label{sec:prelim}
+
+For an odd prime $p$ not dividing $a$, write $\Lsym{a}{p}$ for the Legendre symbol and
+$\chi_a(p)=\Lsym{a}{p}$ for the quadratic character of conductor $\mathrm{cond}(\chi_a)$.
+Write $\Acal_a$ for the set of primes for which $a$ is a primitive root, and
+$X_a(p)=\mathbf{1}[\,p\in\Acal_a\,]$ for its indicator; along the consecutive-prime axis we
+abbreviate $\Art_n = \mathbf{1}[\,p_n\in\Acal_{10}\,]$ for Artin status at the $n$-th prime.
+Then $a$ is a primitive root modulo $p$ exactly when $a^{(p-1)/\ell}\not\equiv 1 \pmod p$ for every prime
+$\ell \mid p-1$. Two elementary facts are used repeatedly. First, if $X_a(p)=1$ then
+$\Lsym{a}{p}=-1$: a primitive root has order $p-1$, so $a^{(p-1)/2}\equiv -1$, whereas a
+quadratic residue satisfies $a^{(p-1)/2}\equiv 1$. Second, quadratic characters are
+multiplicative in the numerator, $\Lsym{ab}{p}=\Lsym{a}{p}\Lsym{b}{p}$, and the Legendre
+symbol depends on $p$ only through $p \bmod 4d$ when $d=\sqf(ab)$.
+
+The Artin property of $p$ is determined by the prime factorisation of $p-1$: the criterion
+consults $\ell=2$ and every prime divisor $\ell$ of $p-1$. This is why both decompositions
+below are stratified by the \emph{fine signature}
+\[
+	\mathrm{sig}(p) = \Bigl(\min(v_2(p-1),4),\;\; \{\,q\le 13 : q\mid p-1\,\},\;\;
+	\min(\omega_{>13}(p-1),3)\Bigr),
+\]
+a partition of the primes into at most $4\cdot 32\cdot 4 = 512$ cells (for odd $p$ one has
+$v_2(p-1)\ge 1$, so the truncated valuation takes four values, not five). The signature
+is a coarse summary of the part of $p-1$ that the criterion consults first for small bases;
+it records neither all prime divisors of $p-1$ nor the power-residue outcomes the criterion
+tests, and so does not determine Artin status.

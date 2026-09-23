@@ -1,0 +1,1 @@
+PASS (28 theorems, standard axioms only)

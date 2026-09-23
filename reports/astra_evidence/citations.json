@@ -1,0 +1,2331 @@
+[
+  {
+    "key": "Artin1965",
+    "query": "The Collected Papers of Emil Artin",
+    "matches": [
+      {
+        "title": [
+          "Theory of Braids"
+        ],
+        "author": [
+          {
+            "given": "E.",
+            "family": "Artin",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "DOI": "10.1007/978-1-4612-5717-2_37",
+        "published": {
+          "date-parts": [
+            [
+              1965
+            ]
+          ]
+        },
+        "volume": null,
+        "issue": null,
+        "page": "446-471",
+        "article-number": null,
+        "container-title": [
+          "Emil Artin Collected Papers"
+        ],
+        "URL": "https://doi.org/10.1007/978-1-4612-5717-2_37"
+      },
+      {
+        "title": [
+          "Braids and Permutations"
+        ],
+        "author": [
+          {
+            "given": "E.",
+            "family": "Artin",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "DOI": "10.1007/978-1-4612-5717-2_38",
+        "published": {
+          "date-parts": [
+            [
+              1965
+            ]
+          ]
+        },
+        "volume": null,
+        "issue": null,
+        "page": "472-478",
+        "article-number": null,
+        "container-title": [
+          "Emil Artin Collected Papers"
+        ],
+        "URL": "https://doi.org/10.1007/978-1-4612-5717-2_38"
+      }
+    ]
+  },
+  {
+    "key": "BakerPollack2016",
+    "query": "Bounded gaps between primes with a given primitive root, II",
+    "matches": [
+      {
+        "title": [
+          "Bounded gaps between primes with a given primitive root, II"
+        ],
+        "author": [
+          {
+            "given": "Roger C.",
+            "family": "Baker",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Department of Mathematics, Brigham Young University, Provo, UT 84602, USA"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Paul",
+            "family": "Pollack",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Mathematics, University of Georgia, Athens, GA 30602, USA"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "DOI": "10.1515/forum-2014-0137",
+        "published": {
+          "date-parts": [
+            [
+              2015,
+              7,
+              15
+            ]
+          ]
+        },
+        "volume": "28",
+        "issue": "4",
+        "page": "675-687",
+        "article-number": null,
+        "container-title": [
+          "Forum Mathematicum"
+        ],
+        "URL": "https://doi.org/10.1515/forum-2014-0137"
+      },
+      {
+        "title": [
+          "Bounded gaps between primes with a given primitive root"
+        ],
+        "author": [
+          {
+            "given": "Paul",
+            "family": "Pollack",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "DOI": "10.2140/ant.2014.8.1769",
+        "published": {
+          "date-parts": [
+            [
+              2014,
+              10,
+              21
+            ]
+          ]
+        },
+        "volume": "8",
+        "issue": "7",
+        "page": "1769-1786",
+        "article-number": null,
+        "container-title": [
+          "Algebra &amp; Number Theory"
+        ],
+        "URL": "https://doi.org/10.2140/ant.2014.8.1769"
+      }
+    ]
+  },
+  {
+    "key": "ConwayGuy1996",
+    "query": "The Book of Numbers",
+    "matches": [
+      {
+        "title": [
+          "Complex numbers"
+        ],
+        "author": [
+          {
+            "given": "Erich",
+            "family": "Steiner",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "DOI": "10.1093/hesc/9780199205356.003.0008",
+        "published": {
+          "date-parts": [
+            [
+              2008,
+              1,
+              31
+            ]
+          ]
+        },
+        "volume": null,
+        "issue": null,
+        "page": null,
+        "article-number": null,
+        "container-title": [
+          "The Chemistry Maths Book"
+        ],
+        "URL": "https://doi.org/10.1093/hesc/9780199205356.003.0008"
+      },
+      {
+        "title": [
+          "Milton\u2019s Book of Numbers: Book 1 and Its Catalog"
+        ],
+        "author": [
+          {
+            "given": "David",
+            "family": "Quint",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "DOI": "10.23943/princeton/9780691161914.003.0002",
+        "published": {
+          "date-parts": [
+            [
+              2017,
+              10,
+              19
+            ]
+          ]
+        },
+        "volume": null,
+        "issue": null,
+        "page": null,
+        "article-number": null,
+        "container-title": [
+          "Princeton University Press"
+        ],
+        "URL": "https://doi.org/10.23943/princeton/9780691161914.003.0002"
+      }
+    ]
+  },
+  {
+    "key": "Erdos1935",
+    "query": "On the normal number of prime factors of p-1 and some related problems\n\t\tconcerning Euler's varphi-function",
+    "matches": [
+      {
+        "title": [
+          "ON THE NORMAL NUMBER OF PRIME FACTORS OF <i>p</i>-1 AND SOME RELATED PROBLEMS CONCERNING EULER'S \u00f8-FUNCTION"
+        ],
+        "author": [
+          {
+            "given": "PAUL",
+            "family": "ERD\u00f3S",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "DOI": "10.1093/qmath/os-6.1.205",
+        "published": {
+          "date-parts": [
+            [
+              1935
+            ]
+          ]
+        },
+        "volume": "os-6",
+        "issue": "1",
+        "page": "205-213",
+        "article-number": null,
+        "container-title": [
+          "The Quarterly Journal of Mathematics"
+        ],
+        "URL": "https://doi.org/10.1093/qmath/os-6.1.205"
+      },
+      {
+        "title": [
+          "Some Remarks and Problems in Number Theory\n                    Related to the Work of Euler, Paul Erd\u0151s and\n                    Underwood Dudley (1983)"
+        ],
+        "author": null,
+        "DOI": "10.1090/spec/051/26",
+        "published": {
+          "date-parts": [
+            [
+              2007
+            ]
+          ]
+        },
+        "volume": null,
+        "issue": null,
+        "page": "215-224",
+        "article-number": null,
+        "container-title": [
+          "Spectrum",
+          "The Genius of Euler"
+        ],
+        "URL": "https://doi.org/10.1090/spec/051/26"
+      }
+    ]
+  },
+  {
+    "key": "FanPollack2025",
+    "query": "Counting primes with a given primitive root, uniformly",
+    "matches": [
+      {
+        "title": [
+          "Counting primes with a given primitive root, uniformly"
+        ],
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0002-2825-0736",
+            "authenticated-orcid": false,
+            "given": "Kai (Steve)",
+            "family": "Fan",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Department of Mathematics University of Georgia Athens Georgia USA"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-4327-5560",
+            "authenticated-orcid": false,
+            "given": "Paul",
+            "family": "Pollack",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Mathematics University of Georgia Athens Georgia USA"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "DOI": "10.1112/mtk.70055",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              10
+            ]
+          ]
+        },
+        "volume": "71",
+        "issue": "4",
+        "page": null,
+        "article-number": "e70055",
+        "container-title": [
+          "Mathematika"
+        ],
+        "URL": "https://doi.org/10.1112/mtk.70055"
+      },
+      {
+        "title": [
+          "Uniformly counting primes with a given primitive root and in an arithmetic progression"
+        ],
+        "author": [
+          {
+            "given": "M.",
+            "family": "Zoeteman",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Mathematisch Instituut, Universiteit Leiden, Postbus 9512, 2300 RA Leiden, The Netherlands"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "DOI": "10.1142/s1793042119501161",
+        "published": {
+          "date-parts": [
+            [
+              2019,
+              11
+            ]
+          ]
+        },
+        "volume": "15",
+        "issue": "10",
+        "page": "2115-2134",
+        "article-number": null,
+        "container-title": [
+          "International Journal of Number Theory"
+        ],
+        "URL": "https://doi.org/10.1142/s1793042119501161"
+      }
+    ]
+  },
+  {
+    "key": "GarciaKahoroLuca2019",
+    "query": "Primitive root bias for twin primes",
+    "matches": [
+      {
+        "title": [
+          "Primitive Root Bias for Twin Primes"
+        ],
+        "author": [
+          {
+            "given": "Stephan Ramon",
+            "family": "Garcia",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Department of Mathematics, Pomona College, Claremont, CA, USA"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Elvis",
+            "family": "Kahoro",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Mathematics, Pomona College, Claremont, CA, USA"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Florian",
+            "family": "Luca",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "School of Mathematics, University of the Witwatersrand, Wits, Johannesburg, South Africa"
+              },
+              {
+                "name": "Max Planck Institute for Mathematics, Bonn, Germany"
+              },
+              {
+                "name": "Department of Mathematics, Faculty of Sciences, University of Ostrava, Ostrava, Czech Republic"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "DOI": "10.1080/10586458.2017.1360809",
+        "published": {
+          "date-parts": [
+            [
+              2017,
+              9,
+              29
+            ]
+          ]
+        },
+        "volume": "28",
+        "issue": "2",
+        "page": "151-160",
+        "article-number": null,
+        "container-title": [
+          "Experimental Mathematics"
+        ],
+        "URL": "https://doi.org/10.1080/10586458.2017.1360809"
+      },
+      {
+        "title": [
+          "Primitive root bias for twin primes II: Schinzel-type theorems for totient quotients and the sum-of-divisors function"
+        ],
+        "author": [
+          {
+            "given": "Stephan Ramon",
+            "family": "Garcia",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Florian",
+            "family": "Luca",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Kye",
+            "family": "Shi",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-0528-874X",
+            "authenticated-orcid": false,
+            "given": "Gabe",
+            "family": "Udell",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "DOI": "10.1016/j.jnt.2019.08.003",
+        "published": {
+          "date-parts": [
+            [
+              2020,
+              3
+            ]
+          ]
+        },
+        "volume": "208",
+        "issue": null,
+        "page": "400-417",
+        "article-number": null,
+        "container-title": [
+          "Journal of Number Theory"
+        ],
+        "URL": "https://doi.org/10.1016/j.jnt.2019.08.003"
+      }
+    ]
+  },
+  {
+    "key": "GarciaLucaShiUdell2020",
+    "query": "Primitive root bias for twin primes II: Schinzel-type theorems for\n\t\ttotient quotients and the sum-of-divisors function",
+    "matches": [
+      {
+        "title": [
+          "Primitive root bias for twin primes II: Schinzel-type theorems for totient quotients and the sum-of-divisors function"
+        ],
+        "author": [
+          {
+            "given": "Stephan Ramon",
+            "family": "Garcia",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Florian",
+            "family": "Luca",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Kye",
+            "family": "Shi",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-0528-874X",
+            "authenticated-orcid": false,
+            "given": "Gabe",
+            "family": "Udell",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "DOI": "10.1016/j.jnt.2019.08.003",
+        "published": {
+          "date-parts": [
+            [
+              2020,
+              3
+            ]
+          ]
+        },
+        "volume": "208",
+        "issue": null,
+        "page": "400-417",
+        "article-number": null,
+        "container-title": [
+          "Journal of Number Theory"
+        ],
+        "URL": "https://doi.org/10.1016/j.jnt.2019.08.003"
+      },
+      {
+        "title": [
+          "Primitive Root Bias for Twin Primes"
+        ],
+        "author": [
+          {
+            "given": "Stephan Ramon",
+            "family": "Garcia",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Department of Mathematics, Pomona College, Claremont, CA, USA"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Elvis",
+            "family": "Kahoro",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Mathematics, Pomona College, Claremont, CA, USA"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Florian",
+            "family": "Luca",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "School of Mathematics, University of the Witwatersrand, Wits, Johannesburg, South Africa"
+              },
+              {
+                "name": "Max Planck Institute for Mathematics, Bonn, Germany"
+              },
+              {
+                "name": "Department of Mathematics, Faculty of Sciences, University of Ostrava, Ostrava, Czech Republic"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "DOI": "10.1080/10586458.2017.1360809",
+        "published": {
+          "date-parts": [
+            [
+              2017,
+              9,
+              29
+            ]
+          ]
+        },
+        "volume": "28",
+        "issue": "2",
+        "page": "151-160",
+        "article-number": null,
+        "container-title": [
+          "Experimental Mathematics"
+        ],
+        "URL": "https://doi.org/10.1080/10586458.2017.1360809"
+      }
+    ]
+  },
+  {
+    "key": "GuptaMurty1984",
+    "query": "A remark on Artin's conjecture",
+    "matches": [
+      {
+        "title": [
+          "Poles of Artin L-functions and the strong Artin conjecture"
+        ],
+        "author": [
+          {
+            "given": "Andrew",
+            "family": "Booker",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "DOI": "10.4007/annals.2003.158.1089",
+        "published": {
+          "date-parts": [
+            [
+              2003,
+              11,
+              1
+            ]
+          ]
+        },
+        "volume": "158",
+        "issue": "3",
+        "page": "1089-1098",
+        "article-number": null,
+        "container-title": [
+          "Annals of Mathematics"
+        ],
+        "URL": "https://doi.org/10.4007/annals.2003.158.1089"
+      },
+      {
+        "title": [
+          "Diophantine problems over global fields and a conjecture of Artin over function fields"
+        ],
+        "author": [
+          {
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Leonhard",
+            "family": "Hochfilzer",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "DOI": "10.53846/goediss-9906",
+        "published": null,
+        "volume": null,
+        "issue": null,
+        "page": null,
+        "article-number": null,
+        "container-title": null,
+        "URL": "https://doi.org/10.53846/goediss-9906"
+      }
+    ]
+  },
+  {
+    "key": "HardyLittlewood1923",
+    "query": "Some problems of `Partitio numerorum'; III: On the expression of a\n\t\tnumber as a sum of primes",
+    "matches": [
+      {
+        "title": [
+          "Some problems of \u2018Partitio numerorum\u2019; III: On the expression of a number as a sum of primes"
+        ],
+        "author": [
+          {
+            "given": "G. H.",
+            "family": "Hardy",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "J. E.",
+            "family": "Littlewood",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "DOI": "10.1007/bf02403921",
+        "published": {
+          "date-parts": [
+            [
+              1923
+            ]
+          ]
+        },
+        "volume": "44",
+        "issue": "0",
+        "page": "1-70",
+        "article-number": null,
+        "container-title": [
+          "Acta Mathematica"
+        ],
+        "URL": "https://doi.org/10.1007/bf02403921"
+      },
+      {
+        "title": [
+          "SOME PROBLEMS OF \u2018PARTITIO NUMERORUM\u2019; III: ON THE EXPRESSION OF A NUMBER AS A SUM OF PRIMES"
+        ],
+        "author": [
+          {
+            "given": "G. H.",
+            "family": "HARDY",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "New College, Oxford, UK"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "J. E.",
+            "family": "LITTLEWOOD",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Trinity College, Cambridge, UK"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "DOI": "10.1142/9789812776600_0002",
+        "published": {
+          "date-parts": [
+            [
+              2002,
+              11
+            ]
+          ]
+        },
+        "volume": null,
+        "issue": null,
+        "page": "21-60",
+        "article-number": null,
+        "container-title": [
+          "Series in Pure Mathematics",
+          "The Goldbach Conjecture"
+        ],
+        "URL": "https://doi.org/10.1142/9789812776600_0002"
+      }
+    ]
+  },
+  {
+    "key": "HeathBrown1986",
+    "query": "Artin's conjecture for primitive roots",
+    "matches": [
+      {
+        "title": [
+          "Artin\u2019s Conjecture for Primitive Roots"
+        ],
+        "author": [
+          {
+            "given": "M.",
+            "family": "Ram Murty",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "DOI": "10.1007/978-1-4613-0195-0_11",
+        "published": {
+          "date-parts": [
+            [
+              2001
+            ]
+          ]
+        },
+        "volume": null,
+        "issue": null,
+        "page": "113-127",
+        "article-number": null,
+        "container-title": [
+          "Mathematical Conversations"
+        ],
+        "URL": "https://doi.org/10.1007/978-1-4613-0195-0_11"
+      },
+      {
+        "title": [
+          "Note on Artin's Conjecture on Primitive Roots"
+        ],
+        "author": [
+          {
+            "given": "Sankar",
+            "family": "Sitaraman",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Department of Mathematics"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "DOI": "10.46298/hrj.2022.7664",
+        "published": {
+          "date-parts": [
+            [
+              2022,
+              1,
+              9
+            ]
+          ]
+        },
+        "volume": "Volume 44 - Special...",
+        "issue": null,
+        "page": null,
+        "article-number": "7664",
+        "container-title": [
+          "Hardy-Ramanujan Journal"
+        ],
+        "URL": "https://doi.org/10.46298/hrj.2022.7664"
+      }
+    ]
+  },
+  {
+    "key": "Hooley1967",
+    "query": "On Artin's conjecture",
+    "matches": [
+      {
+        "title": [
+          "Poles of Artin L-functions and the strong Artin conjecture"
+        ],
+        "author": [
+          {
+            "given": "Andrew",
+            "family": "Booker",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "DOI": "10.4007/annals.2003.158.1089",
+        "published": {
+          "date-parts": [
+            [
+              2003,
+              11,
+              1
+            ]
+          ]
+        },
+        "volume": "158",
+        "issue": "3",
+        "page": "1089-1098",
+        "article-number": null,
+        "container-title": [
+          "Annals of Mathematics"
+        ],
+        "URL": "https://doi.org/10.4007/annals.2003.158.1089"
+      },
+      {
+        "title": [
+          "Diophantine problems over global fields and a conjecture of Artin over function fields"
+        ],
+        "author": [
+          {
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Leonhard",
+            "family": "Hochfilzer",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "DOI": "10.53846/goediss-9906",
+        "published": null,
+        "volume": null,
+        "issue": null,
+        "page": null,
+        "article-number": null,
+        "container-title": null,
+        "URL": "https://doi.org/10.53846/goediss-9906"
+      }
+    ]
+  },
+  {
+    "key": "KlurmanShparlinskiTeravainen2025",
+    "query": "On Artin's conjecture on average and short character sums",
+    "matches": [
+      {
+        "title": [
+          "On Artin's conjecture on average and short character sums"
+        ],
+        "author": [
+          {
+            "given": "Oleksiy",
+            "family": "Klurman",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "School of Mathematics University of Bristol Bristol UK"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-5246-9391",
+            "authenticated-orcid": false,
+            "given": "Igor E.",
+            "family": "Shparlinski",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "School of Mathematics and Statistics University of New South Wales Sydney Australia"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Joni",
+            "family": "Ter\u00e4v\u00e4inen",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Mathematics and Statistics University of Turku Turku Finland"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "DOI": "10.1112/blms.70103",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              5,
+              23
+            ]
+          ]
+        },
+        "volume": "57",
+        "issue": "8",
+        "page": "2429-2443",
+        "article-number": null,
+        "container-title": [
+          "Bulletin of the London Mathematical Society"
+        ],
+        "URL": "https://doi.org/10.1112/blms.70103"
+      },
+      {
+        "title": [
+          "A conjecture of Erd\u0151s, supersingular primes and short character sums"
+        ],
+        "author": [
+          {
+            "given": "Michael A.",
+            "family": "Bennett",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "University of British Columbia, Vancouver, B.C., Canada"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Samir",
+            "family": "Siksek",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Mathematics Institute, University of Warwick, Coventry, United Kingdom"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "DOI": "10.4007/annals.2020.191.2.2",
+        "published": {
+          "date-parts": [
+            [
+              2020,
+              3,
+              1
+            ]
+          ]
+        },
+        "volume": "191",
+        "issue": "2",
+        "page": null,
+        "article-number": null,
+        "container-title": [
+          "Annals of Mathematics"
+        ],
+        "URL": "https://doi.org/10.4007/annals.2020.191.2.2"
+      }
+    ]
+  },
+  {
+    "key": "TinkovaWaxmanZindulka2023",
+    "query": "Artin twin primes",
+    "matches": [
+      {
+        "title": [
+          "Artin twin primes"
+        ],
+        "author": [
+          {
+            "given": "Magdal\u00e9na",
+            "family": "Tinkov\u00e1",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0001-5892-0588",
+            "authenticated-orcid": false,
+            "given": "Ezra",
+            "family": "Waxman",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Mikul\u00e1\u0161",
+            "family": "Zindulka",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "DOI": "10.1016/j.jnt.2022.10.006",
+        "published": {
+          "date-parts": [
+            [
+              2023,
+              4
+            ]
+          ]
+        },
+        "volume": "245",
+        "issue": null,
+        "page": "203-232",
+        "article-number": null,
+        "container-title": [
+          "Journal of Number Theory"
+        ],
+        "URL": "https://doi.org/10.1016/j.jnt.2022.10.006"
+      },
+      {
+        "title": [
+          "7310 Primes and Twin Primes"
+        ],
+        "author": null,
+        "DOI": "10.1515/9783112236185-010",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              12,
+              16
+            ]
+          ]
+        },
+        "volume": null,
+        "issue": null,
+        "page": "73-87",
+        "article-number": null,
+        "container-title": [
+          "Open Mathematical Problems"
+        ],
+        "URL": "https://doi.org/10.1515/9783112236185-010"
+      }
+    ]
+  },
+  {
+    "key": "LOS2016",
+    "query": "Unexpected biases in the distribution of consecutive primes",
+    "matches": [
+      {
+        "title": [
+          "Unexpected biases in the distribution of consecutive primes"
+        ],
+        "author": [
+          {
+            "given": "Robert J.",
+            "family": "Lemke Oliver",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Department of Mathematics, Stanford University, Stanford, CA 94305;"
+              },
+              {
+                "name": "Department of Mathematics, Tufts University, Medford, MA 02155"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Kannan",
+            "family": "Soundararajan",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Mathematics, Stanford University, Stanford, CA 94305;"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "DOI": "10.1073/pnas.1605366113",
+        "published": {
+          "date-parts": [
+            [
+              2016,
+              7,
+              14
+            ]
+          ]
+        },
+        "volume": "113",
+        "issue": "31",
+        "page": null,
+        "article-number": null,
+        "container-title": [
+          "Proceedings of the National Academy of Sciences"
+        ],
+        "URL": "https://doi.org/10.1073/pnas.1605366113"
+      },
+      {
+        "title": [
+          "Gaps between Consecutive Primes"
+        ],
+        "author": null,
+        "DOI": "10.3840/000891",
+        "published": {
+          "date-parts": [
+            [
+              2007,
+              4,
+              27
+            ]
+          ]
+        },
+        "volume": null,
+        "issue": null,
+        "page": null,
+        "article-number": null,
+        "container-title": [
+          "Wolfram Demonstrations Project"
+        ],
+        "URL": "https://doi.org/10.3840/000891"
+      }
+    ]
+  },
+  {
+    "key": "Moree2012",
+    "query": "Artin's primitive root conjecture --- a survey",
+    "matches": [
+      {
+        "title": [
+          "Artin's Primitive Root Conjecture \u2013 A Survey"
+        ],
+        "author": [
+          {
+            "given": "Pieter",
+            "family": "Moree",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "DOI": "10.1515/integers-2012-0043",
+        "published": {
+          "date-parts": [
+            [
+              2012,
+              1,
+              1
+            ]
+          ]
+        },
+        "volume": "12",
+        "issue": "6",
+        "page": null,
+        "article-number": null,
+        "container-title": [
+          "Integers"
+        ],
+        "URL": "https://doi.org/10.1515/integers-2012-0043"
+      },
+      {
+        "title": [
+          "The Generalized Artin Primitive Root Conjecture"
+        ],
+        "author": [
+          {
+            "given": "N. A.",
+            "family": "Carella",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "DOI": "10.29020/nybg.ejpam.v11i1.3182",
+        "published": {
+          "date-parts": [
+            [
+              2018,
+              1,
+              30
+            ]
+          ]
+        },
+        "volume": "11",
+        "issue": "1",
+        "page": "23-34",
+        "article-number": null,
+        "container-title": [
+          "European Journal of Pure and Applied Mathematics"
+        ],
+        "URL": "https://doi.org/10.29020/nybg.ejpam.v11i1.3182"
+      }
+    ]
+  },
+  {
+    "key": "PeruccaShparlinski2025",
+    "query": "Uniform bounds for the density in Artin's conjecture on primitive roots",
+    "matches": [
+      {
+        "title": [
+          "Uniform bounds for the density in Artin's conjecture on primitive roots"
+        ],
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0003-3173-6988",
+            "authenticated-orcid": false,
+            "given": "Antonella",
+            "family": "Perucca",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Department of Mathematics University of Luxembourg Esch\u2010sur\u2010Alzette Luxembourg"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-5246-9391",
+            "authenticated-orcid": false,
+            "given": "Igor E.",
+            "family": "Shparlinski",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "School of Mathematics and Statistics University of New South Wales Sydney Australia"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "DOI": "10.1112/blms.70011",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              2,
+              13
+            ]
+          ]
+        },
+        "volume": "57",
+        "issue": "3",
+        "page": "978-991",
+        "article-number": null,
+        "container-title": [
+          "Bulletin of the London Mathematical Society"
+        ],
+        "URL": "https://doi.org/10.1112/blms.70011"
+      },
+      {
+        "title": [
+          "Artin\u2019s Conjecture for Primitive Roots"
+        ],
+        "author": [
+          {
+            "given": "M.",
+            "family": "Ram Murty",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "DOI": "10.1007/978-1-4613-0195-0_11",
+        "published": {
+          "date-parts": [
+            [
+              2001
+            ]
+          ]
+        },
+        "volume": null,
+        "issue": null,
+        "page": "113-127",
+        "article-number": null,
+        "container-title": [
+          "Mathematical Conversations"
+        ],
+        "URL": "https://doi.org/10.1007/978-1-4613-0195-0_11"
+      }
+    ]
+  },
+  {
+    "key": "Pollack2014",
+    "query": "Bounded gaps between primes with a given primitive root",
+    "matches": [
+      {
+        "title": [
+          "Bounded gaps between primes with a given primitive root"
+        ],
+        "author": [
+          {
+            "given": "Paul",
+            "family": "Pollack",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "DOI": "10.2140/ant.2014.8.1769",
+        "published": {
+          "date-parts": [
+            [
+              2014,
+              10,
+              21
+            ]
+          ]
+        },
+        "volume": "8",
+        "issue": "7",
+        "page": "1769-1786",
+        "article-number": null,
+        "container-title": [
+          "Algebra &amp; Number Theory"
+        ],
+        "URL": "https://doi.org/10.2140/ant.2014.8.1769"
+      },
+      {
+        "title": [
+          "Bounded gaps between primes with a given primitive root, II"
+        ],
+        "author": [
+          {
+            "given": "Roger C.",
+            "family": "Baker",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Department of Mathematics, Brigham Young University, Provo, UT 84602, USA"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Paul",
+            "family": "Pollack",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Mathematics, University of Georgia, Athens, GA 30602, USA"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "DOI": "10.1515/forum-2014-0137",
+        "published": {
+          "date-parts": [
+            [
+              2015,
+              7,
+              15
+            ]
+          ]
+        },
+        "volume": "28",
+        "issue": "4",
+        "page": "675-687",
+        "article-number": null,
+        "container-title": [
+          "Forum Mathematicum"
+        ],
+        "URL": "https://doi.org/10.1515/forum-2014-0137"
+      }
+    ]
+  },
+  {
+    "key": "BaldII",
+    "query": "Quadratic exclusion laws for consecutive Artin primes in arbitrary bases",
+    "matches": [
+      {
+        "title": [
+          "Quadratic polynomials producing consecutive, distinct primes and class groups of complex quadratic fields"
+        ],
+        "author": [
+          {
+            "given": "R.",
+            "family": "Mollin",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "DOI": "10.4064/aa-74-1-17-30",
+        "published": {
+          "date-parts": [
+            [
+              1996
+            ]
+          ]
+        },
+        "volume": "74",
+        "issue": "1",
+        "page": "17-30",
+        "article-number": null,
+        "container-title": [
+          "Acta Arithmetica"
+        ],
+        "URL": "https://doi.org/10.4064/aa-74-1-17-30"
+      },
+      {
+        "title": [
+          "An artin character and representations of primes by binary quadratic forms III"
+        ],
+        "author": [
+          {
+            "given": "Franz",
+            "family": "Halter-Koch",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "DOI": "10.1007/bf01168351",
+        "published": {
+          "date-parts": [
+            [
+              1985,
+              2
+            ]
+          ]
+        },
+        "volume": "51",
+        "issue": "1-3",
+        "page": "163-169",
+        "article-number": null,
+        "container-title": [
+          "Manuscripta Mathematica"
+        ],
+        "URL": "https://doi.org/10.1007/bf01168351"
+      }
+    ]
+  },
+  {
+    "key": "GoldmakherMartinPeringuey2025",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "key": "JarviniemiPeruccaSgobba2025",
+    "query": "Unified treatment of Artin-type problems II",
+    "matches": [
+      {
+        "title": [
+          "Unified treatment of Artin-type problems II"
+        ],
+        "author": [
+          {
+            "given": "Olli",
+            "family": "J\u00e4rviniemi",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Antonella",
+            "family": "Perucca",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0001-5434-0308",
+            "authenticated-orcid": false,
+            "given": "Pietro",
+            "family": "Sgobba",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "DOI": "10.1007/s40993-025-00620-2",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              2,
+              25
+            ]
+          ]
+        },
+        "volume": "11",
+        "issue": "1",
+        "page": null,
+        "article-number": "42",
+        "container-title": [
+          "Research in Number Theory"
+        ],
+        "URL": "https://doi.org/10.1007/s40993-025-00620-2"
+      },
+      {
+        "title": [
+          "Unified treatment of Artin-type problems"
+        ],
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0002-5237-1589",
+            "authenticated-orcid": false,
+            "given": "Olli",
+            "family": "J\u00e4rviniemi",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0003-3173-6988",
+            "authenticated-orcid": false,
+            "given": "Antonella",
+            "family": "Perucca",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "DOI": "10.1007/s40993-022-00418-6",
+        "published": {
+          "date-parts": [
+            [
+              2022,
+              12,
+              19
+            ]
+          ]
+        },
+        "volume": "9",
+        "issue": "1",
+        "page": null,
+        "article-number": "10",
+        "container-title": [
+          "Research in Number Theory"
+        ],
+        "URL": "https://doi.org/10.1007/s40993-022-00418-6"
+      }
+    ]
+  },
+  {
+    "key": "Kimmel2024",
+    "query": "Artin's primitive root conjecture in number fields and for matrices",
+    "matches": [
+      {
+        "title": [
+          "Artin\u2019s primitive root conjecture in number fields and for matrices"
+        ],
+        "author": [
+          {
+            "given": "Noam",
+            "family": "Kimmel",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "DOI": "10.4064/aa230810-29-6",
+        "published": {
+          "date-parts": [
+            [
+              2024
+            ]
+          ]
+        },
+        "volume": "216",
+        "issue": "4",
+        "page": "329-348",
+        "article-number": null,
+        "container-title": [
+          "Acta Arithmetica"
+        ],
+        "URL": "https://doi.org/10.4064/aa230810-29-6"
+      },
+      {
+        "title": [
+          "Artin\u2019s Primitive Root Conjecture"
+        ],
+        "author": [
+          {
+            "given": "Michael",
+            "family": "Rosen",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "DOI": "10.1007/978-1-4757-6046-0_10",
+        "published": {
+          "date-parts": [
+            [
+              2002
+            ]
+          ]
+        },
+        "volume": null,
+        "issue": null,
+        "page": "149-167",
+        "article-number": null,
+        "container-title": [
+          "Graduate Texts in Mathematics",
+          "Number Theory in Function Fields"
+        ],
+        "URL": "https://doi.org/10.1007/978-1-4757-6046-0_10"
+      }
+    ]
+  },
+  {
+    "key": "Lenstra1977",
+    "query": "On Artin's conjecture and Euclid's algorithm in global fields",
+    "matches": [
+      {
+        "title": [
+          "Diophantine problems over global fields and a conjecture of Artin over function fields"
+        ],
+        "author": [
+          {
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Leonhard",
+            "family": "Hochfilzer",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "DOI": "10.53846/goediss-9906",
+        "published": null,
+        "volume": null,
+        "issue": null,
+        "page": null,
+        "article-number": null,
+        "container-title": null,
+        "URL": "https://doi.org/10.53846/goediss-9906"
+      },
+      {
+        "title": [
+          "On Artin\u2032s Conjecture over Function Fields"
+        ],
+        "author": [
+          {
+            "given": "F.",
+            "family": "Pappalardi",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "I.",
+            "family": "Shparlinski",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "DOI": "10.1006/ffta.1995.1030",
+        "published": {
+          "date-parts": [
+            [
+              1995,
+              10
+            ]
+          ]
+        },
+        "volume": "1",
+        "issue": "4",
+        "page": "399-404",
+        "article-number": null,
+        "container-title": [
+          "Finite Fields and Their Applications"
+        ],
+        "URL": "https://doi.org/10.1006/ffta.1995.1030"
+      }
+    ]
+  },
+  {
+    "key": "MoreeStevenhagen2014",
+    "query": "Computing higher rank primitive root densities",
+    "matches": [
+      {
+        "title": [
+          "Computing higher rank primitive root densities"
+        ],
+        "author": [
+          {
+            "given": "P.",
+            "family": "Moree",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "P.",
+            "family": "Stevenhagen",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "DOI": "10.4064/aa163-1-2",
+        "published": {
+          "date-parts": [
+            [
+              2014
+            ]
+          ]
+        },
+        "volume": "163",
+        "issue": "1",
+        "page": "15-32",
+        "article-number": null,
+        "container-title": [
+          "Acta Arithmetica"
+        ],
+        "URL": "https://doi.org/10.4064/aa163-1-2"
+      },
+      {
+        "title": [
+          "Computing multiplicative order and primitive root in finite cyclic group"
+        ],
+        "author": [
+          {
+            "given": "Shri Prakash",
+            "family": "Dwivedi",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "DOI": "10.1109/ic3.2014.6897161",
+        "published": {
+          "date-parts": [
+            [
+              2014,
+              8
+            ]
+          ]
+        },
+        "volume": null,
+        "issue": null,
+        "page": "130-134",
+        "article-number": null,
+        "container-title": [
+          "2014 Seventh International Conference on Contemporary Computing (IC3)"
+        ],
+        "URL": "https://doi.org/10.1109/ic3.2014.6897161"
+      }
+    ]
+  },
+  {
+    "key": "Matthews1976",
+    "query": "A generalisation of Artin's conjecture for primitive roots",
+    "matches": [
+      {
+        "title": [
+          "An investigation of the Davenport-Halberstam inequality : and a generalisation of Artin's conjecture for primitive roots"
+        ],
+        "author": [
+          {
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-9564-1702",
+            "authenticated-orcid": true,
+            "given": "Keith Robert",
+            "family": "Matthews",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "DOI": "10.14264/715835",
+        "published": null,
+        "volume": null,
+        "issue": null,
+        "page": null,
+        "article-number": null,
+        "container-title": null,
+        "URL": "https://doi.org/10.14264/715835"
+      },
+      {
+        "title": [
+          "A generalisation of Artin's conjecture for primitive roots"
+        ],
+        "author": [
+          {
+            "given": "K.",
+            "family": "Matthews",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "DOI": "10.4064/aa-29-2-113-146",
+        "published": {
+          "date-parts": [
+            [
+              1976
+            ]
+          ]
+        },
+        "volume": "29",
+        "issue": "2",
+        "page": "113-146",
+        "article-number": null,
+        "container-title": [
+          "Acta Arithmetica"
+        ],
+        "URL": "https://doi.org/10.4064/aa-29-2-113-146"
+      }
+    ]
+  },
+  {
+    "key": "Sgobba2025",
+    "query": "Unconditional results for Artin-type problems over number fields",
+    "matches": [
+      {
+        "title": [
+          "Diophantine problems over global fields and a conjecture of Artin over function fields"
+        ],
+        "author": [
+          {
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Leonhard",
+            "family": "Hochfilzer",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "DOI": "10.53846/goediss-9906",
+        "published": null,
+        "volume": null,
+        "issue": null,
+        "page": null,
+        "article-number": null,
+        "container-title": null,
+        "URL": "https://doi.org/10.53846/goediss-9906"
+      },
+      {
+        "title": [
+          "Some Artin\u2013Schreier type function fields over finite fields with prescribed genus and number of rational places"
+        ],
+        "author": [
+          {
+            "given": "Emrah",
+            "family": "\u00c7ak\u00e7ak",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Ferruh",
+            "family": "\u00d6zbudak",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "DOI": "10.1016/j.jpaa.2006.08.007",
+        "published": {
+          "date-parts": [
+            [
+              2007,
+              7
+            ]
+          ]
+        },
+        "volume": "210",
+        "issue": "1",
+        "page": "113-135",
+        "article-number": null,
+        "container-title": [
+          "Journal of Pure and Applied Algebra"
+        ],
+        "URL": "https://doi.org/10.1016/j.jpaa.2006.08.007"
+      }
+    ]
+  }
+]

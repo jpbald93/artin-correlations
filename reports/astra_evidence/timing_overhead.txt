@@ -1,0 +1,3 @@
+wall 1.7828736249357462 timed_strategies [0.8089, 0.4146, 0.3701] outside_timed_sections 0.1892736249357463 A/C with shared setup charged once per independent search 1.7844488557185794
+wall 1.6934706000611186 timed_strategies [0.7757, 0.3801, 0.3405] outside_timed_sections 0.19717060006111864 A/C with shared setup charged once per independent search 1.809417513158669
+wall 1.679512046277523 timed_strategies [0.7627, 0.3751, 0.3451] outside_timed_sections 0.19661204627752293 A/C with shared setup charged once per independent search 1.770889262791215

@@ -1,0 +1,2029 @@
+{
+  "Artin1965": {
+    "indexed": {
+      "date-parts": [
+        [
+          2024,
+          9,
+          6
+        ]
+      ],
+      "date-time": "2024-09-06T10:45:43Z",
+      "timestamp": 1725619543019
+    },
+    "publisher-location": "New York, NY",
+    "reference-count": 0,
+    "publisher": "Springer New York",
+    "isbn-type": [
+      {
+        "type": "print",
+        "value": "9781461257189"
+      },
+      {
+        "type": "electronic",
+        "value": "9781461257172"
+      }
+    ],
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              1982,
+              1,
+              1
+            ]
+          ],
+          "date-time": "1982-01-01T00:00:00Z",
+          "timestamp": 378691200000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "http://www.springer.com/tdm"
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [],
+    "published-print": {
+      "date-parts": [
+        [
+          1982
+        ]
+      ]
+    },
+    "DOI": "10.1007/978-1-4612-5717-2",
+    "type": "book",
+    "created": {
+      "date-parts": [
+        [
+          2011,
+          10,
+          8
+        ]
+      ],
+      "date-time": "2011-10-08T00:53:58Z",
+      "timestamp": 1318035238000
+    },
+    "source": "Crossref",
+    "is-referenced-by-count": 1,
+    "title": [
+      "Emil Artin Collected Papers"
+    ],
+    "prefix": "10.1007",
+    "member": "297",
+    "container-title": [],
+    "original-title": [],
+    "language": "de",
+    "link": [
+      {
+        "URL": "http://link.springer.com/content/pdf/10.1007/978-1-4612-5717-2.pdf",
+        "content-type": "application/pdf",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "http://link.springer.com/content/pdf/10.1007/978-1-4612-5717-2",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2019,
+          4,
+          5
+        ]
+      ],
+      "date-time": "2019-04-05T21:37:29Z",
+      "timestamp": 1554500249000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "http://link.springer.com/10.1007/978-1-4612-5717-2"
+      }
+    },
+    "subtitle": [],
+    "editor": [
+      {
+        "given": "Serge",
+        "family": "Lang",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "editor",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "John T.",
+        "family": "Tate",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "editor",
+            "vocabulary": "crossref"
+          }
+        ]
+      }
+    ],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          1982
+        ]
+      ]
+    },
+    "ISBN": [
+      "9781461257189",
+      "9781461257172"
+    ],
+    "references-count": 0,
+    "URL": "https://doi.org/10.1007/978-1-4612-5717-2",
+    "relation": {},
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          1982
+        ]
+      ]
+    }
+  },
+  "ConwayGuy1996": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          22
+        ]
+      ],
+      "date-time": "2026-09-22T02:54:18Z",
+      "timestamp": 1790045658261,
+      "version": "4.0.1"
+    },
+    "publisher-location": "New York, NY",
+    "reference-count": 0,
+    "publisher": "Springer New York",
+    "isbn-type": [
+      {
+        "value": "9781461284888",
+        "type": "print"
+      },
+      {
+        "value": "9781461240723",
+        "type": "electronic"
+      }
+    ],
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              1996,
+              1,
+              1
+            ]
+          ],
+          "date-time": "1996-01-01T00:00:00Z",
+          "timestamp": 820454400000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "https://www.springer.com/tdm"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              1996,
+              1,
+              1
+            ]
+          ],
+          "date-time": "1996-01-01T00:00:00Z",
+          "timestamp": 820454400000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://www.springer.com/tdm"
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [],
+    "published-print": {
+      "date-parts": [
+        [
+          1996
+        ]
+      ]
+    },
+    "DOI": "10.1007/978-1-4612-4072-3",
+    "type": "book",
+    "created": {
+      "date-parts": [
+        [
+          2011,
+          9,
+          6
+        ]
+      ],
+      "date-time": "2011-09-06T11:07:20Z",
+      "timestamp": 1315307240000
+    },
+    "source": "Crossref",
+    "is-referenced-by-count": 357,
+    "title": [
+      "The Book of Numbers"
+    ],
+    "prefix": "10.1007",
+    "author": [
+      {
+        "given": "John H.",
+        "family": "Conway",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Richard K.",
+        "family": "Guy",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "297",
+    "published-online": {
+      "date-parts": [
+        [
+          2022,
+          7,
+          29
+        ]
+      ]
+    },
+    "container-title": [],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://link.springer.com/content/pdf/10.1007/978-1-4612-4072-3.pdf",
+        "content-type": "application/pdf",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://link.springer.com/content/pdf/10.1007/978-1-4612-4072-3",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2022,
+          7,
+          29
+        ]
+      ],
+      "date-time": "2022-07-29T02:50:14Z",
+      "timestamp": 1659063014000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://link.springer.com/10.1007/978-1-4612-4072-3"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          1996
+        ]
+      ]
+    },
+    "ISBN": [
+      "9781461284888",
+      "9781461240723"
+    ],
+    "references-count": 0,
+    "URL": "https://doi.org/10.1007/978-1-4612-4072-3",
+    "relation": {},
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          1996
+        ]
+      ]
+    }
+  },
+  "GuptaMurty1984": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          4,
+          14
+        ]
+      ],
+      "date-time": "2026-04-14T03:47:20Z",
+      "timestamp": 1776138440341,
+      "version": "3.50.1"
+    },
+    "reference-count": 8,
+    "publisher": "Springer Science and Business Media LLC",
+    "issue": "1",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              1984,
+              2,
+              1
+            ]
+          ],
+          "date-time": "1984-02-01T00:00:00Z",
+          "timestamp": 444441600000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "http://www.springer.com/tdm"
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "Invent Math"
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          1984,
+          2
+        ]
+      ]
+    },
+    "DOI": "10.1007/bf01388719",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2005,
+          4,
+          2
+        ]
+      ],
+      "date-time": "2005-04-02T08:28:09Z",
+      "timestamp": 1112430489000
+    },
+    "page": "127-130",
+    "source": "Crossref",
+    "is-referenced-by-count": 78,
+    "title": [
+      "A remark on Artin's conjecture"
+    ],
+    "prefix": "10.1007",
+    "volume": "78",
+    "author": [
+      {
+        "given": "Rajiv",
+        "family": "Gupta",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "M. Ram",
+        "family": "Murty",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      }
+    ],
+    "member": "297",
+    "reference": [
+      {
+        "key": "CR1",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1007/978-1-4614-6294-1",
+        "volume-title": "The Collected Papers of Emil Artin",
+        "author": "E. Artin",
+        "year": "1965",
+        "unstructured": "Artin, E.: The Collected Papers of Emil Artin (S. Lang and J. Tate, Eds.), Reading, Mass.: Addison-Wesley 1965; Math. Rev.31, # 1159"
+      },
+      {
+        "key": "CR2",
+        "unstructured": "Bombieri, E.: Le grand crible dans la th\u00e9orie analytique des nombres, Ast\u00e9risque 18, Societ\u00e9 Mathematique de France, 1974"
+      },
+      {
+        "key": "CR3",
+        "doi-asserted-by": "crossref",
+        "first-page": "197",
+        "DOI": "10.4064/aa-42-2-197-218",
+        "volume": "42",
+        "author": "E. Fouvry",
+        "year": "1983",
+        "unstructured": "Fouvry, E., Iwaniec, H.: Primes in arithmetic progressions. Acta Arithmetica42, 197?218 (1983)",
+        "journal-title": "Acta Arithmetica"
+      },
+      {
+        "key": "CR4",
+        "unstructured": "Gupta, R., Ram Murty, M.: Primitive points on elliptic curves (to appear)"
+      },
+      {
+        "key": "CR5",
+        "first-page": "209",
+        "volume": "225",
+        "author": "C. Hooley",
+        "year": "1967",
+        "unstructured": "Hooley, C.: On Artin's conjecture. J. Reine Angew. Math.225, 209?220 (1967)",
+        "journal-title": "J. Reine Angew. Math."
+      },
+      {
+        "key": "CR6",
+        "doi-asserted-by": "crossref",
+        "first-page": "307",
+        "DOI": "10.4064/aa-37-1-307-320",
+        "volume": "37",
+        "author": "H. Iwaniec",
+        "year": "1980",
+        "unstructured": "Iwaniec, H.: A new form of error term in the linear sieve, Acta Arith.37, 307?320 (1980)",
+        "journal-title": "Acta Arith."
+      },
+      {
+        "key": "CR7",
+        "doi-asserted-by": "crossref",
+        "first-page": "171",
+        "DOI": "10.4064/aa-36-2-171-202",
+        "volume": "36",
+        "author": "H. Iwaniec",
+        "year": "1980",
+        "unstructured": "Iwaniec, H.: Rosser's sieve. Acta Arith.36, 171?202 (1980)",
+        "journal-title": "Acta Arith."
+      },
+      {
+        "key": "CR8",
+        "doi-asserted-by": "crossref",
+        "first-page": "289",
+        "DOI": "10.1090/S0002-9904-1977-14310-3",
+        "volume": "83",
+        "author": "S. Lang",
+        "year": "1977",
+        "unstructured": "Lang, S., Trotter, H.: Primitive points on elliptic curves. Bull., Amer. Math. Soc.83, 289?292 (1977)",
+        "journal-title": "Bull., Amer. Math. Soc."
+      }
+    ],
+    "container-title": [
+      "Inventiones Mathematicae"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "http://link.springer.com/article/10.1007/BF01388719/fulltext.html",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "http://link.springer.com/content/pdf/10.1007/BF01388719.pdf",
+        "content-type": "application/pdf",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "http://link.springer.com/article/10.1007/BF01388719/fulltext.html",
+        "content-type": "text/html",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "http://link.springer.com/content/pdf/10.1007/BF01388719",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2019,
+          5,
+          2
+        ]
+      ],
+      "date-time": "2019-05-02T16:23:13Z",
+      "timestamp": 1556814193000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "http://link.springer.com/10.1007/BF01388719"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          1984,
+          2
+        ]
+      ]
+    },
+    "references-count": 8,
+    "journal-issue": {
+      "issue": "1",
+      "published-print": {
+        "date-parts": [
+          [
+            1984,
+            2
+          ]
+        ]
+      }
+    },
+    "alternative-id": [
+      "BF01388719"
+    ],
+    "URL": "https://doi.org/10.1007/bf01388719",
+    "relation": {},
+    "ISSN": [
+      "0020-9910",
+      "1432-1297"
+    ],
+    "issn-type": [
+      {
+        "value": "0020-9910",
+        "type": "print"
+      },
+      {
+        "value": "1432-1297",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          1984,
+          2
+        ]
+      ]
+    }
+  },
+  "HeathBrown1986": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          7,
+          2
+        ]
+      ],
+      "date-time": "2026-07-02T10:55:24Z",
+      "timestamp": 1782989724732,
+      "version": "3.54.5"
+    },
+    "reference-count": 0,
+    "publisher": "Oxford University Press (OUP)",
+    "issue": "1",
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "Q J Math"
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          1986
+        ]
+      ]
+    },
+    "DOI": "10.1093/qmath/37.1.27",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2007,
+          1,
+          5
+        ]
+      ],
+      "date-time": "2007-01-05T04:40:41Z",
+      "timestamp": 1167972041000
+    },
+    "page": "27-38",
+    "source": "Crossref",
+    "is-referenced-by-count": 150,
+    "title": [
+      "ARTIN'S CONJECTURE FOR PRIMITIVE ROOTS"
+    ],
+    "prefix": "10.1093",
+    "volume": "37",
+    "author": [
+      {
+        "given": "D. R.",
+        "family": "HEATH-BROWN",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "286",
+    "container-title": [
+      "The Quarterly Journal of Mathematics"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "http://academic.oup.com/qjmath/article-pdf/37/1/27/4354561/37-1-27.pdf",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2017,
+          8,
+          23
+        ]
+      ],
+      "date-time": "2017-08-23T22:30:39Z",
+      "timestamp": 1503527439000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://academic.oup.com/qjmath/article-lookup/doi/10.1093/qmath/37.1.27"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          1986
+        ]
+      ]
+    },
+    "references-count": 0,
+    "journal-issue": {
+      "issue": "1",
+      "published-print": {
+        "date-parts": [
+          [
+            1986
+          ]
+        ]
+      }
+    },
+    "URL": "https://doi.org/10.1093/qmath/37.1.27",
+    "relation": {},
+    "ISSN": [
+      "0033-5606",
+      "1464-3847"
+    ],
+    "issn-type": [
+      {
+        "value": "0033-5606",
+        "type": "print"
+      },
+      {
+        "value": "1464-3847",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          1986
+        ]
+      ]
+    }
+  },
+  "Hooley1967": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          4,
+          23
+        ]
+      ],
+      "date-time": "2026-04-23T14:49:30Z",
+      "timestamp": 1776955770243,
+      "version": "3.51.4"
+    },
+    "reference-count": 0,
+    "publisher": "Walter de Gruyter GmbH",
+    "issue": "225",
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [],
+    "published-print": {
+      "date-parts": [
+        [
+          1967,
+          1,
+          1
+        ]
+      ]
+    },
+    "DOI": "10.1515/crll.1967.225.209",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2009,
+          12,
+          14
+        ]
+      ],
+      "date-time": "2009-12-14T17:13:54Z",
+      "timestamp": 1260810834000
+    },
+    "page": "209-220",
+    "source": "Crossref",
+    "is-referenced-by-count": 64,
+    "title": [
+      "On Artin's conjecture."
+    ],
+    "prefix": "10.1515",
+    "volume": "1967",
+    "member": "374",
+    "container-title": [
+      "Journal f\u00fcr die reine und angewandte Mathematik (Crelles Journal)"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "http://www.degruyter.com/view/j/crll.1967.1967.issue-225/crll.1967.225.209/crll.1967.225.209.xml",
+        "content-type": "text/html",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://www.degruyter.com/document/doi/10.1515/crll.1967.225.209/pdf",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2021,
+          4,
+          21
+        ]
+      ],
+      "date-time": "2021-04-21T23:02:29Z",
+      "timestamp": 1619046149000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://www.degruyter.com/document/doi/10.1515/crll.1967.225.209/html"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          1967,
+          1,
+          1
+        ]
+      ]
+    },
+    "references-count": 0,
+    "journal-issue": {
+      "issue": "225"
+    },
+    "URL": "https://doi.org/10.1515/crll.1967.225.209",
+    "relation": {},
+    "ISSN": [
+      "0075-4102",
+      "1435-5345"
+    ],
+    "issn-type": [
+      {
+        "value": "0075-4102",
+        "type": "print"
+      },
+      {
+        "value": "1435-5345",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          1967,
+          1,
+          1
+        ]
+      ]
+    }
+  },
+  "Lenstra1977": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          7,
+          13
+        ]
+      ],
+      "date-time": "2026-07-13T23:28:44Z",
+      "timestamp": 1783985324533,
+      "version": "3.55.0"
+    },
+    "reference-count": 32,
+    "publisher": "Springer Science and Business Media LLC",
+    "issue": "1",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              1977,
+              12,
+              1
+            ]
+          ],
+          "date-time": "1977-12-01T00:00:00Z",
+          "timestamp": 249782400000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "http://www.springer.com/tdm"
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "Invent Math"
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          1977,
+          12
+        ]
+      ]
+    },
+    "DOI": "10.1007/bf01389788",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2005,
+          4,
+          2
+        ]
+      ],
+      "date-time": "2005-04-02T08:16:44Z",
+      "timestamp": 1112429804000
+    },
+    "page": "201-224",
+    "source": "Crossref",
+    "is-referenced-by-count": 90,
+    "title": [
+      "On Artin's conjecture and Euclid's algorithm in global fields"
+    ],
+    "prefix": "10.1007",
+    "volume": "42",
+    "author": [
+      {
+        "suffix": "Jr.",
+        "given": "H. W.",
+        "family": "Lenstra",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "297",
+    "reference": [
+      {
+        "key": "BF01389788_CR1",
+        "first-page": "139",
+        "volume": "274/275",
+        "author": "A. Aigner",
+        "year": "1975",
+        "unstructured": "Aigner, A.: Quadratische und kubische Restkriterien f\u00fcr das Auftreten einer Fibonacci-Primitivwurzel. J. reine angew. Math.274/275, 139\u2013140 (1975)",
+        "journal-title": "J. reine angew. Math."
+      },
+      {
+        "key": "BF01389788_CR2",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1007/978-1-4614-6294-1",
+        "volume-title": "Collected papers",
+        "author": "E. Artin",
+        "year": "1965",
+        "unstructured": "Artin, E.: Collected papers. Reading, Mass.: Addison-Wesley 1965"
+      },
+      {
+        "key": "BF01389788_CR3",
+        "doi-asserted-by": "crossref",
+        "first-page": "476",
+        "DOI": "10.1007/BF01594189",
+        "volume": "114",
+        "author": "H. Bilharz",
+        "year": "1937",
+        "unstructured": "Bilharz, H.: Primdivisoren mit vorgegebener Primitivwurzel. Math. Ann.114, 476\u2013492 (1937)",
+        "journal-title": "Math. Ann."
+      },
+      {
+        "key": "BF01389788_CR4",
+        "volume-title": "Counting points on curves over finite fields (d'apr\u00e8s S.A. Stepanov), S\u00e9m. Bourbaki",
+        "author": "E. Bombieri",
+        "year": "1974",
+        "unstructured": "Bombieri, E.: Counting points on curves over finite fields (d'apr\u00e8s S.A. Stepanov), S\u00e9m. Bourbaki25 (1973), exp. 430, Lecture Notes in Mathematics383. Berlin-Heidelberg-New York: Springer 1974"
+      },
+      {
+        "key": "BF01389788_CR5",
+        "doi-asserted-by": "crossref",
+        "first-page": "481",
+        "DOI": "10.1080/00927877508822057",
+        "volume": "3",
+        "author": "G. Cooke",
+        "year": "1975",
+        "unstructured": "Cooke, G., Weinberger, P.J.: On the construction of division chains in algebraic number fields, with applications toSL 2. Commun. Algebra3, 481\u2013524 (1975)",
+        "journal-title": "Commun. Algebra"
+      },
+      {
+        "key": "BF01389788_CR6",
+        "first-page": "431",
+        "volume": "149",
+        "author": "L.J. Goldstein",
+        "year": "1970",
+        "unstructured": "Goldstein, L.J.: Analogues of Artin's conjecture. Trans. Amer. math. Soc.149, 431\u2013442 (1970); Bull. Amer. math. Soc.74, 517\u2013519 (1968)",
+        "journal-title": "Trans. Amer. math. Soc."
+      },
+      {
+        "key": "BF01389788_CR7",
+        "doi-asserted-by": "crossref",
+        "first-page": "342",
+        "DOI": "10.1080/00029890.1971.11992757",
+        "volume": "78",
+        "author": "L.J. Goldstein",
+        "year": "1971",
+        "unstructured": "Goldstein, L.J.: Density questions in algebraic number theory. Amer. math. Monthly78, 342\u2013351 (1971)",
+        "journal-title": "Amer. math. Monthly"
+      },
+      {
+        "key": "BF01389788_CR8",
+        "doi-asserted-by": "crossref",
+        "first-page": "103",
+        "DOI": "10.1090/pspum/024/0337903",
+        "volume": "24",
+        "author": "L.J. Goldstein",
+        "year": "1973",
+        "unstructured": "Goldstein, L.J.: Some remarks on arithmetic density questions. Proc. Symp. Pure Math.24 (Analytic number theory), 103\u2013110, Amer. math. Soc. 1973",
+        "journal-title": "Proc. Symp. Pure Math."
+      },
+      {
+        "key": "BF01389788_CR9",
+        "unstructured": "Hasse, H.: \u00dcber die Artinsche Vermutung und verwandte Dichtefragen. Ann. Acad. Sci. Fennicae, Ser. A,116 (1952)"
+      },
+      {
+        "key": "BF01389788_CR10",
+        "doi-asserted-by": "crossref",
+        "first-page": "207",
+        "DOI": "10.1017/S030500410001954X",
+        "volume": "33",
+        "author": "H.A. Heilbronn",
+        "year": "1937",
+        "unstructured": "Heilbronn, H.A.: On an inequality in the elementary theory of numbers. Proc. Cambridge Philos. Soc.33, 207\u2013209 (1937)",
+        "journal-title": "Proc. Cambridge Philos. Soc."
+      },
+      {
+        "key": "BF01389788_CR11",
+        "first-page": "209",
+        "volume": "225",
+        "author": "C. Hooley",
+        "year": "1967",
+        "unstructured": "Hooley, C.: On Artin's conjecture. J. reine angew. Math.225, 209\u2013220 (1967)",
+        "journal-title": "J. reine angew. Math."
+      },
+      {
+        "key": "BF01389788_CR12",
+        "volume-title": "Applications of sieve methods to the theory of numbers",
+        "author": "C. Hooley",
+        "year": "1976",
+        "unstructured": "Hooley, C.: Applications of sieve methods to the theory of numbers. Cambridge: Cambridge University Press 1976"
+      },
+      {
+        "key": "BF01389788_CR13",
+        "volume-title": "Algebraic number theory",
+        "author": "S. Lang",
+        "year": "1970",
+        "unstructured": "Lang, S.: Algebraic number theory. Reading, Mass.: Addison-Wesley 1970"
+      },
+      {
+        "key": "BF01389788_CR14",
+        "series-title": "Essays in honor of George P\u00f3lya",
+        "first-page": "202",
+        "volume-title": "Studies in mathematical analysis and related topics",
+        "author": "D.H. Lehmer",
+        "year": "1962",
+        "unstructured": "Lehmer, D.H., Lehmer, Emma: Heuristics, anyone?, pp. 202\u2013210. In: G. Szeg\u00f6 et al. (eds), Studies in mathematical analysis and related topics, Essays in honor of George P\u00f3lya, Stanford University Press, Stanford 1962"
+      },
+      {
+        "key": "BF01389788_CR15",
+        "unstructured": "Lenstra, Jr., H.W.: Perfect arithmetic codes of order one. In preparation"
+      },
+      {
+        "key": "BF01389788_CR16",
+        "doi-asserted-by": "crossref",
+        "first-page": "113",
+        "DOI": "10.4064/aa-29-2-113-146",
+        "volume": "29",
+        "author": "K.R. Matthews",
+        "year": "1976",
+        "unstructured": "Matthews, K.R.: A generalization of Artin's conjecture for primitive roots. Acta arithmetica29, 113\u2013146 (1976)",
+        "journal-title": "Acta arithmetica"
+      },
+      {
+        "key": "BF01389788_CR17",
+        "first-page": "83",
+        "volume": "57",
+        "author": "H. M\u00f6ller",
+        "year": "1972",
+        "unstructured": "M\u00f6ller, H.: Zur Verteilung der Restindizes ganzer Zahlen. Ber. Ges. Math. Datenverarbeitung, Bonn,57, 83\u201398 (1972)",
+        "journal-title": "Ber. Ges. Math. Datenverarbeitung, Bonn"
+      },
+      {
+        "key": "BF01389788_CR18",
+        "volume-title": "Primzahlverteilung",
+        "author": "K. Prachar",
+        "year": "1957",
+        "unstructured": "Prachar, K.: Primzahlverteilung. Berlin-Heidelberg-New York: Springer 1957"
+      },
+      {
+        "key": "BF01389788_CR19",
+        "doi-asserted-by": "crossref",
+        "first-page": "105",
+        "DOI": "10.4064/aa-26-1-105-113",
+        "volume": "26",
+        "author": "C. Queen",
+        "year": "1974",
+        "unstructured": "Queen, C.: Arithmetic euclidean rings. Acta arithmetica26, 105\u2013113 (1974)",
+        "journal-title": "Acta arithmetica"
+      },
+      {
+        "key": "BF01389788_CR20",
+        "doi-asserted-by": "publisher",
+        "first-page": "51",
+        "DOI": "10.1007/BF01229702",
+        "volume": "26",
+        "author": "C. Queen",
+        "year": "1975",
+        "unstructured": "Queen, C.: Some arithmetic properties of subrings of function fields over finite fields. Arch. Math.26, 51\u201356 (1975)",
+        "journal-title": "Arch. Math."
+      },
+      {
+        "key": "BF01389788_CR21",
+        "doi-asserted-by": "crossref",
+        "first-page": "107",
+        "DOI": "10.1002/mana.19590200110",
+        "volume": "20",
+        "author": "G.J. Rieger",
+        "year": "1959",
+        "unstructured": "Rieger, G.J.: Verallgemeinerung eines Satzes von Romanov und anderes. Math. Nachr.20, 107\u2013122 (1959)",
+        "journal-title": "Math. Nachr."
+      },
+      {
+        "key": "BF01389788_CR22",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Ryser, H.J.: Combinatorial mathematics. Carus Math. Monographs14, Math. Ass. of America, 1963",
+        "DOI": "10.5948/UPO9781614440147"
+      },
+      {
+        "key": "BF01389788_CR23",
+        "doi-asserted-by": "publisher",
+        "first-page": "282",
+        "DOI": "10.1016/0021-8693(71)90110-4",
+        "volume": "19",
+        "author": "P. Samuel",
+        "year": "1971",
+        "unstructured": "Samuel, P.: About euclidean rings. J. Algebra19, 282\u2013301 (1971)",
+        "journal-title": "J. Algebra"
+      },
+      {
+        "key": "BF01389788_CR24",
+        "doi-asserted-by": "crossref",
+        "first-page": "163",
+        "DOI": "10.1080/00150517.1972.12430955",
+        "volume": "10",
+        "author": "D. Shanks",
+        "year": "1972",
+        "unstructured": "Shanks, D.: Fibonacci primitive roots. Fibonacci Qu.10, 163\u2013168, 181 (1972); cf. ibidem Shanks, D.: Fibonacci primitive roots. Fibonacci Qu.11, 159\u2013160 (1973)",
+        "journal-title": "Fibonacci Qu."
+      },
+      {
+        "key": "BF01389788_CR25",
+        "doi-asserted-by": "crossref",
+        "first-page": "1162",
+        "DOI": "10.2307/2005768",
+        "volume": "29",
+        "author": "D. Shanks",
+        "year": "1975",
+        "unstructured": "Shanks, D.: Review of: S. Yates, \u201cPrime period lengths\u201d. Math. Comp.29, 1162\u20131163 (1975)",
+        "journal-title": "Math. Comp."
+      },
+      {
+        "key": "BF01389788_CR26",
+        "doi-asserted-by": "crossref",
+        "first-page": "1164",
+        "DOI": "10.2307/2005769",
+        "volume": "29",
+        "author": "D. Shanks",
+        "year": "1975",
+        "unstructured": "Shanks, D.: Review of: R. Baillie, \u201cData on Artin's conjecture\u201d. Math. Comp.29, 1164\u20131165 (1975)",
+        "journal-title": "Math. Comp."
+      },
+      {
+        "key": "BF01389788_CR27",
+        "first-page": "124",
+        "volume": "112",
+        "author": "A.I. Vinogradov",
+        "year": "1971",
+        "unstructured": "Vinogradov, A.I.: ArtinL-series and his conjectures. Proc. Steklov Inst. Math.112, 124\u2013142 (1971)",
+        "journal-title": "Proc. Steklov Inst. Math."
+      },
+      {
+        "key": "BF01389788_CR28",
+        "volume-title": "Sur les courbes alg\u00e9briques et les vari\u00e9t\u00e9s qui s'en d\u00e9duisent",
+        "author": "A. Weil",
+        "year": "1948",
+        "unstructured": "Weil, A.: Sur les courbes alg\u00e9briques et les vari\u00e9t\u00e9s qui s'en d\u00e9duisent. Paris: Hermann 1948"
+      },
+      {
+        "key": "BF01389788_CR29",
+        "first-page": "49",
+        "volume": "35",
+        "author": "P.J. Weinberger",
+        "year": "1972",
+        "unstructured": "Weinberger, P.J.: A counterexample to an analogue of Artin's conjecture. Proc. Amer. math. Soc.35, 49\u201352 (1972)",
+        "journal-title": "Proc. Amer. math. Soc."
+      },
+      {
+        "key": "BF01389788_CR30",
+        "doi-asserted-by": "crossref",
+        "first-page": "321",
+        "DOI": "10.1090/pspum/024/0337902",
+        "volume": "24",
+        "author": "P.J. Weinberger",
+        "year": "1973",
+        "unstructured": "Weinberger, P.J.: On euclidean rings of algebraic integers. Proc. Symp. Pure Math.24 (Analytic number theory), 321\u2013332, Amer. math. Soc., 1973",
+        "journal-title": "Proc. Symp. Pure Math."
+      },
+      {
+        "key": "BF01389788_CR31",
+        "volume-title": "Tables of indices and primitive roots",
+        "author": "A.E. Western",
+        "year": "1968",
+        "unstructured": "Western, A.E., Miller, J.C.P.: Tables of indices and primitive roots. Cambridge: University Press 1968"
+      },
+      {
+        "key": "BF01389788_CR32",
+        "first-page": "396",
+        "volume": "15",
+        "author": "J.W. Wrench Jr.",
+        "year": "1961",
+        "unstructured": "Wrench, Jr., J.W.: Evaluation of Artin's constant and the twin prime constant. Math. Comp.15, 396\u2013398 (1961)",
+        "journal-title": "Math. Comp."
+      }
+    ],
+    "container-title": [
+      "Inventiones mathematicae"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "http://link.springer.com/article/10.1007/BF01389788/fulltext.html",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "http://link.springer.com/content/pdf/10.1007/BF01389788.pdf",
+        "content-type": "application/pdf",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "http://link.springer.com/article/10.1007/BF01389788/fulltext.html",
+        "content-type": "text/html",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "http://link.springer.com/content/pdf/10.1007/BF01389788",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      },
+      {
+        "URL": "http://link.springer.com/content/pdf/10.1007/BF01389788.pdf",
+        "content-type": "application/pdf",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2024,
+          12,
+          30
+        ]
+      ],
+      "date-time": "2024-12-30T06:19:28Z",
+      "timestamp": 1735539568000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "http://link.springer.com/10.1007/BF01389788"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          1977,
+          12
+        ]
+      ]
+    },
+    "references-count": 32,
+    "journal-issue": {
+      "issue": "1",
+      "published-print": {
+        "date-parts": [
+          [
+            1977,
+            12
+          ]
+        ]
+      }
+    },
+    "alternative-id": [
+      "BF01389788"
+    ],
+    "URL": "https://doi.org/10.1007/bf01389788",
+    "relation": {},
+    "ISSN": [
+      "0020-9910",
+      "1432-1297"
+    ],
+    "issn-type": [
+      {
+        "value": "0020-9910",
+        "type": "print"
+      },
+      {
+        "value": "1432-1297",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          1977,
+          12
+        ]
+      ]
+    }
+  },
+  "Matthews1976": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          4,
+          21
+        ]
+      ],
+      "date-time": "2026-04-21T10:32:32Z",
+      "timestamp": 1776767552476,
+      "version": "3.51.2"
+    },
+    "reference-count": 0,
+    "publisher": "Institute of Mathematics, Polish Academy of Sciences",
+    "issue": "2",
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "Acta Arith."
+    ],
+    "DOI": "10.4064/aa-29-2-113-146",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2017,
+          9,
+          25
+        ]
+      ],
+      "date-time": "2017-09-25T15:00:39Z",
+      "timestamp": 1506351639000
+    },
+    "page": "113-146",
+    "source": "Crossref",
+    "is-referenced-by-count": 19,
+    "title": [
+      "A generalisation of Artin's conjecture for primitive roots"
+    ],
+    "prefix": "10.4064",
+    "volume": "29",
+    "author": [
+      {
+        "given": "K.",
+        "family": "Matthews",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      }
+    ],
+    "member": "2508",
+    "published-online": {
+      "date-parts": [
+        [
+          1976
+        ]
+      ]
+    },
+    "container-title": [
+      "Acta Arithmetica"
+    ],
+    "original-title": [],
+    "language": "en",
+    "deposited": {
+      "date-parts": [
+        [
+          2017,
+          9,
+          26
+        ]
+      ],
+      "date-time": "2017-09-26T10:21:59Z",
+      "timestamp": 1506421319000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "http://www.impan.pl/get/doi/10.4064/aa-29-2-113-146"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          1976
+        ]
+      ]
+    },
+    "references-count": 0,
+    "journal-issue": {
+      "issue": "2",
+      "published-print": {
+        "date-parts": [
+          [
+            1976
+          ]
+        ]
+      }
+    },
+    "URL": "https://doi.org/10.4064/aa-29-2-113-146",
+    "relation": {},
+    "ISSN": [
+      "0065-1036",
+      "1730-6264"
+    ],
+    "issn-type": [
+      {
+        "value": "0065-1036",
+        "type": "print"
+      },
+      {
+        "value": "1730-6264",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          1976
+        ]
+      ]
+    }
+  },
+  "BaldII": {
+    "data": {
+      "id": "10.5281/zenodo.22865343",
+      "type": "dois",
+      "attributes": {
+        "doi": "10.5281/zenodo.22865343",
+        "prefix": "10.5281",
+        "suffix": "zenodo.22865343",
+        "identifiers": [],
+        "alternateIdentifiers": [],
+        "creators": [
+          {
+            "name": "Bald, Joshua",
+            "nameType": "Personal",
+            "givenName": "Joshua",
+            "familyName": "Bald",
+            "nameIdentifiers": [
+              {
+                "nameIdentifier": "0009-0002-1317-6489",
+                "nameIdentifierScheme": "ORCID"
+              }
+            ],
+            "affiliation": []
+          }
+        ],
+        "titles": [
+          {
+            "title": "QUADRATIC EXCLUSION LAWS FOR CONSECUTIVE ARTIN PRIMES IN ARBITRARY BASES"
+          }
+        ],
+        "publisher": "Zenodo",
+        "container": {},
+        "publicationYear": 2026,
+        "subjects": [],
+        "contributors": [],
+        "dates": [
+          {
+            "date": "2026-09-21",
+            "dateType": "Issued"
+          }
+        ],
+        "language": "en",
+        "types": {
+          "ris": "GEN",
+          "bibtex": "misc",
+          "citeproc": "article",
+          "schemaOrg": "CreativeWork",
+          "resourceType": "",
+          "resourceTypeGeneral": "Preprint"
+        },
+        "relatedIdentifiers": [
+          {
+            "relationType": "HasVersion",
+            "relatedIdentifier": "10.5281/zenodo.22865344",
+            "relatedIdentifierType": "DOI"
+          }
+        ],
+        "relatedItems": [],
+        "sizes": [],
+        "formats": [],
+        "version": null,
+        "rightsList": [
+          {
+            "rights": "Creative Commons Attribution 4.0 International",
+            "rightsUri": "https://creativecommons.org/licenses/by/4.0/legalcode",
+            "schemeUri": "https://spdx.org/licenses/",
+            "rightsIdentifier": "cc-by-4.0",
+            "rightsIdentifierScheme": "SPDX"
+          }
+        ],
+        "descriptions": [
+          {
+            "description": "Abstract. Let a \u2265 2 be a non-square integer with squarefree part d, and say that an oddprime p is Artin base a if a is a primitive root modulo p. (We restrict to odd primes throughout:modulo 2 every odd integer trivially has full multiplicative order, and the quadratic obstructionbelow fails there.) Membership in Aa forces the quadratic character value \u03c7a(p) = \u22121, andsince \u03c7a has conductor f, this necessary condition depends only on p mod f. We determine,for every non-square base a, the exact set of gap classes on which the resulting quadraticobstruction forbids two primes from both being Artin base a. The forbidden classes themselvesare not new: Tinkov\u00b4a, Waxman and Zindulka [15], studying Artin prime pairs at a fixed evenshift, gave sufficient conditions on (d, g) for the pair set to be empty, and we have verified thattheir conditions and our classification agree on every non-square base a \u2264 80, the exceptionalsquarefree part d = 5 included. Our contribution to the classification is therefore one ofmethod and of completeness rather than of discovery: we derive the classes from an exactcounting identity, obtain the converse direction \u2014 that outside the listed cases no quadraticexclusion class exists \u2014 as a theorem rather than a conjecture, cover bases excluded fromtheir hypothesis g \u2208 H1 (perfect powers such as a = 8, 27, 32), and machine-check the keysteps in Lean 4. Two mechanisms produce such exclusion classes. The first is reversal:\u03c7a(q) = \u2212\u03c7a(p) for all admissible p, q = p + g, so one of the two primes is a quadratic residuebase a; we classify the reversing classes completely via the factorization of the discriminantof Q(\u221aa) into prime discriminants. The second, operating when no reversing class exists,is inadmissibility. Its analysis rests on an exact count, and we prove the general identity4N\u2212\u2212(g) = T(g) \u2212 A(g) \u2212 B(g) + S(g) valid for every modulus, prime or composite, fromwhich the prime-conductor evaluation N\u2212\u2212(g) = (d \u2212 3 + 2\u03c7(g))/4 for g \u0338\u2261 0 (mod d) (andN\u2212\u2212(0) = (d \u2212 1)/2) follows as a special case. The resulting complete dichotomy is: basea admits a quadratic exclusion class if and only if d is even, d \u2261 3 (mod 4), 3 | d, or d = 5.We emphasise throughout that the quadratic obstruction is necessary but not sufficient forArtin status, so an exclusion class is a proof of impossibility, while the absence of one isnot a proof of possibility. The classification is verified by exhaustive computation for allnon-square 2 \u2264 a \u2264 80, and the exclusion laws hold without exception across 84,981,870base\u2013pair incidences below 109. The counting identity, together with the d = 5 and d = 13cases of the prime-conductor count, is additionally machine-checked in Lean 4.We then measure, for eleven bases, the consecutive-pair Artin correlation \u03b4(a) over all50,847,531 consecutive prime pairs below 109 with smaller member at least 5. The exclusionweight w correlates with |\u03b4| at r = 0.646, but this association is confounded with the conductor:r(log f, |\u03b4|) = \u22120.957, the partial correlation of w given log f is only 0.136, and the three baseswith no exclusion classes still carry |\u03b4| up to 0.043. Restricting \u03b4 to gap classes outside theexclusion set yields a positive value for all eight bases that possess such classes. Among thequantities compared, the conductor of \u03c7a is the stronger descriptive predictor of the globalcorrelation; we do not claim it is the operative mechanism.",
+            "descriptionType": "Abstract"
+          }
+        ],
+        "geoLocations": [],
+        "fundingReferences": [],
+        "xml": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00L21ldGFkYXRhLnhzZCI+CiAgPGlkZW50aWZpZXIgaWRlbnRpZmllclR5cGU9IkRPSSI+MTAuNTI4MS9aRU5PRE8uMjI4NjUzNDM8L2lkZW50aWZpZXI+CiAgPGNyZWF0b3JzPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPkJhbGQsIEpvc2h1YTwvY3JlYXRvck5hbWU+CiAgICAgIDxnaXZlbk5hbWU+Sm9zaHVhPC9naXZlbk5hbWU+CiAgICAgIDxmYW1pbHlOYW1lPkJhbGQ8L2ZhbWlseU5hbWU+CiAgICAgIDxuYW1lSWRlbnRpZmllciBuYW1lSWRlbnRpZmllclNjaGVtZT0iT1JDSUQiIHNjaGVtZVVSST0iIj4wMDA5LTAwMDItMTMxNy02NDg5PC9uYW1lSWRlbnRpZmllcj4KICAgIDwvY3JlYXRvcj4KICA8L2NyZWF0b3JzPgogIDx0aXRsZXM+CiAgICA8dGl0bGU+UVVBRFJBVElDIEVYQ0xVU0lPTiBMQVdTIEZPUiBDT05TRUNVVElWRSBBUlRJTiBQUklNRVMgSU4gQVJCSVRSQVJZIEJBU0VTPC90aXRsZT4KICA8L3RpdGxlcz4KICA8cHVibGlzaGVyPlplbm9kbzwvcHVibGlzaGVyPgogIDxwdWJsaWNhdGlvblllYXI+MjAyNjwvcHVibGljYXRpb25ZZWFyPgogIDxyZXNvdXJjZVR5cGUgcmVzb3VyY2VUeXBlR2VuZXJhbD0iUHJlcHJpbnQiLz4KICA8ZGF0ZXM+CiAgICA8ZGF0ZSBkYXRlVHlwZT0iSXNzdWVkIj4yMDI2LTA5LTIxPC9kYXRlPgogIDwvZGF0ZXM+CiAgPGxhbmd1YWdlPmVuPC9sYW5ndWFnZT4KICA8cmVsYXRlZElkZW50aWZpZXJzPgogICAgPHJlbGF0ZWRJZGVudGlmaWVyIHJlbGF0ZWRJZGVudGlmaWVyVHlwZT0iRE9JIiByZWxhdGlvblR5cGU9Ikhhc1ZlcnNpb24iPjEwLjUyODEvemVub2RvLjIyODY1MzQ0PC9yZWxhdGVkSWRlbnRpZmllcj4KICA8L3JlbGF0ZWRJZGVudGlmaWVycz4KICA8c2l6ZXMvPgogIDxmb3JtYXRzLz4KICA8dmVyc2lvbi8+CiAgPHJpZ2h0c0xpc3Q+CiAgICA8cmlnaHRzIHJpZ2h0c1VSST0iaHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LzQuMC9sZWdhbGNvZGUiIHJpZ2h0c0lkZW50aWZpZXI9ImNjLWJ5LTQuMCIgcmlnaHRzSWRlbnRpZmllclNjaGVtZT0iU1BEWCIgc2NoZW1lVVJJPSJodHRwczovL3NwZHgub3JnL2xpY2Vuc2VzLyI+Q3JlYXRpdmUgQ29tbW9ucyBBdHRyaWJ1dGlvbiA0LjAgSW50ZXJuYXRpb25hbDwvcmlnaHRzPgogIDwvcmlnaHRzTGlzdD4KICA8ZGVzY3JpcHRpb25zPgogICAgPGRlc2NyaXB0aW9uIGRlc2NyaXB0aW9uVHlwZT0iQWJzdHJhY3QiPkFic3RyYWN0LiBMZXQgYSDiiaUgMiBiZSBhIG5vbi1zcXVhcmUgaW50ZWdlciB3aXRoIHNxdWFyZWZyZWUgcGFydCBkLCBhbmQgc2F5IHRoYXQgYW4gb2RkcHJpbWUgcCBpcyBBcnRpbiBiYXNlIGEgaWYgYSBpcyBhIHByaW1pdGl2ZSByb290IG1vZHVsbyBwLiAoV2UgcmVzdHJpY3QgdG8gb2RkIHByaW1lcyB0aHJvdWdob3V0Om1vZHVsbyAyIGV2ZXJ5IG9kZCBpbnRlZ2VyIHRyaXZpYWxseSBoYXMgZnVsbCBtdWx0aXBsaWNhdGl2ZSBvcmRlciwgYW5kIHRoZSBxdWFkcmF0aWMgb2JzdHJ1Y3Rpb25iZWxvdyBmYWlscyB0aGVyZS4pIE1lbWJlcnNoaXAgaW4gQWEgZm9yY2VzIHRoZSBxdWFkcmF0aWMgY2hhcmFjdGVyIHZhbHVlIM+HYShwKSA9IOKIkjEsIGFuZHNpbmNlIM+HYSBoYXMgY29uZHVjdG9yIGYsIHRoaXMgbmVjZXNzYXJ5IGNvbmRpdGlvbiBkZXBlbmRzIG9ubHkgb24gcCBtb2QgZi4gV2UgZGV0ZXJtaW5lLGZvciBldmVyeSBub24tc3F1YXJlIGJhc2UgYSwgdGhlIGV4YWN0IHNldCBvZiBnYXAgY2xhc3NlcyBvbiB3aGljaCB0aGUgcmVzdWx0aW5nIHF1YWRyYXRpY29ic3RydWN0aW9uIGZvcmJpZHMgdHdvIHByaW1lcyBmcm9tIGJvdGggYmVpbmcgQXJ0aW4gYmFzZSBhLiBUaGUgZm9yYmlkZGVuIGNsYXNzZXMgdGhlbXNlbHZlc2FyZSBub3QgbmV3OiBUaW5rb3bCtGEsIFdheG1hbiBhbmQgWmluZHVsa2EgWzE1XSwgc3R1ZHlpbmcgQXJ0aW4gcHJpbWUgcGFpcnMgYXQgYSBmaXhlZCBldmVuc2hpZnQsIGdhdmUgc3VmZmljaWVudCBjb25kaXRpb25zIG9uIChkLCBnKSBmb3IgdGhlIHBhaXIgc2V0IHRvIGJlIGVtcHR5LCBhbmQgd2UgaGF2ZSB2ZXJpZmllZCB0aGF0dGhlaXIgY29uZGl0aW9ucyBhbmQgb3VyIGNsYXNzaWZpY2F0aW9uIGFncmVlIG9uIGV2ZXJ5IG5vbi1zcXVhcmUgYmFzZSBhIOKJpCA4MCwgdGhlIGV4Y2VwdGlvbmFsc3F1YXJlZnJlZSBwYXJ0IGQgPSA1IGluY2x1ZGVkLiBPdXIgY29udHJpYnV0aW9uIHRvIHRoZSBjbGFzc2lmaWNhdGlvbiBpcyB0aGVyZWZvcmUgb25lIG9mbWV0aG9kIGFuZCBvZiBjb21wbGV0ZW5lc3MgcmF0aGVyIHRoYW4gb2YgZGlzY292ZXJ5OiB3ZSBkZXJpdmUgdGhlIGNsYXNzZXMgZnJvbSBhbiBleGFjdGNvdW50aW5nIGlkZW50aXR5LCBvYnRhaW4gdGhlIGNvbnZlcnNlIGRpcmVjdGlvbiDigJQgdGhhdCBvdXRzaWRlIHRoZSBsaXN0ZWQgY2FzZXMgbm8gcXVhZHJhdGljZXhjbHVzaW9uIGNsYXNzIGV4aXN0cyDigJQgYXMgYSB0aGVvcmVtIHJhdGhlciB0aGFuIGEgY29uamVjdHVyZSwgY292ZXIgYmFzZXMgZXhjbHVkZWQgZnJvbXRoZWlyIGh5cG90aGVzaXMgZyDiiIggSDEgKHBlcmZlY3QgcG93ZXJzIHN1Y2ggYXMgYSA9IDgsIDI3LCAzMiksIGFuZCBtYWNoaW5lLWNoZWNrIHRoZSBrZXlzdGVwcyBpbiBMZWFuIDQuIFR3byBtZWNoYW5pc21zIHByb2R1Y2Ugc3VjaCBleGNsdXNpb24gY2xhc3Nlcy4gVGhlIGZpcnN0IGlzIHJldmVyc2FsOs+HYShxKSA9IOKIks+HYShwKSBmb3IgYWxsIGFkbWlzc2libGUgcCwgcSA9IHAgKyBnLCBzbyBvbmUgb2YgdGhlIHR3byBwcmltZXMgaXMgYSBxdWFkcmF0aWMgcmVzaWR1ZWJhc2UgYTsgd2UgY2xhc3NpZnkgdGhlIHJldmVyc2luZyBjbGFzc2VzIGNvbXBsZXRlbHkgdmlhIHRoZSBmYWN0b3JpemF0aW9uIG9mIHRoZSBkaXNjcmltaW5hbnRvZiBRKOKImmEpIGludG8gcHJpbWUgZGlzY3JpbWluYW50cy4gVGhlIHNlY29uZCwgb3BlcmF0aW5nIHdoZW4gbm8gcmV2ZXJzaW5nIGNsYXNzIGV4aXN0cyxpcyBpbmFkbWlzc2liaWxpdHkuIEl0cyBhbmFseXNpcyByZXN0cyBvbiBhbiBleGFjdCBjb3VudCwgYW5kIHdlIHByb3ZlIHRoZSBnZW5lcmFsIGlkZW50aXR5NE7iiJLiiJIoZykgPSBUKGcpIOKIkiBBKGcpIOKIkiBCKGcpICsgUyhnKSB2YWxpZCBmb3IgZXZlcnkgbW9kdWx1cywgcHJpbWUgb3IgY29tcG9zaXRlLCBmcm9td2hpY2ggdGhlIHByaW1lLWNvbmR1Y3RvciBldmFsdWF0aW9uIE7iiJLiiJIoZykgPSAoZCDiiJIgMyArIDLPhyhnKSkvNCBmb3IgZyDMuOKJoSAwIChtb2QgZCkgKGFuZE7iiJLiiJIoMCkgPSAoZCDiiJIgMSkvMikgZm9sbG93cyBhcyBhIHNwZWNpYWwgY2FzZS4gVGhlIHJlc3VsdGluZyBjb21wbGV0ZSBkaWNob3RvbXkgaXM6IGJhc2VhIGFkbWl0cyBhIHF1YWRyYXRpYyBleGNsdXNpb24gY2xhc3MgaWYgYW5kIG9ubHkgaWYgZCBpcyBldmVuLCBkIOKJoSAzIChtb2QgNCksIDMgfCBkLCBvciBkID0gNS5XZSBlbXBoYXNpc2UgdGhyb3VnaG91dCB0aGF0IHRoZSBxdWFkcmF0aWMgb2JzdHJ1Y3Rpb24gaXMgbmVjZXNzYXJ5IGJ1dCBub3Qgc3VmZmljaWVudCBmb3JBcnRpbiBzdGF0dXMsIHNvIGFuIGV4Y2x1c2lvbiBjbGFzcyBpcyBhIHByb29mIG9mIGltcG9zc2liaWxpdHksIHdoaWxlIHRoZSBhYnNlbmNlIG9mIG9uZSBpc25vdCBhIHByb29mIG9mIHBvc3NpYmlsaXR5LiBUaGUgY2xhc3NpZmljYXRpb24gaXMgdmVyaWZpZWQgYnkgZXhoYXVzdGl2ZSBjb21wdXRhdGlvbiBmb3IgYWxsbm9uLXNxdWFyZSAyIOKJpCBhIOKJpCA4MCwgYW5kIHRoZSBleGNsdXNpb24gbGF3cyBob2xkIHdpdGhvdXQgZXhjZXB0aW9uIGFjcm9zcyA4NCw5ODEsODcwYmFzZeKAk3BhaXIgaW5jaWRlbmNlcyBiZWxvdyAxMDkuIFRoZSBjb3VudGluZyBpZGVudGl0eSwgdG9nZXRoZXIgd2l0aCB0aGUgZCA9IDUgYW5kIGQgPSAxM2Nhc2VzIG9mIHRoZSBwcmltZS1jb25kdWN0b3IgY291bnQsIGlzIGFkZGl0aW9uYWxseSBtYWNoaW5lLWNoZWNrZWQgaW4gTGVhbiA0LldlIHRoZW4gbWVhc3VyZSwgZm9yIGVsZXZlbiBiYXNlcywgdGhlIGNvbnNlY3V0aXZlLXBhaXIgQXJ0aW4gY29ycmVsYXRpb24gzrQoYSkgb3ZlciBhbGw1MCw4NDcsNTMxIGNvbnNlY3V0aXZlIHByaW1lIHBhaXJzIGJlbG93IDEwOSB3aXRoIHNtYWxsZXIgbWVtYmVyIGF0IGxlYXN0IDUuIFRoZSBleGNsdXNpb253ZWlnaHQgdyBjb3JyZWxhdGVzIHdpdGggfM60fCBhdCByID0gMC42NDYsIGJ1dCB0aGlzIGFzc29jaWF0aW9uIGlzIGNvbmZvdW5kZWQgd2l0aCB0aGUgY29uZHVjdG9yOnIobG9nIGYsIHzOtHwpID0g4oiSMC45NTcsIHRoZSBwYXJ0aWFsIGNvcnJlbGF0aW9uIG9mIHcgZ2l2ZW4gbG9nIGYgaXMgb25seSAwLjEzNiwgYW5kIHRoZSB0aHJlZSBiYXNlc3dpdGggbm8gZXhjbHVzaW9uIGNsYXNzZXMgc3RpbGwgY2FycnkgfM60fCB1cCB0byAwLjA0My4gUmVzdHJpY3RpbmcgzrQgdG8gZ2FwIGNsYXNzZXMgb3V0c2lkZSB0aGVleGNsdXNpb24gc2V0IHlpZWxkcyBhIHBvc2l0aXZlIHZhbHVlIGZvciBhbGwgZWlnaHQgYmFzZXMgdGhhdCBwb3NzZXNzIHN1Y2ggY2xhc3Nlcy4gQW1vbmcgdGhlcXVhbnRpdGllcyBjb21wYXJlZCwgdGhlIGNvbmR1Y3RvciBvZiDPh2EgaXMgdGhlIHN0cm9uZ2VyIGRlc2NyaXB0aXZlIHByZWRpY3RvciBvZiB0aGUgZ2xvYmFsY29ycmVsYXRpb247IHdlIGRvIG5vdCBjbGFpbSBpdCBpcyB0aGUgb3BlcmF0aXZlIG1lY2hhbmlzbS48L2Rlc2NyaXB0aW9uPgogIDwvZGVzY3JpcHRpb25zPgo8L3Jlc291cmNlPgo=",
+        "url": "https://zenodo.org/doi/10.5281/zenodo.22865343",
+        "contentUrl": null,
+        "metadataVersion": 1,
+        "schemaVersion": "http://datacite.org/schema/kernel-4",
+        "source": "api",
+        "isActive": true,
+        "state": "findable",
+        "reason": null,
+        "viewCount": 0,
+        "viewsOverTime": [],
+        "downloadCount": 0,
+        "downloadsOverTime": [],
+        "referenceCount": 0,
+        "citationCount": 0,
+        "citationsOverTime": [],
+        "partCount": 0,
+        "partOfCount": 0,
+        "versionCount": 1,
+        "versionOfCount": 0,
+        "created": "2026-09-20T23:18:07.000Z",
+        "registered": "2026-09-20T23:18:07.000Z",
+        "published": "2026",
+        "updated": "2026-09-21T21:59:32.000Z"
+      },
+      "relationships": {
+        "client": {
+          "data": {
+            "id": "cern.zenodo",
+            "type": "clients"
+          }
+        },
+        "provider": {
+          "data": {
+            "id": "cern",
+            "type": "providers"
+          }
+        },
+        "media": {
+          "data": {
+            "id": "10.5281/zenodo.22865343",
+            "type": "media"
+          }
+        },
+        "references": {
+          "data": []
+        },
+        "citations": {
+          "data": []
+        },
+        "parts": {
+          "data": []
+        },
+        "partOf": {
+          "data": []
+        },
+        "versions": {
+          "data": [
+            {
+              "id": "10.5281/zenodo.22865344",
+              "type": "dois"
+            }
+          ]
+        },
+        "versionOf": {
+          "data": []
+        }
+      }
+    }
+  },
+  "GoldmakherMartinPeringuey2025": {
+    "data": {
+      "id": "10.48550/arxiv.2502.19601",
+      "type": "dois",
+      "attributes": {
+        "doi": "10.48550/arxiv.2502.19601",
+        "prefix": "10.48550",
+        "suffix": "arxiv.2502.19601",
+        "identifiers": [
+          {
+            "identifier": "2502.19601",
+            "identifierType": "arXiv"
+          }
+        ],
+        "alternateIdentifiers": [
+          {
+            "alternateIdentifierType": "arXiv",
+            "alternateIdentifier": "2502.19601"
+          }
+        ],
+        "creators": [
+          {
+            "name": "Goldmakher, Leo",
+            "nameType": "Personal",
+            "givenName": "Leo",
+            "familyName": "Goldmakher",
+            "affiliation": [],
+            "nameIdentifiers": []
+          },
+          {
+            "name": "Martin, Greg",
+            "nameType": "Personal",
+            "givenName": "Greg",
+            "familyName": "Martin",
+            "affiliation": [],
+            "nameIdentifiers": []
+          },
+          {
+            "name": "P\u00e9ringuey, Paul",
+            "nameType": "Personal",
+            "givenName": "Paul",
+            "familyName": "P\u00e9ringuey",
+            "affiliation": [],
+            "nameIdentifiers": []
+          }
+        ],
+        "titles": [
+          {
+            "title": "Refinements of Artin's primitive root conjecture"
+          }
+        ],
+        "publisher": "arXiv",
+        "container": {},
+        "publicationYear": 2025,
+        "subjects": [
+          {
+            "lang": "en",
+            "subject": "Number Theory (math.NT)",
+            "subjectScheme": "arXiv"
+          },
+          {
+            "subject": "FOS: Mathematics",
+            "subjectScheme": "Fields of Science and Technology (FOS)"
+          },
+          {
+            "subject": "FOS: Mathematics",
+            "schemeUri": "http://www.oecd.org/science/inno/38235147.pdf",
+            "subjectScheme": "Fields of Science and Technology (FOS)"
+          },
+          {
+            "lang": "en",
+            "subject": "11A07, 11N05, 11A25 (Primary) 11R20, 11Y60 (Secondary)",
+            "subjectScheme": "MSC"
+          }
+        ],
+        "contributors": [],
+        "dates": [
+          {
+            "date": "2025-02-26T22:30:15Z",
+            "dateType": "Submitted",
+            "dateInformation": "v1"
+          },
+          {
+            "date": "2025-02-28T01:08:59Z",
+            "dateType": "Updated",
+            "dateInformation": "v1"
+          },
+          {
+            "date": "2025-02",
+            "dateType": "Available",
+            "dateInformation": "v1"
+          },
+          {
+            "date": "2025",
+            "dateType": "Issued"
+          }
+        ],
+        "language": null,
+        "types": {
+          "ris": "GEN",
+          "bibtex": "misc",
+          "citeproc": "article",
+          "schemaOrg": "CreativeWork",
+          "resourceType": "Article",
+          "resourceTypeGeneral": "Preprint"
+        },
+        "relatedIdentifiers": [],
+        "relatedItems": [],
+        "sizes": [],
+        "formats": [],
+        "version": "1",
+        "rightsList": [
+          {
+            "rights": "Creative Commons Attribution 4.0 International",
+            "rightsUri": "https://creativecommons.org/licenses/by/4.0/legalcode",
+            "schemeUri": "https://spdx.org/licenses/",
+            "rightsIdentifier": "cc-by-4.0",
+            "rightsIdentifierScheme": "SPDX"
+          }
+        ],
+        "descriptions": [
+          {
+            "description": "A famous conjecture of Artin asserts that any integer $a$ that is neither $-1$ nor a square should be a primitive root (mod $p$) for a positive proportion of primes $p$. Moreover, using a heuristic argument, Artin guessed an explicit formula for the proportion; this formula is well-supported by computations and is known to hold on a generalized Riemann hypothesis, but remains open. In this paper we propose several conjectures that capture the finer properties of the distribution of the order of $a$ (mod $p$) as $p$ varies over primes; these assertions contain Artin's original conjecture as a special case. We prove these conjectures assuming the generalized Riemann hypothesis, as well as weaker versions unconditionally.",
+            "descriptionType": "Abstract"
+          },
+          {
+            "description": "45 pages",
+            "descriptionType": "Other"
+          }
+        ],
+        "geoLocations": [],
+        "fundingReferences": [],
+        "xml": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeG1sbnM6eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00LjMvbWV0YWRhdGEueHNkIj4KICA8aWRlbnRpZmllciBpZGVudGlmaWVyVHlwZT0iRE9JIj4xMC40ODU1MC9BUlhJVi4yNTAyLjE5NjAxPC9pZGVudGlmaWVyPgogIDxhbHRlcm5hdGVJZGVudGlmaWVycz4KICAgIDxhbHRlcm5hdGVJZGVudGlmaWVyIGFsdGVybmF0ZUlkZW50aWZpZXJUeXBlPSJhclhpdiI+MjUwMi4xOTYwMTwvYWx0ZXJuYXRlSWRlbnRpZmllcj4KICA8L2FsdGVybmF0ZUlkZW50aWZpZXJzPgogIDxjcmVhdG9ycz4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5Hb2xkbWFraGVyLCBMZW88L2NyZWF0b3JOYW1lPgogICAgICA8Z2l2ZW5OYW1lPkxlbzwvZ2l2ZW5OYW1lPgogICAgICA8ZmFtaWx5TmFtZT5Hb2xkbWFraGVyPC9mYW1pbHlOYW1lPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPk1hcnRpbiwgR3JlZzwvY3JlYXRvck5hbWU+CiAgICAgIDxnaXZlbk5hbWU+R3JlZzwvZ2l2ZW5OYW1lPgogICAgICA8ZmFtaWx5TmFtZT5NYXJ0aW48L2ZhbWlseU5hbWU+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+UMOpcmluZ3VleSwgUGF1bDwvY3JlYXRvck5hbWU+CiAgICAgIDxnaXZlbk5hbWU+UGF1bDwvZ2l2ZW5OYW1lPgogICAgICA8ZmFtaWx5TmFtZT5Qw6lyaW5ndWV5PC9mYW1pbHlOYW1lPgogICAgPC9jcmVhdG9yPgogIDwvY3JlYXRvcnM+CiAgPHRpdGxlcz4KICAgIDx0aXRsZT5SZWZpbmVtZW50cyBvZiBBcnRpbidzIHByaW1pdGl2ZSByb290IGNvbmplY3R1cmU8L3RpdGxlPgogIDwvdGl0bGVzPgogIDxwdWJsaXNoZXI+YXJYaXY8L3B1Ymxpc2hlcj4KICA8cHVibGljYXRpb25ZZWFyPjIwMjU8L3B1YmxpY2F0aW9uWWVhcj4KICA8c3ViamVjdHM+CiAgICA8c3ViamVjdCB4bWw6bGFuZz0iZW4iIHN1YmplY3RTY2hlbWU9ImFyWGl2Ij5OdW1iZXIgVGhlb3J5IChtYXRoLk5UKTwvc3ViamVjdD4KICAgIDxzdWJqZWN0IHN1YmplY3RTY2hlbWU9IkZpZWxkcyBvZiBTY2llbmNlIGFuZCBUZWNobm9sb2d5IChGT1MpIj5GT1M6IE1hdGhlbWF0aWNzPC9zdWJqZWN0PgogICAgPHN1YmplY3QgeG1sOmxhbmc9ImVuIiBzdWJqZWN0U2NoZW1lPSJNU0MiPjExQTA3LCAxMU4wNSwgMTFBMjUgKFByaW1hcnkpIDExUjIwLCAxMVk2MCAoU2Vjb25kYXJ5KTwvc3ViamVjdD4KICA8L3N1YmplY3RzPgogIDxkYXRlcz4KICAgIDxkYXRlIGRhdGVUeXBlPSJTdWJtaXR0ZWQiIGRhdGVJbmZvcm1hdGlvbj0idjEiPjIwMjUtMDItMjZUMjI6MzA6MTVaPC9kYXRlPgogICAgPGRhdGUgZGF0ZVR5cGU9IlVwZGF0ZWQiIGRhdGVJbmZvcm1hdGlvbj0idjEiPjIwMjUtMDItMjhUMDE6MDg6NTlaPC9kYXRlPgogICAgPGRhdGUgZGF0ZVR5cGU9IkF2YWlsYWJsZSIgZGF0ZUluZm9ybWF0aW9uPSJ2MSI+MjAyNS0wMjwvZGF0ZT4KICA8L2RhdGVzPgogIDxyZXNvdXJjZVR5cGUgcmVzb3VyY2VUeXBlR2VuZXJhbD0iUHJlcHJpbnQiPkFydGljbGU8L3Jlc291cmNlVHlwZT4KICA8dmVyc2lvbj4xPC92ZXJzaW9uPgogIDxyaWdodHNMaXN0PgogICAgPHJpZ2h0cyByaWdodHNVUkk9Imh0dHA6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LzQuMC8iIHJpZ2h0c0lkZW50aWZpZXJTY2hlbWU9IlNQRFgiIHJpZ2h0c0lkZW50aWZpZXI9IkNDLUJZLTQuMCI+Q3JlYXRpdmUgQ29tbW9ucyBBdHRyaWJ1dGlvbiA0LjAgSW50ZXJuYXRpb25hbDwvcmlnaHRzPgogIDwvcmlnaHRzTGlzdD4KICA8ZGVzY3JpcHRpb25zPgogICAgPGRlc2NyaXB0aW9uIGRlc2NyaXB0aW9uVHlwZT0iQWJzdHJhY3QiPkEgZmFtb3VzIGNvbmplY3R1cmUgb2YgQXJ0aW4gYXNzZXJ0cyB0aGF0IGFueSBpbnRlZ2VyICRhJCB0aGF0IGlzIG5laXRoZXIgJC0xJCBub3IgYSBzcXVhcmUgc2hvdWxkIGJlIGEgcHJpbWl0aXZlIHJvb3QgKG1vZCAkcCQpIGZvciBhIHBvc2l0aXZlIHByb3BvcnRpb24gb2YgcHJpbWVzICRwJC4gTW9yZW92ZXIsIHVzaW5nIGEgaGV1cmlzdGljIGFyZ3VtZW50LCBBcnRpbiBndWVzc2VkIGFuIGV4cGxpY2l0IGZvcm11bGEgZm9yIHRoZSBwcm9wb3J0aW9uOyB0aGlzIGZvcm11bGEgaXMgd2VsbC1zdXBwb3J0ZWQgYnkgY29tcHV0YXRpb25zIGFuZCBpcyBrbm93biB0byBob2xkIG9uIGEgZ2VuZXJhbGl6ZWQgUmllbWFubiBoeXBvdGhlc2lzLCBidXQgcmVtYWlucyBvcGVuLiBJbiB0aGlzIHBhcGVyIHdlIHByb3Bvc2Ugc2V2ZXJhbCBjb25qZWN0dXJlcyB0aGF0IGNhcHR1cmUgdGhlIGZpbmVyIHByb3BlcnRpZXMgb2YgdGhlIGRpc3RyaWJ1dGlvbiBvZiB0aGUgb3JkZXIgb2YgJGEkIChtb2QgJHAkKSBhcyAkcCQgdmFyaWVzIG92ZXIgcHJpbWVzOyB0aGVzZSBhc3NlcnRpb25zIGNvbnRhaW4gQXJ0aW4ncyBvcmlnaW5hbCBjb25qZWN0dXJlIGFzIGEgc3BlY2lhbCBjYXNlLiBXZSBwcm92ZSB0aGVzZSBjb25qZWN0dXJlcyBhc3N1bWluZyB0aGUgZ2VuZXJhbGl6ZWQgUmllbWFubiBoeXBvdGhlc2lzLCBhcyB3ZWxsIGFzIHdlYWtlciB2ZXJzaW9ucyB1bmNvbmRpdGlvbmFsbHkuPC9kZXNjcmlwdGlvbj4KICAgIDxkZXNjcmlwdGlvbiBkZXNjcmlwdGlvblR5cGU9Ik90aGVyIj40NSBwYWdlczwvZGVzY3JpcHRpb24+CiAgPC9kZXNjcmlwdGlvbnM+CjwvcmVzb3VyY2U+",
+        "url": "https://arxiv.org/abs/2502.19601",
+        "contentUrl": null,
+        "metadataVersion": 0,
+        "schemaVersion": "http://datacite.org/schema/kernel-4",
+        "source": "mds",
+        "isActive": true,
+        "state": "findable",
+        "reason": null,
+        "viewCount": 0,
+        "viewsOverTime": [],
+        "downloadCount": 0,
+        "downloadsOverTime": [],
+        "referenceCount": 0,
+        "citationCount": 0,
+        "citationsOverTime": [],
+        "partCount": 0,
+        "partOfCount": 0,
+        "versionCount": 0,
+        "versionOfCount": 0,
+        "created": "2025-02-28T02:56:31.000Z",
+        "registered": "2025-02-28T02:56:31.000Z",
+        "published": "2025",
+        "updated": "2025-02-28T02:56:31.000Z"
+      },
+      "relationships": {
+        "client": {
+          "data": {
+            "id": "arxiv.content",
+            "type": "clients"
+          }
+        },
+        "provider": {
+          "data": {
+            "id": "arxiv",
+            "type": "providers"
+          }
+        },
+        "media": {
+          "data": {
+            "id": "10.48550/arxiv.2502.19601",
+            "type": "media"
+          }
+        },
+        "references": {
+          "data": []
+        },
+        "citations": {
+          "data": []
+        },
+        "parts": {
+          "data": []
+        },
+        "partOf": {
+          "data": []
+        },
+        "versions": {
+          "data": []
+        },
+        "versionOf": {
+          "data": []
+        }
+      }
+    }
+  },
+  "Sgobba2025": {
+    "data": {
+      "id": "10.48550/arxiv.2508.08996",
+      "type": "dois",
+      "attributes": {
+        "doi": "10.48550/arxiv.2508.08996",
+        "prefix": "10.48550",
+        "suffix": "arxiv.2508.08996",
+        "identifiers": [
+          {
+            "identifier": "2508.08996",
+            "identifierType": "arXiv"
+          }
+        ],
+        "alternateIdentifiers": [
+          {
+            "alternateIdentifierType": "arXiv",
+            "alternateIdentifier": "2508.08996"
+          }
+        ],
+        "creators": [
+          {
+            "name": "Sgobba, Pietro",
+            "nameType": "Personal",
+            "givenName": "Pietro",
+            "familyName": "Sgobba",
+            "affiliation": [],
+            "nameIdentifiers": []
+          }
+        ],
+        "titles": [
+          {
+            "title": "Unconditional results for Artin-type problems over number fields"
+          }
+        ],
+        "publisher": "arXiv",
+        "container": {},
+        "publicationYear": 2025,
+        "subjects": [
+          {
+            "lang": "en",
+            "subject": "Number Theory (math.NT)",
+            "subjectScheme": "arXiv"
+          },
+          {
+            "subject": "FOS: Mathematics",
+            "subjectScheme": "Fields of Science and Technology (FOS)"
+          },
+          {
+            "subject": "FOS: Mathematics",
+            "schemeUri": "http://www.oecd.org/science/inno/38235147.pdf",
+            "subjectScheme": "Fields of Science and Technology (FOS)"
+          },
+          {
+            "lang": "en",
+            "subject": "11R45 (Primary) 11R44 (Secondary)",
+            "subjectScheme": "MSC"
+          }
+        ],
+        "contributors": [],
+        "dates": [
+          {
+            "date": "2025-08-12T15:03:43Z",
+            "dateType": "Submitted",
+            "dateInformation": "v1"
+          },
+          {
+            "date": "2025-08-13T00:42:57Z",
+            "dateType": "Updated",
+            "dateInformation": "v1"
+          },
+          {
+            "date": "2025-08",
+            "dateType": "Available",
+            "dateInformation": "v1"
+          },
+          {
+            "date": "2025",
+            "dateType": "Issued"
+          }
+        ],
+        "language": null,
+        "types": {
+          "ris": "GEN",
+          "bibtex": "misc",
+          "citeproc": "article",
+          "schemaOrg": "CreativeWork",
+          "resourceType": "Article",
+          "resourceTypeGeneral": "Preprint"
+        },
+        "relatedIdentifiers": [],
+        "relatedItems": [],
+        "sizes": [],
+        "formats": [],
+        "version": "1",
+        "rightsList": [
+          {
+            "rights": "Creative Commons Attribution 4.0 International",
+            "rightsUri": "https://creativecommons.org/licenses/by/4.0/legalcode",
+            "schemeUri": "https://spdx.org/licenses/",
+            "rightsIdentifier": "cc-by-4.0",
+            "rightsIdentifierScheme": "SPDX"
+          }
+        ],
+        "descriptions": [
+          {
+            "description": "Let $K$ be a number field and let $G$ be a finitely generated subgroup of $K^\\times$. For all but finitely many primes $\\mathfrak p$ of $K$, the reduction $(G \\bmod \\mathfrak p)$ generates a well-defined subgroup of the multiplicative group of the residue field at $\\mathfrak p$, and we may consider its index. We study the primes of $K$ for which this index lies in a given set of positive integers $S$. In particular, we prove that under certain convergence conditions on series associated to $S$ this problem can be addressed without assuming the Generalized Riemann Hypothesis (GRH), and we provide asymptotic formulas for the corresponding prime-counting functions. Problems of this type are related to Artin's primitive root conjecture, which has been proven under the assumption of GRH (Hooley, 1967).",
+            "descriptionType": "Abstract"
+          },
+          {
+            "description": "21 pages, comments are welcome",
+            "descriptionType": "Other"
+          }
+        ],
+        "geoLocations": [],
+        "fundingReferences": [],
+        "xml": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeG1sbnM6eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00LjMvbWV0YWRhdGEueHNkIj4KICA8aWRlbnRpZmllciBpZGVudGlmaWVyVHlwZT0iRE9JIj4xMC40ODU1MC9BUlhJVi4yNTA4LjA4OTk2PC9pZGVudGlmaWVyPgogIDxhbHRlcm5hdGVJZGVudGlmaWVycz4KICAgIDxhbHRlcm5hdGVJZGVudGlmaWVyIGFsdGVybmF0ZUlkZW50aWZpZXJUeXBlPSJhclhpdiI+MjUwOC4wODk5NjwvYWx0ZXJuYXRlSWRlbnRpZmllcj4KICA8L2FsdGVybmF0ZUlkZW50aWZpZXJzPgogIDxjcmVhdG9ycz4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5TZ29iYmEsIFBpZXRybzwvY3JlYXRvck5hbWU+CiAgICAgIDxnaXZlbk5hbWU+UGlldHJvPC9naXZlbk5hbWU+CiAgICAgIDxmYW1pbHlOYW1lPlNnb2JiYTwvZmFtaWx5TmFtZT4KICAgIDwvY3JlYXRvcj4KICA8L2NyZWF0b3JzPgogIDx0aXRsZXM+CiAgICA8dGl0bGU+VW5jb25kaXRpb25hbCByZXN1bHRzIGZvciBBcnRpbi10eXBlIHByb2JsZW1zIG92ZXIgbnVtYmVyIGZpZWxkczwvdGl0bGU+CiAgPC90aXRsZXM+CiAgPHB1Ymxpc2hlcj5hclhpdjwvcHVibGlzaGVyPgogIDxwdWJsaWNhdGlvblllYXI+MjAyNTwvcHVibGljYXRpb25ZZWFyPgogIDxzdWJqZWN0cz4KICAgIDxzdWJqZWN0IHhtbDpsYW5nPSJlbiIgc3ViamVjdFNjaGVtZT0iYXJYaXYiPk51bWJlciBUaGVvcnkgKG1hdGguTlQpPC9zdWJqZWN0PgogICAgPHN1YmplY3Qgc3ViamVjdFNjaGVtZT0iRmllbGRzIG9mIFNjaWVuY2UgYW5kIFRlY2hub2xvZ3kgKEZPUykiPkZPUzogTWF0aGVtYXRpY3M8L3N1YmplY3Q+CiAgICA8c3ViamVjdCB4bWw6bGFuZz0iZW4iIHN1YmplY3RTY2hlbWU9Ik1TQyI+MTFSNDUgKFByaW1hcnkpIDExUjQ0IChTZWNvbmRhcnkpPC9zdWJqZWN0PgogIDwvc3ViamVjdHM+CiAgPGRhdGVzPgogICAgPGRhdGUgZGF0ZVR5cGU9IlN1Ym1pdHRlZCIgZGF0ZUluZm9ybWF0aW9uPSJ2MSI+MjAyNS0wOC0xMlQxNTowMzo0M1o8L2RhdGU+CiAgICA8ZGF0ZSBkYXRlVHlwZT0iVXBkYXRlZCIgZGF0ZUluZm9ybWF0aW9uPSJ2MSI+MjAyNS0wOC0xM1QwMDo0Mjo1N1o8L2RhdGU+CiAgICA8ZGF0ZSBkYXRlVHlwZT0iQXZhaWxhYmxlIiBkYXRlSW5mb3JtYXRpb249InYxIj4yMDI1LTA4PC9kYXRlPgogIDwvZGF0ZXM+CiAgPHJlc291cmNlVHlwZSByZXNvdXJjZVR5cGVHZW5lcmFsPSJQcmVwcmludCI+QXJ0aWNsZTwvcmVzb3VyY2VUeXBlPgogIDx2ZXJzaW9uPjE8L3ZlcnNpb24+CiAgPHJpZ2h0c0xpc3Q+CiAgICA8cmlnaHRzIHJpZ2h0c1VSST0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbGljZW5zZXMvYnkvNC4wLyIgcmlnaHRzSWRlbnRpZmllclNjaGVtZT0iU1BEWCIgcmlnaHRzSWRlbnRpZmllcj0iQ0MtQlktNC4wIj5DcmVhdGl2ZSBDb21tb25zIEF0dHJpYnV0aW9uIDQuMCBJbnRlcm5hdGlvbmFsPC9yaWdodHM+CiAgPC9yaWdodHNMaXN0PgogIDxkZXNjcmlwdGlvbnM+CiAgICA8ZGVzY3JpcHRpb24gZGVzY3JpcHRpb25UeXBlPSJBYnN0cmFjdCI+TGV0ICRLJCBiZSBhIG51bWJlciBmaWVsZCBhbmQgbGV0ICRHJCBiZSBhIGZpbml0ZWx5IGdlbmVyYXRlZCBzdWJncm91cCBvZiAkS15cdGltZXMkLiBGb3IgYWxsIGJ1dCBmaW5pdGVseSBtYW55IHByaW1lcyAkXG1hdGhmcmFrIHAkIG9mICRLJCwgdGhlIHJlZHVjdGlvbiAkKEcgXGJtb2QgXG1hdGhmcmFrIHApJCBnZW5lcmF0ZXMgYSB3ZWxsLWRlZmluZWQgc3ViZ3JvdXAgb2YgdGhlIG11bHRpcGxpY2F0aXZlIGdyb3VwIG9mIHRoZSByZXNpZHVlIGZpZWxkIGF0ICRcbWF0aGZyYWsgcCQsIGFuZCB3ZSBtYXkgY29uc2lkZXIgaXRzIGluZGV4LiBXZSBzdHVkeSB0aGUgcHJpbWVzIG9mICRLJCBmb3Igd2hpY2ggdGhpcyBpbmRleCBsaWVzIGluIGEgZ2l2ZW4gc2V0IG9mIHBvc2l0aXZlIGludGVnZXJzICRTJC4gSW4gcGFydGljdWxhciwgd2UgcHJvdmUgdGhhdCB1bmRlciBjZXJ0YWluIGNvbnZlcmdlbmNlIGNvbmRpdGlvbnMgb24gc2VyaWVzIGFzc29jaWF0ZWQgdG8gJFMkIHRoaXMgcHJvYmxlbSBjYW4gYmUgYWRkcmVzc2VkIHdpdGhvdXQgYXNzdW1pbmcgdGhlIEdlbmVyYWxpemVkIFJpZW1hbm4gSHlwb3RoZXNpcyAoR1JIKSwgYW5kIHdlIHByb3ZpZGUgYXN5bXB0b3RpYyBmb3JtdWxhcyBmb3IgdGhlIGNvcnJlc3BvbmRpbmcgcHJpbWUtY291bnRpbmcgZnVuY3Rpb25zLiBQcm9ibGVtcyBvZiB0aGlzIHR5cGUgYXJlIHJlbGF0ZWQgdG8gQXJ0aW4ncyBwcmltaXRpdmUgcm9vdCBjb25qZWN0dXJlLCB3aGljaCBoYXMgYmVlbiBwcm92ZW4gdW5kZXIgdGhlIGFzc3VtcHRpb24gb2YgR1JIIChIb29sZXksIDE5NjcpLjwvZGVzY3JpcHRpb24+CiAgICA8ZGVzY3JpcHRpb24gZGVzY3JpcHRpb25UeXBlPSJPdGhlciI+MjEgcGFnZXMsIGNvbW1lbnRzIGFyZSB3ZWxjb21lPC9kZXNjcmlwdGlvbj4KICA8L2Rlc2NyaXB0aW9ucz4KPC9yZXNvdXJjZT4=",
+        "url": "https://arxiv.org/abs/2508.08996",
+        "contentUrl": null,
+        "metadataVersion": 0,
+        "schemaVersion": "http://datacite.org/schema/kernel-4",
+        "source": "mds",
+        "isActive": true,
+        "state": "findable",
+        "reason": null,
+        "viewCount": 0,
+        "viewsOverTime": [],
+        "downloadCount": 0,
+        "downloadsOverTime": [],
+        "referenceCount": 0,
+        "citationCount": 0,
+        "citationsOverTime": [],
+        "partCount": 0,
+        "partOfCount": 0,
+        "versionCount": 0,
+        "versionOfCount": 0,
+        "created": "2025-08-13T01:39:32.000Z",
+        "registered": "2025-08-13T01:39:33.000Z",
+        "published": "2025",
+        "updated": "2025-08-13T01:39:33.000Z"
+      },
+      "relationships": {
+        "client": {
+          "data": {
+            "id": "arxiv.content",
+            "type": "clients"
+          }
+        },
+        "provider": {
+          "data": {
+            "id": "arxiv",
+            "type": "providers"
+          }
+        },
+        "media": {
+          "data": {
+            "id": "10.48550/arxiv.2508.08996",
+            "type": "media"
+          }
+        },
+        "references": {
+          "data": []
+        },
+        "citations": {
+          "data": []
+        },
+        "parts": {
+          "data": []
+        },
+        "partOf": {
+          "data": []
+        },
+        "versions": {
+          "data": []
+        },
+        "versionOf": {
+          "data": []
+        }
+      }
+    }
+  }
+}

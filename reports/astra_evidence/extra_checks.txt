@@ -1,0 +1,5 @@
+All66 joint-Artin unequal characters 0
+totalbars 1678022846
+delta_1e10_2026-09-11.md sum 455052507 delta -0.014723292716343817
+delta_1e11_2026-09-11.md sum 4118054809 delta -0.014998215680401772
+bib count 25
