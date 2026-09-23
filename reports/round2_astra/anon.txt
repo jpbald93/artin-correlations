@@ -1,0 +1,1858 @@
+Email: . ORCID: .
+CORRELATIONS OF ARTIN STATUS AMONG PRIMES:
+CONSECUTIVE-PRIME ANTICORRELATION, CROSS-BASE
+ENTANGLEMENT,
+AND AN ELEMENTARY DECOMPOSITION
+Abstract. Say a prime p is Artin base a if a is a primitive root modulo p. This paper studies
+correlations of Artin status along two axes — consecutive primes at a fixed base, and several
+bases at a fixed prime — for all 50,847,531 primes up to 109 , and then asks what, if anything,
+such correlations are computationally worth.
+Along the first axis, Artin statuses of consecutive primes are measurably anticorrelated
+at base 10: P (Artn+1 | Artn ) = 0.36514 against P (Artn+1 | ¬Artn ) = 0.37928, a deficit
+δ = −0.01414 (Pearson 10,167 on one degree of freedom; signed square root −100.8 under
+a nominal independent-status reference, over 50,847,530 pairs). The dependence has strong
+gap structure and contains one deterministic component, an elementary exclusion law : if
+p, p + g > 5 are prime with g ≡ 20 (mod 40), then 10 is a quadratic residue modulo exactly one
+of them, so the two can never both be Artin; among 2,195,882 pairs at gaps 20 and 60 there
+is no doubly-Artin pair, and an independent recomputation extends this to 194,296,748 such
+pairs below 1011 , again with none. Conversely g ≡ 0 (mod 40) forces equal quadratic-residue
+status and strong positive dependence (P (Artn+1 | Artn ) = 0.899 at g = 40). Conditioning
+on the joint residues of (pn , pn+1 ) modulo 120 or 840 removes 93% and 97% respectively of
+a selected-cell signed residual association. As an intermediate link we report the apparently
+unreported anticorrelation r(ω(pn − 1), ω(pn+1 − 1)) = −0.041.
+Along the second axis we record a second exclusion law: writing d = sqf(ab) for the
+squarefree part of ab, no prime with dp = −1 is simultaneously Artin for a and for b; whenever
+a and b have different squarefree parts this bars half of all primes, and it implies a triple form
+— if sqf(c) = sqf(ab) then no odd prime is Artin for a, b, c at once (e.g. 2, 5, 10). Across the 66
+base pairs of {2, 3, 5, 6, 7, 10, 11, 13, 15, 17, 21, 29} the measured same-prime correlation ϕ(a, b)
+is positive for 64 pairs (mean 0.0352); conditioning on ω(p − 1) removes only 55% of it, while
+conditioning on a fine signature of p − 1 removes 95%. The residual is concentrated on the three
+pairs whose product class completes a triple and lies in the quadratic-character channel. Joint
+densities predicted by the Matthews–Moree–Stevenhagen Kummer-degree heuristic match the
+measured densities to a mean relative error of 0.012% with no fitted parameters.
+Finally we audit the computational content of these correlations. Measured by cross-entropy,
+the consecutive-prime correlation carries 0.000009 nats (1.3×10−5 bits) of predictive information
+about the next prime’s Artin status beyond the elementary joint-residue baseline, which itself
+carries 0.4195 nats. Both exclusion laws are computationally redundant: each follows from the
+multiplicativity of quadratic characters. The one genuinely usable filter — a primitive root
+must be a quadratic non-residue — is elementary, is exactly what the observed conductor-40
+channel expresses, and halves the factorizations of p − 1 in a scanning search; ordering the
+small prime channels of p − 1 before the full factorization adds a further 15%. We conclude
+that these correlations describe arithmetic structure rather than supply algorithms, and we
+state precisely what would have to change for that verdict to change.
+
+Date: September 2026.
+2020 Mathematics Subject Classification. Primary 11A07; Secondary 11N05, 11N13, 11Y16, 11Y60.
+Key words and phrases. Artin’s primitive root conjecture, primitive roots, consecutive primes, Lemke Oliver–
+Soundararajan bias, entanglement, quadratic characters, Legendre symbol, full reptend primes, computational
+number theory.
+
+1
+
+2
+
+CORRELATIONS OF ARTIN STATUS AMONG PRIMES
+
+1. Introduction
+Artin’s conjecture on primitive roots concerns one base at a time: for non-square a ∈
+/ {−1, 0, 1}
+the set Aa = { p prime : a
+is
+a
+primitive
+root
+mod
+p
+}
+should
+have
+positive
+density,
+a multiple
+
+Q
+1
+of Artin’s constant C = q 1 − q(q−1)
+≈ 0.3739558; for base 10 no correction factor applies,
+so the conjectural density is exactly C. Hooley [11] proved this under GRH; unconditionally,
+Gupta–Murty [8] and Heath-Brown [10] showed the conjecture can fail for at most two prime
+bases, and Klurman–Shparlinski–Teräväinen [12] established the predicted asymptotic on
+average over almost all small bases. Moree’s survey [15] is the standard account. For a = 10
+the property has a classical meaning: 10 is a primitive root mod p exactly when the decimal
+expansion of 1/p has maximal period p − 1 — the full reptend primes [3, pp. 166–171].
+Three further strands meet here. The first is the bias discovered numerically by Knapowski–
+Turán, Ko and Ash–Beltis–Gross–Sinnott and quantitatively treated by Lemke Oliver and
+Soundararajan [14]: consecutive primes in the same reduced residue class modulo q occur
+markedly less often than equidistribution predicts, a phenomenon explained conjecturally by
+the Hardy–Littlewood k-tuple conjectures [9]. Since the Artin property of p is governed by the
+factorisation of p − 1, and since residues of consecutive primes modulo small q are correlated
+by [14], one expects some induced dependence between the Artin indicators of consecutive
+primes. The second is the joint behaviour across bases at a fixed prime, computed under GRH
+by Matthews [24] and systematically by Moree–Stevenhagen [23], with the qualitative message
+that Aa and Ab are not independent and that the deviation is governed by entanglement
+of the associated Kummer–Galois extensions; the framework remains active (see [20] and
+references there). The third is the question of which primes at a fixed shift can both be Artin:
+Tinková–Waxman–Zindulka [13] identify shift–base pairs admitting no such prime, and our
+Theorem 2 is the base-10 instance of that phenomenon; we claim no priority for it.
+The present paper asks the statistical question along both axes — how Artin statuses
+of consecutive primes are correlated on average, and how Artin statuses of several bases
+are correlated at the same prime — and then asks a question we have not seen posed in this
+literature: what is such a correlation computationally worth? 1 The answer we give is a measured
+negative, and we regard it as part of the result rather than a failure of it.
+Two comparisons should be made explicit. Garcia–Kahoro–Luca [6] (see also [7]) compare
+the number of primitive roots, φ(p − 1) versus φ(p + 1), for twin pairs; Pollack [17] and
+Baker–Pollack [2] prove existence of runs of consecutive primes each having a prescribed
+primitive root. Those are existence results, produced by sieves that select rare favourable
+configurations; they say nothing about the typical joint behaviour along the sequence of primes.
+The questions studied here are complementary: the average correlation, its decomposition, and
+its computational content.
+2. Summary of results
+Throughout, Artin prime means Artin prime for base 10 unless stated otherwise, pn denotes
+the n-th prime, ω(m) the number of distinct prime factors of m, and sqf(m) the squarefree
+part of m.
+1An earlier version of parts of this work appeared as the preprints Correlations between primitive root
+
+statuses of consecutive primes (Zenodo, doi:10.5281/zenodo.22863946) and Cross-base correlations of Artin
+primes (Zenodo, doi:10.5281/zenodo.22878204). This paper consolidates those two preprints and adds the audit
+of §15; it supersedes them, and the preprints are retained for the record.
+
+CORRELATIONS OF ARTIN STATUS AMONG PRIMES
+
+3
+
+(1) Consecutive-prime exclusion law (Theorem
+2).
+
+
+ If p and p + g are primes with
+10
+p, p + g > 5 and g ≡ 20 (mod 40), then p+g = − 10
+p ; consequently at most one of
+  
+
+10
+= 10
+the two is Artin base 10. If instead g ≡ 0 (mod 40) then p+g
+p .
+ 
+(2) Same-prime exclusion law (Theorem 6). With d = sqf(ab), no prime with dp = −1
+is Artin for both a and b. If sqf(c) = sqf(ab) then no odd prime is Artin for a, b and c
+simultaneously (Theorem 7).
+(3) Consecutive-prime anticorrelation (§7). Across all 50,847,530 consecutive pairs
+up to 109 , δ = P (Artn+1 | Artn ) − P (Artn+1 | ¬Artn ) = −0.01414, with Pearson
+χ2 = 10,167 on one degree of freedom.
+(4) Gap structure (§8). δ(g) ranges from −0.592 at g = 60, where the theorem forces
+exclusion, to +0.643 at g = 40.
+(5) Residue conditioning (§9). Conditioning on the joint residues of (pn , pn+1 ) modulo
+120 and 840 removes 93% and 97% of a selected-cell signed residual metric. The
+remaining residual is consistent with further small-modulus channels but has not been
+shown to vanish.
+(6) ω repulsion (§10). r(ω(pn − 1), ω(pn+1 − 1)) = −0.0410.
+(7) Cross-base correlation (§11). Over the 66 pairs of the base set, ϕ(a, b) is positive for
+64 pairs (mean 0.0352); the only negative pairs are (2, 10) and (3, 15).
+(8) Decomposition of the cross-base correlation (§12). Conditioning on ω(p − 1)
+removes 55% of the mean correlation; conditioning on the fine signature sig(p) removes
+95%.
+(9) Residual localisation (§13). The surviving residual is concentrated on the triplecompleting pairs and lies in the quadratic-character channel.
+(10) Kummer-degree densities (§14). The Matthews–Moree–Stevenhagen predictions
+match the measured joint densities to a mean relative error of 0.012%, with no fitted
+parameters.
+(11) Computational content: a measured negative (§15). The consecutive-prime
+correlation carries 0.000009 nats of predictive information beyond the elementary jointresidue baseline; both exclusion laws are consequences of character multiplicativity and
+hence computationally redundant; the only usable filter is the elementary non-residue
+test, which the conductor-40 channel expresses.
+3. Preliminaries and notation
+ 
+ 
+For an odd prime p not dividing a, write ap for the Legendre symbol and χa (p) = ap
+for the quadratic character of conductor cond(χa ). We write Aa (p) = 1 if a is a primitive root
+modulo p and 0 otherwise; a is a primitive root exactly when a(p−1)/ℓ ̸≡ 1 (modp)for every
+prime ℓ | p − 1. Two elementary facts are used repeatedly. First, if Aa (p) = 1 then ap = −1: a
+(p−1)/2 ≡ 1.
+primitive root has order p−1, so a(p−1)/2 ≡ −1, whereas a quadratic residue
+  satisfies
+  a 
+b
+Second, quadratic characters are multiplicative in the numerator, ab
+= ap
+p
+p , and the
+Legendre symbol depends on p only through p mod 4d when d = sqf(ab).
+The Artin property of p is determined by the prime factorisation of p − 1, and conversely
+only by the small part of it for small bases: the criterion consults ℓ = 2 and the prime divisors
+ℓ of p − 1. This is why both decompositions below are stratified by the fine signature
+
+
+sig(p) = min(v2 (p − 1), 4), { q ≤ 13 : q | p − 1 }, min(ω>13 (p − 1), 3) ,
+
+4
+
+CORRELATIONS OF ARTIN STATUS AMONG PRIMES
+
+a partition of the primes into at most 4 · 32 · 4 = 512 cells (for odd p one has v2 (p − 1) ≥ 1, so the
+truncated valuation takes four values, not five). The signature records exactly the information
+about p − 1 that the Artin criterion consults for small bases.
+4. The consecutive-prime exclusion law
+ 
+Definition 1. For an odd prime p ∤ 10, write 10
+for the Legendre symbol. We say p is an
+p
+Artin prime (for base 10) if the multiplicative order of 10 modulo p equals p − 1.
+If 10
+ is a quadratic residue mod p then its order divides (p − 1)/2, so a QR is never a primitive
+= −1 is a necessary (not sufficient) condition for the Artin property.
+root; 10
+p
+Theorem 2 (Exclusion law for gaps ≡ 20 (mod 40); cf. [13, Thm. 1.1]). Let p and p′ = p + g
+be primes with p, p′ > 5 and g > 0, g ≡ 20 (mod 40). Then
+ 
+ 
+10
+10
+=
+−
+′
+p
+p .
+In particular, 10 is a quadratic residue modulo exactly one of p, p′ , and at most one of them is
+an Artin prime for base 10.
+    
+5
+= p2
+Proof. By multiplicativity, 10
+p
+p .
+′
+
+g ≡ 0 (mod 5), we have p ≡ p (mod
+ Since
+
+ 5). By quadratic reciprocity (5 ≡ 1 mod 4),
+p
+5
+5
+5
+p = 5 depends only on p mod 5; hence p′ = p .
+Since g ≡ 4 (mod 8), we have p′ ≡ p + 4 (mod 8). The map r 7→ r 
++ 4 on odd residues
+mod 8 exchanges 1 ↔ 5 and 3 ↔ 7. By the second supplementary law, p2 = +1 iff p ≡ ±1
+ 
+ 
+(mod 8), and the exchange maps {1, 7} onto {5, 3} and vice versa; hence p2′ = − p2 for
+every admissible residue.
+
+ 
+
+10
+10
+Multiplying, 10
+=
+−
+= +1 satisfies ord(10) |
+p′
+p . Whichever of the two primes has
+·
+(p − 1)/2 < p − 1, so it is not an Artin prime.
+□
+′
+′
+Corollary 3 (Coupling law
+ for
+ gaps
+ ≡
+ 0 (mod 40)). If p, p = p + g are primes with p, p > 5
+and g ≡ 0 (mod 40), then 10
+= 10
+p′
+p . In particular, if either is an Artin prime, then 10 is a
+quadratic non-residue for both.
+
+
+□
+Proof. Now g ≡ 0 (mod 8) and g ≡ 0 (mod 5), so both 2· and 5· are preserved.
+
+Remark
+ 4. The modulus 40 is specific to base 10: it is√the conductor of the quadratic character
+p 7→ 10
+p , namely 4 · 10 = 40 (the discriminant of Q( 10)). For a general non-square integer
+base a the same argument
+√ applies with 40 replaced by the conductor |da | of the quadratic
+character attached to Q( a): for odd primes p, p′ with p ∤ a and p′ ∤ a, gaps g ≡ 0 (mod |da |)
+preserve quadratic-residue status. The coprimality
+hypothesis is needed, not cosmetic: the
+
+a
+primitive character of the field agrees with 
+· only away from the primes dividing a, and a
+prime dividing a square factor of a gives
+
+a
+p
+
+= 0 while the field character is nonzero. For
+
+instance a = 98 = 2 · 72 has conductor 8, and the primes 7 and 23 differ by 16 ≡ 0 (mod 8), yet
+98
+7
+
+
+
+2
+= 0 while 98
+23 = 23 = +1. (The base-10 theorem is unaffected: its hypotheses exclude
+p = 2, 5.) Some bases also admit residue classes of gaps that reverse the Legendre symbol on
+every admissible pair; their existence requires a separate classification. Base 10 is distinguished
+only by our decimal habit and the full-reptend interpretation.
+
+
+CORRELATIONS OF ARTIN STATUS AMONG PRIMES
+
+5
+
+ 
+
+Remark 5. For gaps in classes other than 0, 20 (mod 40) the relation between 10
+and
+p
+ 
+10
+depends on p as well as g (the shift on p mod 8 or p mod 5 is not a symbol-preserving or
+p′
+symbol-flipping involution), producing the partial correlations catalogued in Section 8.
+We verified Theorem 2 computationally as a guard against error: for all 23,956 consecutive
+prime pairs below 107 with gap ≡ 20 (mod 40), the Legendre symbols flip in every single case,
+and a direct order computation on a systematic subsample found no doubly-Artin pair. In the
+full dataset up to 109 (Section 8), the 2,195,882 consecutive pairs with g ∈ {20, 60} contain
+no pair in which both primes are Artin — an empirical count of zero, exactly as the theorem
+requires.
+5. The same-prime exclusion laws
+
+Throughout, for a positive integer a we write da = sqf(a) for its squarefree part and χa = d·a
+√
+for the quadratic character attached to Q( a); thus χa (p) = +1 exactly when a is a quadratic
+residue modulo p (for p ∤ 2a). We allow a to be a square, in which case da = 1 and χa ≡ +1 is
+the principal character; this convention costs nothing and lets the statements below dispense
+with a non-squareness hypothesis. We have
+p ∈ Aa =⇒ χa (p) = −1,
+
+(1)
+
+since a quadratic residue generates a subgroup of index at least 2 in (Z/pZ)× .
+Everything in this section follows from one line: the quadratic character is completely
+multiplicative, so for any positive integers a, b and any odd prime p ∤ ab,
+
+ 
+
+χa (p) χb (p) = dapdb = sqf(ab)
+= χsqf(ab) (p),
+(2)
+p
+since da db and sqf(ab) differ by a square. Combining (2) with the obstruction (1) gives the
+following.
+Theorem 6 (Pair exclusion).
+Let a, b be positive integers and set d = sqf(ab). Then for every
+
+odd prime p with dp = −1, the prime p is not simultaneously Artin base a and Artin base b.
+Proof. If p | ab then one of the two basesis ≡ 0 (mod p) and so is not a primitive root; assume
+therefore p ∤ ab. By (2), χa (p)χb (p) = dp = −1, so χa (p) and χb (p) have opposite signs and in
+particular one of them equals +1; by (1) the corresponding base is not a primitive root.
+□
+
+
+The condition dp = −1 is a condition on residue classes. For d > 1 the character d· is
+non-principal, of fundamental discriminant d if d ≡ 1 (mod 4) and 4d otherwise; either way
+the discriminant divides 4d, so the excluded set is an explicit union of reduced classes modulo
+4d, and exactly half of those classes carry character −1. By the prime number theorem in
+arithmetic progressions the excluded set then has density exactly 1/2 among the odd primes.
+So for any two bases with d > 1 — no third base required, no special configuration — half of all
+primes are deterministically barred from being Artin for both, and Theorem 6 is a congruence
+exclusion law.
+The excluded case d = 1 is exactly sqf(a) = sqf(b), i.e. ab a perfect square, i.e. χa = χb : then
+χa χb = χ2a ≡ +1, nothing is ever barred, and Theorem 6 is vacuous rather than false. (For
+instance a = 2, b = 8: the two bases generate the same quadratic field, and indeed 2 and 8 are
+simultaneously primitive roots for p = 3, 5, 11, 29, 53, . . .) Such pairs are precisely the ones our
+
+6
+
+CORRELATIONS OF ARTIN STATUS AMONG PRIMES
+
+base set avoids: all twelve bases are squarefree and distinct, so d > 1 for all 66 pairs. Writing
+the classes out in the four cases we return to below:
+(2, 6), d = 3 : p ≡ 5, 7 (mod 12);
+(3, 6) and (5, 10), d = 2 : p ≡ 3, 5 (mod 8);
+(2, 10), d = 5 : p ≡ 2, 3 (mod 5).
+We verified each over all primes below 6 × 104 with no exceptions, and Section 11 verifies
+the theorem itself against all 50,847,524 primes below 109 for all 66 pairs of our base set
+simultaneously. Theorems 6 and 7 are also machine-checked in Lean 4 against Mathlib,
+including the step (1) and the (5, 10) instance above, whose barring condition is discharged
+from p mod 8 — so that instance is verified with no character hypothesis assumed at all. Every
+checked statement depends on no axiom beyond propext, Classical.choice
+and Quot.sound.
+
+d
+We state the limit of this plainly: the general translation of p = −1 into residue classes modulo
+4d is not formalised generically, but carried out by hand per instance. See LEAN NOTE.md in
+the accompanying package.
+The triple form of the law, which was our original route to it, is the special case in which the
+barring character is supplied by a third base of the set.
+Theorem 7 (Triple exclusion). Let a, b, c be positive integers with sqf(c) = sqf(ab) and let p be
+an odd prime. Then p is not simultaneously Artin base a, Artin base b, and Artin base c.
+Proof. If p is Artin base c then χc (p) = −1 by (1), and χc = χd with d = sqf(ab) = sqf(c); now
+apply Theorem 6.
+□
+Corollary 8. Within any multiplicative triple — for instance (2, 5, 10), (3, 5, 15), (3, 7, 21),
+(2, 3, 6) — an odd prime can be Artin for at most two of the three bases. The restriction to odd
+p is necessary and not cosmetic: every odd integer is vacuously a primitive root modulo 2, so
+all three members of (3, 5, 15) are Artin base 2.
+The gain in passing from Theorem 7 to Theorem 6 is not cosmetic, though it is a gain in
+usable content rather than in logical strength: both are pointwise statements at every odd
+prime. The difference is in what one must know to apply them. To invoke Theorem 7 one must
+first identify a third base c with sqf(c) = sqf(ab) and establish that c is a primitive root at the
+prime in question — itself an instance of the Artin problem, conjectural in general and (under
+GRH) of positive but base-dependent density. Theorem 6 needs neither: the barring condition
+is a congruence, decidable from p alone by reciprocity, and for d > 1 it holds on a set of density
+exactly 1/2. The triple law is the shadow that the pair law casts when one insists on reading
+the barring character off a primitive root instead of off a residue class.
+Remark 9 (Sharpness of the hypotheses). In both theorems no hypothesis on the bases
+beyond positivity is needed, only “p odd” (together with the barring condition (d/p) = −1 in
+Theorem 6). Non-squareness of the bases is not required: if a is a square then χa (p) = +1 and
+a is not a primitive root, so the conclusion is immediate. The same remark disposes of c = 1
+in Theorem 7, which arises whenever sqf(a) = sqf(b). The hypothesis p ̸= 2 must however be
+kept, and is not removable: (Z/2Z)× is trivial, so every odd integer is vacuously a primitive
+root mod 2 and e.g. (a, b, c) = (3, 5, 15) violates the conclusion there. The accompanying Lean
+formalisation (Section 5) confirms independently that the a ̸≡ 0 and b ̸≡ 0 (mod p) assumptions
+are never used.
+Remark 10. The exclusion is sharp: primes Artin for exactly two of (2, 5, 10) exist in abundance.
+The smallest is p = 3, where 2 and 5 are both primitive roots (each of order 2 = p − 1) while
+10 ≡ 1 is not; the smallest for which 10 itself is Artin is p = 7, where 5 and 10 are both primitive
+roots (each of order 6) while 2 has order 3; likewise p = 23, where 5 and 10 are primitive roots
+
+CORRELATIONS OF ARTIN STATUS AMONG PRIMES
+
+7
+
+and 2 is a quadratic residue of order 11. More systematically, in our data the pair (2, 10) has
+P (A10 | A2 ) = 0.355: two-of-three is common, three-of-three is impossible.
+Remark 11. Theorem 6 is the same-prime analogue of the gap exclusion law for consecutive
+primes proved in [18]: both are instances of a parity obstruction in the group generated by
+the quadratic characters involved, and in both the excluded set is a union of residue classes.
+There the two characters were χa evaluated at p and at p + g, and the obstruction was
+arranged by the shift g; here the characters belong to different bases at the same prime, and the
+obstruction is arranged by multiplicative dependence. The Galois-theoretic density computations
+of Matthews [24] and Moree–Stevenhagen [23] contain this relation as the vanishing criterion
+recalled in Section 1 (the degree of the compositum of the relevant Kummer extensions drops);
+the elementary pointwise form seems worth recording.
+6. Data and computation
+The two axes of this paper use two censuses over the same primes, with slightly different
+exclusions at the low end, by design. We describe each.
+The consecutive-prime census (base 10). For every prime 7 ≤ p ≤ 109 we compute: the
+gap to the neighbouring primes, the number ω(p − 1) of distinct prime factors of p − 1 (by
+trial division), the Artin indicator (computed exactly via 10(p−1)/q ̸≡ 1 (mod p) for each prime
+q | p − 1, using GMP modular exponentiation), and small residues of p. A segmented sieve of
+Eratosthenes generates the primes; the corrected sieve emits all 50,847,531 primes from 7 to
+999,999,937 (the largest prime ≤ 109 ).
+Independent recomputation. The census has been recomputed from scratch by a second,
+deliberately disjoint implementation, which shares no code with the sieve above: it uses handwritten 128-bit modular exponentiation in place of GMP, and it factors p − 1 by a segmented
+sieve of factors over the shifted interval rather than by per-prime trial division, so that an error
+in either implementation is unlikely to be mirrored in the other. Both were first checked against
+sympy at 106 , where all three routes agree exactly. At 109 the independent implementation
+reproduces the published census in every quantity: 50,847,531 primes, 19,016,617 Artin primes,
+12072868
+the joint table 19758045
+12072869 6943748 , δ = −0.014140158840, and zero doubly-Artin pairs among all
+2,195,882 pairs at gaps 20 and 60.
+The same program extends the census to 1010 (455,052,508 primes) and 1011 (4,118,054,810
+primes). In both cases the prime count equals π(x) less the three excluded primes 2, 3, 5,
+and the Artin density agrees with Artin’s constant 0.3739558 to six decimal places (0.373955
+and 0.3739543). Theorem 2 continues to hold: there are no doubly-Artin pairs among the
+20,700,958 pairs at gaps 20, 60 below 1010 , nor among the 194,296,748 such pairs below 1011 .
+The computation is run as a few hundred contiguous shards and stitched, with the pairs
+straddling shard boundaries added back; re-sharding 1010 under a different partition reproduces
+every quantity identically, including δ to fifteen decimal places, so the totals do not depend on
+the shard layout.
+Endpoint correction. An earlier version of the sieve contained two endpoint bugs: it
+emitted a duplicate row for p = 7 and omitted the final prime p = 999,999,937. These have been
+corrected. The duplicate was already skipped by the analysis scripts; the missing endpoint adds
+one pair at gap 8 (both primes non-Artin: ord10 (999,999,937) = 333,333,312; independently
+verified via sympy). This correction changes the pair count from 50,847,529 to 50,847,530 and
+does not materially alter any displayed summary statistic.
+As a global check, the number of Artin primes in the dataset is 19,016,617, a proportion
+0.373993, matching Artin’s constant 0.373956 to four decimal places (for base 10 the squarefree
+
+8
+
+CORRELATIONS OF ARTIN STATUS AMONG PRIMES
+
+part is 10 ̸≡ 1 mod 4, so no correction factor applies and the conjectural density is exactly C;
+see [11, 15]). Agreement with a conjectural density is a sanity check, not a verification of every
+indicator.
+The consecutive-pair analysis is a single streaming pass over the 50,847,530 ordered pairs
+(pn , pn+1 ), accumulating 2 × 2 contingency tables of (1[Artn ], 1[Artn+1 ]): globally, stratified
+by gap g, and stratified by joint residues of (pn , pn+1 ) to various moduli. All counts reported
+below are exact (no sampling), except where noted. Analysis scripts and their outputs are
+available with the data; see the Data Availability statement.
+Runtime, hardware, and validation. The computations to 109 were performed on a single
+machine with a 2-core Intel Xeon E5-2673 v4 processor at 2.3 GHz and 8 GB of RAM, running
+Ubuntu Linux, using no parallelism beyond a single core. The independent recomputation and
+the extensions to 1010 and 1011 were run on a separate 32-core AMD machine (gcc 15.2.0) as a
+few hundred contiguous shards; that run is described above and uses a different implementation.
+The segmented sieve (segment length 221 , so the working set stays within cache) together with
+the per-prime computation — trial-division factorisation of p − 1 and the Artin test by modular
+9
+exponentiation — generates the full dataset
+√ to 10 ; peak memory usage is under 200 MB, as
+only one segment and the small primes to x are held in memory. The streaming pair analysis
+reads the dataset once and runs in minutes. As validation we checked: (i) the prime count
+π(109 ) = 50,847,534 against the known value; (ii) the Artin prime count 19,016,617 (proportion
+0.373993) against Artin’s constant 0.373956, as discussed above; (iii) Theorem 2 on all 23,956
+pairs with gap ≡ 20 (mod 40) below 107 , with an independent sympy order computation on
+a subsample; and (iv) the mod-12 consecutive-residue transition matrix against the values
+reported in [14] at comparable scale.
+The cross-base census. By a segmented sieve we enumerated all primes p ≤ 109 (50,847,534
+primes). The programs discard only the smallest primes, for which the 128-bit Euler-criterion
+arithmetic and the signature encoding are degenerate: p < 5 for the correlation and decomposition runs, leaving 50,847,532 primes, and p < 31 for the signature-and-character run of
+Section 13, leaving 50,847,524. A prime dividing a base is not discarded; it is simply recorded
+as non-Artin for that base, which is correct, since 0 is not a primitive root. The two counts
+therefore differ by exactly the eight primes in [5, 31). For each prime we factored p − 1 once by
+trial division and computed the Artin indicator for each of the twelve bases by the standard
+criterion (a(p−1)/ℓ ̸≡ 1 mod p for every prime ℓ | p − 1, in 128-bit arithmetic). One streaming
+pass accumulates, for each of the 66 unordered base pairs, the 2 × 2 contingency table of joint
+Artin status — globally, and stratified by (i) ω(p − 1) and (ii) the fine signature
+
+
+sig(p) = min(v2 (p − 1), 4), { q ≤ 13 : q | p − 1 }, min(ω>13 (p − 1), 3) ,
+a partition of the primes into at most 4 · 32 · 4 = 512 cells (for odd p we always have
+v2 (p − 1) ≥ 1, so the truncated valuation takes four values, not five). The signature records
+exactly the information about p − 1 that the Artin criterion consults for small bases: the 2-part
+and the small odd prime divisors. A separate run, also to 109 (50,847,524
+ primes), stratified
+each pair additionally by the quadratic-residue statuses χa (p), χb (p) of the two bases on
+top of the signature. The whole computation runs in under two hours on a single core of a
+commodity machine (2-core Intel Xeon E5-2673 v4, 8 GB RAM); all counts are exact.
+As validation, the marginal Artin densities agreed with the Hooley densities to within 6×10−5
+absolute (0.014% relative) for every base — e.g. 0.373957 for base 2, against Artin’s constant
+20
+0.373956, and 0.393642 for base 5, whose density carries the classical correction factor C · 19
+for d ≡ 1 (mod 4) (see [11, 15]).
+
+CORRELATIONS OF ARTIN STATUS AMONG PRIMES
+
+9
+
+7. The global anticorrelation
+Table 1. Artin status of consecutive primes, all 50,847,530 pairs with 7 ≤ pn <
+pn+1 ≤ 109 .
+Quantity
+
+Value
+
+P (Artn+1 )
+0.373993
+P (Artn+1 | Artn )
+0.365141
+P (Artn+1 | ¬Artn )
+0.379281
+δ = difference
+−0.014140
+ϕ coefficient
+−0.014140
+χ2 (1 df)
+10,167
+p
+2
+signed χ (descriptive)
+−100.8
+Table 1 presents the central fact: an Artin prime is followed by another Artin prime about
+1.4 percentage points less often than a non-Artin prime is. The Pearson statistic is 10,167
+(signed square root −100.8 under the nominal independent-status reference model). This is
+a deterministic finite census, not a random survey; the statistic is reported as a descriptive
+measure of the strength of association, and should not be interpreted as a sampling confidence
+level without specifying and justifying a null stochastic model. Consecutive pairs overlap, and
+residue-cell memberships are serially structured.
+The sign is what theLemke
+Oliver–Soundararajan repulsion predicts. Heuristically: the
+
+10
+Artin property requires p = −1, which is a condition on p mod 40; it is further favoured by
+3 ∤ p − 1, i.e. p ≡ 2 (mod 3), since a factor of 3 in p − 1 contributes the largest single suppression
+(1 − 13 ) of the primitive-root density among odd primes. Consecutive primes repel in their
+residues modulo 40 and modulo 3 [14]; conditions favourable to the Artin property therefore
+tend not to repeat at pn+1 when they hold at pn , depressing P (Artn+1 | Artn ).
+For reference, the mod-12 transition matrix in our data displays the repulsion prominently:
+the diagonal entries P (pn+1 ≡ r | pn ≡ r) are 0.1813–0.1815 for r ∈ {1, 5, 7, 11}, against the
+equidistribution value 0.25 — a 27% deficit, consistent in magnitude with the computations
+in [14] at comparable scales.
+8. Gap structure
+Stratifying by the gap g = pn+1 − pn reveals sign-alternating within-gap effects that are
+individually far larger in magnitude than the global δ = −0.0141. The global value is not
+the pair-frequency-weighted average of the within-gap values: for a marginal conditional risk
+difference such as δ, the strata are additionally reweighted by the gap-conditional distribution
+of Artn , so no such averaging identity holds. Indeed the pair-weighted mean of the within-gap
+differences over the 36 qualifying gap classes (50,114,759 pairs, 98.6% of the census) is +0.00159,
+opposite in sign to the global value. The two quantities answer different questions, and the gap
+table below should be read as a decomposition of where the association lives, not as a summand
+decomposition of δ itself (cf. the caution in Section 9). Table 2 shows all gaps with at least 105
+pairs up to g = 60; additional qualifying gaps (g ∈ {62, 64, 66, 70, 72, 78}) are included in the
+analysis scripts and archived results but omitted from the table for brevity. Figure 1 displays
+δ(g) with the residue class of g mod 40 marked, including all qualifying gaps.
+Three features stand out.
+
+10
+
+CORRELATIONS OF ARTIN STATUS AMONG PRIMES
+
+Table 2. Conditional Artin dependence by gap (N ≥ 105 pairs, g ≤ 60).
+δ(g) = P (Artn+1 | Artn ) − P (Artn+1 | ¬Artn ).
+g
+
+N
+
+2
+4
+6
+8
+10
+12
+14
+16
+18
+20
+22
+24
+26
+28
+30
+
+3,424,504
+3,424,679
+6,089,791
+2,695,109
+3,484,767
+4,468,957
+2,464,565
+1,846,097
+3,351,032
+1,824,043
+1,569,679
+2,367,474
+1,119,585
+1,219,243
+2,177,991
+
+P (A|A) P (A|¬A)
+
+δ(g)
+
+g
+
+0.293 −0.002
+0.381 +0.181
+0.382 +0.025
+0.409 −0.249
+0.443 +0.005
+0.283 +0.229
+0.296 +0.002
+0.543 −0.247
+0.359 +0.019
+0.553 −0.553
+0.447 −0.004
+0.411 −0.116
+0.313 +0.000
+0.366 +0.253
+0.363 +0.027
+
+0.291
+0.562
+0.407
+0.160
+0.448
+0.512
+0.298
+0.296
+0.378
+0.000
+0.444
+0.295
+0.313
+0.619
+0.390
+
+N
+
+P (A|A) P (A|¬A)
+
+32
+683,896
+34
+719,531
+36 1,171,524
+38
+548,746
+40
+648,780
+42
+954,456
+44
+389,634
+46
+334,720
+48
+577,247
+50
+328,066
+52
+245,804
+54
+410,754
+56
+211,462
+58
+181,948
+60
+371,839
+
+0.176
+0.445
+0.559
+0.288
+0.899
+0.380
+0.344
+0.469
+0.216
+0.311
+0.572
+0.382
+0.225
+0.437
+0.000
+
+0.386
+0.445
+0.314
+0.293
+0.257
+0.358
+0.249
+0.469
+0.454
+0.307
+0.381
+0.356
+0.389
+0.441
+0.592
+
+δ(g)
+−0.209
++0.001
++0.245
+−0.006
++0.643
++0.023
++0.095
++0.000
+−0.238
++0.005
++0.191
++0.026
+−0.164
+−0.004
+−0.592
+
+Conditional Artin dependence by prime gap, p 109 (gaps with N 105 pairs)
+40
+
+(g) = P(An + 1 |An) P(An + 1 |¬An)
+
+0.6
+0.4
+0.2
+
+28
+
+12
+
+4
+
+36
+
+52
+
+0.0
+0.2
+
+16
+
+8
+
+g 20 (mod 40): QR status flips (exclusion)
+g 0 (mod6040): QR status preserved
+other classes (mixed coupling)
+
+20
+
+0.6
+10
+
+20
+
+72
+
+48
+
+0.4
+
+0
+
+64
+
+56
+
+32
+
+30
+
+40
+gap g = pn + 1 pn
+
+50
+
+60
+
+70
+
+80
+
+Figure 1. δ(g) for all gaps with N ≥ 105 pairs, p ≤ 109 . Red: g ≡ 20 (mod 40)
+(Theorem 2 forces P (A|A) = 0). Green: g ≡ 0 (mod 40) (Corollary 3 preserves
+quadratic-residue status). Grey: other classes.
+(i) The exclusion rows. At g = 20 (1,824,043 pairs) and g = 60 (371,839 pairs), P (A | A) is
+exactly zero: among 2.2 million consecutive pairs, not one is doubly Artin. This is Theorem 2
+in action, and conversely the observation that motivated its proof.
+(ii) The g = 40 spike. P (A | A) = 0.899, the largest conditional probability in the table and
+2.4 times the unconditional density. Two forced mechanisms combine. First, by Corollary 3, if
+
+CORRELATIONS OF ARTIN STATUS AMONG PRIMES
+
+11
+
+pn is Artin then 10 is a non-residue for pn+1 as well, a necessary condition for the Artin property.
+Second, 40 ≡ 1 (mod 3) forces the pair’s mod-3 residues: pn ≡ 2 (mod 3) would give 3 | pn + 40,
+impossible; so every g = 40 pair has pn ≡ 1, pn+1 ≡ 2 (mod 3) — that is, 3 | pn − 1 (suppressing
+Artn ) and 3 ∤ pn+1 − 1 (favouring Artn+1 ). Conditioning on Artn therefore selects pairs in
+which pn+1 enjoys both the non-residue status and the mod-3 advantage. These conditions are
+consistent with the large observed value 0.899 but do not quantitatively derive it without an
+explicit density calculation.
+(iii) Sign classes. Several gaps that are divisible by 3 but not constrained mod 40, for
+instance 6, 18, 30, 42 and 54, show a small positive δ ≈ +0.02. A natural guess is that the pair
+shares its mod-3 status, weakly coupling the largest single suppression factor. This is a selected
+family rather than a rule: other gaps divisible by 3 and lying in neither 0 nor 20 mod 40, such
+as 12, 24 and 36, do not all behave this way, and we have no statement covering every class.
+Some gaps with adverse mod-8 and mod-5 shifts show strong negative δ. We can therefore offer
+only a qualitative reading of Table 2 in terms of how the shift by g permutes the residues of p
+modulo 8, 5 and 3; we do not derive the entries, and outside the exclusion classes nothing here
+is forced.
+9. Residue conditioning
+To what extent does the association persist once the explicit residue channels are held
+fixed? We treat what follows as an exploratory conditioning diagnostic; it does not answer
+that question quantitatively. We condition on the joint residue class of (pn , pn+1 ) to modulus
+m and measure the residual within-cell dependence. The statistic reported is the sum of
+per-cell Pearson χ2 values over all non-degenerate cells meeting a minimum count threshold,
+together with the pair-weighted mean of per-cell δ. This is a descriptive aggregate of per-cell
+associations; it is not the standard Cochran–Mantel–Haenszel statistic (which would be a single
+one-degree-of-freedom test of a common association).
+
+Conditioning on m = 120 = lcm(8, 3, 5) fixes the quadratic character 10· of both primes
+(its conductor 40 divides 120) and the mod-3 channel. Cells in which 10 is a quadratic residue
+for pn or pn+1 are degenerate for the analysis (one margin of the 2 × 2 table vanishes — the
+Artin property is impossible); the informative population is roughly a quarter of all pairs, those
+in doubly-non-residue cells. The selected populations in Table 3 are the thresholded subsets of
+this population: 12,255,203 pairs (24.10% of the census) at modulus 120 and 12,086,765 pairs
+(23.77%) at modulus 840. The unthresholded doubly-non-residue fraction need not be exactly
+1/4.
+Table 3. Selected-cell residual association after conditioning on joint residues
+mod m. “δres ” is the pair-weighted mean within-cell δ over non-degenerate cells
+meeting the count threshold; “cells” is the number of such cells; “pairs used”
+is the total pairs in those cells. Cells with fewer than 5000 (m = 120) or 2000
+(m = 840) pairs are excluded.
+pairs used
+
+P
+
+χ2 (df)
+
+Conditioning
+
+cells
+
+δres
+
+none (global)
+mod 120 joint residues
+mod 840 joint residues
+
+1 50,847,530 10,167 (1) −0.014140
+145 12,255,203 789.2 (145) −0.001055
+633 12,086,765 719.8 (633) −0.000473
+
+Interpretation and limitations. The three statistics in Table 3 have successively smaller
+absolute values: −0.0141 (global) then −0.00106 (mod 120, 145 cells covering 12.3 million
+
+12
+
+CORRELATIONS OF ARTIN STATUS AMONG PRIMES
+
+pairs) then −0.00047 (mod 840, 633 cells covering 12.1 million pairs). We emphasise that
+these are three different quantities computed on three different populations, not one quantity
+being reduced; the comparison is an exploratory conditioning diagnostic, not a decomposition.
+Note also that a signed mean can be small because sizable positive and negative within-cell
+associations cancel, so smallness in this metric is not by itself evidence that dependence has gone.
+The summed per-cell χ2 at mod 840 is 719.8 on 633 nominal degrees of freedom (χ2 /df = 1.14);
+we do not read χ2 /df ≈ 1 as the disappearance of dependence, since no reference distribution
+has been established for this serially structured, selected collection. Two further observations:
+(i) the three values decrease in magnitude in the order stated (−0.0141, −0.00106, −0.00047);
+(ii) a split-sample check (pairs with p < 5 × 108 versus p ≥ 5 × 108 , conditioning mod 120) gives
+residuals −0.00096 and −0.00094 — stable across the range.
+Several caveats apply. The global δ over 50.8 million pairs and the selected-cell δres over
+12.1 million selected informative pairs are different estimands on different populations; arithmetic
+comparison of their magnitudes is descriptive but does not constitute a proper decomposition.
+A marginal risk difference is not, in general, the pair-weighted mean of stratum risk differences
+without a between-group term and specified weights. The per-cell Pearson calibration assumes
+independent observations within each cell, which is not established for this serially structured
+deterministic census. The paper does not specify a numerical model for the omitted channels
+against which “compatible” could be formally tested. Those omitted channels are not only
+the divisibility channels at q ≥ 11: fixing p modulo 840 determines whether 3, 5 and 7 divide
+p − 1, but not whether 10(p−1)/q ≡ 1 (mod p) when one of them does, so cubic and higher
+power-residue obstructions at these same small primes are also unmodelled. The mod-3 channel
+here is the divisibility channel, not the full cubic-residue condition.
+Joint-residue conditioning yields a smaller selected-cell signed residual association than the
+global figure. The remaining association is small in that metric but is not established to vanish.
+These results are consistent with a substantial role for arithmetic residue structure; they do
+not constitute a complete decomposition or an independent quantitative verification of the
+Hardy–Littlewood-based explanation of the consecutive-prime bias.
+10. The intermediate link: repulsion of ω(p − 1)
+The chain from residue bias to Artin status passes through the factorisation of p − 1. Its first
+summary statistic is ω(p − 1), the number of distinct prime factors, which has normal order
+log log p over shifted primes p − 1 — a classical result of Erdős [4]. (We invoke the normal
+order only; we do not use a mean-value asymptotic, which would need separate tail control.) If
+consecutive primes repel modulo every small q, then q | pn − 1 makes q | pn+1 − 1 less likely
+than average, and summing over q one predicts a negative correlation between ω(pn − 1) and
+ω(pn+1 − 1).
+The data confirm this with a value that is, to our knowledge, unreported:
+
+r ω(pn − 1), ω(pn+1 − 1) = −0.0410
+(50,847,530 pairs, p ≤ 109 ).
+The factorisations of p − 1 for consecutive primes are therefore not independent. We stress that
+this measurement establishes dependence, not its cause. The heuristic above accounts only for
+the same-q terms: writing Iq (p) = 1q|p−1 ,
+ X
+ X
+
+Cov ω(pn − 1), ω(pn+1 − 1) =
+Cov Iq (pn ), Iq (pn+1 ) +
+Cov Iq (pn ), Ir (pn+1 ) ,
+q
+
+q̸=r
+
+and the cross terms q ̸= r are neither estimated nor signed here. Summing fixed-modulus
+predictions over all q up to a growing cutoff would in any case require uniformity and tail
+
+CORRELATIONS OF ARTIN STATUS AMONG PRIMES
+
+13
+
+Table 4. Same-prime cross-base Artin correlation at x = 109 : summary and
+extremes. “Triple-completed” means the base set contains a third base c with
+sqf(c) = sqf(ab). This is a property of the chosen base set, not of the pair: the
+two bases of such a pair are multiplicatively independent in the usual sense, and
+adding or removing c changes the label but not the pair’s density, character or
+Kummer field.
+pairs
+all pairs
+non-completed
+triple-completed
+largest: (5, 13)
+smallest: (3, 15)
+second smallest: (2, 10)
+
+mean ϕ
+
+66 +0.0352
+51 +0.0363
+15 +0.0314
++0.0667
+−0.0303
+−0.0302
+
+control that we do not supply. Nor is ω a sufficient statistic for Artin status: which primes
+divide p − 1, and whether 10 is a qth power residue, both matter. The observed repulsion is
+consistent with the same residue-class repulsion that governs the primes, but we do not establish
+that it has the same cause. The Pearson coefficient is reported as a descriptive nominal value.
+11. The cross-base correlation
+For each pair write ϕ(a, b) for the Pearson correlation of the indicator variables (the ϕ
+coefficient of the 2 × 2 table). This is an exhaustive census of a fixed interval for a deliberately
+chosen finite set of bases, so the coefficients below are exact and carry no sampling error. We
+therefore report effect sizes and their variation with x, and avoid the vocabulary of statistical
+inference. Where a scale factor is quoted we write σ0 = N −1/2 ≈ 0.00014 at N ≈ 5.08×107 : this
+is the standard deviation of ϕ under an i.i.d. independence benchmark that does not describe
+these data — the primes are enumerated, not sampled — and ratios ϕ/σ0 should be read as
+model-relative diagnostics indicating that the effects are far larger than that benchmark’s scale,
+not as tests of any hypothesis. No claim below depends on such a ratio.
+One convention should be stated, since it affects the conditional averages in Sections 12 and 13.
+Within-cell ϕ is undefined when a cell is constant in one of the two indicators (for example cells
+with 5 | p − 1, in which no prime is Artin base 5). Such cells carry zero conditional covariance
+and are omitted from the pooled average, which therefore draws on 73% of primes on average
+for the signature stratification, and 23% for the finer signature-plus-character stratification,
+where three of the four character quadrants are identically non-Artin. Explicitly, for a base
+pair (a, b) we report
+P
+s∈Eab ns ϕab,s
+P
+ϕ | sig =
+,
+s∈Eab ns
+where s runs over signature cells, ns is the number of primes in cell s, and Eab is the set of cells
+with ns ≥ 200 in which both indicators vary. This is a prime-count-weighted descriptive mean
+of within-cell correlations, not a partial correlation coefficient and not an additive component of
+ϕ; outer means over the 66 base pairs are unweighted. Pooling instead on the covariance scale
+over all cells, which requires no such exclusion, gives 95.3% removal, in agreement with Table 6.
+Three observations, in increasing order of depth.
+
+14
+
+CORRELATIONS OF ARTIN STATUS AMONG PRIMES
+
+Table 5. The ten largest |ϕ| at x = 109 , with the values after conditioning on
+ω(p − 1) and on the fine signature sig(p) (pair-weighted mean of within-cell ϕ;
+cells with fewer than 200 primes excluded). “TC” marks triple-completed pairs.
+a
+
+b
+
+ϕ
+
+ϕ|ω
+
+5
+5
+5
+5
+5
+5
+5
+3
+5
+2
+
+13
+17
+29
+10
+6
+11
+15
+5
+7
+5
+
++0.0667
++0.0649
++0.0631
++0.0624
++0.0623
++0.0623
++0.0622
++0.0622
++0.0622
++0.0621
+
++0.0200
++0.0218
++0.0246
++0.0285
++0.0292
++0.0300
++0.0297
++0.0284
++0.0297
++0.0336
+
+ϕ | sig TC
++0.0003
++0.0025
++0.0007
+−0.0125
++0.0005
++0.0004
+−0.0255
++0.0015
++0.0002
++0.0004
+
+✓
+
+✓
+✓
+✓
+
+Observation 12 (Positivity). ϕ(a, b) > 0 for 64 of the 66 pairs. Artin statuses of different
+bases at the same prime attract.
+The sign is the opposite of the consecutive-prime correlation measured above (§7, where
+δ < 0), and the mechanism is transparent: there the two primes had different (and LOSanticorrelated) values of p − 1; here every base is tested against the same p − 1. If p − 1 has
+few small prime factors and a small 2-part, the primitive-root condition is easier for every base
+at once. Formally, the Artin indicators share the common cause sig(p).
+Observation 13 (The negative pairs are triple-completed). The only pairs with ϕ < 0 are
+(2, 10) and (3, 15): in each, the product of the two bases is, up to a square, the third base
+of a multiplicative triple contained in the set (2 · 10 = 4 · 5, 3 · 15 = 9 · 5). For (2, 10):
+P (A10 | A2 ) = 0.3551 versus P (A10 | ¬A2 ) = 0.3853.
+The sign reversal is where Theorem 6 becomes visible statistically. For every pair, triplecompleted or not, the primes split into two halves according to the sign of χd (p), d = sqf(ab):
+on the half with χd (p) = −1 the values χa (p) and χb (p) are forced opposite, so joint Artin status
+is impossible there, while on the half with χd (p) = +1 they are forced equal and joint Artin
+status is unobstructed. This is visible directly in the data: over all 66 pairs and all 50,847,524
+primes, the number of primes Artin for both bases with χa (p) ̸= χb (p) is exactly zero, while
+the conditional joint density on the complementary half is 0.299.
+What then distinguishes the two negatively correlated pairs is not the existence of the
+exclusion — every one of the 66 pairs has it, on exactly half the primes — but the identity of the
+barring character χd , and in particular how its conductor interacts with the common cause p − 1.
+Among the fifteen triple-completed pairs, d = sqf(ab) takes the values {2, 3, 5, 6, 7, 10, 15, 21},
+and the two pairs with d = 5 — (2, 10) and (3, 15), of conductor 5, the smallest conductor
+occurring and the only odd prime one — are exactly the two with ϕ < 0. That is the sharp
+empirical discriminant: not dependence, which thirteen positively correlated pairs also enjoy, but
+cond(sqf(ab)) = 5. A plausible reading is that a small conductor makes the barring condition
+χd (p) = −1 resolve on a coarse residue class that is comparatively well correlated with the
+divisibility structure of p − 1 driving the common cause, so the exclusion survives the averaging
+instead of being diluted by it; we do not have a proof of this and record it as an observation.
+
+CORRELATIONS OF ARTIN STATUS AMONG PRIMES
+
+15
+
+Table 6. Mean cross-base correlation after conditioning, all 66 pairs at x = 109 .
+“Removed” is 1 − |ϕcond |/|ϕ|, the means taken signed over the 66 pairs; on the
+mean-absolute scale the corresponding figures are 51% and 87%, and on the
+covariance scale 57% and 95%.
+conditioning
+
+mean ϕ removed
+
+none
+ω(p − 1)
+
+sig(p): v2 , {q ≤ 13}, ω>13
+
+0.0352
+0.0158
+0.0019
+
+—
+55%
+95%
+
+Table 7. Residual correlation after conditioning on sig(p) and after additionally
+conditioning on the pair of quadratic-residue statuses (χa (p), χb (p)), split by
+triple-completion. All values at x = 109 over 50,847,524 primes.
+group
+
+mean ϕ mean ϕ | sig mean ϕ | sig, QR
+
+triple-completed (15 pairs) +0.0314
+mean absolute residual
+non-completed (51 pairs)
++0.0363
+mean absolute residual
+
++0.0049
+0.0179
++0.0010
+0.0010
+
+all 66 pairs
+
++0.0019
+
++0.0352
+
++0.0049
++0.0052
++0.0052
+
+Section 13 tests the reading by conditioning the common cause away, after which the exclusion
+becomes visible on six triple-completed pairs rather than two.
+12. Decomposition: the correlation is the structure of p − 1
+Conditioning on ω(p − 1) alone — the crude size of the factorisation — removes barely
+half of the correlation. This is worth emphasising because ω is the statistic through which
+the consecutive-prime papers routed the mechanism, and it is genuinely insufficient here: two
+primes with the same ω(p − 1) can present very different Artin conditions (it matters which
+primes divide p − 1, and with what 2-adic valuation, not how many). The fine signature —
+2-adic valuation capped at 4, the exact set of primes ≤ 13 dividing p − 1, and the count of larger
+prime factors capped at 3 — is the information the Artin criterion actually consults for small
+bases, and conditioning on it removes 95% of the mean correlation (Table 6). That the fine
+structure of p − 1, rather than its coarse size, is what governs Artin behaviour is in the same
+spirit as the refined order-distribution conjectures of [19],
+ which pass from the Artin condition
+ordp (a) = p − 1 to the distribution of ω (p − 1)/ordp (a) — finer information about the index
+than its mere vanishing, just as our signature is finer information about p − 1 than ω(p − 1).
+We regard this as the main statistical finding: cross-base Artin correlation at a single prime
+is, to first order, not an interaction between the bases at all. It is a common-cause effect of the
+shared integer p − 1. Any model that treats Aa and Ab as conditionally independent given the
+small-prime structure of p − 1 reproduces 95% of the observed association.
+13. The residual and the exclusion law
+The 5% that survives is not uniformly distributed: it is concentrated on the triple-completed
+pairs. This section argues that it is the statistical trace of Theorem 6 — the deterministic
+exclusion that the unconditional correlation of Section 11 had largely averaged away.
+
+16
+
+CORRELATIONS OF ARTIN STATUS AMONG PRIMES
+
+Two facts pin down the mechanism, both measured over the full 109 range.
+First, after fine conditioning the triple-completed pairs retain substantial residuals, and
+every pair with a substantial negative residual is triple-completed. The six pairs below are the
+only ones with ϕ | sig < −0.004, and all six are triple-completed. We state this as the exact
+combinatorial fact it is — six of the six most negative residuals fall in the triple-completed class
+— rather than attaching a p-value to it: the 66 pairs share endpoints and the base set was chosen
+to contain multiplicative triples, so the pair labels are neither independent nor exchangeable
+and no randomisation model licences such a test.
+(2, 10) : −0.0343,
+(5, 15) : −0.0255,
+(6, 10) : −0.0144,
+(5, 10) : −0.0125,
+
+(7, 21) : −0.0060,
+
+(10, 15) : −0.0049.
+
+At x = 109 these are also the only six negative residuals of any size, but that sharper statement
+is not stable with x: at x = 3 × 107 a further twelve pairs have residuals marginally below zero,
+all within 3σ0 of it in the benchmark scale of Section 11.
+The residual is not sign-definite, and we record the exceptions explicitly. Nine of the fifteen
+triple-completed pairs have positive residuals: eight of them small, and one, (2, 6), a large outlier
+at +0.1598 — the largest residual of any pair in the collection. Its mechanism is transparent
+and is the same entanglement phenomenon seen from the other side: sqf(6) = 2 · 3. The relevant
+family is narrower than 3 ∤ p − 1 alone, however. If 3 ∤ p − 1 and v2 (p − 1) ≥ 2 then p ≡ 5
+(mod 12), so (3/p) = −1 and Theorem 6 forbids 2 and 6 together. Agreement can occur only
+on the complementary family v2 (p − 1) = 1, that is p ≡ 11 (mod 12), where (3/p) = +1 and
+the two quadratic characters coincide; that the remaining odd-prime tests then also very nearly
+coincide is what we measure, not something the factorisation sqf(6) = 2 · 3 implies on its own,
+and the signature records whether 3 | p − 1 without recording the resulting near-determinism
+inside those cells. (The effect is sharpest in the cells where p − 1 has no small odd prime
+factor at all: for v2 (p − 1) = 1, no prime q ≤ 13 dividing p − 1 and exactly one larger factor,
+the 2 × 2 table for (2, 6) is exactly diagonal over 1,775,686 primes, giving ϕ = +1. Across
+the 44 cells with v2 (p − 1) = 1 and 3 ∤ p − 1 the within-cell ϕ ranges from +0.39 to +0.98,
+so the near-determinism is a feature of that family of cells rather than of a single one.) The
+triple-completed-group mean absolute residual of 0.0179 is substantially driven by this one
+pair: excluding it, the figure is 0.0077, still eightfold the value for the remaining pairs of 0.0010.
+Conditioning additionally on (χa (p), χb (p)) reduces (2, 6) to +0.0055, in line with every other
+pair — so the outlier is explained by the entanglement account rather than in tension with it.
+Note that (2, 10) and (5, 15) are more negative after conditioning than before, and that (5, 10),
+(5, 15), (6, 10), (10, 15) and (7, 21) change sign under conditioning: the common-cause channel
+had been masking an underlying repulsion.
+Second, additionally conditioning on the pair of quadratic-residue statuses (χa (p), χb (p))
+removes the negative residuals. We put it this way deliberately: the signed group means do not
+both fall to zero. The triple-completed mean stays at +0.0049 while the mean for the remaining
+pairs rises from +0.0010 to +0.0052, and the two averages are taken over different eligible
+populations (about 73% of primes for signature conditioning against 23% here), so they are
+not components of a single decomposition. Every one of the six negative values above becomes
+positive and small (+0.0031, +0.0066, +0.0045, +0.0065, +0.0040, +0.0048 respectively), and
+the triple-completed and remaining groups become indistinguishable at +0.0049 and +0.0052
+(Table 7). That common small positive floor of about +0.005 is present for all 66 pairs and is
+plausibly attributable to residual odd-prime conditions shared through p − 1 beyond what our
+signature records. We note that a quartic channel is not available as an explanation here: a
+
+CORRELATIONS OF ARTIN STATUS AMONG PRIMES
+
+17
+
+fourth power is a square, and in the only quadrant contributing defined correlations both bases
+are quadratic nonresidues, so no further 2-power residue condition can bind.
+Conditioning on the quadratic characters is precisely what removes character-level entanglement, and that it flattens the triple-completed pairs is consistent with the residual as the
+statistical trace of the relation χa χb = χsqf(ab) — the same object that makes Theorem 6 true.
+One part of this can be made exact, though it is a statement about support and not about
+the residual’s size. Theorem 6 asserts that the joint Artin event is empty on the stratum
+χa (p) ̸= χb (p), and this is what the contingency tables show: summing the joint-Artin cell over
+all signature classes and all 66 pairs, the count of primes p ≤ 109 that are Artin for both a and
+b with χa (p) ̸= χb (p) is
+0
+
+(out of 50,847,524 primes, for every one of the 66 pairs),
+
+while on the complementary stratum the joint density is 0.299. The support restriction is
+therefore a theorem rather than a conjecture. It does not by itself determine the sign or
+the magnitude of any residual: a support constraint of this kind is compatible with zero
+covariance, as the trivial example of two independent fair signs with Artin indicators given by
+their negative-sign indicators shows. What the residual measures is a quadratic-information
+component; that this component is the pointwise law’s statistical trace is an interpretation the
+data support, not a consequence of the theorem.
+One caveat on the strength of the flattening step, in the other direction. Within a (χa , χb )
+stratum the exclusion cannot operate at all: by criterion (1) an Artin prime for a has χa (p) = −1,
+so all the joint Artin mass sits in the single quadrant (−1, −1). In each of the other three
+quadrants at least one of the two indicators is identically zero, so the within-cell correlation
+is undefined and the conditional covariance vanishes; this is not the same as saying neither
+indicator varies there. Conditioning on (χa , χb ) therefore restricts attention to the stratum on
+which the constraint of Theorem 6 is vacuous, and the vanishing of the residual there is in part
+a structural consequence of that restriction rather than an independent confirmation. What the
+step establishes is the localisation: the residual lives in the character channel and not elsewhere
+in the signature. We state it in that weaker form.
+The picture that emerges is cleanly layered:
+common cause p − 1 + quadratic entanglement χa χb = χsqf(ab) + higher-order sharing .
+{z
+}
+{z
+}
+|
+|
+|
+{z
+}
+≈95%
+
+residual, localised on triple-completed pairs
+
+small positive floor
+
+14. Comparison with the predicted joint densities
+The measurements of Sections 11–13 identify the mechanisms empirically. We now check
+them against theory quantitatively, by computing the joint densities predicted by the Matthews–
+Moree–Stevenhagen framework and comparing with the observed counts pair by pair.
+Write da = sqf(a). The heuristic, in the form originating with [24] and systematised by the
+character-sum method of [23] (with the general framework in [20]), is an inclusion–exclusion
+over the degrees of the Kummer extensions that detect the conditions “a is an ℓ-th power
+residue”:
+X
+
+µ(m) µ(n)
+
+,
+L = lcm(m, n),
+(3)
+P p ∈ Aa ∩ Ab =
+1/m , b1/n ) : Q
+Q(ζ
+,
+a
+L
+m,n squarefree
+and the entanglement enters through the degree in the denominator. Generically
+[Q(ζL , a1/m , b1/n ) : Q] = φ(L) m n,
+
+18
+
+CORRELATIONS OF ARTIN STATUS AMONG PRIMES
+
+Table 8. Predicted versus measured joint Artin densities, selected pairs at
+x = 109 . “TC” marks triple-completed pairs. The final two rows are the two
+negatively correlated pairs.
+a
+
+b measured j
+
+model j
+
+rel. err. measured ϕ model ϕ TC
+
+5
+5
+5
+3
+13
+2
+2
+7
+15
+
+13
+10
+15
+7
+17
+3
+6
+21
+21
+
+0.163943
+0.161922
+0.161922
+0.149971
+0.150261
+0.147349
+0.147349
+0.144728
+0.144728
+
++0.00%
+−0.02%
+−0.01%
++0.00%
++0.01%
+−0.01%
++0.01%
+−0.02%
++0.00%
+
+3 15
+2 10
+
+0.163939
+0.161962
+0.161934
+0.149965
+0.150249
+0.147361
+0.147334
+0.144754
+0.144725
+
+0.132769 0.132776 +0.01%
+0.132776 0.132776 +0.00%
+
++0.0667
++0.0624
++0.0622
++0.0432
++0.0383
++0.0321
++0.0320
++0.0238
++0.0237
+
++0.0667
++0.0623
++0.0623
++0.0433
++0.0383
++0.0321
++0.0321
++0.0238
++0.0238
+
+−0.0303 −0.0302
+−0.0302 −0.0302
+
+✓
+✓
+✓
+✓
+✓
+✓
+✓
+✓
+
+but the degree drops by the order of the subgroup of quadratic classes realised inside Q(ζL ),
+taken from the group
+V (m, n) = da (if 2 | m), db (if 2 | n) ⊆ Q× /(Q× )2
+whose quadratic field lies inside Q(ζL ), i.e. whose conductor divides L. The point of contact
+with Theorem 6 is that when both 2 | m and 2 | n the group V contains not only da and db but
+their product da db ∼ sqf(ab), so the barring character χsqf(ab) of Theorem 6 is present in the
+model as a potential source of degree collapse. Two things must be said precisely here, because
+a natural stronger reading is false. First, the product class lies in V (m, n) for every pair of
+bases whenever both indices are even; its membership is automatic and has nothing to do with
+whether a third base of our set completes a multiplicative triple. Second, membership in V
+is not collapse: a class contributes only when its conductor divides L. These two conditions
+do not coincide, in either direction. For (7, 11) — a pair outside every triple of our set — the
+product class 77 has conductor 77, which divides L = 154, while the individual conductors
+28 and 44 do not, so the product class does contribute a collapse there. Conversely for (2, 6)
+— a pair inside the triple (2, 3, 6) — the nontrivial classes of V have conductors 8, 24 and
+12, all divisible by 4, and no squarefree L is, so no term of (3) receives this correction at all.
+The triple-completion classification used in our tables is therefore a property of the chosen
+base set, not a field-theoretic invariant of the pair, and it is not equivalent to the occurrence
+of an extra degree collapse. We evaluate (3) by summing the ramified part exactly over all
+squarefree m, n supported
+on S = {2} ∪ {q : q | da db } and folding the rest into the Euler product
+Q
+2q−1 
+6
+q ∈S
+/ 1 − q 2 (q−1) , truncated at 3 × 10 .
+As a check on the implementation, the same code specialised to a single base reproduces the
+classical Hooley densities: 0.373956 for bases with d ̸≡ 1 (mod 4) (Artin’s constant), 0.393638
+for d = 5, 0.376368 for d = 13, against measured 0.373957, 0.393642, 0.376362.
+Observation 14 (The model reproduces the measurements). Over all 66 pairs at x = 109 ,
+the mean absolute relative error between the predicted and measured joint densities is 0.012%,
+with maximum 0.040% (attained at (21, 29)). In particular the model predicts the sign reversal:
+for the negatively correlated pairs (2, 10) and (3, 15) it gives j = 0.132776 and ϕ = −0.0302 for
+both, against measured j = 0.132776, 0.132769 and ϕ = −0.0302, −0.0303 respectively.
+
+CORRELATIONS OF ARTIN STATUS AMONG PRIMES
+
+19
+
+This is the quantitative counterpart of Sections 11 and 13. It is a comparison of unconditional
+joint densities, so it does not by itself validate any conditional mechanism, but it is a demanding
+test and the framework passes it. The 66-pair pattern — positive correlation almost everywhere,
+negative precisely on the two pairs where it is observed to be negative, with magnitudes ordered
+as observed — is not merely consistent with the Matthews–Moree–Stevenhagen framework; it is
+reproduced by it to within a few parts in 104 , with no fitted parameters. Correspondingly, the
+same quadratic class sqf(ab) governs the deterministic law of Theorem 6 and enters the heuristic
+through the group V (m, n). We stop short of calling these one object: the class lies in V (m, n)
+for every pair once both indices are even, while it lowers a degree only when its conductor
+divides L, and the two conditions come apart in both directions as noted in Section 14.
+Remark 15. The residual discrepancies are uniformly small (all 66 pairs below 0.040%) and we
+have not pursued them; ordinary Hooley-type errors of this size are expected at x = 109 , since
+the convergence in Hooley’s theorem is only logarithmic, and our Euler products are truncated
+at 3 × 106 . We record one methodological warning, since it cost us a draft. Computing ε(m, n)
+as 2 raised to the number of classes of V (m, n) with conductor dividing L — rather than as the
+order of the subgroup of V (m, n) realised in Q(ζL ) — inflates ε to 8 on exactly those pairs with
+da ≡ db ≡ 1 (mod 4), where all three of da , db , sqf(ab) have odd conductor. Since V (m, n) has
+two generators, |V (m, n)| ≤ 4 and ε = 8 is impossible. The error is invisible in the single-base
+specialisation, which is why the check above does not catch it; it inflates the mean relative
+error over the 66 pairs from 0.012% to 0.037% and concentrates the damage on the ten pairs
+drawn from {5, 13, 17, 21, 29}.
+15. Computational content: a measured negative
+The correlations above are statistically overwhelming: δ = −0.01414 with Pearson 10,167 on
+one degree of freedom, and individual cross-base values of ϕ/σ0 up to 476. A natural question,
+and the one that motivates this section, is whether such a correlation is computationally worth
+anything: could it predict generator availability, or yield a faster algorithm? We answer by
+measurement, and the answer is no. We record the measurement because the negative is
+informative and because the same protocol applies to any claimed predictive advantage in this
+area.
+The right baseline. A correlation can look large against a naive reference and carry no usable
+information once the elementary structure is taken into account. For consecutive primes the
+elementary structure is the joint residue pair : a practitioner asking
+  whether a is a primitive
+root mod p already knows p mod 4d, and the Legendre symbol ap is a function of it. The
+correct baseline for a predictive claim is therefore not the marginal density of Art but the
+conditional distribution given the joint residues. We measure the cross-entropy of predicting
+Artn+1 under three nested models, on all 50,847,530 consecutive pairs below 109 .
+The correlation’s own predictive edge, beyond the elementary baseline, is of order 10−5 bits.
+It is not usable, and no predictor built on it can beat one built on the residues. One caution for
+the reader who repeats this: conditioning on the gap class g mod 40 alone produces a spurious
+gain of about 0.02 nats, because g mod 40 does not determine the individual residues pn mod 40
+and pn+1 mod 40; the apparent signal is residue information re-appearing. The joint residues
+are the correct baseline, and against them the effect is negligible.
+Both exclusion laws are computationally redundant. An exclusion law can be mathematically correct and computationally useless, and both of ours are instances of that. The gap
+law (Theorem 2) is the statement that for g ≡ 20 (mod 40) the product χ10 (p)χ10 (p + g) =
+
+20
+
+CORRELATIONS OF ARTIN STATUS AMONG PRIMES
+
+conditioning
+
+cross-entropy (nats)
+
+gain over marginal
+
+0.661047
+0.241529
+0.241520
+
+—
+0.419517 (0.605 bits)
+0.000009 (1.3 × 10−5 bits)
+
+marginal
+joint residues mod 120
++ predecessor Artin status
+
+joint residues mod 840
+0.237235
+0.423812
++ predecessor Artin status
+0.237217
+0.000018 (2.6 × 10−5 bits)
+Table 9. Predictive content of the consecutive-prime Artin correlation, by
+cross-entropy, over 50,847,530 pairs below 109 . The elementary joint-residue
+baseline carries 0.42 nats; the correlation itself adds of order 10−5 nats.
+
+strategy
+
+time (s) factorizations of p − 1 speedup
+
+naive (factor every prime)
+non-residue filter first
++ small-ℓ early exit
+
+0.1642
+0.0841
+0.0732
+
+722
+376
+300
+
+1.00×
+1.95×
+2.24×
+
+Table 10. Finding 300 Artin-base-10 primes above 1015 ; 32 threads, 722 primes
+visited. The small-ℓ early exit tests the channels ℓ ∈ {3, 5, 7, 11, 13, 17, 19} of
+p − 1 before the full factorisation, rejecting on first failure (402 cheap exponentiations).
+
+
+χ10 p(p + g) takes a fixed value +1, so the two characters are opposite and at most one of the
+two primes can be Artin. But a practitioner need not track predecessor status or gap state to
+learn this: reading p mod 40 gives χ10 (p) directly, and p + g mod 40 gives χ10 (p + g). The law
+is a statement about characters that a character computation already answers. Likewise the
+triple law (Theorem 7) follows from χc = χa χb : if a and b are Artin then both characters are
+−1, so χc = +1 and c is not Artin. Both deductions are one line of multiplicativity; neither
+saves a modular exponentiation that a character-aware implementation was not already saving.
+We verified the gap law exhaustively at 109 — 2,214,511 pairs with g ≡ 20 (mod 40), of which
+984,678 have an Artin predecessor, and zero are doubly-Artin — but exhaustive verification of
+a redundancy is still a redundancy.
+The one usable filter is elementary. The only filter that does real work
+ is
+ the necessary
+a
+condition of §3: a primitive root must be a quadratic non-residue, so p = −1. It is
+answerable in O(1) arithmetic by reciprocity rather than by exponentiation, and it is exactly
+the information that the conductor-40 quadratic channel of §9 carries. That is the honest
+reading of the decomposition: the paper explains why a standard filter works, and identifies
+which channel carries the effect, but it does not supply a new one.
+We measured the filter in a scanning search for Artin-base-10 primes at p ≈ 1015 , where
+factorising p − 1 dominates.
+Ordering the small prime channels of p − 1 before the full factorisation — testing a(p−1)/ℓ ̸≡ 1
+for small ℓ | p − 1 and rejecting on the first failure — saves a further 15%, or 20% of the
+factorizations. This is a test-ordering principle rather than a new algorithm, and it is workloaddependent in a way worth stating: if the task is to find any primitive root for a given p, then
+p − 1 is factored once and cached, and the early exit saves the cheap exponentiations but not
+the factorisation at all. The 1.15× exists only for scanning searches over fresh primes.
+
+CORRELATIONS OF ARTIN STATUS AMONG PRIMES
+
+21
+
+What would change the verdict. This is a negative assessment of the evidence, not an
+impossibility theorem. The conditioning above does not prove exact conditional independence,
+and the verdict would change if: (i) a repeated workload existed in which many compatible
+primes or candidate bases are tested and the required labels are already available; (ii) a new
+deterministic exclusion were found that rules out a case the character deductions do not
+already rule out; (iii) an actionable decision followed from the correlation — skipping a soundly
+excluded candidate, or reordering costly tests — with net cost falling after factorisation, feature
+acquisition and bookkeeping; and (iv) correctness were preserved, since a predictor may order
+tests but cannot replace certification. None of these holds for the correlations studied here.
+The results are best understood as describing arithmetic structure, and as identifying exactly
+which elementary structure the observed correlations are made of.
+16. Discussion
+What is new here. The individual ingredients are classical: quadratic reciprocity, the
+quadratic-residue obstruction to primitive roots, the consecutive-prime bias of [14], and the
+Kummer-degree density computations of [24, 23]. The contributions of this paper are: (i) the
+observation that these combine into deterministic exclusion laws on both axes — a gap law for
+consecutive primes at base 10 (Theorem 2) and a same-prime pair law with a triple corollary
+(Theorem 6, Theorem 7) — each elementary, but none of which we have found stated in this
+form; (ii) a measurement, at the scale of 109 primes, of the consecutive-prime Artin correlation,
+its gap profile, and the ω repulsion, together with the cross-base correlations ϕ(a, b) and their
+joint-density comparison; (iii) an elementary decomposition showing that both correlations
+are, to 93–97% and 95% respectively, the same arithmetic structure — the residues of p
+and the factorisation of p − 1 — rather than an interaction; and (iv) a measured audit of
+the computational content of those correlations, which is nil (§15). The exclusion laws are
+immediate applications of standard quadratic reciprocity; their simplicity is a feature, not a
+limitation, and the same is true of the audit.
+Relation to runs of Artin primes. Pollack [17] proved (under GRH) that for every nonsquare
+g ̸= −1 and every m there are infinitely many runs of m consecutive primes each having g as a
+primitive root. Baker and Pollack [2] proved unconditionally that if Q contains at least exp(Cm)
+multiplicatively independent primes, then infinitely many runs of m consecutive primes each
+have some element of Q as a primitive root, with the primes lying in a bounded-length interval.
+Our results add an arithmetic constraint to the base-specific version: for base 10, no run of
+all-Artin consecutive primes can cross a gap ≡ 20 (mod 40). We have not inferred longer-run
+frequencies from the pair statistic, and we emphasise that the existence results above concern
+rare favourable configurations rather than the typical behaviour measured here.
+Relation to the Kummer-degree theory. The pointwise obstruction of Theorem 6 and the
+Kummer-degree heuristic of §14 are both governed by the same quadratic class sqf(ab): in the
+first it appears as a congruence barring half the primes, in the second as a member of the group
+of quadratic classes that can reduce a degree. We do not claim these are the same phenomenon.
+The product class belongs to that group for every pair, whereas it lowers a degree only when
+its conductor divides the relevant cyclotomic level, and §14 exhibits pairs separating the two.
+The agreement of the Matthews–Moree–Stevenhagen densities with measurement to 0.012%
+mean relative error is a check of the density theory at this scale, not a new derivation of it.
+
+22
+
+CORRELATIONS OF ARTIN STATUS AMONG PRIMES
+
+Future work. Four extensions suggest themselves. (1) Other bases: the same pipeline with
+a = 2, 3, 5, 6, 7 would test the conductor prediction after Corollary 3 (conductor 8 for a = 2, so
+exclusion classes mod 8; conductor 24 for a = 6). (2) Scale: extending the consecutive census to
+1012 would help distinguish decay from persistence in δ(x). (3) Theory: a derivation of δ(g) from
+the singular series of [9] combined with Hooley’s method, at least for the dominant channels,
+would replace empirical conditioning with a formula. (4) Audit protocol : the measurement
+in §15 is a general recipe — compare a claimed predictive advantage against the elementary
+necessary-condition baseline, using a proper scoring rule, and report end-to-end cost including
+feature acquisition — and it would be worth applying to other claims of algorithmic value from
+arithmetic correlations.
+Acknowledgements
+The author thanks the developers of the open-source tools used in this work (GMP, Python,
+NumPy, SymPy, Matplotlib).
+Use of AI assistance. Large-language-model AI assistants were used in code development,
+literature-search assistance, drafting and editing, and initial formulation of the elementary
+proofs of Theorems 2 and 6. The computational audit of §15 was designed with AI assistance
+and independently critiqued by a separate AI system before the measurements were made. All
+numerical outputs were produced by executing deterministic programs; no number in this paper
+was synthesised by a language model. The author takes responsibility for the manuscript.
+Declaration of interest
+No potential conflict of interest was reported by the author.
+Funding
+This research received no specific grant from any funding agency in the public, commercial,
+or not-for-profit sectors.
+Data availability
+All code required to reproduce every number in this paper is supplied in the accompanying reproduction package: the C segmented sieve and census programs, the independent
+recomputation, the analysis scripts, the verification driver for the tables of §15, and the Lean
+development for the exclusion laws. The code, manuscript, results and Lean development are at
+https://github.com/jpbald93/artin-correlations. The per-prime dataset itself (1.8 GB
+CSV covering all 50,847,531 primes from 7 to 999,999,937: gap, ω(p − 1), Artin indicator,
+and small residues) is not deposited because of its size, but it is exactly and deterministically
+reproducible from the included C source on a single machine, and is available from the author
+on request.
+17. Open questions
+The Hardy–Littlewood-based framework of [14] makes the residue transition frequencies of
+consecutive primes quantitatively predictable, and every channel in our conditioning is built
+from such frequencies. This motivates the following open questions.
+Conjecture 16 (Persistence). For primes up to x, the consecutive-pair Artin correlation
+δ(x) = P (Artn+1 | Artn ) − P (Artn+1 | ¬Artn ) is negative for all sufficiently large x.
+
+CORRELATIONS OF ARTIN STATUS AMONG PRIMES
+
+23
+
+We have measured δ at four decade-spaced cutoffs:
+δ(108 ) = −0.013360,
+
+δ(109 ) = −0.014140,
+
+δ(1010 ) = −0.014723,
+
+δ(1011 ) = −0.014998,
+
+the last two from an independent recomputation described in Section 6 (over 455,052,508 and
+4,118,054,810 primes respectively). At these four cutoffs the magnitude of δ increases, and
+the increments −0.000780, −0.000583, −0.000275 decrease. No turnover is observed over the
+measured range.
+We draw no asymptotic conclusion from this. Four nested cumulative cutoffs are not four
+independent observations, and they determine neither an eventual sign nor a limit nor a decay
+rate. Two specific negative remarks are all that the values support: the ratio of successive
+increments is not constant (0.75 then 0.47), so a geometric increment model does not describe
+them — extrapolating geometrically from the first three values predicts δ(1011 ) ≈ −0.01516
+against a measured −0.014998, a discrepancy of 1.6 × 10−4 — and δ(x) log x is not constant
+(−0.246, −0.293, −0.339, −0.380), so a bare c/ log x law does not describe them either.
+It is worth recording explicitly that monotone strengthening with decelerating increments
+does not constrain the eventual rate, and in particular does not exclude decay to zero. Writing
+t = log10 x, the function
+0.248463 1.495239 41.285554 162.098640
+−
++
+−
+f (t) = −
+t
+t2
+t3
+t4
+reproduces all four measured values at t = 8, 9, 10, 11, is negative for all t ≥ 8, strengthens
+across the measured range, and yet satisfies f (t) ∼ −0.248463/t, so that f → 0; its turning
+point lies at t ≈ 11.56, just beyond the last cutoff. This is an interpolation constructed to make
+the point, not a proposed model, and we attach no significance to its coefficients. It shows only
+that our data are equally compatible with eventual decay to zero and with persistence of a
+nonzero correlation, and that the question is not settled by extending the census a decade or
+two further.
+We also note that the conjecture as stated — that δ is eventually negative — is compatible
+with δ(x) → 0; eventual negativity and decay to zero are not competing alternatives. A separate
+reason for caution against assuming a nonzero limit arises in a restricted setting. Consider a
+separable fixed-modulus channel model: write R, S for the residue classes of (pn , pn+1 ) modulo
+a fixed M , and suppose the modelled indicators satisfy E[X | R, S] = α(R), E[Y | R, S] = β(S)
+and Cov(X, Y | R, S) = 0, so that the only modelled dependence between the two endpoints
+runs through the joint law of (R, S). If that joint law tends to the product of its marginals, as
+the leading term of the Lemke Oliver–Soundararajan prediction gives for fixed M [14], then
+E[XY ] − E[X] E[Y ] → 0, and hence the modelled δ → 0 whenever the limiting source marginal
+is nondegenerate. Non-uniform singular-series weights across gap classes do not by themselves
+defeat this conclusion: the gaps grow with x, and it is the surviving total covariance, rather
+than the non-uniformity of the weights, that would have to be estimated.
+The separability hypothesis is essential and is not automatic. Conditioning on the joint
+pair (R, S) alone does not force independence: taking R, S independent and uniform on the
+sixteen reduced classes modulo 40 and setting X = Y = Q(R)Q(S), where Q indicates the
+eight classes on which the relevant quadratic symbol is −1, gives perfectly equidistributed
+3
+residue pairs together with E[X] = E[Y ] = E[XY ] = 14 and Cov(X, Y ) = 16
+. So the observation
+above constrains separable finite-modulus models, not every model built on a fixed modulus.
+Extending a finite-obstruction approach to a statement about the limit would in addition
+require joint-distribution information at each finite channel together with a uniform bound on
+the omitted higher-power-residue obstructions; the quadratic channel visible here is only the
+
+24
+
+CORRELATIONS OF ARTIN STATUS AMONG PRIMES
+
+first of these. The question of the limiting behaviour is unresolved; finite-range measurements
+cannot distinguish the two alternatives.
+Research question (residue completeness). Does there exist, for every ε > 0, a
+modulus M such that conditioning on the joint residues of (pn , pn+1 ) modulo M reduces some
+appropriate within-cell dependence measure below ε in absolute value? This is stated as a
+question rather than a conjecture because a precise formulation requires specifying the order of
+limits (over x and M ), the treatment of sparse and degenerate cells, the dependence criterion
+(e.g. a covariance decomposition rather than a signed cell mean), and the range of x over which
+the bound is asserted. We do not know a formulation that avoids these ambiguities.
+We remark that a sufficiently uniform Hardy–Littlewood prime k-tuple framework, together
+with a justified treatment of the no-intermediate-prime restriction, would be the natural setting
+in which to predict the joint distribution of (pn mod M, pn+1 mod M, g) via singular series.
+The pair conjecture alone does not suffice, and the restriction is not an optional refinement:
+consecutiveness is part of the event, and its indicator
+Y
+
+1p prime 1p+g prime
+1 − 1p+h prime
+1≤h<g
+
+expands into higher-tuple correlations that two-point counts do not determine. This is why [14]
+proceeds from a k-tuple heuristic rather than from the pair conjecture. Whether such predictions
+carry the Chebotarev and power-residue information needed for Artin status is a further question
+again, and requires analysis we do not attempt here.
+
+Conjecture 17 (ω repulsion). r ω(pn − 1), ω(pn+1 − 1) is negative for all large x and tends
+to 0 as x → ∞.
+The single reported value does not establish eventual sign or limit. We state this as a
+conjecture consistent with the data.
+References
+[1] E. Artin, The Collected Papers of Emil Artin (S. Lang and J. T. Tate, eds.), Addison–Wesley, Reading,
+MA, 1965.
+[2] R. C. Baker and P. Pollack, Bounded gaps between primes with a given primitive root, II, Forum Math. 28
+(2016), no. 4, 675–687.
+[3] J. H. Conway and R. K. Guy, The Book of Numbers, Springer-Verlag, New York, 1996.
+[4] P. Erdős, On the normal number of prime factors of p − 1 and some related problems concerning Euler’s
+φ-function, Quart. J. Math. Oxford Ser. 6 (1935), 205–213.
+[5] K. (S.) Fan and P. Pollack, Counting primes with a given primitive root, uniformly, Mathematika 71 (2025),
+no. 4, Paper No. e70055.
+[6] S. R. Garcia, E. Kahoro, and F. Luca, Primitive root bias for twin primes, Exp. Math. 28 (2019), no. 2,
+151–160.
+[7] S. R. Garcia, F. Luca, K. Shi, and G. Udell, Primitive root bias for twin primes II: Schinzel-type theorems
+for totient quotients and the sum-of-divisors function, J. Number Theory 208 (2020), 400–417.
+[8] R. Gupta and M. R. Murty, A remark on Artin’s conjecture, Invent. Math. 78 (1984), no. 1, 127–130.
+[9] G. H. Hardy and J. E. Littlewood, Some problems of ‘Partitio numerorum’; III: On the expression of a
+number as a sum of primes, Acta Math. 44 (1923), 1–70.
+[10] D. R. Heath-Brown, Artin’s conjecture for primitive roots, Quart. J. Math. Oxford Ser. (2) 37 (1986),
+no. 145, 27–38.
+[11] C. Hooley, On Artin’s conjecture, J. Reine Angew. Math. 225 (1967), 209–220.
+[12] O. Klurman, I. E. Shparlinski, and J. Teräväinen, On Artin’s conjecture on average and short character
+sums, Bull. Lond. Math. Soc. 57 (2025), no. 8, 2429–2443; arXiv:2412.13355.
+[13] M. Tinková, E. Waxman, and M. Zindulka, Artin twin primes, J. Number Theory 247 (2023), 274–304;
+arXiv:2010.15988.
+
+CORRELATIONS OF ARTIN STATUS AMONG PRIMES
+
+25
+
+[14] R. J. Lemke Oliver and K. Soundararajan, Unexpected biases in the distribution of consecutive primes, Proc.
+Natl. Acad. Sci. USA 113 (2016), no. 31, E4446–E4454.
+[15] P. Moree, Artin’s primitive root conjecture — a survey, Integers 12A (2012), Article A13, 100 pp.
+[16] A. Perucca and I. E. Shparlinski, Uniform bounds for the density in Artin’s conjecture on primitive roots,
+Bull. Lond. Math. Soc. 57 (2025), 978–991.
+[17] P. Pollack, Bounded gaps between primes with a given primitive root, Algebra Number Theory 8 (2014),
+no. 7, 1769–1786.
+[18] Bald, J., Quadratic exclusion laws for consecutive Artin primes in arbitrary bases, unrefereed preprint (2026),
+Zenodo, doi:10.5281/zenodo.22865343; code and data at https://github.com/jpbald93/quadratic-exclu
+sion-laws.
+[19] L. Goldmakher, G. Martin, and P. Péringuey, Refinements of Artin’s primitive root conjecture, preprint
+(2025), arXiv:2502.19601.
+[20] O. Järviniemi, A. Perucca, and P. Sgobba, Unified treatment of Artin-type problems II, Res. Number Theory
+11 (2025), no. 42, 19 pp.
+[21] N. Kimmel, Artin’s primitive root conjecture in number fields and for matrices, Acta Arith. 216 (2024),
+no. 4, 329–348.
+[22] H. W. Lenstra, Jr., On Artin’s conjecture and Euclid’s algorithm in global fields, Invent. Math. 42 (1977),
+201–224.
+[23] P. Moree and P. Stevenhagen, Computing higher rank primitive root densities, Acta Arith. 163 (2014), no. 1,
+15–32.
+[24] K. R. Matthews, A generalisation of Artin’s conjecture for primitive roots, Acta Arith. 29 (1976), no. 2,
+113–146.
+[25] P. Sgobba, Unconditional results for Artin-type problems over number fields, preprint (2025),
+arXiv:2508.08996.
+
+

@@ -1,0 +1,945 @@
+{
+  "status": "ok",
+  "message-type": "work-list",
+  "message-version": "1.0.0",
+  "message": {
+    "facets": {},
+    "total-results": 2538771,
+    "items": [
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2026,
+              3,
+              1
+            ]
+          ],
+          "date-time": "2026-03-01T09:26:23Z",
+          "timestamp": 1772357183992,
+          "version": "3.50.1"
+        },
+        "reference-count": 12,
+        "publisher": "Mathematical Sciences Publishers",
+        "issue": "7",
+        "content-domain": {
+          "domain": [],
+          "crossmark-restriction": false
+        },
+        "short-container-title": [
+          "Algebra Number Theory"
+        ],
+        "DOI": "10.2140/ant.2014.8.1769",
+        "type": "journal-article",
+        "created": {
+          "date-parts": [
+            [
+              2014,
+              10,
+              27
+            ]
+          ],
+          "date-time": "2014-10-27T05:42:33Z",
+          "timestamp": 1414388553000
+        },
+        "page": "1769-1786",
+        "source": "Crossref",
+        "is-referenced-by-count": 10,
+        "title": [
+          "Bounded gaps between primes with a given primitive root"
+        ],
+        "prefix": "10.2140",
+        "volume": "8",
+        "author": [
+          {
+            "given": "Paul",
+            "family": "Pollack",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "member": "910",
+        "published-online": {
+          "date-parts": [
+            [
+              2014,
+              10,
+              21
+            ]
+          ]
+        },
+        "reference": [
+          {
+            "key": "CP05",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1007/0-387-28979-8"
+          },
+          {
+            "key": "GM84",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1007/BF01388719"
+          },
+          {
+            "key": "HB86",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1093/qmath/37.1.27"
+          },
+          {
+            "key": "hooley67",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1515/crll.1967.225.209"
+          },
+          {
+            "key": "hooley76",
+            "series-title": "Cambridge Tracts in Mathematics",
+            "volume-title": "Applications of sieve methods to the theory of numbers",
+            "volume": "70",
+            "author": "Hooley",
+            "year": "1976"
+          },
+          {
+            "key": "LO77",
+            "first-page": "409",
+            "volume-title": "Algebraic number fields: L-functions and Galois properties",
+            "author": "Lagarias",
+            "year": "1977"
+          },
+          {
+            "key": "moree07",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1007/BF03173492"
+          },
+          {
+            "key": "moree12",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1515/integers-2012-0043"
+          },
+          {
+            "key": "serre81",
+            "first-page": "323",
+            "author": "Serre",
+            "year": "1981",
+            "journal-title": "Inst. Hautes \u00c9tudes Sci. Publ. Math."
+          },
+          {
+            "key": "shiu00",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1112/S0024610799007863"
+          },
+          {
+            "key": "thorner14",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1186/2197-9847-1-4"
+          },
+          {
+            "key": "wan97",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1090/S0025-5718-97-00835-1"
+          }
+        ],
+        "container-title": [
+          "Algebra &amp; Number Theory"
+        ],
+        "language": "en",
+        "link": [
+          {
+            "URL": "http://msp.org/ant/2014/8-7/ant-v8-n7-p07-s.pdf",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2017,
+              3,
+              11
+            ]
+          ],
+          "date-time": "2017-03-11T19:37:46Z",
+          "timestamp": 1489261066000
+        },
+        "score": 60.21706,
+        "resource": {
+          "primary": {
+            "URL": "http://www.msp.org/ant/2014/8-7/p07.xhtml"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2014,
+              10,
+              21
+            ]
+          ]
+        },
+        "references-count": 12,
+        "journal-issue": {
+          "issue": "7",
+          "published-online": {
+            "date-parts": [
+              [
+                2014
+              ]
+            ]
+          }
+        },
+        "URL": "https://doi.org/10.2140/ant.2014.8.1769",
+        "ISSN": [
+          "1944-7833",
+          "1937-0652"
+        ],
+        "issn-type": [
+          {
+            "value": "1944-7833",
+            "type": "electronic"
+          },
+          {
+            "value": "1937-0652",
+            "type": "print"
+          }
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2014,
+              10,
+              21
+            ]
+          ]
+        }
+      },
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2025,
+              9,
+              21
+            ]
+          ],
+          "date-time": "2025-09-21T17:30:32Z",
+          "timestamp": 1758475832340,
+          "version": "3.37.3"
+        },
+        "reference-count": 28,
+        "publisher": "Walter de Gruyter GmbH",
+        "issue": "4",
+        "funder": [
+          {
+            "DOI": "10.13039/100000001",
+            "name": "National Science Foundation",
+            "doi-asserted-by": "publisher",
+            "award": [
+              "DMS-1402268"
+            ],
+            "award-info": [
+              {
+                "award-number": [
+                  "DMS-1402268"
+                ]
+              }
+            ],
+            "id": [
+              {
+                "id": "10.13039/100000001",
+                "id-type": "DOI",
+                "asserted-by": "publisher"
+              }
+            ]
+          }
+        ],
+        "content-domain": {
+          "domain": [],
+          "crossmark-restriction": false
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2016,
+              7,
+              1
+            ]
+          ]
+        },
+        "abstract": "<jats:title>Abstract</jats:title>\n               <jats:p>Let <jats:italic>m</jats:italic> be a natural number, and let <jats:inline-formula id=\"j_forum-2014-0137_eq_9999_w2aab3b8e3082b1b7b1aab1c13b1b3Aa\">\n                     <jats:alternatives>\n                        <m:math xmlns:m=\"http://www.w3.org/1998/Math/MathML\">\n                           <m:mi>\ud835\udcac</m:mi>\n                        </m:math>\n                        <jats:inline-graphic xmlns:xlink=\"http://www.w3.org/1999/xlink\" content-type=\"j_forum-2014-0137_eq_9999\" xlink:href=\"graphic/j_forum-2014-0137_eq_mi695.png\"/>\n                        <jats:tex-math>${\\mathscr{Q}}$</jats:tex-math>\n                     </jats:alternatives>\n                  </jats:inline-formula> be a set containing at least <jats:inline-formula id=\"j_forum-2014-0137_eq_9998_w2aab3b8e3082b1b7b1aab1c13b1b5Aa\">\n                     <jats:alternatives>\n                        <m:math xmlns:m=\"http://www.w3.org/1998/Math/MathML\">\n                           <m:mrow>\n                              <m:mi>exp</m:mi>\n                              <m:mo>\u2061</m:mo>\n                              <m:mrow>\n                                 <m:mo>(</m:mo>\n                                 <m:mrow>\n                                    <m:mi>C</m:mi>\n                                    <m:mo>\u2062</m:mo>\n                                    <m:mi>m</m:mi>\n                                 </m:mrow>\n                                 <m:mo>)</m:mo>\n                              </m:mrow>\n                           </m:mrow>\n                        </m:math>\n                        <jats:inline-graphic xmlns:xlink=\"http://www.w3.org/1999/xlink\" content-type=\"j_forum-2014-0137_eq_9998\" xlink:href=\"graphic/j_forum-2014-0137_eq_mi651.png\"/>\n                        <jats:tex-math>${\\exp(Cm)}$</jats:tex-math>\n                     </jats:alternatives>\n                  </jats:inline-formula> primes. We show that one can find infinitely many strings of <jats:italic>m</jats:italic> consecutive primes each of which has some <jats:inline-formula id=\"j_forum-2014-0137_eq_9997_w2aab3b8e3082b1b7b1aab1c13b1b9Aa\">\n                     <jats:alternatives>\n                        <m:math xmlns:m=\"http://www.w3.org/1998/Math/MathML\">\n                           <m:mrow>\n                              <m:mi>q</m:mi>\n                              <m:mo>\u2208</m:mo>\n                              <m:mi>\ud835\udcac</m:mi>\n                           </m:mrow>\n                        </m:math>\n                        <jats:inline-graphic xmlns:xlink=\"http://www.w3.org/1999/xlink\" content-type=\"j_forum-2014-0137_eq_9997\" xlink:href=\"graphic/j_forum-2014-0137_eq_mi800.png\"/>\n                        <jats:tex-math>${q\\in\\mathscr{Q}}$</jats:tex-math>\n                     </jats:alternatives>\n                  </jats:inline-formula> as a primitive root, all lying in an interval of length <jats:inline-formula id=\"j_forum-2014-0137_eq_9996_w2aab3b8e3082b1b7b1aab1c13b1c11Aa\">\n                     <jats:alternatives>\n                        <m:math xmlns:m=\"http://www.w3.org/1998/Math/MathML\">\n                           <m:mrow>\n                              <m:msub>\n                                 <m:mi>O</m:mi>\n                                 <m:mi>\ud835\udcac</m:mi>\n                              </m:msub>\n                              <m:mo>\u2062</m:mo>\n                              <m:mrow>\n                                 <m:mo>(</m:mo>\n                                 <m:mrow>\n                                    <m:mi>exp</m:mi>\n                                    <m:mo>\u2061</m:mo>\n                                    <m:mrow>\n                                       <m:mo>(</m:mo>\n                                       <m:mrow>\n                                          <m:msup>\n                                             <m:mi>C</m:mi>\n                                             <m:mo>\u2032</m:mo>\n                                          </m:msup>\n                                          <m:mo>\u2062</m:mo>\n                                          <m:mi>m</m:mi>\n                                       </m:mrow>\n                                       <m:mo>)</m:mo>\n                                    </m:mrow>\n                                 </m:mrow>\n                                 <m:mo>)</m:mo>\n                              </m:mrow>\n                           </m:mrow>\n                        </m:math>\n                        <jats:inline-graphic xmlns:xlink=\"http://www.w3.org/1999/xlink\" content-type=\"j_forum-2014-0137_eq_9996\" xlink:href=\"graphic/j_forum-2014-0137_eq_mi602.png\"/>\n                        <jats:tex-math>${O_{\\mathscr{Q}}(\\exp(C^{\\prime}m))}$</jats:tex-math>\n                     </jats:alternatives>\n                  </jats:inline-formula>. This is a bounded gaps variant of a theorem of Gupta and Ram Murty. We also prove a result on an elliptic analogue of Artin\u2019s conjecture. Let <jats:inline-formula id=\"j_forum-2014-0137_eq_9995_w2aab3b8e3082b1b7b1aab1c13b1c13Aa\">\n                     <jats:alternatives>\n                        <m:math xmlns:m=\"http://www.w3.org/1998/Math/MathML\">\n                           <m:mrow>\n                              <m:mi>E</m:mi>\n                              <m:mo>/</m:mo>\n                              <m:mi>\u211a</m:mi>\n                           </m:mrow>\n                        </m:math>\n                        <jats:inline-graphic xmlns:xlink=\"http://www.w3.org/1999/xlink\" content-type=\"j_forum-2014-0137_eq_9995\" xlink:href=\"graphic/j_forum-2014-0137_eq_mi555.png\"/>\n                        <jats:tex-math>${E/\\mathbb{Q}}$</jats:tex-math>\n                     </jats:alternatives>\n                  </jats:inline-formula> be an elliptic curve with an irrational 2-torsion point. Assume GRH. Then for every <jats:italic>m</jats:italic>, there are infinitely many strings of <jats:italic>m</jats:italic> consecutive primes <jats:italic>p</jats:italic> for which <jats:inline-formula id=\"j_forum-2014-0137_eq_9994_w2aab3b8e3082b1b7b1aab1c13b1c21Aa\">\n                     <jats:alternatives>\n                        <m:math xmlns:m=\"http://www.w3.org/1998/Math/MathML\">\n                           <m:mrow>\n                              <m:mi>E</m:mi>\n                              <m:mo>\u2062</m:mo>\n                              <m:mrow>\n                                 <m:mo>(</m:mo>\n                                 <m:msub>\n                                    <m:mi>\ud835\udd3d</m:mi>\n                                    <m:mi>p</m:mi>\n                                 </m:msub>\n                                 <m:mo>)</m:mo>\n                              </m:mrow>\n                           </m:mrow>\n                        </m:math>\n                        <jats:inline-graphic xmlns:xlink=\"http://www.w3.org/1999/xlink\" content-type=\"j_forum-2014-0137_eq_9994\" xlink:href=\"graphic/j_forum-2014-0137_eq_mi553.png\"/>\n                        <jats:tex-math>${E(\\mathbb{F}_{p})}$</jats:tex-math>\n                     </jats:alternatives>\n                  </jats:inline-formula> is cyclic, all lying an interval of length <jats:inline-formula id=\"j_forum-2014-0137_eq_9993_w2aab3b8e3082b1b7b1aab1c13b1c23Aa\">\n                     <jats:alternatives>\n                        <m:math xmlns:m=\"http://www.w3.org/1998/Math/MathML\">\n                           <m:mrow>\n                              <m:msub>\n                                 <m:mi>O</m:mi>\n                                 <m:mi>E</m:mi>\n                              </m:msub>\n                              <m:mo>\u2062</m:mo>\n                              <m:mrow>\n                                 <m:mo>(</m:mo>\n                                 <m:mrow>\n                                    <m:mi>exp</m:mi>\n                                    <m:mo>\u2061</m:mo>\n                                    <m:mrow>\n                                       <m:mo>(</m:mo>\n                                       <m:mrow>\n                                          <m:msup>\n                                             <m:mi>C</m:mi>\n                                             <m:mi>\u2032\u2032</m:mi>\n                                          </m:msup>\n                                          <m:mo>\u2062</m:mo>\n                                          <m:mi>m</m:mi>\n                                       </m:mrow>\n                                       <m:mo>)</m:mo>\n                                    </m:mrow>\n                                 </m:mrow>\n                                 <m:mo>)</m:mo>\n                              </m:mrow>\n                           </m:mrow>\n                        </m:math>\n                        <jats:inline-graphic xmlns:xlink=\"http://www.w3.org/1999/xlink\" content-type=\"j_forum-2014-0137_eq_9993\" xlink:href=\"graphic/j_forum-2014-0137_eq_mi598.png\"/>\n                        <jats:tex-math>${O_{E}(\\exp(C^{\\prime\\prime}m))}$</jats:tex-math>\n                     </jats:alternatives>\n                  </jats:inline-formula>. If <jats:italic>E</jats:italic> has CM, then the GRH assumption can be removed. Here <jats:italic>C</jats:italic>, <jats:inline-formula id=\"j_forum-2014-0137_eq_9992_w2aab3b8e3082b1b7b1aab1c13b1c29Aa\">\n                     <jats:alternatives>\n                        <m:math xmlns:m=\"http://www.w3.org/1998/Math/MathML\">\n                           <m:msup>\n                              <m:mi>C</m:mi>\n                              <m:mo>\u2032</m:mo>\n                           </m:msup>\n                        </m:math>\n                        <jats:inline-graphic xmlns:xlink=\"http://www.w3.org/1999/xlink\" content-type=\"j_forum-2014-0137_eq_9992\" xlink:href=\"graphic/j_forum-2014-0137_eq_mi543.png\"/>\n                        <jats:tex-math>${C^{\\prime}}$</jats:tex-math>\n                     </jats:alternatives>\n                  </jats:inline-formula>, and <jats:inline-formula id=\"j_forum-2014-0137_eq_9991_w2aab3b8e3082b1b7b1aab1c13b1c31Aa\">\n                     <jats:alternatives>\n                        <m:math xmlns:m=\"http://www.w3.org/1998/Math/MathML\">\n                           <m:msup>\n                              <m:mi>C</m:mi>\n                              <m:mi>\u2032\u2032</m:mi>\n                           </m:msup>\n                        </m:math>\n                        <jats:inline-graphic xmlns:xlink=\"http://www.w3.org/1999/xlink\" content-type=\"j_forum-2014-0137_eq_9991\" xlink:href=\"graphic/j_forum-2014-0137_eq_mi541.png\"/>\n                        <jats:tex-math>${C^{\\prime\\prime}}$</jats:tex-math>\n                     </jats:alternatives>\n                  </jats:inline-formula> are absolute constants.</jats:p>",
+        "DOI": "10.1515/forum-2014-0137",
+        "type": "journal-article",
+        "created": {
+          "date-parts": [
+            [
+              2015,
+              7,
+              15
+            ]
+          ],
+          "date-time": "2015-07-15T17:16:09Z",
+          "timestamp": 1436980569000
+        },
+        "page": "675-687",
+        "source": "Crossref",
+        "is-referenced-by-count": 2,
+        "title": [
+          "Bounded gaps between primes with a given primitive root, II"
+        ],
+        "prefix": "10.1515",
+        "volume": "28",
+        "author": [
+          {
+            "given": "Roger C.",
+            "family": "Baker",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Department of Mathematics, Brigham Young University, Provo, UT 84602, USA"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Paul",
+            "family": "Pollack",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Mathematics, University of Georgia, Athens, GA 30602, USA"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "member": "374",
+        "published-online": {
+          "date-parts": [
+            [
+              2015,
+              7,
+              15
+            ]
+          ]
+        },
+        "reference": [
+          {
+            "key": "2023033118582756905_j_forum-2014-0137_ref_001_w2aab3b8e3082b1b7b1ab2b1b1Aa",
+            "doi-asserted-by": "crossref",
+            "unstructured": "Akbary A. and Murty V. K.,\nAn analogue of the Siegel\u2013Walfisz theorem for the cyclicity of CM elliptic curves mod p,\nIndian J. Pure Appl. Math. 41 (2010), 25\u201337.",
+            "DOI": "10.1007/s13226-010-0002-4"
+          },
+          {
+            "key": "2023033118582756905_j_forum-2014-0137_ref_002_w2aab3b8e3082b1b7b1ab2b1b2Aa",
+            "doi-asserted-by": "crossref",
+            "unstructured": "Banks W. D., Freiberg T. and Turnage-Butterbaugh C. L.,\nConsecutive primes in tuples,\nActa Arith. 167 (2015), 261\u2013266.",
+            "DOI": "10.4064/aa167-3-4"
+          },
+          {
+            "key": "2023033118582756905_j_forum-2014-0137_ref_003_w2aab3b8e3082b1b7b1ab2b1b3Aa",
+            "unstructured": "Cassels J. W. S. and Fr\u00f6hlich A.,\nAlgebraic Number Theory,\nAcademic Press, London, 1986."
+          },
+          {
+            "key": "2023033118582756905_j_forum-2014-0137_ref_004_w2aab3b8e3082b1b7b1ab2b1b4Aa",
+            "doi-asserted-by": "crossref",
+            "unstructured": "Clark P. L., Cook B. and Stankewicz J.,\nTorsion points on elliptic curves with complex multiplication (with an appendix by Alex Rice),\nInt. J. Number Theory 9 (2013), 447\u2013479.",
+            "DOI": "10.1142/S1793042112501436"
+          },
+          {
+            "key": "2023033118582756905_j_forum-2014-0137_ref_005_w2aab3b8e3082b1b7b1ab2b1b5Aa",
+            "doi-asserted-by": "crossref",
+            "unstructured": "Cojocaru A. C.,\nCyclicity of CM elliptic curves modulo p,\nTrans. Amer. Math. Soc. 355 (2003), 2651\u20132662, (electronic).",
+            "DOI": "10.1090/S0002-9947-03-03283-5"
+          },
+          {
+            "key": "2023033118582756905_j_forum-2014-0137_ref_006_w2aab3b8e3082b1b7b1ab2b1b6Aa",
+            "doi-asserted-by": "crossref",
+            "unstructured": "Cojocaru A. C. and Murty. M. R.,\nCyclicity of elliptic curves modulo p and elliptic curve analogues of Linnik\u2019s problem,\nMath. Ann. 330 (2004), 601\u2013625.",
+            "DOI": "10.1007/s00208-004-0562-x"
+          },
+          {
+            "key": "2023033118582756905_j_forum-2014-0137_ref_007_w2aab3b8e3082b1b7b1ab2b1b7Aa",
+            "doi-asserted-by": "crossref",
+            "unstructured": "Duke W.,\nAlmost all reductions modulo p of an elliptic curve have a large exponent,\nC. R. Math. Acad. Sci. Paris 337 (2003), 689\u2013692.",
+            "DOI": "10.1016/j.crma.2003.10.006"
+          },
+          {
+            "key": "2023033118582756905_j_forum-2014-0137_ref_008_w2aab3b8e3082b1b7b1ab2b1b8Aa",
+            "doi-asserted-by": "crossref",
+            "unstructured": "Gupta R. and Murty M. R.,\nA remark on Artin\u2019s conjecture,\nInvent. Math. 78 (1984), 127\u2013130.",
+            "DOI": "10.1007/BF01388719"
+          },
+          {
+            "key": "2023033118582756905_j_forum-2014-0137_ref_009_w2aab3b8e3082b1b7b1ab2b1b9Aa",
+            "doi-asserted-by": "crossref",
+            "unstructured": "Gupta R. and Murty M. R.,\nCyclicity and generation of points mod p on elliptic curves,\nInvent. Math. 101 (1990), 225\u2013235.",
+            "DOI": "10.1007/BF01231502"
+          },
+          {
+            "key": "2023033118582756905_j_forum-2014-0137_ref_010_w2aab3b8e3082b1b7b1ab2b1c10Aa",
+            "unstructured": "Gupta R., Murty M. R. and Murty V. K.,\nThe Euclidean algorithm for S-integers,\nNumber Theory (Montreal 1985),\nCMS Conf. Proc. 7,\nAmerican Mathematical Society, Providence (1987), 189\u2013201."
+          },
+          {
+            "key": "2023033118582756905_j_forum-2014-0137_ref_011_w2aab3b8e3082b1b7b1ab2b1c11Aa",
+            "doi-asserted-by": "crossref",
+            "unstructured": "Heath-Brown D. R.,\nArtin\u2019s conjecture for primitive roots,\nQuart. J. Math. Oxford (2) 37 (1986), 27\u201338.",
+            "DOI": "10.1093/qmath/37.1.27"
+          },
+          {
+            "key": "2023033118582756905_j_forum-2014-0137_ref_012_w2aab3b8e3082b1b7b1ab2b1c12Aa",
+            "doi-asserted-by": "crossref",
+            "unstructured": "Hooley C.,\nOn Artin\u2019s conjecture,\nJ. Reine Angew. Math. 225 (1967), 209\u2013220.",
+            "DOI": "10.1515/crll.1967.225.209"
+          },
+          {
+            "key": "2023033118582756905_j_forum-2014-0137_ref_013_w2aab3b8e3082b1b7b1ab2b1c13Aa",
+            "unstructured": "Lagarias J. C. and Odlyzko A. M.,\nEffective versions of the Chebotarev density theorem,\nAlgebraic Number Fields. L-Functions and Galois Properties (Durham 1975),\nAcademic Press, London (1977), 409\u2013464."
+          },
+          {
+            "key": "2023033118582756905_j_forum-2014-0137_ref_014_w2aab3b8e3082b1b7b1ab2b1c14Aa",
+            "doi-asserted-by": "crossref",
+            "unstructured": "Lang S.,\nElliptic Functions, 2nd ed.,\nGrad. Texts in Math. 112,\nSpringer, New York, 1987.",
+            "DOI": "10.1007/978-1-4612-4752-4"
+          },
+          {
+            "key": "2023033118582756905_j_forum-2014-0137_ref_015_w2aab3b8e3082b1b7b1ab2b1c15Aa",
+            "doi-asserted-by": "crossref",
+            "unstructured": "Li H. and Pan H.,\nBounded gaps between primes of the special form,\nInt. Math. Res. Not. IMRN (2015), 10.1093/imrn/rnv049.",
+            "DOI": "10.1093/imrn/rnv049"
+          },
+          {
+            "key": "2023033118582756905_j_forum-2014-0137_ref_016_w2aab3b8e3082b1b7b1ab2b1c16Aa",
+            "unstructured": "Maynard J.,\nDense clusters of primes in subsets,\npreprint 2014, http://arxiv.org/abs/1405.2593."
+          },
+          {
+            "key": "2023033118582756905_j_forum-2014-0137_ref_017_w2aab3b8e3082b1b7b1ab2b1c17Aa",
+            "doi-asserted-by": "crossref",
+            "unstructured": "Moree P.,\nArtin\u2019s primitive root conjecture\u2014A survey,\nIntegers 12 (2012), 1305\u20131416.",
+            "DOI": "10.1515/integers-2012-0043"
+          },
+          {
+            "key": "2023033118582756905_j_forum-2014-0137_ref_018_w2aab3b8e3082b1b7b1ab2b1c18Aa",
+            "doi-asserted-by": "crossref",
+            "unstructured": "Murty M. R.,\nOn Artin\u2019s conjecture,\nJ. Number Theory 16 (1983), 147\u2013168.",
+            "DOI": "10.1016/0022-314X(83)90039-2"
+          },
+          {
+            "key": "2023033118582756905_j_forum-2014-0137_ref_019_w2aab3b8e3082b1b7b1ab2b1c19Aa",
+            "unstructured": "Murty M. R. and Murty V. K.,\nA variant of the Bombieri\u2013Vinogradov theorem,\nNumber Theory (Montreal 1985),\nCMS Conf. Proc. 7,\nAmerican Mathematical Society, Providence (1987), 243\u2013272."
+          },
+          {
+            "key": "2023033118582756905_j_forum-2014-0137_ref_020_w2aab3b8e3082b1b7b1ab2b1c20Aa",
+            "doi-asserted-by": "crossref",
+            "unstructured": "Murty M. R. and Srinivasan S.,\nSome remarks on Artin\u2019s conjecture,\nCanad. Math. Bull. 30 (1987), 80\u201385.",
+            "DOI": "10.4153/CMB-1987-012-5"
+          },
+          {
+            "key": "2023033118582756905_j_forum-2014-0137_ref_021_w2aab3b8e3082b1b7b1ab2b1c21Aa",
+            "doi-asserted-by": "crossref",
+            "unstructured": "Pintz J.,\nAre there arbitrarily long arithmetic progressions in the sequence of twin primes?,\nAn Irregular Mind,\nBolyai Soc. Math. Stud. 21,\nJ\u00e1nos Bolyai Mathematical Society, Budapest (2010), 525\u2013559.",
+            "DOI": "10.1007/978-3-642-14444-8_15"
+          },
+          {
+            "key": "2023033118582756905_j_forum-2014-0137_ref_022_w2aab3b8e3082b1b7b1ab2b1c22Aa",
+            "doi-asserted-by": "crossref",
+            "unstructured": "Pollack P.,\nBounded gaps between primes with a given primitive root,\nAlgebra Number Theory 8 (2014), no. 7, 1769\u20131786.",
+            "DOI": "10.2140/ant.2014.8.1769"
+          },
+          {
+            "key": "2023033118582756905_j_forum-2014-0137_ref_023_w2aab3b8e3082b1b7b1ab2b1c23Aa",
+            "doi-asserted-by": "crossref",
+            "unstructured": "Serre J.-P.,\nPropri\u00e9t\u00e9s galoisiennes des points d\u2019ordre fini des courbes elliptiques,\nInvent. Math. 15 (1972), 259\u2013331.",
+            "DOI": "10.1007/BF01405086"
+          },
+          {
+            "key": "2023033118582756905_j_forum-2014-0137_ref_024_w2aab3b8e3082b1b7b1ab2b1c24Aa",
+            "unstructured": "Serre J.-P.,\nR\u00e9sum\u00e9 des cours de l\u2019ann\u00e9e scolaire 1977\u20131978,\nAnn. Coll. France 1978 (1978), 67\u201370."
+          },
+          {
+            "key": "2023033118582756905_j_forum-2014-0137_ref_025_w2aab3b8e3082b1b7b1ab2b1c25Aa",
+            "doi-asserted-by": "crossref",
+            "unstructured": "Serre J.-P.,\nQuelques applications du th\u00e9or\u00e8me de densit\u00e9 de Chebotarev,\nPubl. Math. Inst. Hautes \u00c9tudes Sci. 54 (1981), 323\u2013401.",
+            "DOI": "10.1007/BF02698692"
+          },
+          {
+            "key": "2023033118582756905_j_forum-2014-0137_ref_026_w2aab3b8e3082b1b7b1ab2b1c26Aa",
+            "doi-asserted-by": "crossref",
+            "unstructured": "Silverman J. H.,\nThe Arithmetic of Elliptic Curves, 2nd ed.,\nGrad. Texts in Math. 106,\nSpringer, New York, 2009.",
+            "DOI": "10.1007/978-0-387-09494-6"
+          },
+          {
+            "key": "2023033118582756905_j_forum-2014-0137_ref_027_w2aab3b8e3082b1b7b1ab2b1c27Aa",
+            "doi-asserted-by": "crossref",
+            "unstructured": "Thorner J.,\nBounded gaps between primes in Chebotarev sets,\nRes. Math. Sci. 1 (2014), Article No. 4.",
+            "DOI": "10.1186/2197-9847-1-4"
+          },
+          {
+            "key": "2023033118582756905_j_forum-2014-0137_ref_028_w2aab3b8e3082b1b7b1ab2b1c28Aa",
+            "doi-asserted-by": "crossref",
+            "unstructured": "Washington L. C.,\nIntroduction to Cyclotomic Fields, 2nd ed.,\nGrad. Texts in Math. 83,\nSpringer, New York, 1997.",
+            "DOI": "10.1007/978-1-4612-1934-7"
+          }
+        ],
+        "container-title": [
+          "Forum Mathematicum"
+        ],
+        "language": "en",
+        "link": [
+          {
+            "URL": "https://www.degruyter.com/document/doi/10.1515/forum-2014-0137/xml",
+            "content-type": "application/xml",
+            "content-version": "vor",
+            "intended-application": "text-mining"
+          },
+          {
+            "URL": "https://www.degruyter.com/document/doi/10.1515/forum-2014-0137/pdf",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2023,
+              4,
+              1
+            ]
+          ],
+          "date-time": "2023-04-01T04:06:34Z",
+          "timestamp": 1680321994000
+        },
+        "score": 57.955486,
+        "resource": {
+          "primary": {
+            "URL": "https://www.degruyter.com/document/doi/10.1515/forum-2014-0137/html"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2015,
+              7,
+              15
+            ]
+          ]
+        },
+        "references-count": 28,
+        "journal-issue": {
+          "issue": "4",
+          "published-online": {
+            "date-parts": [
+              [
+                2015,
+                7,
+                15
+              ]
+            ]
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2016,
+                7,
+                1
+              ]
+            ]
+          }
+        },
+        "alternative-id": [
+          "10.1515/forum-2014-0137"
+        ],
+        "URL": "https://doi.org/10.1515/forum-2014-0137",
+        "ISSN": [
+          "0933-7741",
+          "1435-5337"
+        ],
+        "issn-type": [
+          {
+            "type": "print",
+            "value": "0933-7741"
+          },
+          {
+            "type": "electronic",
+            "value": "1435-5337"
+          }
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2015,
+              7,
+              15
+            ]
+          ]
+        }
+      },
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2025,
+              10,
+              21
+            ]
+          ],
+          "date-time": "2025-10-21T06:42:05Z",
+          "timestamp": 1761028925149,
+          "version": "build-2065373602"
+        },
+        "reference-count": 11,
+        "publisher": "Elsevier BV",
+        "license": [
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2016,
+                  1,
+                  1
+                ]
+              ],
+              "date-time": "2016-01-01T00:00:00Z",
+              "timestamp": 1451606400000
+            },
+            "content-version": "tdm",
+            "delay-in-days": 0,
+            "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+          },
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2016,
+                  1,
+                  1
+                ]
+              ],
+              "date-time": "2016-01-01T00:00:00Z",
+              "timestamp": 1451606400000
+            },
+            "content-version": "tdm",
+            "delay-in-days": 0,
+            "URL": "https://www.elsevier.com/legal/tdmrep-license"
+          },
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2020,
+                  1,
+                  1
+                ]
+              ],
+              "date-time": "2020-01-01T00:00:00Z",
+              "timestamp": 1577836800000
+            },
+            "content-version": "vor",
+            "delay-in-days": 1461,
+            "URL": "http://www.elsevier.com/open-access/userlicense/1.0/"
+          }
+        ],
+        "funder": [
+          {
+            "DOI": "10.13039/100000001",
+            "name": "NSF",
+            "doi-asserted-by": "publisher",
+            "award": [
+              "DMS-1344994"
+            ],
+            "award-info": [
+              {
+                "award-number": [
+                  "DMS-1344994"
+                ]
+              }
+            ],
+            "id": [
+              {
+                "id": "10.13039/100000001",
+                "id-type": "DOI",
+                "asserted-by": "publisher"
+              }
+            ]
+          }
+        ],
+        "content-domain": {
+          "domain": [
+            "elsevier.com",
+            "sciencedirect.com"
+          ],
+          "crossmark-restriction": true
+        },
+        "short-container-title": [
+          "Finite Fields and Their Applications"
+        ],
+        "published-print": {
+          "date-parts": [
+            [
+              2016,
+              1
+            ]
+          ]
+        },
+        "DOI": "10.1016/j.ffa.2015.11.001",
+        "type": "journal-article",
+        "created": {
+          "date-parts": [
+            [
+              2015,
+              11,
+              16
+            ]
+          ],
+          "date-time": "2015-11-16T07:00:11Z",
+          "timestamp": 1447657211000
+        },
+        "page": "295-310",
+        "update-policy": "https://doi.org/10.1016/elsevier_cm_policy",
+        "source": "Crossref",
+        "is-referenced-by-count": 1,
+        "special_numbering": "C",
+        "title": [
+          "Bounded gaps between prime polynomials with a given primitive root"
+        ],
+        "prefix": "10.1016",
+        "volume": "37",
+        "author": [
+          {
+            "given": "Lee",
+            "family": "Troupe",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "member": "78",
+        "reference": [
+          {
+            "issue": "1",
+            "key": "10.1016/j.ffa.2015.11.001_br0010",
+            "doi-asserted-by": "crossref",
+            "first-page": "476",
+            "DOI": "10.1007/BF01594189",
+            "article-title": "Primdivisoren mit vorgegebener Primitivwurzel",
+            "volume": "114",
+            "author": "Bilharz",
+            "year": "1937",
+            "journal-title": "Math. Ann."
+          },
+          {
+            "key": "10.1016/j.ffa.2015.11.001_br0020",
+            "doi-asserted-by": "crossref",
+            "first-page": "2841",
+            "DOI": "10.1090/S0002-9939-2015-12554-3",
+            "article-title": "Bounded gaps between primes in number fields and function fields",
+            "volume": "143",
+            "author": "Castillo",
+            "year": "2015",
+            "journal-title": "Proc. Am. Math. Soc."
+          },
+          {
+            "key": "10.1016/j.ffa.2015.11.001_br0030",
+            "article-title": "Field Arithmetic",
+            "volume": "vol. 11",
+            "author": "Fried",
+            "year": "2008"
+          },
+          {
+            "key": "10.1016/j.ffa.2015.11.001_br0040",
+            "first-page": "209",
+            "article-title": "On Artin's conjecture",
+            "volume": "225",
+            "author": "Hooley",
+            "year": "1967",
+            "journal-title": "J. Reine Angew. Math."
+          },
+          {
+            "key": "10.1016/j.ffa.2015.11.001_br0050",
+            "article-title": "Finite Fields",
+            "volume": "vol. 20",
+            "author": "Lidl",
+            "year": "1997"
+          },
+          {
+            "issue": "1",
+            "key": "10.1016/j.ffa.2015.11.001_br0060",
+            "doi-asserted-by": "crossref",
+            "first-page": "383",
+            "DOI": "10.4007/annals.2015.181.1.7",
+            "article-title": "Small gaps between primes",
+            "volume": "181",
+            "author": "Maynard",
+            "year": "2015",
+            "journal-title": "Ann. Math."
+          },
+          {
+            "issue": "7",
+            "key": "10.1016/j.ffa.2015.11.001_br0070",
+            "doi-asserted-by": "crossref",
+            "first-page": "1769",
+            "DOI": "10.2140/ant.2014.8.1769",
+            "article-title": "Bounded gaps between primes with a given primitive root",
+            "volume": "8",
+            "author": "Pollack",
+            "year": "2014",
+            "journal-title": "Algebra Number Theory"
+          },
+          {
+            "key": "10.1016/j.ffa.2015.11.001_br0080",
+            "article-title": "Number Theory in Function Fields",
+            "volume": "vol. 210",
+            "author": "Rosen",
+            "year": "2002"
+          },
+          {
+            "article-title": "Topics in the Theory of Algebraic Function Fields",
+            "year": "2007",
+            "author": "Salvador",
+            "key": "10.1016/j.ffa.2015.11.001_br0090"
+          },
+          {
+            "key": "10.1016/j.ffa.2015.11.001_br0100",
+            "article-title": "Algebraic Function Fields and Codes",
+            "volume": "vol. 254",
+            "author": "Stichtenoth",
+            "year": "2009"
+          },
+          {
+            "issue": "3",
+            "key": "10.1016/j.ffa.2015.11.001_br0110",
+            "doi-asserted-by": "crossref",
+            "first-page": "1121",
+            "DOI": "10.4007/annals.2014.179.3.7",
+            "article-title": "Bounded gaps between primes",
+            "volume": "179",
+            "author": "Zhang",
+            "year": "2014",
+            "journal-title": "Ann. Math."
+          }
+        ],
+        "container-title": [
+          "Finite Fields and Their Applications"
+        ],
+        "language": "en",
+        "link": [
+          {
+            "URL": "https://api.elsevier.com/content/article/PII:S1071579715001100?httpAccept=text/xml",
+            "content-type": "text/xml",
+            "content-version": "vor",
+            "intended-application": "text-mining"
+          },
+          {
+            "URL": "https://api.elsevier.com/content/article/PII:S1071579715001100?httpAccept=text/plain",
+            "content-type": "text/plain",
+            "content-version": "vor",
+            "intended-application": "text-mining"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2025,
+              10,
+              21
+            ]
+          ],
+          "date-time": "2025-10-21T06:15:01Z",
+          "timestamp": 1761027301000
+        },
+        "score": 47.48215,
+        "resource": {
+          "primary": {
+            "URL": "https://linkinghub.elsevier.com/retrieve/pii/S1071579715001100"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2016,
+              1
+            ]
+          ]
+        },
+        "references-count": 11,
+        "alternative-id": [
+          "S1071579715001100"
+        ],
+        "URL": "https://doi.org/10.1016/j.ffa.2015.11.001",
+        "ISSN": [
+          "1071-5797"
+        ],
+        "issn-type": [
+          {
+            "type": "print",
+            "value": "1071-5797"
+          }
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2016,
+              1
+            ]
+          ]
+        },
+        "assertion": [
+          {
+            "value": "Elsevier",
+            "name": "publisher",
+            "label": "This article is maintained by"
+          },
+          {
+            "value": "Bounded gaps between prime polynomials with a given primitive root",
+            "name": "articletitle",
+            "label": "Article Title"
+          },
+          {
+            "value": "Finite Fields and Their Applications",
+            "name": "journaltitle",
+            "label": "Journal Title"
+          },
+          {
+            "value": "https://doi.org/10.1016/j.ffa.2015.11.001",
+            "name": "articlelink",
+            "label": "CrossRef DOI link to publisher maintained version"
+          },
+          {
+            "value": "article",
+            "name": "content_type",
+            "label": "Content Type"
+          },
+          {
+            "value": "Copyright \u00a9 2015 Elsevier Inc. All rights reserved.",
+            "name": "copyright",
+            "label": "Copyright"
+          }
+        ]
+      }
+    ],
+    "items-per-page": 3,
+    "query": {
+      "start-index": 0,
+      "search-terms": null
+    }
+  }
+}

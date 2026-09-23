@@ -1,0 +1,81 @@
+# Raw outputs — artin_payoff.c on jack (GMKtec, 32 cores, OMP_NUM_THREADS=32)
+# sha256(artin_payoff.c) = 109f23d763fa4a011f2cf9c2d1b7afc06da6335981b7e1dfd2b04fb22ce447ef
+# date: 2026-09-23
+
+=== ./artin_payoff census 1000000000 ===
+limit: 1000000000
+n_primes: 50847531
+n_artin: 19016617
+artin_density: 0.37399293
+n_qr_neg: 25426007
+qr_neg_frac: 0.50004408
+n_artin_with_qr_pos: 0
+filter_kept_frac: 0.50004408
+g20_pairs: 1824043
+g20_both_artin: 0
+gmod40_20_pairs: 2214511
+gmod40_20_prev_artin: 984678
+gmod40_20_both_artin: 0
+gmod40_0_pairs: 712316
+gmod40_0_prev_artin: 219445
+gmod40_0_both_artin: 189864
+t_sieve: 2.052
+t_status: 2.426
+t_agg: 0.262
+t_total: 4.740
+P(A|A) at g=0 mod 40: 0.8652
+
+=== ./artin_payoff ce 1000000000 ===
+limit: 1000000000, n_primes: 50847531
+joint_residues_mod120: {"N": 50847530, "CE_marginal": 0.661047, "CE_residues": 0.241529,
+  "CE_residues_plus_prevA": 0.241520, "gain_from_residues": 0.419517,
+  "gain_prevA_beyond_residues": 0.000009}
+joint_residues_mod840: {"N": 50847530, "CE_marginal": 0.661047, "CE_residues": 0.237235,
+  "CE_residues_plus_prevA": 0.237217, "gain_from_residues": 0.423812,
+  "gain_prevA_beyond_residues": 0.000018}
+# gain_prevA_beyond_residues = the correlation's OWN predictive edge after the elementary
+# joint-residue baseline. 0.000009 nats = 1.3e-5 bits (mod 120); 0.000018 nats = 2.6e-5 bits (mod 840).
+
+=== ./artin_payoff search 1000000000000000 300 ===
+mode: search, start: 1000000000000000, count: 300
+naive_seconds: 0.1639, naive_factorizations: 722
+filtered_seconds: 0.0831, filtered_factorizations: 376, skipped_by_qr: 346
+speedup: 1.974, factorization_reduction: 1.920
+
+# Cross-checks (local smoke runs, same binary):
+#   census 1e6:  primes=78495  artin=29500  density=0.375820  qrpos_violations=0
+#   census 1e7:  primes=664576 artin=248881 density=0.374496  qrpos_violations=0
+#                g=20 pairs 22084 -> both-Artin 0 ; g=0 mod 40 -> P(A|A)=1465/1646=0.8901
+#   ce 1e7:      mod120 gain_prevA_beyond_residues = 0.000149 ; mod840 = 0.000566
+#                (1e9 values above are the converged ones; 1e7 is noisier, as expected)
+#   search 1e12: naive 0.0787s/836  filtered 0.0607s/402  speedup 1.296 (primality cost not yet negligible)
+
+=== ./artin_payoff search3 1000000000000000 300 ===
+# Three strategies for finding 300 Artin-base-10 primes above 1e15, 32 threads.
+#  A naive      : factor every prime's p-1, test all ell
+#  B legendre   : (10|p) = -1 by reciprocity (O(1)), then factor
+#  C earlyexit  : (10|p) = -1, then test the small-ell channels of p-1 (ell=3,5,7,11,13,17,19)
+#                 with early exit, THEN factor the survivors
+A_naive:     {"sec": 0.1642, "primes": 722, "factorizations": 722}
+B_legendre:  {"sec": 0.0841, "primes": 722, "factorizations": 376}
+C_earlyexit: {"sec": 0.0732, "primes": 722, "factorizations": 300, "modexps_small_ell": 402}
+speedup_A_over_B: 1.953   speedup_A_over_C: 2.244   speedup_B_over_C: 1.149
+factorizations_saved_vs_B: 0.2021
+
+# same at 1e12 (primality cost less negligible):
+#   A 0.0733s/836   B 0.0530s/402   C 0.0432s/302 (418 modexps)
+#   A/B 1.382  A/C 1.695  B/C 1.226  factorizations saved vs B: 0.2488
+# leg10_fast (reciprocity) vs leg10 (modexp): 0 mismatches on primes in [1000,5000).
+
+=== ./artin_payoff cehold 1000000000 ===
+# Held-out test. Split: hash64(successor prime) & 1 (an exchangeable split; a RANGE split is
+# invalid here because the Artin density drifts with x and would penalise the finer model
+# spuriously -- that error produced a spurious -8.2e-2 nats before it was fixed).
+# Smoothing: Jeffreys 0.5. Fit on one half, scored on the other (25,421,106 test pairs).
+holdout_mod120: {"N_test": 25421106, "CE_residues": 0.241409954, "CE_residues_plus_prevA": 0.241413147, "heldout_gain": -3.193322862e-06}
+holdout_mod840: {"N_test": 25421106, "CE_residues": 0.237279922, "CE_residues_plus_prevA": 0.237341030, "heldout_gain": -6.110788523e-05}
+# Both held-out gains are NEGATIVE: adding the predecessor's Artin status makes held-out
+# prediction slightly worse. An independent auditor's separate implementation gave -5.9e-06
+# and -7.9e-05 nats, the same sign and order.
+# NOTE: the in-sample table in results.txt is an EMPIRICAL CONDITIONAL-ENTROPY DIAGNOSTIC
+# (resubstitution), not a held-out measurement. Only this section measures predictive skill.

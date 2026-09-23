@@ -1,0 +1,1304 @@
+{
+  "status": "ok",
+  "message-type": "work-list",
+  "message-version": "1.0.0",
+  "message": {
+    "facets": {},
+    "total-results": 420859,
+    "items": [
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2025,
+              10,
+              9
+            ]
+          ],
+          "date-time": "2025-10-09T12:48:58Z",
+          "timestamp": 1760014138399
+        },
+        "reference-count": 9,
+        "publisher": "Informa UK Limited",
+        "issue": "2",
+        "content-domain": {
+          "domain": [
+            "www.tandfonline.com"
+          ],
+          "crossmark-restriction": true
+        },
+        "short-container-title": [
+          "Experimental Mathematics"
+        ],
+        "published-print": {
+          "date-parts": [
+            [
+              2019,
+              4,
+              3
+            ]
+          ]
+        },
+        "DOI": "10.1080/10586458.2017.1360809",
+        "type": "journal-article",
+        "created": {
+          "date-parts": [
+            [
+              2017,
+              9,
+              29
+            ]
+          ],
+          "date-time": "2017-09-29T09:38:44Z",
+          "timestamp": 1506677924000
+        },
+        "page": "151-160",
+        "update-policy": "http://dx.doi.org/10.1080/tandf_crossmark_01",
+        "source": "Crossref",
+        "is-referenced-by-count": 4,
+        "title": [
+          "Primitive Root Bias for Twin Primes"
+        ],
+        "prefix": "10.1080",
+        "volume": "28",
+        "author": [
+          {
+            "given": "Stephan Ramon",
+            "family": "Garcia",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Department of Mathematics, Pomona College, Claremont, CA, USA"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Elvis",
+            "family": "Kahoro",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Mathematics, Pomona College, Claremont, CA, USA"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Florian",
+            "family": "Luca",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "School of Mathematics, University of the Witwatersrand, Wits, Johannesburg, South Africa"
+              },
+              {
+                "name": "Max Planck Institute for Mathematics, Bonn, Germany"
+              },
+              {
+                "name": "Department of Mathematics, Faculty of Sciences, University of Ostrava, Ostrava, Czech Republic"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "member": "301",
+        "published-online": {
+          "date-parts": [
+            [
+              2017,
+              9,
+              29
+            ]
+          ]
+        },
+        "reference": [
+          {
+            "key": "cit0001",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1090/S0025-5718-1962-0148632-7"
+          },
+          {
+            "key": "cit0002",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.2140/ant.2014.8.2067"
+          },
+          {
+            "key": "cit0004",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1515/9783110285581.867"
+          },
+          {
+            "issue": "3",
+            "key": "cit0005",
+            "first-page": "215",
+            "volume": "114",
+            "author": "Hardy [Hardy and Littlewood 04] G. H.",
+            "year": "2004",
+            "journal-title": "Acta Math."
+          },
+          {
+            "key": "cit0006",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1073/pnas.1605366113"
+          },
+          {
+            "key": "cit0007",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.4007/annals.2015.181.1.7"
+          },
+          {
+            "key": "cit0008",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1090/gsm/163"
+          },
+          {
+            "key": "cit0009",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.4064/aa114-3-2"
+          },
+          {
+            "key": "cit0010",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.4007/annals.2014.179.3.7"
+          }
+        ],
+        "container-title": [
+          "Experimental Mathematics"
+        ],
+        "language": "en",
+        "link": [
+          {
+            "URL": "https://www.tandfonline.com/doi/pdf/10.1080/10586458.2017.1360809",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2019,
+              5,
+              29
+            ]
+          ],
+          "date-time": "2019-05-29T07:53:21Z",
+          "timestamp": 1559116401000
+        },
+        "score": 50.34085,
+        "resource": {
+          "primary": {
+            "URL": "https://www.tandfonline.com/doi/full/10.1080/10586458.2017.1360809"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2017,
+              9,
+              29
+            ]
+          ]
+        },
+        "references-count": 9,
+        "journal-issue": {
+          "issue": "2",
+          "published-online": {
+            "date-parts": [
+              [
+                2017,
+                10,
+                6
+              ]
+            ]
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2019,
+                4,
+                3
+              ]
+            ]
+          }
+        },
+        "alternative-id": [
+          "10.1080/10586458.2017.1360809"
+        ],
+        "URL": "https://doi.org/10.1080/10586458.2017.1360809",
+        "ISSN": [
+          "1058-6458",
+          "1944-950X"
+        ],
+        "issn-type": [
+          {
+            "value": "1058-6458",
+            "type": "print"
+          },
+          {
+            "value": "1944-950X",
+            "type": "electronic"
+          }
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2017,
+              9,
+              29
+            ]
+          ]
+        },
+        "assertion": [
+          {
+            "value": "The publishing and review policy for this title is described in its Aims & Scope.",
+            "order": 1,
+            "name": "peerreview_statement",
+            "label": "Peer Review Statement"
+          },
+          {
+            "value": "http://www.tandfonline.com/action/journalInformation?show=aimsScope&journalCode=uexm20",
+            "URL": "http://www.tandfonline.com/action/journalInformation?show=aimsScope&journalCode=uexm20",
+            "order": 2,
+            "name": "aims_and_scope_url",
+            "label": "Aim & Scope"
+          },
+          {
+            "value": "2017-09-29",
+            "order": 3,
+            "name": "published",
+            "label": "Published",
+            "group": {
+              "name": "publication_history",
+              "label": "Publication History"
+            }
+          }
+        ]
+      },
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2025,
+              9,
+              21
+            ]
+          ],
+          "date-time": "2025-09-21T17:17:59Z",
+          "timestamp": 1758475079098,
+          "version": "3.44.0"
+        },
+        "reference-count": 27,
+        "publisher": "Elsevier BV",
+        "license": [
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2020,
+                  3,
+                  1
+                ]
+              ],
+              "date-time": "2020-03-01T00:00:00Z",
+              "timestamp": 1583020800000
+            },
+            "content-version": "tdm",
+            "delay-in-days": 0,
+            "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+          },
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2020,
+                  3,
+                  1
+                ]
+              ],
+              "date-time": "2020-03-01T00:00:00Z",
+              "timestamp": 1583020800000
+            },
+            "content-version": "tdm",
+            "delay-in-days": 0,
+            "URL": "https://www.elsevier.com/legal/tdmrep-license"
+          },
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2024,
+                  5,
+                  22
+                ]
+              ],
+              "date-time": "2024-05-22T00:00:00Z",
+              "timestamp": 1716336000000
+            },
+            "content-version": "vor",
+            "delay-in-days": 1543,
+            "URL": "http://www.elsevier.com/open-access/userlicense/1.0/"
+          },
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2020,
+                  3,
+                  1
+                ]
+              ],
+              "date-time": "2020-03-01T00:00:00Z",
+              "timestamp": 1583020800000
+            },
+            "content-version": "stm-asf",
+            "delay-in-days": 0,
+            "URL": "https://doi.org/10.15223/policy-017"
+          },
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2020,
+                  3,
+                  1
+                ]
+              ],
+              "date-time": "2020-03-01T00:00:00Z",
+              "timestamp": 1583020800000
+            },
+            "content-version": "stm-asf",
+            "delay-in-days": 0,
+            "URL": "https://doi.org/10.15223/policy-037"
+          },
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2020,
+                  3,
+                  1
+                ]
+              ],
+              "date-time": "2020-03-01T00:00:00Z",
+              "timestamp": 1583020800000
+            },
+            "content-version": "stm-asf",
+            "delay-in-days": 0,
+            "URL": "https://doi.org/10.15223/policy-012"
+          },
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2020,
+                  3,
+                  1
+                ]
+              ],
+              "date-time": "2020-03-01T00:00:00Z",
+              "timestamp": 1583020800000
+            },
+            "content-version": "stm-asf",
+            "delay-in-days": 0,
+            "URL": "https://doi.org/10.15223/policy-029"
+          },
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2020,
+                  3,
+                  1
+                ]
+              ],
+              "date-time": "2020-03-01T00:00:00Z",
+              "timestamp": 1583020800000
+            },
+            "content-version": "stm-asf",
+            "delay-in-days": 0,
+            "URL": "https://doi.org/10.15223/policy-004"
+          }
+        ],
+        "funder": [
+          {
+            "DOI": "10.13039/100000001",
+            "name": "National Science Foundation",
+            "doi-asserted-by": "publisher",
+            "id": [
+              {
+                "id": "10.13039/100000001",
+                "id-type": "DOI",
+                "asserted-by": "publisher"
+              }
+            ]
+          }
+        ],
+        "content-domain": {
+          "domain": [
+            "elsevier.com",
+            "sciencedirect.com"
+          ],
+          "crossmark-restriction": true
+        },
+        "short-container-title": [
+          "Journal of Number Theory"
+        ],
+        "published-print": {
+          "date-parts": [
+            [
+              2020,
+              3
+            ]
+          ]
+        },
+        "DOI": "10.1016/j.jnt.2019.08.003",
+        "type": "journal-article",
+        "created": {
+          "date-parts": [
+            [
+              2019,
+              9,
+              24
+            ]
+          ],
+          "date-time": "2019-09-24T11:10:12Z",
+          "timestamp": 1569323412000
+        },
+        "page": "400-417",
+        "update-policy": "https://doi.org/10.1016/elsevier_cm_policy",
+        "source": "Crossref",
+        "is-referenced-by-count": 2,
+        "special_numbering": "C",
+        "title": [
+          "Primitive root bias for twin primes II: Schinzel-type theorems for totient quotients and the sum-of-divisors function"
+        ],
+        "prefix": "10.1016",
+        "volume": "208",
+        "author": [
+          {
+            "given": "Stephan Ramon",
+            "family": "Garcia",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Florian",
+            "family": "Luca",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Kye",
+            "family": "Shi",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-0528-874X",
+            "authenticated-orcid": false,
+            "given": "Gabe",
+            "family": "Udell",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "member": "78",
+        "reference": [
+          {
+            "key": "10.1016/j.jnt.2019.08.003_br0010",
+            "article-title": "The Bateman\u2013Horn conjecture: heuristics, history, and applications",
+            "author": "Aletheia-Zomlefer",
+            "year": "2019",
+            "journal-title": "Expo. Math."
+          },
+          {
+            "key": "10.1016/j.jnt.2019.08.003_br0020",
+            "doi-asserted-by": "crossref",
+            "first-page": "363",
+            "DOI": "10.1090/S0025-5718-1962-0148632-7",
+            "article-title": "A heuristic asymptotic formula concerning the distribution of prime numbers",
+            "volume": "16",
+            "author": "Bateman",
+            "year": "1962",
+            "journal-title": "Math. Comp."
+          },
+          {
+            "key": "10.1016/j.jnt.2019.08.003_br0030",
+            "first-page": "119",
+            "article-title": "Primes Represented by Irreducible Polynomials in One Variable",
+            "volume": "vol. VIII",
+            "author": "Bateman",
+            "year": "1965"
+          },
+          {
+            "key": "10.1016/j.jnt.2019.08.003_br0040",
+            "first-page": "157",
+            "article-title": "On the representation of a larger even integer as the sum of a prime and the product of at most two primes",
+            "volume": "16",
+            "author": "Chen",
+            "year": "1973",
+            "journal-title": "Sci. Sin."
+          },
+          {
+            "key": "10.1016/j.jnt.2019.08.003_br0050",
+            "article-title": "Analytic Number Theory",
+            "volume": "vol. 134",
+            "author": "De Koninck",
+            "year": "2012"
+          },
+          {
+            "key": "10.1016/j.jnt.2019.08.003_br0060",
+            "first-page": "155",
+            "article-title": "A new extension of Dirichlet's theorem on prime numbers",
+            "volume": "33",
+            "author": "Dickson",
+            "year": "1904",
+            "journal-title": "Messenger Math."
+          },
+          {
+            "key": "10.1016/j.jnt.2019.08.003_br0070",
+            "doi-asserted-by": "crossref",
+            "first-page": "10",
+            "DOI": "10.4064/aa-4-1-10-19",
+            "article-title": "Some remarks on Euler's \u03c6 function",
+            "volume": "4",
+            "author": "Erd\u0151s",
+            "year": "1958",
+            "journal-title": "Acta Arith."
+          },
+          {
+            "issue": "1\u20133",
+            "key": "10.1016/j.jnt.2019.08.003_br0080",
+            "first-page": "125",
+            "article-title": "On some new properties of functions \u03c3(n), \u03c6(n), d(n) and \u03bd(n)",
+            "volume": "28",
+            "author": "Erd\u0151s",
+            "year": "1980",
+            "journal-title": "Mat. Lapok"
+          },
+          {
+            "key": "10.1016/j.jnt.2019.08.003_br0090",
+            "article-title": "Opera de Cribro",
+            "volume": "vol. 57",
+            "author": "Friedlander",
+            "year": "2010"
+          },
+          {
+            "issue": "2",
+            "key": "10.1016/j.jnt.2019.08.003_br0100",
+            "doi-asserted-by": "crossref",
+            "first-page": "151",
+            "DOI": "10.1080/10586458.2017.1360809",
+            "article-title": "Primitive root bias for twin primes",
+            "volume": "28",
+            "author": "Garcia",
+            "year": "2019",
+            "journal-title": "Exp. Math."
+          },
+          {
+            "key": "10.1016/j.jnt.2019.08.003_br0110",
+            "series-title": "Irregularities in the Distribution of Prime Numbers",
+            "first-page": "69",
+            "article-title": "On the difference in values of the Euler totient function near prime arguments",
+            "author": "Garcia",
+            "year": "2018"
+          },
+          {
+            "key": "10.1016/j.jnt.2019.08.003_br0120",
+            "doi-asserted-by": "crossref",
+            "first-page": "93",
+            "DOI": "10.1016/j.jnt.2017.10.023",
+            "article-title": "Primitive root biases for prime pairs I: existence and non-totality of biases",
+            "volume": "185",
+            "author": "Garcia",
+            "year": "2018",
+            "journal-title": "J. Number Theory"
+          },
+          {
+            "issue": "3",
+            "key": "10.1016/j.jnt.2019.08.003_br0130",
+            "first-page": "215",
+            "article-title": "Some problems of \u2018Partitio numerorum\u2019; III: on the expression of a number as a sum of primes",
+            "volume": "114",
+            "author": "Hardy",
+            "year": "1923",
+            "journal-title": "Acta Math."
+          },
+          {
+            "year": "2008",
+            "series-title": "An Introduction to the Theory of Numbers",
+            "author": "Hardy",
+            "key": "10.1016/j.jnt.2019.08.003_br0140"
+          },
+          {
+            "key": "10.1016/j.jnt.2019.08.003_br0150",
+            "first-page": "385",
+            "article-title": "On the representation of a large even integer as the sum of a prime and the product of at most two primes",
+            "volume": "17",
+            "author": "Chen",
+            "year": "1966",
+            "journal-title": "Kexue Tongbao"
+          },
+          {
+            "issue": "1",
+            "key": "10.1016/j.jnt.2019.08.003_br0160",
+            "doi-asserted-by": "crossref",
+            "first-page": "383",
+            "DOI": "10.4007/annals.2015.181.1.7",
+            "article-title": "Small gaps between primes",
+            "volume": "181",
+            "author": "Maynard",
+            "year": "2015",
+            "journal-title": "Ann. of Math. (2)"
+          },
+          {
+            "key": "10.1016/j.jnt.2019.08.003_br0170",
+            "first-page": "46",
+            "article-title": "Ein Beitrag zur analytischen Zahlentheorie",
+            "volume": "78",
+            "author": "Mertens",
+            "year": "1874",
+            "journal-title": "J. Reine Angew. Math."
+          },
+          {
+            "issue": "9",
+            "key": "10.1016/j.jnt.2019.08.003_br0180",
+            "doi-asserted-by": "crossref",
+            "first-page": "2067",
+            "DOI": "10.2140/ant.2014.8.2067",
+            "article-title": "New equidistribution estimates of Zhang type",
+            "volume": "8",
+            "author": "Polymath",
+            "year": "2014",
+            "journal-title": "Algebra Number Theory"
+          },
+          {
+            "issue": "12",
+            "key": "10.1016/j.jnt.2019.08.003_br0190",
+            "first-page": "83",
+            "article-title": "Variants of the Selberg sieve, and bounded intervals containing many primes",
+            "volume": "1:Art",
+            "author": "Polymath",
+            "year": "2014",
+            "journal-title": "Res. Math. Sci."
+          },
+          {
+            "year": "1996",
+            "series-title": "The New Book of Prime Number Records",
+            "author": "Ribenboim",
+            "key": "10.1016/j.jnt.2019.08.003_br0200"
+          },
+          {
+            "year": "2006",
+            "series-title": "Handbook of Number Theory. I",
+            "author": "S\u00e1ndor",
+            "key": "10.1016/j.jnt.2019.08.003_br0210"
+          },
+          {
+            "key": "10.1016/j.jnt.2019.08.003_br0220",
+            "first-page": "123",
+            "article-title": "Generalisation of a theorem of B.S.K.R. Somayajulu on the Euler's function \u03c6(n)",
+            "volume": "5",
+            "author": "Schinzel",
+            "year": "1955",
+            "journal-title": "Ganita"
+          },
+          {
+            "key": "10.1016/j.jnt.2019.08.003_br0230",
+            "first-page": "467",
+            "article-title": "Quelques th\u00e9or\u00e8mes sur les fonctions \u03c6(n) et \u03c3(n)",
+            "volume": "2",
+            "author": "Schinzel",
+            "year": "1955",
+            "journal-title": "Bull. Acad. Polon. Sci. Cl. III."
+          },
+          {
+            "key": "10.1016/j.jnt.2019.08.003_br0240",
+            "first-page": "415",
+            "article-title": "On functions \u03c6(n) and \u03c3(n)",
+            "volume": "3",
+            "author": "Schinzel",
+            "year": "1955",
+            "journal-title": "Bull. Acad. Polon. Sci. Cl. III."
+          },
+          {
+            "key": "10.1016/j.jnt.2019.08.003_br0250",
+            "first-page": "463",
+            "article-title": "Sur quelques propri\u00e9t\u00e9s des fonctions \u03c6(n) et \u03c3(n)",
+            "volume": "2",
+            "author": "Schinzel",
+            "year": "1955",
+            "journal-title": "Bull. Acad. Polon. Sci. Cl. III."
+          },
+          {
+            "key": "10.1016/j.jnt.2019.08.003_br0260",
+            "doi-asserted-by": "crossref",
+            "first-page": "201",
+            "DOI": "10.4064/ap-4-2-201-213",
+            "article-title": "A note on some properties of the functions \u03c6(n), \u03c3(n) and \u03b8(n)",
+            "volume": "4",
+            "author": "Schinzel",
+            "year": "1958",
+            "journal-title": "Ann. Polon. Math."
+          },
+          {
+            "issue": "3",
+            "key": "10.1016/j.jnt.2019.08.003_br0270",
+            "doi-asserted-by": "crossref",
+            "first-page": "1121",
+            "DOI": "10.4007/annals.2014.179.3.7",
+            "article-title": "Bounded gaps between primes",
+            "volume": "179",
+            "author": "Zhang",
+            "year": "2014",
+            "journal-title": "Ann. of Math. (2)"
+          }
+        ],
+        "container-title": [
+          "Journal of Number Theory"
+        ],
+        "language": "en",
+        "link": [
+          {
+            "URL": "https://api.elsevier.com/content/article/PII:S0022314X19302835?httpAccept=text/xml",
+            "content-type": "text/xml",
+            "content-version": "vor",
+            "intended-application": "text-mining"
+          },
+          {
+            "URL": "https://api.elsevier.com/content/article/PII:S0022314X19302835?httpAccept=text/plain",
+            "content-type": "text/plain",
+            "content-version": "vor",
+            "intended-application": "text-mining"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2025,
+              9,
+              20
+            ]
+          ],
+          "date-time": "2025-09-20T05:36:11Z",
+          "timestamp": 1758346571000
+        },
+        "score": 32.086205,
+        "resource": {
+          "primary": {
+            "URL": "https://linkinghub.elsevier.com/retrieve/pii/S0022314X19302835"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2020,
+              3
+            ]
+          ]
+        },
+        "references-count": 27,
+        "alternative-id": [
+          "S0022314X19302835"
+        ],
+        "URL": "https://doi.org/10.1016/j.jnt.2019.08.003",
+        "ISSN": [
+          "0022-314X"
+        ],
+        "issn-type": [
+          {
+            "type": "print",
+            "value": "0022-314X"
+          }
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2020,
+              3
+            ]
+          ]
+        },
+        "assertion": [
+          {
+            "value": "Elsevier",
+            "name": "publisher",
+            "label": "This article is maintained by"
+          },
+          {
+            "value": "Primitive root bias for twin primes II: Schinzel-type theorems for totient quotients and the sum-of-divisors function",
+            "name": "articletitle",
+            "label": "Article Title"
+          },
+          {
+            "value": "Journal of Number Theory",
+            "name": "journaltitle",
+            "label": "Journal Title"
+          },
+          {
+            "value": "https://doi.org/10.1016/j.jnt.2019.08.003",
+            "name": "articlelink",
+            "label": "CrossRef DOI link to publisher maintained version"
+          },
+          {
+            "value": "article",
+            "name": "content_type",
+            "label": "Content Type"
+          },
+          {
+            "value": "\u00a9 2019 Elsevier Inc.",
+            "name": "copyright",
+            "label": "Copyright"
+          }
+        ]
+      },
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2026,
+              3,
+              19
+            ]
+          ],
+          "date-time": "2026-03-19T00:08:29Z",
+          "timestamp": 1773878909582,
+          "version": "3.50.1"
+        },
+        "reference-count": 21,
+        "publisher": "Wiley",
+        "issue": "4",
+        "license": [
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2025,
+                  10,
+                  14
+                ]
+              ],
+              "date-time": "2025-10-14T00:00:00Z",
+              "timestamp": 1760400000000
+            },
+            "content-version": "vor",
+            "delay-in-days": 13,
+            "URL": "http://creativecommons.org/licenses/by/4.0/"
+          },
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2025,
+                  10,
+                  1
+                ]
+              ],
+              "date-time": "2025-10-01T00:00:00Z",
+              "timestamp": 1759276800000
+            },
+            "content-version": "tdm",
+            "delay-in-days": 0,
+            "URL": "http://doi.wiley.com/10.1002/tdm_license_1.1"
+          }
+        ],
+        "funder": [
+          {
+            "DOI": "10.13039/100000001",
+            "name": "National Science Foundation",
+            "doi-asserted-by": "publisher",
+            "award": [
+              "DMS\u20102001581"
+            ],
+            "award-info": [
+              {
+                "award-number": [
+                  "DMS\u20102001581"
+                ]
+              }
+            ],
+            "id": [
+              {
+                "id": "10.13039/100000001",
+                "id-type": "DOI",
+                "asserted-by": "publisher"
+              }
+            ]
+          }
+        ],
+        "content-domain": {
+          "domain": [
+            "londmathsoc.onlinelibrary.wiley.com"
+          ],
+          "crossmark-restriction": true
+        },
+        "short-container-title": [
+          "Mathematika"
+        ],
+        "published-print": {
+          "date-parts": [
+            [
+              2025,
+              10
+            ]
+          ]
+        },
+        "abstract": "<jats:title>Abstract</jats:title>\n                  <jats:p>The celebrated Artin conjecture on primitive roots asserts that given any integer  that is neither  nor a perfect square, there is an explicit constant  such that the number  of primes  for which  is a primitive root is asymptotically  as , where  counts the number of primes not exceeding . Artin's conjecture has remained unsolved since its formulation in 1927. Nevertheless, Hooley demonstrated in 1967 that Artin's conjecture is a consequence of the Generalized Riemann Hypothesis (GRH) for Dedekind zeta functions of certain cyclotomic\u2010Kummer extensions over . In this paper, we use GRH to establish a uniform version of the Artin\u2013Hooley asymptotic formula. Specifically, we prove that  whenever , that is, whenever  tends to infinity faster than any power of . Under GRH, we also show that the least prime  possessing  as a primitive root satisfies the upper bound  uniformly for all nonsquare . We conclude with an application to the average value of  and a discussion of an analog concerning the least \u201calmost\u2010primitive\u201d\u00a0root.</jats:p>",
+        "DOI": "10.1112/mtk.70055",
+        "type": "journal-article",
+        "created": {
+          "date-parts": [
+            [
+              2025,
+              10,
+              14
+            ]
+          ],
+          "date-time": "2025-10-14T13:28:12Z",
+          "timestamp": 1760448492000
+        },
+        "update-policy": "https://doi.org/10.1002/crossmark_policy",
+        "source": "Crossref",
+        "is-referenced-by-count": 0,
+        "title": [
+          "Counting primes with a given primitive root, uniformly"
+        ],
+        "prefix": "10.1112",
+        "volume": "71",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0002-2825-0736",
+            "authenticated-orcid": false,
+            "given": "Kai (Steve)",
+            "family": "Fan",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Department of Mathematics University of Georgia Athens Georgia USA"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-4327-5560",
+            "authenticated-orcid": false,
+            "given": "Paul",
+            "family": "Pollack",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Mathematics University of Georgia Athens Georgia USA"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "member": "311",
+        "published-online": {
+          "date-parts": [
+            [
+              2025,
+              10,
+              14
+            ]
+          ]
+        },
+        "reference": [
+          {
+            "key": "e_1_2_10_2_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.17875/gup2008-61"
+          },
+          {
+            "key": "e_1_2_10_3_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1112/plms/s3-12.1.179"
+          },
+          {
+            "key": "e_1_2_10_4_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1017/CBO9780511542909"
+          },
+          {
+            "key": "e_1_2_10_5_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1112/S0024610797005310"
+          },
+          {
+            "key": "e_1_2_10_6_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1090/coll/057"
+          },
+          {
+            "key": "e_1_2_10_7_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1112/S0025579300007968"
+          },
+          {
+            "key": "e_1_2_10_8_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.4064/aa-18-1-77-81"
+          },
+          {
+            "key": "e_1_2_10_9_1",
+            "unstructured": "A.Granville Least prime in Artin's primitive root conjecture MathOverflow https://mathoverflow.net/q/386952(version: 2021\u201003\u201019) https://mathoverflow.net/users/70432/andrewgranville."
+          },
+          {
+            "key": "e_1_2_10_10_1",
+            "series-title": "London Mathematical Society Monographs",
+            "volume-title": "Sieve methods",
+            "author": "Halberstam H.",
+            "year": "1974"
+          },
+          {
+            "key": "e_1_2_10_11_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1093/qmath/37.1.27"
+          },
+          {
+            "key": "e_1_2_10_12_1",
+            "first-page": "209",
+            "article-title": "On Artin's conjecture",
+            "volume": "225",
+            "author": "Hooley C.",
+            "year": "1967",
+            "journal-title": "J. Reine Angew. Math."
+          },
+          {
+            "key": "e_1_2_10_13_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1007/BFb0060851"
+          },
+          {
+            "key": "e_1_2_10_14_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1017/CBO9780511618314"
+          },
+          {
+            "key": "e_1_2_10_15_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1515/integers-2012-0043"
+          },
+          {
+            "key": "e_1_2_10_16_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1515/9783110208504.171"
+          },
+          {
+            "key": "e_1_2_10_17_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1007/BF02698692"
+          },
+          {
+            "key": "e_1_2_10_18_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1090/S0025-5718-1992-1106981-9"
+          },
+          {
+            "key": "e_1_2_10_19_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.5802/jtnb.408"
+          },
+          {
+            "key": "e_1_2_10_20_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1016/0022-314X(73)90059-0"
+          },
+          {
+            "key": "e_1_2_10_21_1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.4064/aa-41-2-141-150"
+          },
+          {
+            "key": "e_1_2_10_22_1",
+            "first-page": "432",
+            "article-title": "On the least primitive root of a prime",
+            "volume": "9",
+            "author": "Wang Y.",
+            "year": "1959",
+            "journal-title": "Acta Math. Sinica"
+          }
+        ],
+        "container-title": [
+          "Mathematika"
+        ],
+        "language": "en",
+        "link": [
+          {
+            "URL": "https://londmathsoc.onlinelibrary.wiley.com/doi/pdf/10.1112/mtk.70055",
+            "content-type": "application/pdf",
+            "content-version": "vor",
+            "intended-application": "text-mining"
+          },
+          {
+            "URL": "https://londmathsoc.onlinelibrary.wiley.com/doi/full-xml/10.1112/mtk.70055",
+            "content-type": "application/xml",
+            "content-version": "vor",
+            "intended-application": "text-mining"
+          },
+          {
+            "URL": "https://londmathsoc.onlinelibrary.wiley.com/doi/pdf/10.1112/mtk.70055",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2026,
+              3,
+              18
+            ]
+          ],
+          "date-time": "2026-03-18T17:32:29Z",
+          "timestamp": 1773855149000
+        },
+        "score": 29.543613,
+        "resource": {
+          "primary": {
+            "URL": "https://londmathsoc.onlinelibrary.wiley.com/doi/10.1112/mtk.70055"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2025,
+              10
+            ]
+          ]
+        },
+        "references-count": 21,
+        "journal-issue": {
+          "issue": "4",
+          "published-print": {
+            "date-parts": [
+              [
+                2025,
+                10
+              ]
+            ]
+          }
+        },
+        "alternative-id": [
+          "10.1112/mtk.70055"
+        ],
+        "URL": "https://doi.org/10.1112/mtk.70055",
+        "archive": [
+          "Portico"
+        ],
+        "ISSN": [
+          "0025-5793",
+          "2041-7942"
+        ],
+        "issn-type": [
+          {
+            "value": "0025-5793",
+            "type": "print"
+          },
+          {
+            "value": "2041-7942",
+            "type": "electronic"
+          }
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              10
+            ]
+          ]
+        },
+        "assertion": [
+          {
+            "value": "2025-05-07",
+            "order": 0,
+            "name": "received",
+            "label": "Received",
+            "group": {
+              "name": "publication_history",
+              "label": "Publication History"
+            }
+          },
+          {
+            "value": "2025-09-17",
+            "order": 2,
+            "name": "accepted",
+            "label": "Accepted",
+            "group": {
+              "name": "publication_history",
+              "label": "Publication History"
+            }
+          },
+          {
+            "value": "2025-10-14",
+            "order": 3,
+            "name": "published",
+            "label": "Published",
+            "group": {
+              "name": "publication_history",
+              "label": "Publication History"
+            }
+          }
+        ],
+        "article-number": "e70055"
+      }
+    ],
+    "items-per-page": 3,
+    "query": {
+      "start-index": 0,
+      "search-terms": null
+    }
+  }
+}

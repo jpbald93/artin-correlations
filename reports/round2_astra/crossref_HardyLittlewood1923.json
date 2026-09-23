@@ -1,0 +1,874 @@
+{
+  "status": "ok",
+  "message-type": "work-list",
+  "message-version": "1.0.0",
+  "message": {
+    "facets": {},
+    "total-results": 3190758,
+    "items": [
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2023,
+              4,
+              9
+            ]
+          ],
+          "date-time": "2023-04-09T04:28:26Z",
+          "timestamp": 1681014506455
+        },
+        "reference-count": 0,
+        "publisher": "WORLD SCIENTIFIC",
+        "isbn-type": [
+          {
+            "value": "9789971966089",
+            "type": "print"
+          },
+          {
+            "value": "9789814542487",
+            "type": "electronic"
+          }
+        ],
+        "content-domain": {
+          "domain": [],
+          "crossmark-restriction": false
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              1984,
+              5
+            ]
+          ]
+        },
+        "DOI": "10.1142/9789814542487_0002",
+        "type": "book-chapter",
+        "created": {
+          "date-parts": [
+            [
+              2014,
+              7,
+              23
+            ]
+          ],
+          "date-time": "2014-07-23T21:11:28Z",
+          "timestamp": 1406149888000
+        },
+        "page": "21-60",
+        "source": "Crossref",
+        "is-referenced-by-count": 0,
+        "title": [
+          "SOME PROBLEMS OF \u2019PARTITIO NUMERORUM\u2019; III: ON THE EXPRESSION OF A NUMBER AS A SUM OF PRIMES."
+        ],
+        "prefix": "10.1142",
+        "author": [
+          {
+            "given": "G. H.",
+            "family": "HARDY",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "New College, OXFORD.England"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "J. E.",
+            "family": "LITTLEWOOD",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Trinity College, CAMBRIDGE.England"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "member": "219",
+        "published-online": {
+          "date-parts": [
+            [
+              2014,
+              7,
+              14
+            ]
+          ]
+        },
+        "container-title": [
+          "Series in Pure Mathematics",
+          "Goldbach Conjecture"
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2023,
+              4,
+              9
+            ]
+          ],
+          "date-time": "2023-04-09T03:56:30Z",
+          "timestamp": 1681012590000
+        },
+        "score": 63.099022,
+        "resource": {
+          "primary": {
+            "URL": "https://www.worldscientific.com/doi/10.1142/9789814542487_0002"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              1984,
+              5
+            ]
+          ]
+        },
+        "ISBN": [
+          "9789971966089",
+          "9789814542487"
+        ],
+        "references-count": 0,
+        "alternative-id": [
+          "10.1142/9789814542487_0002",
+          "10.1142/SPM",
+          "10.1142/0069"
+        ],
+        "URL": "https://doi.org/10.1142/9789814542487_0002",
+        "ISSN": [
+          "1793-1185"
+        ],
+        "issn-type": [
+          {
+            "value": "1793-1185",
+            "type": "print"
+          }
+        ],
+        "published": {
+          "date-parts": [
+            [
+              1984,
+              5
+            ]
+          ]
+        }
+      },
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2022,
+              3,
+              30
+            ]
+          ],
+          "date-time": "2022-03-30T10:29:21Z",
+          "timestamp": 1648636161819
+        },
+        "edition-number": "2",
+        "reference-count": 0,
+        "publisher": "WORLD SCIENTIFIC",
+        "content-domain": {
+          "domain": [],
+          "crossmark-restriction": false
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2002,
+              11
+            ]
+          ]
+        },
+        "DOI": "10.1142/9789812776600_0002",
+        "type": "book-chapter",
+        "created": {
+          "date-parts": [
+            [
+              2010,
+              8,
+              16
+            ]
+          ],
+          "date-time": "2010-08-16T04:34:54Z",
+          "timestamp": 1281933294000
+        },
+        "page": "21-60",
+        "source": "Crossref",
+        "is-referenced-by-count": 0,
+        "title": [
+          "SOME PROBLEMS OF \u2018PARTITIO NUMERORUM\u2019; III: ON THE EXPRESSION OF A NUMBER AS A SUM OF PRIMES"
+        ],
+        "prefix": "10.1142",
+        "author": [
+          {
+            "given": "G. H.",
+            "family": "HARDY",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "New College, Oxford, UK"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "J. E.",
+            "family": "LITTLEWOOD",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Trinity College, Cambridge, UK"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "member": "219",
+        "published-online": {
+          "date-parts": [
+            [
+              2011,
+              11,
+              21
+            ]
+          ]
+        },
+        "container-title": [
+          "Series in Pure Mathematics",
+          "The Goldbach Conjecture"
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2017,
+              7,
+              24
+            ]
+          ],
+          "date-time": "2017-07-24T09:18:51Z",
+          "timestamp": 1500887931000
+        },
+        "score": 62.78111,
+        "resource": {
+          "primary": {
+            "URL": "http://www.worldscientific.com/doi/abs/10.1142/9789812776600_0002"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2002,
+              11
+            ]
+          ]
+        },
+        "references-count": 0,
+        "alternative-id": [
+          "10.1142/9789812776600_0002",
+          "10.1142/SPM",
+          "10.1142/5096"
+        ],
+        "URL": "https://doi.org/10.1142/9789812776600_0002",
+        "ISSN": [
+          "1793-1185"
+        ],
+        "issn-type": [
+          {
+            "value": "1793-1185",
+            "type": "print"
+          }
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2002,
+              11
+            ]
+          ]
+        }
+      },
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2026,
+              9,
+              23
+            ]
+          ],
+          "date-time": "2026-09-23T06:54:10Z",
+          "timestamp": 1790146450334,
+          "version": "4.0.1"
+        },
+        "reference-count": 71,
+        "publisher": "International Press of Boston",
+        "issue": "0",
+        "content-domain": {
+          "domain": [],
+          "crossmark-restriction": false
+        },
+        "short-container-title": [
+          "Acta Math."
+        ],
+        "published-print": {
+          "date-parts": [
+            [
+              1923
+            ]
+          ]
+        },
+        "DOI": "10.1007/bf02403921",
+        "type": "journal-article",
+        "created": {
+          "date-parts": [
+            [
+              2006,
+              5,
+              11
+            ]
+          ],
+          "date-time": "2006-05-11T16:41:02Z",
+          "timestamp": 1147365662000
+        },
+        "page": "1-70",
+        "source": "Crossref",
+        "is-referenced-by-count": 499,
+        "title": [
+          "Some problems of \u2018Partitio numerorum\u2019; III: On the expression of a number as a sum of primes"
+        ],
+        "prefix": "10.4310",
+        "volume": "44",
+        "author": [
+          {
+            "given": "G. H.",
+            "family": "Hardy",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "J. E.",
+            "family": "Littlewood",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "member": "2902",
+        "reference": [
+          {
+            "key": "BF02403921_CR1",
+            "unstructured": "E. Landau, \u2018Gel\u00f6ste und ungel\u00f6ste Probleme aus der Theorie der Primzahlverteilung und der Riemannschen Zetafunktion,Proceedings of the fifth International Congress of Mathematicians, Cambridge, 1912, vol. 1, pp. 93\u2013108 (p. 105). This address was reprinted in theJahresbericht der Deutschen Math.-Vereinigung, vol. 21 (1912), pp. 208\u2013228."
+          },
+          {
+            "key": "BF02403921_CR2",
+            "unstructured": "We give here a complete list of memoirs concenred with the various applications of this method."
+          },
+          {
+            "key": "BF02403921_CR3",
+            "unstructured": "\u2018Asymptotic formulae in combinatory analysis\u2019,Comptes rendus du quatri\u00e8me Congr\u00e8s des mathematiciens Scandinaves \u00e0 Stockholm, 1916, pp. 45\u201353."
+          },
+          {
+            "key": "BF02403921_CR4",
+            "doi-asserted-by": "crossref",
+            "first-page": "189",
+            "DOI": "10.1073/pnas.4.7.189",
+            "volume": "4",
+            "author": "G. H. Hardy",
+            "year": "1918",
+            "unstructured": ", \u2018On the expression of a number as the sum of any number of squares, and in particular of five or seven\u2019,Proceedings of the National Academy of Sciences, vol. 4 (1918), pp. 189\u2013193.",
+            "journal-title": "Proceedings of the National Academy of Sciences"
+          },
+          {
+            "key": "BF02403921_CR5",
+            "first-page": "1",
+            "volume-title": "Some famous problems of the Theory of Numbers, and in particular Waring's Problem",
+            "author": "G. H. Hardy",
+            "year": "1920",
+            "unstructured": ", \u2018Some famous problems of the Theory of Numbers, and in particular Waring's Problem\u2019, (Oxford, Clarendon Press, 1920, pp. 1\u201334)."
+          },
+          {
+            "key": "BF02403921_CR6",
+            "doi-asserted-by": "crossref",
+            "first-page": "255",
+            "DOI": "10.1090/S0002-9947-1920-1501144-7",
+            "volume": "21",
+            "author": "G. H. Hardy",
+            "year": "1920",
+            "unstructured": ", \u2018On the representation of a number as the sum of any number of squares, and in particular of five\u2019,Transactions of the American Mathematical Society, vol. 21 (1920), pp. 255\u2013284.",
+            "journal-title": "Transactions of the American Mathematical Society"
+          },
+          {
+            "key": "BF02403921_CR7",
+            "first-page": "263",
+            "volume": "20",
+            "author": "G. H. Hardy",
+            "year": "1921",
+            "unstructured": ", \u2018Note on Ramanujan's trigonometrical sumc q (n)\u2019,Proceedings of the Cambridge Philosophical Society, vol. 20 (1921), pp. 263\u2013271.",
+            "journal-title": "Proceedings of the Cambridge Philosophical Society"
+          },
+          {
+            "key": "BF02403921_CR8",
+            "first-page": "272",
+            "volume": "48",
+            "author": "G. H. Hardy",
+            "year": "1919",
+            "unstructured": "G. H. Hardy andJ. E. Littlewood, \u2018A new solution of Waring's Problem\u2019,Quarterly Journal of pure and applied mathematics, vol. 48 (1919), pp. 272\u2013293.",
+            "journal-title": "Quarterly Journal of pure and applied mathematics"
+          },
+          {
+            "key": "BF02403921_CR9",
+            "first-page": "245",
+            "volume": "19",
+            "author": "G. H. Hardy",
+            "year": "1919",
+            "unstructured": ", \u2018Note on Messrs. Shah and Wilson's paper entitled: On an empirical formula connected with Goldbach's Theorem\u2019,Proceedings of the Cambridge Philosophical Society, vol. 19 (1919), pp. 245\u2013254.",
+            "journal-title": "Proceedings of the Cambridge Philosophical Society"
+          },
+          {
+            "key": "BF02403921_CR10",
+            "unstructured": "G. H. Hardy andJ. E. Littlewood, \u2018Some problems of \u2018Partitio numerorum\u2019; I: A new solution of Waring's Problem\u2019,Nachrichten von der K. Gesellschaft der Wissenschaften zu G\u00f6ttingen (1920), pp. 33\u201354."
+          },
+          {
+            "key": "BF02403921_CR11",
+            "doi-asserted-by": "crossref",
+            "first-page": "14",
+            "DOI": "10.1007/BF01378332",
+            "volume": "9",
+            "author": "G. H. Hardy",
+            "year": "1921",
+            "unstructured": "\u2018Some problems of \u2018Partitio numerorum\u2019 II: Proof that any large number is the sum of at most 21 biquadrates\u2019,Mathematische Zeitschrift, vol. 9 (1921), pp. 14\u201327.",
+            "journal-title": "Mathematische Zeitschrift"
+          },
+          {
+            "key": "BF02403921_CR12",
+            "unstructured": "G. H. Hardy andS. Ramanujan, \u2018Une formule asymptotique pour le nombre des partitions den\u2019, Comptes rendus de l'Acad\u00e9mie des Sciences, 2 Jan. 1917."
+          },
+          {
+            "key": "BF02403921_CR13",
+            "doi-asserted-by": "crossref",
+            "first-page": "75",
+            "DOI": "10.1112/plms/s2-17.1.75",
+            "volume": "17",
+            "author": "G. H. Hardy",
+            "year": "1918",
+            "unstructured": ", \u2018Asymptotic formulae in combinatory analysis\u2019,Proceedings of the London Mathematical Society, ser. 2, vol. 17 (1918), pp. 75\u2013115.",
+            "journal-title": "Proceedings of the London Mathematical Society"
+          },
+          {
+            "key": "BF02403921_CR14",
+            "doi-asserted-by": "crossref",
+            "first-page": "144",
+            "DOI": "10.1098/rspa.1918.0056",
+            "volume": "95",
+            "author": "G. H. Hardy",
+            "year": "1918",
+            "unstructured": ", \u2018On the coefficients in the expansions of certain modular functions\u2019,Proceedings of the Royal Society of London (A) vol. 95 (1918), pp. 144\u2013155.",
+            "journal-title": "Proceedings of the Royal Society of London (A)"
+          },
+          {
+            "key": "BF02403921_CR15",
+            "unstructured": "E. Landau, \u2018Zur Hardy-Littlewood'schen L\u00f6sung des Waringschen Problems\u2019,Nachrichten von der K. Gesellschaft der Wissenschaften zu G\u00f6ttingen (1921), pp. 88\u201392."
+          },
+          {
+            "key": "BF02403921_CR16",
+            "first-page": "361",
+            "volume": "22",
+            "author": "L. J. Mordell",
+            "year": "1919",
+            "unstructured": "L. J. Mordell, \u2018On the representations of numbers as the sum of an odd number of squares\u2019,Transactions of the Cambridge Philosophical Society, vol. 22 (1919), pp. 361\u2013372.",
+            "journal-title": "Transactions of the Cambridge Philosophical Society"
+          },
+          {
+            "key": "BF02403921_CR17",
+            "doi-asserted-by": "crossref",
+            "first-page": "28",
+            "DOI": "10.1007/BF01378333",
+            "volume": "9",
+            "author": "A. Ostrowski",
+            "year": "1921",
+            "unstructured": "A. Ostrowski, \u2018Bemerkungen zur Hardy-Littlewood'schen L\u00f6sung des Waringschen Problems\u2019,Mathematische Zeitschrift, vol. 9 (1921), pp. 28\u201334.",
+            "journal-title": "Mathematische Zeitschrift"
+          },
+          {
+            "key": "BF02403921_CR18",
+            "first-page": "259",
+            "volume": "22",
+            "author": "S. Ramanujan",
+            "year": "1918",
+            "unstructured": "S. Ramanujan, \u2018On certain trigonometrical sums and their applications in the theory of numbers\u2019,Transactions of the Cambridge Philosophical Society, vol. 22 (1918), pp. 259\u2013276.",
+            "journal-title": "Transactions of the Cambridge Philosophical Society"
+          },
+          {
+            "key": "BF02403921_CR19",
+            "first-page": "238",
+            "volume": "19",
+            "author": "N. M. Shah",
+            "year": "1919",
+            "unstructured": "N. M. Shah andB. M. Wilson, \u2018On an empirical formula connected with Goldbach's Theorem\u2019,Proceedings of the Cambridge Philosophical Society, vol. 19 (1919), pp. 238\u2013244.",
+            "journal-title": "Proceedings of the Cambridge Philosophical Society"
+          },
+          {
+            "key": "BF02403921_CR20",
+            "unstructured": "The hypothesis must be stated in this way because (a) it has not been proved that noL(s) has real zeros between 1/2 and 1, (b) theL-functions associated withimprimitive (uneigentlich) characters have zeros on the line \u03c3=o."
+          },
+          {
+            "key": "BF02403921_CR21",
+            "unstructured": "Naturally many of the results stated incidentally do not depend upon the hypothesis."
+          },
+          {
+            "key": "BF02403921_CR22",
+            "unstructured": "Landau \u2018Zur Hardy-Littlewood'schen L\u00f6sung des Waringschen Problems\u2019,Nachrichten von der K. Gesellschaft der Wissenschaften zu G\u00f6ttingen (1921) p. 498. All references to \u2018Landau\u2019 are to hisHandbuch, unless the contrary is stated."
+          },
+          {
+            "key": "BF02403921_CR23",
+            "unstructured": "\u03c7k m =o if (m,q)>I."
+          },
+          {
+            "key": "BF02403921_CR24",
+            "unstructured": "Landau, \u2018Zur Hardy-Littlewood'schen L\u00f6sung des Waringschen Problems\u2019,Nachrichten von der K. Gesellschaft der Wissenschaften zu G\u00f6ttingen (1921) p. 497."
+          },
+          {
+            "key": "BF02403921_CR25",
+            "unstructured": "The distinction between major and minor arcs, fundamental in our work on Waring's Problem, does not arise here."
+          },
+          {
+            "key": "BF02403921_CR26",
+            "unstructured": "Landau, \u2018Zur Hardy-Littlewood'schen L\u00f6sung des Waringschen Problems\u2019,Nachrichten von der K. Gesellschaft der Wissenschaften zu G\u00f6ttingen (1921), p. 421."
+          },
+          {
+            "key": "BF02403921_CR27",
+            "unstructured": "Landau, \u2018Zur Hardy-Littlewood'schen L\u00f6sung des Waringschen Problems\u2019,Nachrichten von der K. Gesellschaft der Wissenschaften zu G\u00f6ttingen (1921), pp. 572\u2013573."
+          },
+          {
+            "key": "BF02403921_CR28",
+            "unstructured": "Landau, \u2018Zur Hardy-Littlewood'schen L\u00f6sung des Waringschen Problems\u2019,Nachrichten von der K. Gesellschaft der Wissenschaften zu G\u00f6ttingen (1921), p. 485. The result is stated there only for a primitive character, but the proof is valid also for an imprimitive character when (p, q)=1."
+          },
+          {
+            "key": "BF02403921_CR29",
+            "unstructured": "Landau, \u2018Zur Hardy-Littlewood'schen L\u00f6sung des Waringschen Problems\u2019,Nachrichten von der K. Gesellschaft der Wissenschaften zu G\u00f6ttingen (1921), pp. 485, 489, 492."
+          },
+          {
+            "key": "BF02403921_CR30",
+            "unstructured": "See the additional note at the end."
+          },
+          {
+            "key": "BF02403921_CR31",
+            "unstructured": "Landau, \u2018Zur Hardy-Littlewood'schen L\u00f6sung des Waringschen Problems\u2019,Nachrichten von der K. Gesellschaft der Wissenschaften zu G\u00f6ttingen (1921), pp. 509, 510, 519."
+          },
+          {
+            "key": "BF02403921_CR32",
+            "unstructured": "Landau, \u2018Zur Hardy-Littlewood'schen L\u00f6sung des Waringschen Problems\u2019,Nachrichten von der K. Gesellschaft der Wissenschaften zu G\u00f6ttingen (1921), p. 511 (footnote)."
+          },
+          {
+            "key": "BF02403921_CR33",
+            "doi-asserted-by": "crossref",
+            "unstructured": "This application of Cauchy's Theorem may be justified on the lines of the classical proof of the \u2018explicit formulae\u2019 for \u03c8(x) and \u03c0(x): see Landau, pp. 333\u2013368. In this case the roof is much easier, sinceY \u22123 \u0414(s) tends to zero, when |t|\u21a6\u221e, like an exponentiale \u2212a|t| Compare pp. 134\u2013135 of our memoir \u2018Contributions to the theory of the Riemann Zeta-function and the theory of the distribution of primes\u2019,Acta Mathematica, vol. 41 (1917), pp. 119\u2013196.",
+            "DOI": "10.1007/BF02422942"
+          },
+          {
+            "key": "BF02403921_CR34",
+            "unstructured": "Landau, p. 517. \u2018Gel\u00f6ste und ungel\u00f6ste Probleme aus der Theorie der Primzahlverteilung und der Riemannschen Zetafunktion,Proceeding of the fifth International Congress of Mathematicians Cambridge, 1913, vol. I, pp. 93\u2013108 (p. 105)."
+          },
+          {
+            "key": "BF02403921_CR35",
+            "unstructured": "Landau, p. 480. \u2018Gel\u00f6ste und ungel\u00f6ste Probleme aus der Theorie der Primzahlverteilung und der Riemannschen Zetafunktion,Proceeding of the fifth International Congress of Mathematicians, Cambridge, 1912, vol, I, pp. 93\u2013108 (p. 105)."
+          },
+          {
+            "key": "BF02403921_CR36",
+            "unstructured": "Landau, p. 507. \u2018Gel\u00f6ste und ungel\u00f6ste Probleme aus der Theorie der Primzahlverteilung und der Riemannschen Zetafunktion,Proceeding of the fifth International Congress of Mathematicians, Cambridge, 1912, vol. I, pp. 93\u2013108 (p. 105)."
+          },
+          {
+            "key": "BF02403921_CR37",
+            "unstructured": "Landau, pp. 496, 497. \u2018Gel\u00f6ste und ungel\u00f6ste Probleme aus der Theorie der Primzahlverteilung und der Riemannschen Zetafunktion,Proceeding of the fifth International Congress of Mathematicians, Cambridge, 1912, vol. I, pp. 93\u2013108 (p. 105)."
+          },
+          {
+            "key": "BF02403921_CR38",
+            "unstructured": "Landau, p. 337. \u2018Gel\u00f6ste und ungel\u00f6ste Probleme aus der Theorie der Primzahlverteilung und der Riemannschen Zetafunktion,Proceeding of the fifth International Congress of Mathematicians, Cambridge, 1912, vol. I, pp. 93\u2013108 (p. 105)."
+          },
+          {
+            "key": "BF02403921_CR39",
+            "unstructured": "Landau, p. 423. \u2018Gel\u00f6ste und ungel\u00f6ste Probleme aus der Theorie der Primzahlverteilung und der Riemannschen Zetafunktion,Proceeding of the fifth International Congress of Mathematicians, Cambridge, 1912, vol. I, pp. 93\u2013108 (p. 105)."
+          },
+          {
+            "key": "BF02403921_CR40",
+            "unstructured": "\u03a3 refers to the complex zeros ofL 1 (s), not merely to those of \u03b6(s)"
+          },
+          {
+            "key": "BF02403921_CR41",
+            "unstructured": "Landau, p. 217.E. Landau, \u2018Gel\u00f6ste und ungel\u00f6ste Probleme aus der Theorie der Primzahlverteilung und der Riemannschen Zetafunktion,Proceedings of the fifth International Congress of Mathematicians, Cambridge, 1912, vol. 1, pp. 93\u2013108 (p. 105)."
+          },
+          {
+            "key": "BF02403921_CR42",
+            "unstructured": "The argument fails ifq=1, orq=2; butc 1 (n)=c 1(\u2212n)=1,c 2(n)=c 2(\u2212n)=\u22121."
+          },
+          {
+            "key": "BF02403921_CR43",
+            "unstructured": "Landau, p. 577.E. Landau, \u2018Gel\u00f6ste und ungel\u00f6ste Probleme aus der Theorie der Primzahlverteilung und der Riemannschen Zetafunktion,Proceedings of the fifth International Congress of Mathematicians, Cambridge, 1912, vol. 1, pp. 93\u2013108 (p. 105)."
+          },
+          {
+            "key": "BF02403921_CR44",
+            "first-page": "421",
+            "volume": "1",
+            "author": "L. E. Dickson",
+            "year": "1919",
+            "unstructured": "As regards the earlier history of \u2018Goldbach's Theorem\u2019, seeL. E. Dickson,History of the Theory of Numbers, vol. 1 (Washington 1919), pp. 421\u2013425.",
+            "journal-title": "History of the Theory of Numbers"
+          },
+          {
+            "key": "BF02403921_CR45",
+            "first-page": "4",
+            "volume": "4",
+            "author": "J. J. Sylvester",
+            "year": "1871",
+            "unstructured": "J. J. Sylvester, \u2018On the partition of an even number into two primes\u2019,Proc. London Math. Soc., ser. 1, vol. 4 (1871), pp. 4\u20136 (Math. Papers, vol. 2, pp. 709\u2013711). See also \u2018On the Goldbach-Euler Theorem regarding prime numbers\u2019,Nature, vol. 55 (1896\u20137), pp. 196\u2013197, 269 (Math. Papers, vol. 4, pp. 734\u2013737). We owe our knowledge of Sylvester's notes on the subject to Mr.B. M. Wilson of Trinity College, Cambridge. See, in connection with all that follows, Shah and Wilson, I, and Hardy and Littlewood, 2.",
+            "journal-title": "Proc. London Math. Soc., ser. 1"
+          },
+          {
+            "key": "BF02403921_CR46",
+            "unstructured": "Landau, p. 218.E. Landau, \u2018Gel\u00f6ste"
+          },
+          {
+            "key": "BF02403921_CR47",
+            "unstructured": "P. St\u00e4ckel, \u2018\u00dcber Goldbach's empirisches Theorem: Jede grade Zahl kann als Summe von zwei Primzahlen dargestellt werden\u2019,G\u00f6ttinger Nachrichten, 1896, pp. 292\u2013299."
+          },
+          {
+            "key": "BF02403921_CR48",
+            "unstructured": "E. Landau, \u2018\u00dcber die zahlentheoretische Funktion \u03d5(n) und ihre Beziehung zum Goldbachschen Satz\u2019,G\u00f6ttinger Nachrichten, 1900, pp. 177\u2013186."
+          },
+          {
+            "key": "BF02403921_CR49",
+            "first-page": "121",
+            "volume": "39",
+            "author": "J. Merlin",
+            "year": "1915",
+            "unstructured": "J. Merlin, \u2018Un travail sur les nombres premiers,\u2019,Bulletin des sciences math\u00e9matiques, vol. 39 (1915), pp. 121\u2013136.",
+            "journal-title": "Bulletin des sciences math\u00e9matiques"
+          },
+          {
+            "issue": "no. 8",
+            "key": "BF02403921_CR50",
+            "first-page": "1",
+            "volume": "34",
+            "author": "V. Brun",
+            "year": "1915",
+            "unstructured": "V. Brun, \u2018\u00dcber das Goldbachsche Gesetz und die Anzahl der Primzahlpaare\u2019,Archiv for Mathematik (Christiania), vol. 34 part 2 (1915), no. 8, pp. 1\u201315. The formula (4. 18) is not actually formulated by Brun: see the discussion by Shah and Wilson, 1, and Hardy and Littlewood, 2. See also a second paper by the same author, \u2018Sur les nombres premiers de la formeap+b\u2019,ibid. part. 4 (1917). no. 14, pp. 1\u20139; and the postscript to this memoir.",
+            "journal-title": "Archiv for Mathematik (Christiania)"
+          },
+          {
+            "key": "BF02403921_CR51",
+            "unstructured": "P. St\u00e4ckel, \u2018Die Darstellung der geraden Zahlen als Summen von zwei Primzahlen\u2019, 8 August 1916; \u2018Die L\u00fcckenzahlenr-ter Stufe und die Darstellung der geraden Zahlen als Summen und Differenzen ungerader Primzahlen\u2019, I. Teil 27 Dezember 1917, II. Teil 19 Januar 1918, III. Teil 19 Juli 1918."
+          },
+          {
+            "key": "BF02403921_CR52",
+            "unstructured": "Throughout 4. 2A is the same constant."
+          },
+          {
+            "key": "BF02403921_CR53",
+            "doi-asserted-by": "crossref",
+            "first-page": "165",
+            "DOI": "10.1007/BF02393127",
+            "volume": "34",
+            "author": "K. Knopp",
+            "year": "1909",
+            "unstructured": "For general theorems including those used here as very special cases, seeK. Knopp, Divergenzcharactere gewisser Dirichlet'scher Reihen\u2019,Acta Mathematica, vol. 34, 1909, pp. 165\u2013204 (e. g. Satz III, p. 176).",
+            "journal-title": "Acta Mathematica"
+          },
+          {
+            "key": "BF02403921_CR54",
+            "unstructured": "Landau, p. 218.E. Landau, \u2018Gel\u00f6ste"
+          },
+          {
+            "key": "BF02403921_CR55",
+            "unstructured": "Whether Sylvester's argument was or was not we have no direct means of judging."
+          },
+          {
+            "key": "BF02403921_CR56",
+            "unstructured": "Probability is not a notion of puro mathematies, but of philosophy or physics."
+          },
+          {
+            "key": "BF02403921_CR57",
+            "first-page": "238",
+            "volume": "1",
+            "author": "L. E. Dickson",
+            "year": "1919",
+            "unstructured": "Compare Shah and Wilson,l. c.) p. 238. The same conclusion may be arrived at in other ways.",
+            "journal-title": "History of the Theory of Numbers"
+          },
+          {
+            "key": "BF02403921_CR58",
+            "first-page": "242",
+            "volume": "1",
+            "author": "L. E. Dickson",
+            "year": "1919",
+            "unstructured": ", p. 242.",
+            "journal-title": "History of the Theory of Numbers"
+          },
+          {
+            "key": "BF02403921_CR59",
+            "unstructured": "We appeal again here to the Tauberian theorem referred to at the end of 4. 2 (f. n. t), This time, of course, there is no question of an alternative argument."
+          },
+          {
+            "key": "BF02403921_CR60",
+            "unstructured": "Note thatS 2 \u2032=o ifk is odd, as it should be."
+          },
+          {
+            "key": "BF02403921_CR61",
+            "unstructured": "The series is of course divergent, and must be regarded as closed after a finite number of terms, with an error term of lower order than the last term retained."
+          },
+          {
+            "key": "BF02403921_CR62",
+            "first-page": "28",
+            "volume": "8",
+            "author": "J. W. L. Glaisher",
+            "year": "1878",
+            "unstructured": "J. W. L. Glaisher, \u2018An enumeration of prime-pairs\u2019,Messenger of Mathematics, vol. 8 (1878), pp. 28\u201333. Glaisher counts (1, 3) as a pair, so that his figure exceeds ours by I.",
+            "journal-title": "Messenger of Mathematics"
+          },
+          {
+            "key": "BF02403921_CR63",
+            "unstructured": "The fourth was that of the existence of a prime betweenn 2 and (n+1)2 for everyn>0. The problem of primesam 2 +bm+c must not be confused with the much simpler (though still difficult) problem of primes included in the definite quadratic formax 2 +bxy+cy 2 in two independent variables. This problem, of course, was solved in the classical researches ofde la Vall\u00e9e Poussin. Our method naturally leads to de la Vall\u00e9e Poussin's results, and the formal verification of them in this manner is not without interest. Here, however, our method is plainly not the right one, and could lead at best to a proof encumbered with an unnecessary hypothesis and far more difficult than the accepted proof."
+          },
+          {
+            "key": "BF02403921_CR64",
+            "unstructured": "Even this is a formal process, for (5. 412) is not absolutely convergent."
+          },
+          {
+            "key": "BF02403921_CR65",
+            "unstructured": "SeeDirichlet-Dedekind,Vorlesungen \u00fcber Zahleutheorie, ed. 4 (1894), pp. 293et seq."
+          },
+          {
+            "key": "BF02403921_CR66",
+            "first-page": "424",
+            "volume": "I",
+            "author": "L. E. Dickson",
+            "year": "1919",
+            "unstructured": "ByStern and his pupils in 1856. See-History (referred to on p. 32) p. 424. The tables constructed by Stern were presorved in the library of Hurwitz, and have been very kindly placed at our disposal by Mr. G. P\u00f3lya. These manuscr\u00edpts also contain a table of decompositions of primesq=4m+3 into sumsq=p+2p\u2032, wherep andp\u2032 are primes of the form 4m+1, extending as far asq=20983. The conjecture that such a decomposition is always possible (1 being counted as a prime) was made by Lagrange in 1775 (see Dickson, L. E. Dickson,History of the Theory of Numbers, vol. I (Washington 1919) p. 424).",
+            "journal-title": "History of the Theory of Numbers"
+          },
+          {
+            "key": "BF02403921_CR67",
+            "unstructured": "See Landau, p. 67. \u2019Gel\u00f6ste und ungel\u00f6ste Problemeaus der Theorie der Primzahverteilung und der Riemanmschen Zetafunktion,Proceedings of the fifth Intemaltional longress of Mathematicions, Cambridge, 1912 vol, I, 93\u2013108 (p. 105)."
+          },
+          {
+            "key": "BF02403921_CR68",
+            "unstructured": "Landau, p. 140. \u2018Gel\u00f6ste und ungel\u00f6ste Problemeaus der Theorie der Primzahrerteilung und der Riemanmschen Zetafunktion,Proceedings of the fifth Intemational longress of Mathematicious. Cambridge, 1912 vol. I, 93\u2013108 (p. 105)."
+          },
+          {
+            "key": "BF02403921_CR69",
+            "unstructured": "It is here that we use the conditiona r \u253ca s ."
+          },
+          {
+            "key": "BF02403921_CR70",
+            "unstructured": "To avoid any possible misunderstanding, we repeat that these theorems areconsequences of Hypothesis X."
+          },
+          {
+            "key": "BF02403921_CR71",
+            "unstructured": "L. E. Dickson,History of the Theory of Numbers, vol. I, p. 355."
+          }
+        ],
+        "container-title": [
+          "Acta Mathematica"
+        ],
+        "language": "en",
+        "link": [
+          {
+            "URL": "http://www.springerlink.com/index/pdf/10.1007/BF02403921",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2019,
+              4,
+              18
+            ]
+          ],
+          "date-time": "2019-04-18T16:04:53Z",
+          "timestamp": 1555603493000
+        },
+        "score": 62.127277,
+        "resource": {
+          "primary": {
+            "URL": "http://projecteuclid.org/euclid.acta/1485887559"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              1923
+            ]
+          ]
+        },
+        "references-count": 71,
+        "journal-issue": {
+          "issue": "0",
+          "published-print": {
+            "date-parts": [
+              [
+                1923
+              ]
+            ]
+          }
+        },
+        "URL": "https://doi.org/10.1007/bf02403921",
+        "ISSN": [
+          "0001-5962"
+        ],
+        "issn-type": [
+          {
+            "value": "0001-5962",
+            "type": "print"
+          }
+        ],
+        "published": {
+          "date-parts": [
+            [
+              1923
+            ]
+          ]
+        }
+      }
+    ],
+    "items-per-page": 3,
+    "query": {
+      "start-index": 0,
+      "search-terms": null
+    }
+  }
+}

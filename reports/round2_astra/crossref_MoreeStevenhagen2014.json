@@ -1,0 +1,600 @@
+{
+  "status": "ok",
+  "message-type": "work-list",
+  "message-version": "1.0.0",
+  "message": {
+    "facets": {},
+    "total-results": 890174,
+    "items": [
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2024,
+              6,
+              9
+            ]
+          ],
+          "date-time": "2024-06-09T22:55:49Z",
+          "timestamp": 1717973749361
+        },
+        "reference-count": 0,
+        "publisher": "Institute of Mathematics, Polish Academy of Sciences",
+        "issue": "1",
+        "content-domain": {
+          "domain": [],
+          "crossmark-restriction": false
+        },
+        "short-container-title": [
+          "Acta Arith."
+        ],
+        "DOI": "10.4064/aa163-1-2",
+        "type": "journal-article",
+        "created": {
+          "date-parts": [
+            [
+              2014,
+              4,
+              2
+            ]
+          ],
+          "date-time": "2014-04-02T06:47:04Z",
+          "timestamp": 1396421224000
+        },
+        "page": "15-32",
+        "source": "Crossref",
+        "is-referenced-by-count": 4,
+        "title": [
+          "Computing higher rank primitive root densities"
+        ],
+        "prefix": "10.4064",
+        "volume": "163",
+        "author": [
+          {
+            "given": "P.",
+            "family": "Moree",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "P.",
+            "family": "Stevenhagen",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "member": "2508",
+        "published-online": {
+          "date-parts": [
+            [
+              2014
+            ]
+          ]
+        },
+        "container-title": [
+          "Acta Arithmetica"
+        ],
+        "language": "en",
+        "deposited": {
+          "date-parts": [
+            [
+              2014,
+              4,
+              2
+            ]
+          ],
+          "date-time": "2014-04-02T06:47:07Z",
+          "timestamp": 1396421227000
+        },
+        "score": 56.147026,
+        "resource": {
+          "primary": {
+            "URL": "http://journals.impan.pl/cgi-bin/doi?aa163-1-2"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2014
+            ]
+          ]
+        },
+        "references-count": 0,
+        "journal-issue": {
+          "issue": "1",
+          "published-print": {
+            "date-parts": [
+              [
+                2014
+              ]
+            ]
+          }
+        },
+        "URL": "https://doi.org/10.4064/aa163-1-2",
+        "ISSN": [
+          "0065-1036",
+          "1730-6264"
+        ],
+        "issn-type": [
+          {
+            "value": "0065-1036",
+            "type": "print"
+          },
+          {
+            "value": "1730-6264",
+            "type": "electronic"
+          }
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2014
+            ]
+          ]
+        }
+      },
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2026,
+              7,
+              10
+            ]
+          ],
+          "date-time": "2026-07-10T02:04:48Z",
+          "timestamp": 1783649088300,
+          "version": "3.55.0"
+        },
+        "reference-count": 19,
+        "publisher": "Cambridge University Press (CUP)",
+        "issue": "3",
+        "license": [
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2014,
+                  11,
+                  5
+                ]
+              ],
+              "date-time": "2014-11-05T00:00:00Z",
+              "timestamp": 1415145600000
+            },
+            "content-version": "unspecified",
+            "delay-in-days": 4,
+            "URL": "https://www.cambridge.org/core/terms"
+          }
+        ],
+        "content-domain": {
+          "domain": [],
+          "crossmark-restriction": false
+        },
+        "short-container-title": [
+          "Math. Proc. Camb. Phil. Soc."
+        ],
+        "published-print": {
+          "date-parts": [
+            [
+              2014,
+              11
+            ]
+          ]
+        },
+        "abstract": "<jats:title>Abstract</jats:title><jats:p>It follows from the work of Artin and Hooley that, under assumption of the generalised Riemann hypothesis, the density of the set of primes <jats:italic>q</jats:italic> for which a given non-zero rational number <jats:italic>r</jats:italic> is a primitive root modulo <jats:italic>q</jats:italic> can be written as an infinite product \u220f<jats:sub><jats:italic>p</jats:italic></jats:sub> \u03b4<jats:sub><jats:italic>p</jats:italic></jats:sub> of local factors \u03b4<jats:italic><jats:sub>p</jats:sub></jats:italic> reflecting the degree of the splitting field of <jats:italic>X<jats:sup>p</jats:sup> - r</jats:italic> at the primes <jats:italic>p</jats:italic>, multiplied by a somewhat complicated factor that corrects for the \u2018entanglement\u2019 of these splitting fields.</jats:p><jats:p>We show how the correction factors arising in Artin's original primitive root problem and several of its generalisations can be interpreted as character sums describing the nature of the entanglement. The resulting description in terms of local contributions is so transparent that it greatly facilitates explicit computations, and naturally leads to non-vanishing criteria for the correction factors.</jats:p><jats:p>The method not only applies in the setting of Galois representations of the multiplicative group underlying Artin's conjecture, but also in the GL<jats:sub>2</jats:sub>-setting arising for elliptic curves. As an application, we compute the density of the set of primes of cyclic reduction for Serre curves.</jats:p>",
+        "DOI": "10.1017/s0305004114000450",
+        "type": "journal-article",
+        "created": {
+          "date-parts": [
+            [
+              2014,
+              11,
+              5
+            ]
+          ],
+          "date-time": "2014-11-05T09:59:29Z",
+          "timestamp": 1415181569000
+        },
+        "page": "489-511",
+        "source": "Crossref",
+        "is-referenced-by-count": 20,
+        "title": [
+          "Character sums for primitive root densities"
+        ],
+        "prefix": "10.1017",
+        "volume": "157",
+        "author": [
+          {
+            "suffix": "JR.",
+            "given": "H. W.",
+            "family": "LENSTRA",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "P.",
+            "family": "STEVENHAGEN",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "P.",
+            "family": "MOREE",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "member": "56",
+        "published-online": {
+          "date-parts": [
+            [
+              2014,
+              11,
+              5
+            ]
+          ]
+        },
+        "reference": [
+          {
+            "key": "S0305004114000450_ref12",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.4064/aa163-1-2"
+          },
+          {
+            "key": "S0305004114000450_ref17",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1007/BF01405086"
+          },
+          {
+            "key": "S0305004114000450_ref9",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1006/jnth.1999.2409"
+          },
+          {
+            "key": "S0305004114000450_ref19",
+            "doi-asserted-by": "crossref",
+            "first-page": "141",
+            "DOI": "10.4064/aa-41-2-141-150",
+            "article-title": "Pseudoprimes and a generalisation of Artin's conjecture",
+            "volume": "41",
+            "author": "Wagstaff",
+            "year": "1982",
+            "journal-title": "Acta Arith."
+          },
+          {
+            "key": "S0305004114000450_ref4",
+            "unstructured": "A. Javanpeykar . Radical Galois groups and cohomology. Master's thesis. Universiteit Leiden, http://www.math.leidenuniv.nl/en/theses/377. (2013)."
+          },
+          {
+            "key": "S0305004114000450_ref15",
+            "doi-asserted-by": "crossref",
+            "first-page": "245",
+            "DOI": "10.4064/aa-32-3-245-274",
+            "article-title": "Abelian binomials, power residues and exponential congruences",
+            "volume": "32",
+            "author": "Schinzel",
+            "year": "1977",
+            "journal-title": "Acta Arith."
+          },
+          {
+            "key": "S0305004114000450_ref1",
+            "unstructured": "J. Brau . Ph.D. thesis. Universiteit Leiden, https://openaccess.leidenuniv.nl, to appear."
+          },
+          {
+            "key": "S0305004114000450_ref7",
+            "unstructured": "H. W. Lenstra Jr. , Entangled radicals. AMS Colloquium Lectures (San Antonio, 2006), http://www.math.leidenuniv.nl/~hwl/papers/rad.pdf."
+          },
+          {
+            "key": "S0305004114000450_ref8",
+            "doi-asserted-by": "crossref",
+            "first-page": "113",
+            "DOI": "10.4064/aa-29-2-113-146",
+            "article-title": "A generalisation of Artin's conjecture for primitive roots",
+            "volume": "29",
+            "author": "Matthews",
+            "year": "1976",
+            "journal-title": "Acta Arith."
+          },
+          {
+            "key": "S0305004114000450_ref2",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1006/jnth.1998.2319"
+          },
+          {
+            "key": "S0305004114000450_ref16",
+            "unstructured": "A. Schinzel . Selecta. vol. II. European Mathematical Society (2007)."
+          },
+          {
+            "key": "S0305004114000450_ref3",
+            "first-page": "209",
+            "article-title": "On Artin's conjecture for primitive roots",
+            "volume": "225",
+            "author": "Hooley",
+            "year": "1967",
+            "journal-title": "J. Reine Angew. Math."
+          },
+          {
+            "key": "S0305004114000450_ref13",
+            "unstructured": "W. J. Palenstijn . Radicals in arithmetic. Ph.D. thesis. Universiteit Leiden, https://openaccess.leidenuniv.nl (2014)."
+          },
+          {
+            "key": "S0305004114000450_ref5",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1090/S0002-9947-09-04804-1"
+          },
+          {
+            "key": "S0305004114000450_ref18",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.5802/jtnb.408"
+          },
+          {
+            "key": "S0305004114000450_ref11",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1006/jnth.2000.2547"
+          },
+          {
+            "key": "S0305004114000450_ref14",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1007/978-3-662-04097-3"
+          },
+          {
+            "key": "S0305004114000450_ref6",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1007/BF01389788"
+          },
+          {
+            "key": "S0305004114000450_ref10",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.7169/facm/1229696559"
+          }
+        ],
+        "container-title": [
+          "Mathematical Proceedings of the Cambridge Philosophical Society"
+        ],
+        "language": "en",
+        "link": [
+          {
+            "URL": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/S0305004114000450",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2019,
+              4,
+              21
+            ]
+          ],
+          "date-time": "2019-04-21T18:53:51Z",
+          "timestamp": 1555872831000
+        },
+        "score": 30.211613,
+        "resource": {
+          "primary": {
+            "URL": "https://www.cambridge.org/core/product/identifier/S0305004114000450/type/journal_article"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2014,
+              11
+            ]
+          ]
+        },
+        "references-count": 19,
+        "journal-issue": {
+          "issue": "3",
+          "published-print": {
+            "date-parts": [
+              [
+                2014,
+                11
+              ]
+            ]
+          }
+        },
+        "alternative-id": [
+          "S0305004114000450"
+        ],
+        "URL": "https://doi.org/10.1017/s0305004114000450",
+        "ISSN": [
+          "0305-0041",
+          "1469-8064"
+        ],
+        "issn-type": [
+          {
+            "value": "0305-0041",
+            "type": "print"
+          },
+          {
+            "value": "1469-8064",
+            "type": "electronic"
+          }
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2014,
+              11
+            ]
+          ]
+        }
+      },
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2026,
+              4,
+              6
+            ]
+          ],
+          "date-time": "2026-04-06T02:25:19Z",
+          "timestamp": 1775442319575,
+          "version": "3.50.1"
+        },
+        "publisher-location": "Providence, Rhode Island",
+        "reference-count": 0,
+        "publisher": "American Mathematical Society",
+        "isbn-type": [
+          {
+            "value": "9780821839607",
+            "type": "print"
+          },
+          {
+            "value": "9780821884003",
+            "type": "print"
+          },
+          {
+            "value": "9781470418038",
+            "type": "print"
+          }
+        ],
+        "content-domain": {
+          "domain": [],
+          "crossmark-restriction": false
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2007,
+              2,
+              13
+            ]
+          ]
+        },
+        "DOI": "10.1090/gsm/079/12",
+        "type": "book-chapter",
+        "created": {
+          "date-parts": [
+            [
+              2015,
+              2,
+              27
+            ]
+          ],
+          "date-time": "2015-02-27T13:17:32Z",
+          "timestamp": 1425043052000
+        },
+        "page": "203-252",
+        "source": "Crossref",
+        "is-referenced-by-count": 0,
+        "title": [
+          "Computing in higher rank"
+        ],
+        "prefix": "10.1090",
+        "author": [
+          {
+            "given": "William",
+            "family": "Stein",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "member": "14",
+        "container-title": [
+          "Graduate Studies in Mathematics",
+          "Modular Forms, a Computational Approach"
+        ],
+        "language": "en",
+        "deposited": {
+          "date-parts": [
+            [
+              2026,
+              4,
+              6
+            ]
+          ],
+          "date-time": "2026-04-06T01:24:13Z",
+          "timestamp": 1775438653000
+        },
+        "score": 28.5256,
+        "resource": {
+          "primary": {
+            "URL": "https://www.ams.org/gsm/079"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2007,
+              2,
+              13
+            ]
+          ]
+        },
+        "ISBN": [
+          "9780821839607",
+          "9780821884003",
+          "9781470418038"
+        ],
+        "references-count": 0,
+        "URL": "https://doi.org/10.1090/gsm/079/12",
+        "ISSN": [
+          "1065-7339"
+        ],
+        "issn-type": [
+          {
+            "value": "1065-7339",
+            "type": "print"
+          }
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2007,
+              2,
+              13
+            ]
+          ]
+        }
+      }
+    ],
+    "items-per-page": 3,
+    "query": {
+      "start-index": 0,
+      "search-terms": null
+    }
+  }
+}
