@@ -37,7 +37,10 @@ cross-base paper's *set* notation `\mathcal{A}_a` distinctly from the consecutiv
 *indicator* `\Art_n`. A numeral-preservation check
 confirms that **all 1,345 numerals in the source blocks survive unaltered** in the merged
 source. Run `python3 assemble.py` to rebuild when the two source papers are available; otherwise
-it uses the shipped assembled TeX. Run `bash build_submission.sh` for the full submission build.
+it uses the shipped assembled TeX, and refuses if that TeX does not contain the current
+`FRONT.tex`/`SECTION_content.tex`/`DISC.tex`. `bash build_submission.sh` is run from the
+**source archive** (`submission/artin_correlations_source.zip`, flat layout), not from a
+checkout of this repository, where the TeX sits in `paper/`.
 
 ## Reproduce
 
@@ -64,7 +67,8 @@ gcc -O3 -fopenmp -o artin_payoff artin_payoff.c -lm
 - same prime: with `d = sqf(ab)`, no prime with `(d|p) = −1` is Artin for both `a` and `b`;
   if `sqf(c) = sqf(ab)` then no odd prime is Artin for all three.
 
-**Measurements below 10⁹** (50,847,531 primes, exact counts): consecutive-prime
+**Measurements below 10⁹** (exact counts; 50,847,530 consecutive pairs for the
+consecutive-prime statistics): consecutive-prime
 anticorrelation `δ = −0.01414` (Pearson 10,167); cross-base correlation `φ(a,b)` positive for
 64 of 66 pairs. An exact covariance decomposition places 98.7 % / 99.5 % of `δ` between
 joint-residue cells mod 120 / 840 (96.1–99.2 % / 97.8–99.7 % across four weighting conventions);
@@ -94,7 +98,10 @@ verified against code before each change. No audit found an error in a theorem o
 count; the corrections concern the wording and statistics of the computational-content section,
 the bibliography, and packaging.
 
-**Reproducing Section 15.** `code/artin_payoff dump 1000000000 > results/joint_residue_tables_1e9.txt`
+**Reproducing Section 15.** Fastest: `zcat results/joint_residue_tables_1e9.txt.gz > t.txt &&
+python3 code/section15.py t.txt` reproduces `results/section15_1e9.json` byte for byte (sha256 in
+`results/section15_sha256.txt`). From scratch:
+`code/artin_payoff dump 1000000000 > results/joint_residue_tables_1e9.txt`
 writes the complete cell tables; `python3 code/section15.py results/joint_residue_tables_1e9.txt`
 recomputes and asserts every decomposition and held-out number;
 `code/artin_payoff resnull 1000000000 100` runs the residue-status null

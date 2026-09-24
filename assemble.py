@@ -2,7 +2,8 @@
 """Assemble the consolidated Artin-correlations paper from Paper 1 + Paper 3.
 
 Technical core sections are copied VERBATIM (byte-for-byte) so no numeral is retyped.
-Only the section titles of two sections are edited, and P3's colliding labels are renamed.
+The only edits to copied text are listed in README.md (two section titles, renamed colliding
+labels, citation repairs, one wording-only sentence change, and notation for the set A_a).
 """
 import re, sys, hashlib, pathlib
 
@@ -16,7 +17,15 @@ P3 = pathlib.Path(os.environ.get("PAPER3_TEX", BASE / "Paper 3 Full file/paper/c
 if not (P1.is_file() and P3.is_file()):
     if not (W / "artin_correlations.tex").is_file():
         sys.exit("assemble: source papers and shipped manuscript are missing")
-    print("assemble: source papers absent; using shipped artin_correlations.tex")
+    shipped = (W / "artin_correlations.tex").read_text(encoding="utf-8")
+    stale = [f for f in ("FRONT.tex", "SECTION_content.tex", "DISC.tex")
+             if (W / f).is_file() and (W / f).read_text(encoding="utf-8") not in shipped]
+    if stale:
+        sys.exit("assemble: source papers absent and the shipped artin_correlations.tex does not "
+                 "contain the current " + ", ".join(stale) + " verbatim; it is stale. Provide the "
+                 "two source papers (PAPER1_TEX / PAPER3_TEX) to regenerate it.")
+    print("assemble: source papers absent; shipped artin_correlations.tex contains the current "
+          "FRONT/SECTION_content/DISC verbatim; using it")
     sys.exit(0)
 
 p1 = open(P1, encoding="utf-8").read()
@@ -171,7 +180,7 @@ for _old, _new in [
 ]:
     if _old in out:
         out = out.replace(_old, _new); print("  merge-time citation repair:", _old[:40])
-# Wording-only cleanup required by the submission phrase gate; same discriminant claim.
+# Wording-only change ("either way" -> "in both cases"); the discriminant claim is unchanged.
 _old = "otherwise; either way the discriminant divides"
 assert out.count(_old) == 1
 out = out.replace(_old, "otherwise; in both cases the discriminant divides")

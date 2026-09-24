@@ -22,7 +22,10 @@ import pathlib
 # identifiers of the author that must not survive anywhere
 IDENTIFIERS = [r"Bald", r"\bJosh(ua)?\b", r"jpbald93", r"0009-0002-1317-6489",
                r"@gmail\.com", r"@genspark", r"Independent Researcher", r"Ontario",
-               r"\bPaper\s+[123]\b", r"GMKtec", r"qwen3", r"\bjack\b", r"OpenClaw",
+               r"\bPaper[\s~-]*(?:[123]|I{1,3})\b", r"GMKtec", r"NucBox", r"Tailscale",
+               r"100\.72\.132\.55", r"192\.168\.2\.61", r"Toronto", r"present author",
+               r"our (?:earlier|previous|prior) (?:paper|preprint|work)", r"J\.\s*~?\s*B\.",
+               r"qwen3", r"\bjack\b", r"OpenClaw",
                r"/?home/work", r"genspark", r"artin[_-]correlations", r"\bthe\s+author\b"]
 OWN_TITLES = [r"Correlations\s+between\s+primitive\s+root\s+statuses",
               r"Cross[ -]base\s+correlations\s+of\s+Artin",
@@ -73,7 +76,22 @@ def audit(text, label):
     for pat in IDENTIFIERS + OWN_TITLES:
         for m in re.finditer(pat, text, flags=re.I):
             problems.append(f"{label}: identifier {m.group(0)!r}")
+    # normalised copy: drop TeX commands and braces, join hyphenated line breaks, squeeze
+    # whitespace, lower-case -- titles are searched in this form as well
+    norm = re.sub(r"-\s*\n\s*", "", text)
+    norm = re.sub(r"\\[A-Za-z]+\*?", " ", norm).replace("{", " ").replace("}", " ").replace("~", " ")
+    norm = re.sub(r"\s+", " ", norm).lower()
+    for pat in OWN_TITLES:
+        for m in re.finditer(pat.replace("Cross[ -]base", "cross[ -]?base"), norm, flags=re.I):
+            problems.append(f"{label}: own title (normalised) {m.group(0)!r}")
+    squeezed = norm.replace(" ", "").replace("-", "")
+    for t in ("correlationsbetweenprimitiverootstatuses", "crossbasecorrelationsofartin",
+              "exclusionlawsforconsecutiveartinprimes"):
+        if t in squeezed:
+            problems.append(f"{label}: own title (squeezed) {t!r}")
     flat = re.sub(r"\s+", "", text)
+    for m in re.finditer(r"zenodo\W{0,3}\d{6,}", text, flags=re.I):
+        problems.append(f"{label}: Zenodo record {m.group(0)!r}")
     for doi in OWN_DOIS:
         if doi in flat:
             problems.append(f"{label}: author's own DOI {doi}")

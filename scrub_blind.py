@@ -57,8 +57,12 @@ SUBS = [
     (r'Correlations\s+between\s+primitive\s+root\s+statuses\s+of\s+consecutive\s+primes', '[title withheld]'),
     (r'Cross[ -]base\s+correlations\s+of\s+Artin(?:\s+status\s+at\s+a\s+single\s+prime|\s+primes)?', '[title withheld]'),
     (r'(?:Quadratic\s+)?Exclusion\s+laws\s+for\s+consecutive\s+Artin\s+primes(?:\s+in\s+arbitrary\s+bases)?', '[title withheld]'),
+    # checksum lists: keep the basename so `sha256sum -c` still names the file
+    (r'(?m)^([0-9a-f]{64}\s+)\S*/home/work/.*/([^/\n]+)$', r'\1\2'),
     (r'/home/work[^\n]*', '[local path withheld]'),
-    (r'\bPaper\s+[123]\b', 'the source study'),
+    (r'Prime Math/[^\n`]*', '[local path withheld]'),
+    (r'/tmp/p1_audit/', '/tmp/audit/'),
+    (r'\b(?:the\s+)?Paper[\s~-]*[123]\b', 'the earlier study'),
     (r'\bJ(?:osh(?:ua)?)?\.?\s*~?Bald\b', '[name withheld]'),
     (r'\bBald\b|\bJosh(?:ua)?\b|jpbald93|0009-0002-1317-6489', '[identifier withheld]'),
     (r'GMKtec|qwen3(?::[A-Za-z0-9]+)?|\bjack\b|OpenClaw|genspark', '[provenance withheld]'),
@@ -67,7 +71,27 @@ SUBS = [
 ]
 
 
+# Lean modules named after the author's paper series are renamed in the blind copy only.
+LEAN_RENAMES = [('Paper2Rebuild', 'ArbitraryBaseRebuild'), ('Paper2', 'ArbitraryBase')]
+
+
+def rename_lean(root):
+    art = root / 'lean' / 'Artin'
+    for old, new in LEAN_RENAMES:
+        f = art / f'{old}.lean'
+        if f.is_file():
+            f.rename(art / f'{new}.lean')
+    for p in (root / 'lean').rglob('*.lean'):
+        s = p.read_text(encoding='utf-8')
+        t = s
+        for old, new in LEAN_RENAMES:
+            t = t.replace(old, new)
+        if t != s:
+            p.write_text(t, encoding='utf-8')
+
+
 def scrub(root):
+    rename_lean(root)
     count = 0
     for p in sorted(root.rglob('*')):
         if not p.is_file():
