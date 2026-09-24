@@ -6,13 +6,18 @@ Only the section titles of two sections are edited, and P3's colliding labels ar
 """
 import re, sys, hashlib, pathlib
 
-# Source locations. Override with PAPER1_TEX / PAPER3_TEX / CONSOLIDATED_DIR if the
-# papers live elsewhere; the defaults match the author's workspace layout.
+# Assembly is optional: a source archive ships the already assembled manuscript.
+# Defaults are relative to this script; explicit input overrides remain supported.
 import os
-BASE = os.environ.get("MATH_AUDIT_BASE", "/home/work/.openclaw/workspace/Prime Math")
-P1 = os.environ.get("PAPER1_TEX", os.path.join(BASE, "Paper 1 Full file/paper/consecutive_artin.tex"))
-P3 = os.environ.get("PAPER3_TEX", os.path.join(BASE, "Paper 3 Full file/paper/crossbase_artin.tex"))
-W  = pathlib.Path(os.environ.get("CONSOLIDATED_DIR", os.path.join(BASE, "consolidated")))
+W = pathlib.Path(__file__).resolve().parent
+BASE = pathlib.Path(os.environ.get("MATH_AUDIT_BASE", W.parent))
+P1 = pathlib.Path(os.environ.get("PAPER1_TEX", BASE / "Paper 1 Full file/paper/consecutive_artin.tex"))
+P3 = pathlib.Path(os.environ.get("PAPER3_TEX", BASE / "Paper 3 Full file/paper/crossbase_artin.tex"))
+if not (P1.is_file() and P3.is_file()):
+    if not (W / "artin_correlations.tex").is_file():
+        sys.exit("assemble: source papers and shipped manuscript are missing")
+    print("assemble: source papers absent; using shipped artin_correlations.tex")
+    sys.exit(0)
 
 p1 = open(P1, encoding="utf-8").read()
 p3 = open(P3, encoding="utf-8").read()
@@ -166,6 +171,10 @@ for _old, _new in [
 ]:
     if _old in out:
         out = out.replace(_old, _new); print("  merge-time citation repair:", _old[:40])
+# Wording-only cleanup required by the submission phrase gate; same discriminant claim.
+_old = "otherwise; either way the discriminant divides"
+assert out.count(_old) == 1
+out = out.replace(_old, "otherwise; in both cases the discriminant divides")
 (W/"artin_correlations.tex").write_text(out, encoding="utf-8")
 
 print("  wrote artin_correlations.tex: %d bytes, %d lines" % (len(out), out.count("\n")))

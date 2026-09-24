@@ -93,3 +93,7 @@ holdout_mod840: {"N_test": 25421106, "CE_residues": 0.237279922, "CE_residues_pl
 #   ./artin_payoff resnull 1000000000 100 > ../results/resnull_1e9.json
 # section15.py asserts all four decomposition identities (exit non-zero on failure);
 # ./artin_payoff decomp asserts the same four identities in C.
+
+# Round-4 packaging check: k counts cells with both X and Y varying.
+# mod120: k=256
+# mod840: k=1,599

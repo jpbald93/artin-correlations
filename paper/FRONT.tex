@@ -56,17 +56,19 @@
 	($1.3\times10^{-5}$ bits) of conditional-entropy reduction beyond the elementary
 	joint-residue baseline, which itself carries $0.4195$ nats. A simulation in which every
 	status depends only on $p \bmod 840$ reproduces the part of that increment which exceeds
-	the mod-$120$ baseline: it is residue information (the prime $7$ of $p-1$), not information
-	carried by the predecessor's status, and in held-out scoring the predecessor's status
+	the mod-$120$ baseline: residues (the prime $7$ of $p-1$) suffice to reproduce that excess
+	without predecessor-specific information, and in held-out scoring the predecessor's status
 	gives no gain beyond residues mod $840$.
 Both exclusion laws are computationally redundant: the gap law from quadratic reciprocity
-	together with multiplicativity, the same-prime law from multiplicativity alone. The one genuinely usable filter --- a primitive root must be a
-quadratic non-residue --- is elementary, is exactly what the observed conductor-$40$
-channel expresses, and halves the factorizations of $p-1$ in a scanning search; ordering
+	together with multiplicativity, the same-prime law from multiplicativity alone. The quadratic filter expressed by these exclusion laws --- a primitive root must be a
+quadratic non-residue --- is elementary, is already applied by a character-aware
+implementation, is exactly what the observed conductor-$40$ channel expresses, and halves
+the factorizations of $p-1$ in a scanning search; ordering
 	the small prime channels of $p-1$ before the full factorization is about $13\%$ faster
 	again.
-We conclude that these correlations describe arithmetic structure rather than supply
-algorithms, and we state precisely what would have to change for that verdict to change.
+We conclude that, for the workloads tested, these correlations describe arithmetic structure
+rather than supply algorithms, and we state precisely what would have to change for that
+verdict to change.
 \end{abstract}
 
 \maketitle
@@ -177,13 +179,13 @@ and $\sqf(m)$ the squarefree part of $m$.
 	relative error of $0.012\%$, with no fitted parameters.
 	\item \textbf{Computational content: a measured negative} (\S\ref{sec:content}). The
 	consecutive-prime correlation adds $0.000009$ nats of in-sample conditional-entropy
-	reduction to the mod-$120$ joint-residue baseline; a residue-only simulation shows that
-	excess to be residue information mod $840$, and no held-out estimator we tested gains
+	reduction to the mod-$120$ joint-residue baseline; a residue-only simulation mod $840$
+	reproduces that excess without predecessor-specific information, and no held-out estimator we tested gains
 	beyond residues mod $840$; both exclusion laws are computationally
 	redundant, the same-prime law from character multiplicativity alone and the gap law from
 	reciprocity together with it;
-	the only usable filter is the elementary non-residue test, which the conductor-$40$
-	channel expresses.
+	the quadratic filter expressed by these exclusion laws is the elementary non-residue test,
+	which a character-aware implementation already applies and the conductor-$40$ channel expresses.
 \end{enumerate}
 
 \section{Preliminaries and notation}

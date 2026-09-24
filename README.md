@@ -32,10 +32,12 @@ fig_gap_delta.pdf, make_figure.py  the gap-profile figure
 `assemble.py` copies the **technical core sections verbatim** from the two source papers and
 stitches in the newly written front matter, data section, audit section and discussion. The
 only edits to copied text are: two section titles, renaming of six colliding `\label`s, one
-self-citation repair, and rendering the cross-base paper's *set* notation `\mathcal{A}_a`
-distinctly from the consecutive-prime *indicator* `\Art_n`. A numeral-preservation check
+self-citation repair, a wording-only discriminant sentence cleanup, and rendering the
+cross-base paper's *set* notation `\mathcal{A}_a` distinctly from the consecutive-prime
+*indicator* `\Art_n`. A numeral-preservation check
 confirms that **all 1,345 numerals in the source blocks survive unaltered** in the merged
-source. Run `python3 assemble.py` to rebuild.
+source. Run `python3 assemble.py` to rebuild when the two source papers are available; otherwise
+it uses the shipped assembled TeX. Run `bash build_submission.sh` for the full submission build.
 
 ## Reproduce
 
@@ -62,7 +64,7 @@ gcc -O3 -fopenmp -o artin_payoff artin_payoff.c -lm
 - same prime: with `d = sqf(ab)`, no prime with `(d|p) = −1` is Artin for both `a` and `b`;
   if `sqf(c) = sqf(ab)` then no odd prime is Artin for all three.
 
-**Measurements at 10⁹ primes** (50,847,531 primes, exact counts): consecutive-prime
+**Measurements below 10⁹** (50,847,531 primes, exact counts): consecutive-prime
 anticorrelation `δ = −0.01414` (Pearson 10,167); cross-base correlation `φ(a,b)` positive for
 64 of 66 pairs. An exact covariance decomposition places 98.7 % / 99.5 % of `δ` between
 joint-residue cells mod 120 / 840 (96.1–99.2 % / 97.8–99.7 % across four weighting conventions);
@@ -70,12 +72,12 @@ conditioning on the fine signature of `p−1` removes 95 % of the mean cross-bas
 
 **A measured negative** (new), limited to the estimators and the search workload tested: the
 predecessor's Artin status adds `0.000009` nats in-sample to the mod-120 joint-residue baseline,
-and a simulation in which statuses depend only on `p mod 840` reproduces that excess — it is
-residue information (the prime 7 of `p−1`), not information carried by the predecessor's
-status. No held-out estimator gains beyond residues mod 840. Both exclusion laws are
+and a simulation in which statuses depend only on `p mod 840` reproduces that excess without
+predecessor-specific information. No held-out estimator gains beyond residues mod 840. Both exclusion laws are
 computationally redundant (the same-prime law from character multiplicativity, the gap law from
-reciprocity together with it); the only usable filter is the elementary non-residue test, which
-the observed conductor-40 channel expresses.
+reciprocity together with it); the quadratic filter expressed by these exclusion laws is the
+elementary non-residue test, which a character-aware implementation already applies and the
+observed conductor-40 channel expresses.
 
 ## Evidence tiers
 
@@ -92,9 +94,7 @@ verified against code before each change. No audit found an error in a theorem o
 count; the corrections concern the wording and statistics of the computational-content section,
 the bibliography, and packaging.
 
-**Reproducing Section 15.** Build `gcc -O3 -fopenmp -o code/artin_payoff code/artin_payoff.c -lm`, then
-`code/artin_payoff dump 1000000000 > results/joint_residue_tables_1e9.txt` (a gzipped copy is shipped as
-`results/joint_residue_tables_1e9.txt.gz`, sha256 in `results/section15_sha256.txt`)
+**Reproducing Section 15.** `code/artin_payoff dump 1000000000 > results/joint_residue_tables_1e9.txt`
 writes the complete cell tables; `python3 code/section15.py results/joint_residue_tables_1e9.txt`
 recomputes and asserts every decomposition and held-out number;
 `code/artin_payoff resnull 1000000000 100` runs the residue-status null

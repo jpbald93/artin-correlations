@@ -1,113 +1,117 @@
 #!/bin/bash
-# Build the consolidated paper's submission set. Portable: no absolute paths.
-#
-# Produces, in submission/:
-#   artin_correlations_manuscript.pdf    named manuscript
-#   artin_correlations_anonymous.pdf     blind manuscript (provenance removed, then audited)
-#   artin_correlations_source.zip        named sources, including every build dependency
-#   artin_correlations_reproduction.zip  named code/results/Lean (for the public record)
-#   artin_correlations_blind_supplement.zip  scrubbed code/results/Lean for blind review (audited)
-#
-# Fails on: undefined references, overfull hboxes, a blind-PDF page count differing from the
-# named one by more than one page or a different section count, ANY identifier / own DOI /
-# repository link surviving in the blind PDF or in any text file of the blind supplement, or
-# a source or reproduction archive that cannot rebuild from a clean extraction.
+# Build named sources/reproduction and neutral blind artifacts.
+# A clean source archive runs this same full build, with only recursion disabled.
 set -euo pipefail
 cd "$(dirname "$0")"
+CHECK_CLEAN=1
+case "${1:-}" in
+  '') ;;
+  --skip-clean-extraction) CHECK_CLEAN=0 ;;
+  *) echo "usage: bash build_submission.sh [--skip-clean-extraction]"; exit 2 ;;
+esac
 SUB=submission
 mkdir -p "$SUB"
-DEPS="artin_correlations.tex FRONT.tex SECTION_content.tex DISC.tex assemble.py anonymise.py build_submission.sh fig_gap_delta.pdf make_figure.py LEAN_NOTE.md"
+HERE=$(pwd)
+TMP=$(mktemp -d "$HERE/.submission-build.XXXXXX")
+CLEAN=''
+trap 'rm -rf "$TMP"; if [ -n "$CLEAN" ]; then rm -rf "$CLEAN"; fi' EXIT
+DEPS="artin_correlations.tex FRONT.tex SECTION_content.tex DISC.tex assemble.py anonymise.py scrub_blind.py build_submission.sh fig_gap_delta.pdf make_figure.py LEAN_NOTE.md README.md"
+# Remove the superseded identifying blind filenames from the working submission set.
+rm -f "$SUB/artin_correlations_anonymous.pdf" "$SUB/artin_correlations_blind_supplement.zip"
 
-echo "== assemble (regenerate artin_correlations.tex from the two source papers)"
-python3 assemble.py >/dev/null
+latex_build() {
+  local dir=$1 stem=$2
+  ( cd "$dir"; for i in 1 2 3; do pdflatex -interaction=nonstopmode "$stem.tex" > /dev/null 2>&1 || true; done )
+  local err ovh ovv und pages
+  err=$(grep -c '^! ' "$dir/$stem.log" || true)
+  ovh=$(grep -cE '^Overfull \\hbox' "$dir/$stem.log" || true)
+  ovv=$(grep -cE '^Overfull \\vbox' "$dir/$stem.log" || true)
+  und=$(grep -ciE 'undefined|multiply.defined' "$dir/$stem.log" || true)
+  pages=$(pdfinfo "$dir/$stem.pdf" | awk '/^Pages/{print $2}')
+  echo "   $stem pages=$pages errors=$err overfull_hbox=$ovh overfull_vbox=$ovv undefined=$und"
+  [ "$err/$ovh/$ovv/$und" = '0/0/0/0' ] || { echo 'FAIL: LaTeX diagnostics'; exit 1; }
+}
 
-echo "== named manuscript"
-for i in 1 2 3; do pdflatex -interaction=nonstopmode artin_correlations.tex >/dev/null 2>&1 || true; done
-OVH=$(grep -cE '^Overfull \\hbox' artin_correlations.log || true)
-UND=$(grep -ciE 'undefined|multiply.defined' artin_correlations.log || true)
-ERR=$(grep -c '^! ' artin_correlations.log || true)
+echo '== optional assembly'
+python3 assemble.py
+
+echo '== named manuscript'
+latex_build . artin_correlations
 PAGES=$(pdfinfo artin_correlations.pdf | awk '/^Pages/{print $2}')
-echo "   pages=$PAGES errors=$ERR overfull_hbox=$OVH undefined=$UND"
-[ "$ERR" = "0" ] || { echo "FAIL: LaTeX errors"; exit 1; }
-[ "$UND" = "0" ] || { echo "FAIL: undefined references"; exit 1; }
-[ "$OVH" = "0" ] || { echo "FAIL: overfull \\hbox"; exit 1; }
 cp artin_correlations.pdf "$SUB/artin_correlations_manuscript.pdf"
 
-echo "== blind manuscript"
-TMP=$(mktemp -d); trap 'rm -rf "$TMP"' EXIT
-python3 anonymise.py artin_correlations.tex "$TMP/anon.tex"
-cp fig_gap_delta.pdf "$TMP/" 2>/dev/null || true
-( cd "$TMP" && for i in 1 2 3; do pdflatex -interaction=nonstopmode anon.tex >/dev/null 2>&1 || true; done )
-APAGES=$(pdfinfo "$TMP/anon.pdf" | awk '/^Pages/{print $2}')
-AUND=$(grep -ciE 'undefined|multiply.defined' "$TMP/anon.log" || true)
-NSEC=$(grep -c '^\\section{' artin_correlations.tex || true); ANSEC=$(grep -c '^\\section{' "$TMP/anon.tex" || true)
-D=$((APAGES - PAGES)); [ "${D#-}" -le 1 ] || { echo "FAIL: blind page count $APAGES vs named $PAGES"; exit 1; }
-[ "$NSEC" = "$ANSEC" ] || { echo "FAIL: blind lost a section ($ANSEC vs $NSEC)"; exit 1; }
-[ "$AUND" = "0" ] || { echo "FAIL: undefined references in blind build"; exit 1; }
-pdftotext "$TMP/anon.pdf" "$TMP/anon.txt"
-python3 anonymise.py --audit blind-pdf-text "$TMP/anon.txt" || { echo "FAIL: blind PDF identifies the author"; exit 1; }
-AUTH=$(pdfinfo "$TMP/anon.pdf" | awk -F': *' '/^Author/{print $2}')
-[ -z "$AUTH" ] || { echo "FAIL: blind PDF metadata Author=$AUTH"; exit 1; }
+echo '== blind manuscript'
+python3 anonymise.py artin_correlations.tex "$TMP/blind_manuscript.tex"
+cp fig_gap_delta.pdf "$TMP/"
+latex_build "$TMP" blind_manuscript
+APAGES=$(pdfinfo "$TMP/blind_manuscript.pdf" | awk '/^Pages/{print $2}')
+NSEC=$(grep -c '^\\section{' artin_correlations.tex || true)
+ANSEC=$(grep -c '^\\section{' "$TMP/blind_manuscript.tex" || true)
+D=$((APAGES - PAGES)); [ "${D#-}" -le 1 ] || { echo 'FAIL: blind page count'; exit 1; }
+[ "$NSEC" = "$ANSEC" ] || { echo 'FAIL: blind section count'; exit 1; }
+pdftotext "$TMP/blind_manuscript.pdf" "$TMP/blind_manuscript.txt"
+python3 anonymise.py --audit blind-pdf-text "$TMP/blind_manuscript.txt"
+pdfinfo "$TMP/blind_manuscript.pdf" > "$TMP/pdfinfo.txt"
+python3 anonymise.py --audit blind-pdf-metadata "$TMP/pdfinfo.txt"
+AUTH=$(awk -F': *' '/^Author/{print $2}' "$TMP/pdfinfo.txt")
+[ -z "$AUTH" ] || { echo 'FAIL: blind Author metadata'; exit 1; }
 echo "   blind pages=$APAGES (named $PAGES) sections=$ANSEC audit=clean"
-cp "$TMP/anon.pdf" "$SUB/artin_correlations_anonymous.pdf"
+cp "$TMP/blind_manuscript.pdf" "$SUB/blind_manuscript.pdf"
 
-echo "== source zip (named) + clean-extraction check"
-rm -f "$SUB/artin_correlations_source.zip"
-zip -q -j "$SUB/artin_correlations_source.zip" $DEPS
-HERE=$(pwd)
-mkdir "$TMP/src" && ( cd "$TMP/src" && unzip -q "$HERE/$SUB/artin_correlations_source.zip" )
-for f in $DEPS; do [ -f "$TMP/src/$f" ] || { echo "FAIL: source zip lacks $f"; exit 1; }; done
-( cd "$TMP/src" && python3 anonymise.py artin_correlations.tex anon.tex >/dev/null ) || { echo "FAIL: anonymiser does not run from the source zip"; exit 1; }
-( cd "$TMP/src" && pdflatex -interaction=nonstopmode artin_correlations.tex >/dev/null 2>&1; pdflatex -interaction=nonstopmode artin_correlations.tex >/dev/null 2>&1; [ -s artin_correlations.pdf ] ) \
-  || { echo "FAIL: manuscript does not compile from the source zip"; exit 1; }
-echo "   source zip: all dependencies present; anonymiser and LaTeX run from a clean extraction"
-
-echo "== reproduction zip (named, public record)"
-rm -f "$SUB/artin_correlations_reproduction.zip"
+echo '== named source and reproduction archives'
+rm -f "$SUB/artin_correlations_source.zip" "$SUB/artin_correlations_reproduction.zip"
+zip -q -r "$SUB/artin_correlations_source.zip" $DEPS code results lean \
+  -x 'lean/.lake/*' '*/__pycache__/*' '*.pyc' 'code/artin_payoff'
 zip -q -r "$SUB/artin_correlations_reproduction.zip" code results lean README.md LEAN_NOTE.md \
-    -x "lean/.lake/*" "code/__pycache__/*" "*.aux" "*.log" "*.out"
+  -x 'lean/.lake/*' '*/__pycache__/*' '*.pyc' 'code/artin_payoff'
 
-echo "== blind supplement (scrubbed code/results/Lean) + per-file audit"
-rm -rf "$TMP/blind"; mkdir -p "$TMP/blind"
+echo '== blind supplement: scrub and audit every file'
+mkdir "$TMP/blind"
 cp -r code results lean LEAN_NOTE.md "$TMP/blind/"
 rm -rf "$TMP/blind/lean/.lake" "$TMP/blind/code/__pycache__"
-cp "$TMP/anon.tex" "$TMP/blind/manuscript_anonymous.tex"
+rm -f "$TMP/blind/code/artin_payoff"
+cp "$TMP/blind_manuscript.tex" "$TMP/blind/blind_manuscript.tex"
+python3 scrub_blind.py "$TMP/blind"
 python3 - "$TMP/blind" <<'PY'
-import re, sys, pathlib
+import pathlib, sys
+from anonymise import audit
 root = pathlib.Path(sys.argv[1])
-SUBS = [(r"Copyright \(c\) 2026 J\. Bald\. All rights reserved\.", "Copyright (c) 2026 the authors. All rights reserved."),
-        (r"Authors: J\. Bald, with a model-drafted skeleton from qwen3:32b \(local, via\s*\n\s*GMKtec/Ollama\) closed by J\. Bald with OpenClaw assistance\.",
-         "Authors: withheld for review (skeleton drafted with a local language model, closed with AI assistance)."),
-        (r"Authors: J\. Bald", "Authors: withheld for review"),
-        (r"https?://github\.com/jpbald93/[A-Za-z0-9_.\-/]+", "[repository withheld for review]"),
-        (r"10\.5281/zenodo\.\d+", "[DOI withheld for review]"),
-        (r"\bJ(osh(ua)?)?\.? ?~?Bald\b", "the authors"), (r"jpbald93", "anon")]
-for p in root.rglob("*"):
-    if not p.is_file():
-        continue
-    try:
-        s = p.read_text(encoding="utf-8")
-    except UnicodeDecodeError:
-        continue
-    t = s
-    for a, b in SUBS:
-        t = re.sub(a, b, t)
-    if t != s:
-        p.write_text(t, encoding="utf-8")
+problems = []
+n = 0
+for p in sorted(root.rglob('*')):
+    if p.is_file():
+        n += 1
+        rel = str(p.relative_to(root))
+        problems += audit(rel, 'filename')
+        problems += audit(p.read_bytes().decode('utf-8', errors='replace'), rel)
+if problems:
+    print('\n'.join(problems))
+    sys.exit(1)
+print(f'   blind supplement: {n} files, audit=clean')
 PY
-BAD=0
-while IFS= read -r -d '' f; do
-  if grep -Iq . "$f"; then
-    rel="${f#$TMP/blind/}"
-    # third-party dependency URLs (Lean package manifest) are not provenance
-    case "$rel" in lean/lake-manifest.json) sed -i 's#https://github.com/leanprover[^"]*#[lean-dependency]#g' "$f";; esac
-    python3 anonymise.py --audit "$rel" "$f" >/dev/null || { python3 anonymise.py --audit "$rel" "$f" | head -3; BAD=1; }
-  else
-    strings "$f" | grep -qiE "Bald|jpbald93|0009-0002-1317-6489" && { echo "   binary $f carries an identifier"; BAD=1; }
-  fi
-done < <(find "$TMP/blind" -type f -print0)
-[ "$BAD" = "0" ] || { echo "FAIL: blind supplement identifies the author"; exit 1; }
-rm -f "$SUB/artin_correlations_blind_supplement.zip"
-( cd "$TMP/blind" && zip -q -r "$HERE/$SUB/artin_correlations_blind_supplement.zip" . )
-echo "   blind supplement: $(find "$TMP/blind" -type f | wc -l) files, audit=clean"
-echo "== done"; ls -la "$SUB"
+rm -f "$SUB/blind_supplement.zip"
+( cd "$TMP/blind"; zip -q -r "$HERE/$SUB/blind_supplement.zip" . )
+
+echo '== build actual scrubbed Lean archive (optional shared cache)'
+CACHE=/home/work/Projects/artin-lean/artin/.lake/packages
+if [ -d "$CACHE/mathlib/.lake/build" ] && command -v "$HOME/.elan/bin/lake" >/dev/null; then
+  mkdir "$TMP/leancheck"
+  ( cd "$TMP/leancheck"; unzip -q "$HERE/$SUB/blind_supplement.zip" )
+  mkdir -p "$TMP/leancheck/lean/.lake"
+  ln -s "$CACHE" "$TMP/leancheck/lean/.lake/packages"
+  ( export PATH="$HOME/.elan/bin:$PATH"; cd "$TMP/leancheck/lean"; lake build; bash gate.sh )
+else
+  echo 'SKIP: scrubbed Lean build requires an installed lake and the shared Mathlib cache; no download attempted.'
+fi
+
+if [ "$CHECK_CLEAN" = 1 ]; then
+  echo '== source archive: full build from a clean /tmp extraction'
+  CLEAN=$(mktemp -d /tmp/submission-source.XXXXXX)
+  ( cd "$CLEAN"; unzip -q "$HERE/$SUB/artin_correlations_source.zip"
+    env -u MATH_AUDIT_BASE -u CONSOLIDATED_DIR -u PAPER1_TEX -u PAPER3_TEX bash build_submission.sh --skip-clean-extraction
+  )
+  echo '   clean-extraction full build: EXIT=0'
+else
+  echo '   clean-extraction recursion only: skipped (all other build stages ran)'
+fi
+echo '== done'

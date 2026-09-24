@@ -14,7 +14,7 @@ Conventions (stated in the paper):
     I(Y;X|C) in nats per pair (the 'incremental' column of Table tab:content).
   * Held-out scoring uses Jeffreys (+0.5) smoothing in EVERY cell. Estimator A splits every
     cell on X; estimator B does not split a cell whose successor status is constant in the
-    fit half (splitting such a cell can only add smoothing penalty).
+    fit half (avoiding a smoothing penalty when that constancy persists).
 """
 import json
 import math
@@ -141,7 +141,6 @@ def main():
                 "B_no_split_constant_odd_to_even": heldout(T[M][1], T[M][0], False),
             },
         }
-    # cross-check against the driver's held-out table (estimator A, even->odd), 1e9 values
     json.dump(res, sys.stdout, indent=1)
     print()
 

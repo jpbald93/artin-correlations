@@ -74,7 +74,7 @@ $10^9$, and Table~\ref{tab:holdout} the second.
 	($25{,}421{,}106$ pairs); odd$\to$even is the reverse ($25{,}426{,}424$ pairs). Jeffreys
 	($+\tfrac12$) smoothing is applied in every cell. Estimator~A splits every cell on the
 	predecessor's status; estimator~B does not split a cell whose successor status is constant in
-	the fit half, where splitting can only add smoothing penalty. A hash split is used rather than
+	the fit half, avoiding a smoothing penalty when that constancy persists. A hash split is used rather than
 	a range split because the Artin density drifts with $x$. At modulus $120$ the sign depends on
 	the estimator; at modulus $840$ both estimators lose.}
 	\label{tab:holdout}
@@ -101,8 +101,8 @@ information beyond residues modulo $M$. Over $100$ replicates for each $M$:
 	\item with $M=840$ the null gives a mod-$120$ increment of mean $8.82\times10^{-6}$ (standard
 	deviation $4.9\times10^{-7}$), and $24$ of the $100$ replicates reach or exceed the observed value.
 \end{itemize}
-The excess over the mod-$120$ baseline is therefore residue information: a model in which
-statuses depend on nothing but $p \bmod 840$ reproduces it. The residue channel involved is the
+A model in which statuses depend on nothing but $p \bmod 840$ reproduces the excess over the
+mod-$120$ baseline, so reproducing it requires no predecessor-specific information. The residue channel involved is the
 prime $7$ of $p-1$, which the mod-$120$ cells do not see: primes $p\equiv 1 \pmod 7$ are Artin
 base $10$ at rate $0.3284$, against $0.3831$ for the other classes (ratio $0.857$, consistent with
 the heuristic factor $6/7$ for that channel). At modulus $120$ estimator~B of
@@ -112,13 +112,14 @@ we do not treat it as evidence of information specific to the predecessor's stat
 
 Against the mod-$840$ baseline the observed increment, $1.83\times10^{-5}$, lies slightly above
 the $M=840$ null (mean $1.71\times10^{-5}$, standard deviation $6.8\times10^{-7}$; $2$ of the $100$
-replicates reach it). We do not read this either way: the null is a simulation benchmark with its
-own assumption (independent statuses given the residue class), $100$ replicates resolve tail
-frequencies only coarsely, and neither held-out estimator gains at modulus $840$.
+replicates reach it). We leave this small in-sample excess unresolved: the null is a simulation
+benchmark with its own assumption (independent statuses given the residue class), $100$
+replicates resolve tail frequencies only coarsely, and neither held-out estimator gains at
+modulus $840$.
 
 Within the estimators above, then, the predecessor's Artin status shows no predictive value beyond
-the joint residues modulo $840$, and its apparent value beyond residues modulo $120$ is residue
-information. We state this as a model- and workload-limited finding, not as an
+the joint residues modulo $840$, and its apparent value beyond residues modulo $120$ is
+reproduced by a residue-only model. We state this as a model- and workload-limited finding, not as an
 information-theoretic bound: nothing here bounds the oracle conditional mutual information, other
 estimators or other ranges. The same trap appears one level coarser, and a reader who repeats this
 should expect it: conditioning on the gap class $g \bmod 40$ \emph{alone} produces a spurious
@@ -179,9 +180,10 @@ the gap law exhaustively at $10^9$ --- $2{,}214{,}511$ pairs with $g \equiv 20 \
 which $984{,}678$ have an Artin predecessor, and \emph{zero} are doubly-Artin --- but exhaustive
 verification of a redundancy is still a redundancy.
 
-\subsection*{The one usable filter is elementary}
-The only filter that does real work is the necessary condition of \S\ref{sec:prelim}: a primitive
-root must be a quadratic non-residue, so $\Lsym{a}{p}=-1$. It is answerable in $O(1)$ arithmetic
+\subsection*{The quadratic filter is elementary}
+The quadratic filter expressed by the exclusion laws is the necessary condition of
+\S\ref{sec:prelim}, already applied by a character-aware implementation: a primitive root
+must be a quadratic non-residue, so $\Lsym{a}{p}=-1$. It is answerable in $O(1)$ arithmetic
 by reciprocity rather than by exponentiation, and it is exactly the information that the
 conductor-$40$ quadratic channel of \S\ref{sec:decomposition} carries. That is the honest reading
 of the decomposition: the paper \emph{explains} why a standard filter works, and identifies which

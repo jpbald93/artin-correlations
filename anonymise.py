@@ -8,12 +8,12 @@ is missing, so a source change cannot silently defeat it):
   3. the Data-availability repository URL             -> "supplied with the submission"
   4. the self-citation \\bibitem{BaldII}               -> "[reference withheld for review]"
      (the citing sentence is kept, so the argument is unchanged)
-  5. "The author thanks" / "the author on request"    -> neutral wording
+  5. acknowledgements, requests, responsibility and interest -> neutral wording
 
-Then a positive audit over the resulting TeX: every DOI, every URL and every personal
-identifier left in the text is listed; any DOI or URL not on the THIRD-PARTY allowlist below,
-and any hit on the identifier list, is an error. The build script runs the same identifier and
-DOI/URL audit on the extracted PDF text and on every file inside the supplementary archives.
+Then audit known author identifiers, own-title fragments, provenance tokens, DOI strings
+and URLs. Only the two cited third-party DOIs and Lean dependency repository URLs are
+allowlisted. This is a mechanical leakage check, not a guarantee against identification
+from public scientific content.
 """
 import re
 import sys
@@ -21,7 +21,14 @@ import pathlib
 
 # identifiers of the author that must not survive anywhere
 IDENTIFIERS = [r"Bald", r"\bJosh(ua)?\b", r"jpbald93", r"0009-0002-1317-6489",
-               r"@gmail\.com", r"@genspark", r"Independent Researcher", r"Ontario"]
+               r"@gmail\.com", r"@genspark", r"Independent Researcher", r"Ontario",
+               r"\bPaper\s+[123]\b", r"GMKtec", r"qwen3", r"\bjack\b", r"OpenClaw",
+               r"/?home/work", r"genspark", r"artin[_-]correlations", r"\bthe\s+author\b"]
+OWN_TITLES = [r"Correlations\s+between\s+primitive\s+root\s+statuses",
+              r"Cross[ -]base\s+correlations\s+of\s+Artin",
+              r"(?:Quadratic\s+)?Exclusion\s+laws\s+for\s+consecutive\s+Artin\s+primes"]
+THIRD_PARTY_DOIS = {"10.1016/j.jnt.2022.10.006", "10.1515/integers-2012-0043"}
+DEPENDENCY_URL = re.compile(r"https://github\.com/(?:leanprover|leanprover-community)/[A-Za-z0-9_.-]+(?:\.git)?/?$")
 # the author's own deposits: must not survive in the blind version
 OWN_DOIS = ["10.5281/zenodo.22863946", "10.5281/zenodo.22865197", "10.5281/zenodo.22865343",
             "10.5281/zenodo.22865344", "10.5281/zenodo.22878204", "10.5281/zenodo.22878205"]
@@ -52,13 +59,18 @@ def anonymise(tex):
     tex = must_sub(r"The author thanks", "We thank", tex, count=1, what="acknowledgement")
     tex = must_sub(r"available from the author on request", "available on request", tex, count=1,
                    what="data request line")
+    tex = must_sub(r"The author takes responsibility", "We take responsibility", tex, count=1,
+                   what="responsibility statement")
+    tex = must_sub(r"No potential conflict of interest was reported by the author\.",
+                   "No potential conflict of interest is reported.", tex, count=1,
+                   what="interest declaration")
     return tex
 
 
 def audit(text, label):
     """Return a list of problems found in `text` (TeX or extracted PDF text)."""
     problems = []
-    for pat in IDENTIFIERS:
+    for pat in IDENTIFIERS + OWN_TITLES:
         for m in re.finditer(pat, text, flags=re.I):
             problems.append(f"{label}: identifier {m.group(0)!r}")
     flat = re.sub(r"\s+", "", text)
@@ -67,8 +79,17 @@ def audit(text, label):
             problems.append(f"{label}: author's own DOI {doi}")
     for m in re.finditer(r"zenodo\.\d{6,}", flat, flags=re.I):
         problems.append(f"{label}: Zenodo record {m.group(0)} (any Zenodo DOI is treated as provenance)")
-    for m in re.finditer(r"github\.com/[A-Za-z0-9_.\-/]+", flat):
-        problems.append(f"{label}: repository link {m.group(0)}")
+    for m in re.finditer(r"10\.\d{4,9}/[A-Za-z0-9._;()/:+-]+", text):
+        doi = m.group(0).rstrip(".;,)")
+        if doi not in THIRD_PARTY_DOIS:
+            problems.append(f"{label}: non-allowlisted DOI {doi}")
+    for m in re.finditer(r"https?://[^\s{}<>\\\"`]+", text):
+        url = m.group(0).rstrip(".;,)")
+        if not DEPENDENCY_URL.fullmatch(url) and url not in {"https://doi.org/" + d for d in THIRD_PARTY_DOIS}:
+            problems.append(f"{label}: non-allowlisted URL {url}")
+    for m in re.finditer(r"github\.com/[A-Za-z0-9_.\-/]+", text):
+        if not DEPENDENCY_URL.fullmatch("https://" + m.group(0)):
+            problems.append(f"{label}: repository link {m.group(0)}")
     return problems
 
 
