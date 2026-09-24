@@ -64,14 +64,18 @@ gcc -O3 -fopenmp -o artin_payoff artin_payoff.c -lm
 
 **Measurements at 10⁹ primes** (50,847,531 primes, exact counts): consecutive-prime
 anticorrelation `δ = −0.01414` (Pearson 10,167); cross-base correlation `φ(a,b)` positive for
-64 of 66 pairs; both decomposed — 93 %/97 % by joint residues mod 120/840, 95 % by the fine
-signature of `p−1`.
+64 of 66 pairs. An exact covariance decomposition places 98.7 % / 99.5 % of `δ` between
+joint-residue cells mod 120 / 840 (96.1–99.2 % / 97.8–99.7 % across four weighting conventions);
+conditioning on the fine signature of `p−1` removes 95 % of the mean cross-base correlation.
 
-**A measured negative** (new): the correlations carry no computational content. Measured by
-cross-entropy, the consecutive-prime correlation's own predictive edge beyond the elementary
-joint-residue baseline is `0.000009` nats (`1.3×10⁻⁵` bits); both exclusion laws follow from
-character multiplicativity and are therefore computationally redundant; the only usable filter
-is the elementary non-residue test, which the observed conductor-40 channel expresses.
+**A measured negative** (new), limited to the estimators and the search workload tested: the
+predecessor's Artin status adds `0.000009` nats in-sample to the mod-120 joint-residue baseline,
+and a simulation in which statuses depend only on `p mod 840` reproduces that excess — it is
+residue information (the prime 7 of `p−1`), not information carried by the predecessor's
+status. No held-out estimator gains beyond residues mod 840. Both exclusion laws are
+computationally redundant (the same-prime law from character multiplicativity, the gap law from
+reciprocity together with it); the only usable filter is the elementary non-residue test, which
+the observed conductor-40 channel expresses.
 
 ## Evidence tiers
 
@@ -81,9 +85,17 @@ is the elementary non-residue test, which the observed conductor-40 channel expr
 
 ## Audit status
 
-Audited by two independent systems with adversarial, verification-first briefs:
-- Astra (`gpt-6-astra`) → `reports/AUDIT_astra_artin-correlations.md`
-- Opus 5.5 (`claude-opus-5-5`) → `reports/AUDIT_opus55_artin-correlations.md`
+Three rounds of adversarial audit by two independent systems, Astra (`gpt-6-astra`) and
+Opus 5.5 (`claude-opus-5-5`); every report is in `reports/`
+(`AUDIT_*_artin-correlations.md`, `AUDIT_round2_*.md`, `AUDIT_round3_*.md`). Findings were
+verified against code before each change. No audit found an error in a theorem or in a census
+count; the corrections concern the wording and statistics of the computational-content section,
+the bibliography, and packaging.
 
-Findings are being verified against code before any change is made; see the reports for the
-current state.
+**Reproducing Section 15.** Build `gcc -O3 -fopenmp -o code/artin_payoff code/artin_payoff.c -lm`, then
+`code/artin_payoff dump 1000000000 > results/joint_residue_tables_1e9.txt` (a gzipped copy is shipped as
+`results/joint_residue_tables_1e9.txt.gz`, sha256 in `results/section15_sha256.txt`)
+writes the complete cell tables; `python3 code/section15.py results/joint_residue_tables_1e9.txt`
+recomputes and asserts every decomposition and held-out number;
+`code/artin_payoff resnull 1000000000 100` runs the residue-status null
+(`results/resnull_1e9.json`).

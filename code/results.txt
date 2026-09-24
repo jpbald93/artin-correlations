@@ -1,5 +1,5 @@
 # Raw outputs — artin_payoff.c on jack (GMKtec, 32 cores, OMP_NUM_THREADS=32)
-# sha256(artin_payoff.c) = 92a60bdda9c16cc0fadbd0d69ac9d0e54416d50db1e85c157e6a9eb66b0d6b2b
+# sha256(artin_payoff.c) = 7d998195f7ad2818c887c0839c8dd2418a7591fd121a55fb34c54d07b36e9790
 #   (supersedes d246f705..., d4992d40..., 109f23d7..., 43335061...; re-verify with sha256sum)
 # date: 2026-09-23
 
@@ -83,42 +83,13 @@ holdout_mod840: {"N_test": 25421106, "CE_residues": 0.237279922, "CE_residues_pl
 # NOTE: the in-sample table in results.txt is an EMPIRICAL CONDITIONAL-ENTROPY DIAGNOSTIC
 # (resubstitution), not a held-out measurement. Only this section measures predictive skill.
 
-
-# ===== single-pass 1e9 run (mode 'all'): decomposition + held-out + pooled + permutation null =====
-# command: ./artin_payoff all 1000000000 200
-# both decomposition identities are asserted in the driver (it exits non-zero if they fail)
-{
-  "mode": "all", "limit": 1000000000, "n_primes": 50847531,
-  "decomp_mod120": {
-    "N": 50847530, "delta": -0.014140159,
-    "kitagawa":   {"within": -0.000545418, "between": -0.013594741, "between_share": 0.9614, "identity_error": -2.26e-17},
-    "covariance": {"within": -0.000185668, "between": -0.013954491, "between_share": 0.9869, "identity_error": -1.73e-17},
-    "between_share_by_convention": {"w1": 0.9614, "w0": 0.9922, "symmetric": 0.9768, "covariance": 0.9869},
-    "cells": {"x_nondegenerate": 512, "xy_nondegenerate": 256, "x_only_mass": 5.000e-01},
-    "optimism": {"k": 256, "k_over_2N": 2.517e-06},
-    "ASSERT": "both identities hold"},
-  "decomp_mod840": {
-    "N": 50847530, "delta": -0.014140159,
-    "kitagawa":   {"within": -0.000225792, "between": -0.013914367, "between_share": 0.9840, "identity_error": -7.11e-17},
-    "covariance": {"within": -0.000064320, "between": -0.014075839, "between_share": 0.9955, "identity_error": -8.33e-17},
-    "between_share_by_convention": {"w1": 0.9840, "w0": 0.9971, "symmetric": 0.9906, "covariance": 0.9955},
-    "cells": {"x_nondegenerate": 4123, "xy_nondegenerate": 1702, "x_only_mass": 5.000e-01},
-    "optimism": {"k": 1702, "k_over_2N": 1.674e-05},
-    "ASSERT": "both identities hold"},
-  "holdout_mod120_even_to_odd": {"N_test": 25421106, "CE_residues": 0.241409954, "CE_residues_plus_prevA": 0.241413147, "heldout_gain": -3.193322862e-06},
-  "holdout_mod840_even_to_odd": {"N_test": 25421106, "CE_residues": 0.237279922, "CE_residues_plus_prevA": 0.237341030, "heldout_gain": -6.110788523e-05},
-  "holdout_mod120_odd_to_even": {"N_test": 25426424, "CE_residues": 0.241698741, "CE_residues_plus_prevA": 0.241703633, "heldout_gain": -4.892457923e-06},
-  "holdout_mod840_odd_to_even": {"N_test": 25426424, "CE_residues": 0.237590080, "CE_residues_plus_prevA": 0.237650844, "heldout_gain": -6.076392436e-05},
-  "pooled_mod120": {"N_test": 25421106, "beta": -0.009136, "CE_residues": 0.241409954, "CE_pooled_beta": 0.241410006, "heldout_gain": -5.232e-08},
-  "pooled_mod840": {"N_test": 25421106, "beta": -0.004601, "CE_residues": 0.237279922, "CE_pooled_beta": 0.237280704, "heldout_gain": -7.826e-07},
-  "nullsim_mod120": {"replicates": 200,
-    "in_sample":  {"observed": 6.592129e-06, "null_mean": -2.506441e-08, "null_sd": 2.461273e-07, "z": 26.89},
-    "heldout_even_to_odd": {"observed": -3.193323e-06, "null_mean": -1.014912e-05, "null_sd": 1.143147e-06, "z": 6.08},
-    "heldout_odd_to_even": {"observed": -4.892458e-06, "null_mean": -9.945915e-06, "null_sd": 1.022689e-06, "z": 4.94}},
-  "nullsim_mod840": {"replicates": 200,
-    "in_sample":  {"observed": -5.386132e-08, "null_mean": -1.392284e-06, "null_sd": 5.585983e-07, "z": 2.40},
-    "heldout_even_to_odd": {"observed": -5.624772e-05, "null_mean": -5.902058e-05, "null_sd": 1.739040e-06, "z": 1.59},
-    "heldout_odd_to_even": {"observed": -5.670065e-05, "null_mean": -5.775800e-05, "null_sd": 1.775026e-06, "z": 0.60}},
-  "split": "hash64(successor) & 1 : 0 = fit (even), 1 = test (odd)",
-  "note": "decomp identities asserted; held-out direction given in each key name"
-}
+# ===== Section 15 (round-3 revision) =====
+# The earlier 'all' / 'nullsim' / 'cepool' outputs are SUPERSEDED and removed: the approximate
+# permutation null answered the wrong question (it could not separate predecessor information
+# from residue information mod 7), and the k count included 103 cells with constant X.
+# Section 15 is now reproduced by:
+#   ./artin_payoff dump 1000000000 > ../results/joint_residue_tables_1e9.txt
+#   python3 section15.py ../results/joint_residue_tables_1e9.txt > ../results/section15_1e9.json
+#   ./artin_payoff resnull 1000000000 100 > ../results/resnull_1e9.json
+# section15.py asserts all four decomposition identities (exit non-zero on failure);
+# ./artin_payoff decomp asserts the same four identities in C.

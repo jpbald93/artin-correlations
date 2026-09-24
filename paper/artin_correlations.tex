@@ -65,8 +65,9 @@
 	below $10^{11}$, again with none. Conversely $g \equiv 0 \pmod{40}$ forces equal
 	quadratic-residue status and strong positive dependence ($P(\Art_{n+1}\mid\Art_n)=0.899$
 	at $g=40$). Conditioning on the joint residues of $(p_n,p_{n+1})$ modulo $120$ or
-	$840$ accounts for $96.1\%$ and $97.8\%$ of the global deficit through joint-residue cell
-	composition rather than within-cell association (an exact within/between decomposition). As an intermediate link we report the apparently unreported
+	$840$ places $98.7\%$ and $99.5\%$ of the global deficit between joint-residue cells
+	rather than within them (an exact covariance decomposition; $96.1$--$99.2\%$ and $97.8$--$99.7\%$
+	across the four weighting conventions we report). As an intermediate link we report the apparently unreported
 	anticorrelation $r(\omega(p_n-1),\omega(p_{n+1}-1))=-0.041$.
 
 	Along the second axis we record a second exclusion law: writing $d=\sqf(ab)$ for the
@@ -84,8 +85,11 @@
 
 	Finally we \emph{audit the computational content} of these correlations. In a resubstitution diagnostic the consecutive-prime correlation carries $0.000009$ nats
 	($1.3\times10^{-5}$ bits) of conditional-entropy reduction beyond the elementary
-	joint-residue baseline, which itself carries $0.4195$ nats; a permutation null shows a real but very small predecessor signal at modulus $120$
-	(of order $10^{-6}$ nats) and none detectable at modulus $840$ --- far too small to guide a search.
+	joint-residue baseline, which itself carries $0.4195$ nats. A simulation in which every
+	status depends only on $p \bmod 840$ reproduces the part of that increment which exceeds
+	the mod-$120$ baseline: it is residue information (the prime $7$ of $p-1$), not information
+	carried by the predecessor's status, and in held-out scoring the predecessor's status
+	gives no gain beyond residues mod $840$.
 Both exclusion laws are computationally redundant: the gap law from quadratic reciprocity
 	together with multiplicativity, the same-prime law from multiplicativity alone. The one genuinely usable filter --- a primitive root must be a
 quadratic non-residue --- is elementary, is exactly what the observed conductor-$40$
@@ -184,11 +188,10 @@ and $\sqf(m)$ the squarefree part of $m$.
 	\item \textbf{Gap structure} (\S\ref{sec:gaps}). $\delta(g)$ ranges from $-0.592$ at
 	$g=60$, where the theorem forces exclusion, to $+0.643$ at $g=40$.
 	\item \textbf{Residue conditioning} (\S\ref{sec:decomposition}). Conditioning on the
-	joint residues of $(p_n,p_{n+1})$ modulo $120$ and $840$ gives an exact within/between split
-	of the global deficit in which $96.1\%$ and $97.8\%$ respectively is attributable to cell
-	composition rather than within-cell association; the residual within-cell association
-	($-0.000545$, $-0.000310$) is consistent with further small-modulus channels but has not
-	been shown to vanish.
+	joint residues of $(p_n,p_{n+1})$ modulo $120$ and $840$ gives an exact covariance
+	decomposition of the global deficit, placing $98.69\%$ and $99.55\%$ of it between cells
+	(within-cell terms $-0.000186$ and $-0.000064$); across four weighting conventions the
+	between share lies in $[96.1\%,99.2\%]$ and $[97.8\%,99.7\%]$.
 	\item \textbf{$\omega$ repulsion} (\S\ref{sec:omega}).
 	$r(\omega(p_n-1),\omega(p_{n+1}-1)) = -0.0410$.
 	\item \textbf{Cross-base correlation} (\S\ref{sec:measurement}). Over the $66$ pairs of
@@ -204,9 +207,10 @@ and $\sqf(m)$ the squarefree part of $m$.
 	Matthews--Moree--Stevenhagen predictions match the measured joint densities to a mean
 	relative error of $0.012\%$, with no fitted parameters.
 	\item \textbf{Computational content: a measured negative} (\S\ref{sec:content}). The
-	consecutive-prime correlation carries $0.000009$ nats of conditional-entropy reduction
-	beyond the elementary joint-residue baseline --- real at modulus $120$, not detectable at
-	modulus $840$, and far too small to guide a search; both exclusion laws are computationally
+	consecutive-prime correlation adds $0.000009$ nats of in-sample conditional-entropy
+	reduction to the mod-$120$ joint-residue baseline; a residue-only simulation shows that
+	excess to be residue information mod $840$, and no held-out estimator we tested gains
+	beyond residues mod $840$; both exclusion laws are computationally
 	redundant, the same-prime law from character multiplicativity alone and the gap law from
 	reciprocity together with it;
 	the only usable filter is the elementary non-residue test, which the conductor-$40$
@@ -1399,7 +1403,8 @@ Pearson statistic of $10{,}167$ on one degree of freedom, and individual cross-b
 $\phi/\sigma_0$ up to $476$. Those statistics are descriptive, not calibrated: they describe
 $5 \times 10^7$ enumerated primes rather than a large effect. The question of this section is
 whether the correlation is \emph{computationally} worth anything --- could it predict generator
-availability, or yield a faster algorithm? We answer by measurement, and the answer is no. We
+availability, or yield a faster algorithm? We answer by measurement, for the estimators and the
+search workload described below, and within that scope we find no computational use for it. We
 record it because the negative is informative and because the protocol transfers to any claimed
 predictive advantage in this area.
 
@@ -1448,62 +1453,75 @@ $10^9$, and Table~\ref{tab:holdout} the second.
 
 \begin{table}[t]
 	\centering
-	\begin{tabular}{lccc}
+	\begin{tabular}{llcc}
 		\toprule
-		conditioning & held-out entropy (nats) & held-out gain \\
+		baseline & estimator & gain, even$\to$odd & gain, odd$\to$even \\
 		\midrule
-		joint residues mod $120$ & $0.241410$ & --- \\
-		\quad $+$ predecessor Artin status & $0.241413$ & $-0.0000032$ \\
+		joint residues mod $120$ & A & $-3.2\times10^{-6}$ & $-4.9\times10^{-6}$ \\
+		& B & $+1.9\times10^{-6}$ & $+9.4\times10^{-8}$ \\
 		\midrule
-		joint residues mod $840$ & $0.237280$ & --- \\
-		\quad $+$ predecessor Artin status & $0.237341$ & $-0.0000611$ \\
+		joint residues mod $840$ & A & $-6.11\times10^{-5}$ & $-6.08\times10^{-5}$ \\
+		& B & $-2.55\times10^{-5}$ & $-2.71\times10^{-5}$ \\
 		\bottomrule
 	\end{tabular}
-	\caption{\emph{Held-out} measurement. Cell probabilities are fitted on pairs whose successor
-	prime has an \emph{even} 64-bit hash (bit $0$ of the hash) and scored on the complementary
-	odd-hash half ($25{,}421{,}106$ pairs);
-	Jeffreys ($0.5$) smoothing is applied to empty and sparse cells. A hash split is used rather
-	than a range split because the Artin density drifts with $x$, which would penalise the finer
-	model for reasons unrelated to prediction. Both gains are \emph{negative}: adding the
-	predecessor's status makes held-out prediction slightly worse.}
+	\caption{\emph{Held-out} gain, in nats per test pair, from adding the predecessor's Artin
+	status to the joint-residue cells. Even$\to$odd: probabilities are fitted on the pairs whose
+	successor prime has least significant hash bit $0$ and scored on the complementary half
+	($25{,}421{,}106$ pairs); odd$\to$even is the reverse ($25{,}426{,}424$ pairs). Jeffreys
+	($+\tfrac12$) smoothing is applied in every cell. Estimator~A splits every cell on the
+	predecessor's status; estimator~B does not split a cell whose successor status is constant in
+	the fit half, where splitting can only add smoothing penalty. A hash split is used rather than
+	a range split because the Artin density drifts with $x$. At modulus $120$ the sign depends on
+	the estimator; at modulus $840$ both estimators lose.}
 	\label{tab:holdout}
 \end{table}
 
-No estimator we tested converts the correlation into an improvement, but the in-sample
-increment is not pure overfitting at modulus $120$, and we report both facts. The in-sample
-increment is $0.000009$ nats (mod $120$) and $0.000018$ nats (mod $840$). The optimism expected
-from the extra free parameters is the reference scale: splitting each cell on the predecessor's
-status adds one probability per cell whose successor is not constant, and there are $k=256$
-(mod $120$) and $k=1{,}702$ (mod $840$) such cells, so the classical $k/(2N)$ optimism is
-$2.5\times10^{-6}$ and $1.7\times10^{-5}$ nats. At modulus $840$ the increment is therefore
-indistinguishable from that scale; at modulus $120$ it exceeds it by a factor of about $3.6$.
+\subsection*{What the in-sample increment is made of}
+The in-sample increment of Table~\ref{tab:content} is $0.000009$ nats at modulus $120$ and
+$0.000018$ nats at modulus $840$. For scale only: with no association and regular i.i.d.\
+sampling, its expectation is $k/(2N)$, where $k$ counts the cells in which both the
+predecessor's and the successor's status vary ($k=256$ and $k=1{,}599$), that is
+$2.5\times10^{-6}$ and $1.6\times10^{-5}$ nats. That reference is heuristic --- the cells are
+sparse and consecutive pairs overlap --- so we calibrate by simulation instead.
 
-A permutation test makes this concrete. Holding both margins of every cell fixed and redrawing
-each $2\times2$ table from the hypergeometric distribution, the in-sample increment at modulus
-$120$ lies far outside the null ($z=+26.9$ over $200$ replicates) while at modulus $840$ it does
-not ($z=+2.4$). Applied to the held-out direction the same null predicts losses of
-$-1.0\times10^{-5}$ and $-9.9\times10^{-6}$ at modulus $120$, against observed
-$-3.2\times10^{-6}$ and $-4.9\times10^{-6}$ --- that is, the observed losses are much
-\emph{smaller} than pure overfitting would produce ($z=+6.1$ and $+4.9$), which is positive
-evidence of predecessor information. At modulus $840$ the held-out $z$ scores are $+1.6$ and
-$+0.6$: no signal beyond the null.
+The simulation is a \emph{residue-status null}. Every prime's Artin status is redrawn
+independently, with probability equal to the observed Artin rate of its residue class modulo
+$M$, and the census tables are rebuilt from the simulated statuses. Statuses are drawn per
+prime, so each simulated pair is still (status of $p_n$, status of $p_{n+1}$) and the overlap
+between consecutive pairs is preserved; by construction the predecessor's status carries no
+information beyond residues modulo $M$. Over $100$ replicates for each $M$:
+\begin{itemize}
+	\item with $M=120$ the null reproduces the reference scale (mean $2.53\times10^{-6}$, standard
+	deviation $2.1\times10^{-7}$, for the mod-$120$ increment), and no replicate reaches the
+	observed $9.18\times10^{-6}$;
+	\item with $M=840$ the null gives a mod-$120$ increment of mean $8.82\times10^{-6}$ (standard
+	deviation $4.9\times10^{-7}$), and $24$ of the $100$ replicates reach or exceed the observed value.
+\end{itemize}
+The excess over the mod-$120$ baseline is therefore residue information: a model in which
+statuses depend on nothing but $p \bmod 840$ reproduces it. The residue channel involved is the
+prime $7$ of $p-1$, which the mod-$120$ cells do not see: primes $p\equiv 1 \pmod 7$ are Artin
+base $10$ at rate $0.3284$, against $0.3831$ for the other classes (ratio $0.857$, consistent with
+the heuristic factor $6/7$ for that channel). At modulus $120$ estimator~B of
+Table~\ref{tab:holdout} gains slightly ($+1.9\times10^{-6}$ and $+9.4\times10^{-8}$). We have not
+tested that held-out figure against the residue-status null, and in view of the in-sample result
+we do not treat it as evidence of information specific to the predecessor's status.
 
-The picture is therefore: a real but very small predecessor signal beyond the mod-$120$
-residues, of order $10^{-6}$ nats by the split-sample estimate $(g_{\text{in}}+g_{\text{out}})/2$
-($1.7\times10^{-6}$ and $8.5\times10^{-7}$ in the two directions); no signal detectable beyond
-mod $840$; and in either case an edge several orders of magnitude below any threshold at which a
-predictor could pay for itself. A pooled one-parameter variant (a single logit offset for the
-predecessor's status on top of the residue cells) scores held-out gains of $-5\times10^{-8}$
-(mod $120$) and $-8\times10^{-7}$ (mod $840$) --- no gain, within noise. The tension between
-these two results is itself informative: a pooled offset buys nothing while cell-level
-information is significant at modulus $120$, so the signal is heterogeneous across cells (a
-sign-varying $\delta_c$) rather than a common shift. We state the negative as a model- and
-workload-limited finding, not as an information-theoretic bound: nothing here bounds the oracle
-conditional mutual information, other estimators or other ranges. One caution for the reader who
-repeats this: conditioning on the gap class $g \bmod 40$ \emph{alone} produces a spurious
+Against the mod-$840$ baseline the observed increment, $1.83\times10^{-5}$, lies slightly above
+the $M=840$ null (mean $1.71\times10^{-5}$, standard deviation $6.8\times10^{-7}$; $2$ of the $100$
+replicates reach it). We do not read this either way: the null is a simulation benchmark with its
+own assumption (independent statuses given the residue class), $100$ replicates resolve tail
+frequencies only coarsely, and neither held-out estimator gains at modulus $840$.
+
+Within the estimators above, then, the predecessor's Artin status shows no predictive value beyond
+the joint residues modulo $840$, and its apparent value beyond residues modulo $120$ is residue
+information. We state this as a model- and workload-limited finding, not as an
+information-theoretic bound: nothing here bounds the oracle conditional mutual information, other
+estimators or other ranges. The same trap appears one level coarser, and a reader who repeats this
+should expect it: conditioning on the gap class $g \bmod 40$ \emph{alone} produces a spurious
 apparent gain of about $0.02$ nats, because $g \bmod 40$ does not determine the individual
 residues $p_n \bmod 40$ and $p_{n+1} \bmod 40$; the apparent signal is residue information
-re-appearing. The joint residues are the correct baseline.
+re-appearing. The joint residues, at a modulus that includes every small channel of $p-1$ in
+play, are the correct baseline.
 
 \subsection*{What the between-cell share measures}
 The global anticorrelation admits an exact two-term decomposition. Writing $X,Y$ for the
@@ -1515,22 +1533,22 @@ total covariance gives
 \]
 with $\pi_c = P(C{=}c)$, $r_c = P(X{=}1\mid C{=}c)$, $w_c^{x}=P(C{=}c\mid X{=}x)$,
 $p_c=P(Y{=}1\mid C{=}c)$ and $\delta_c$ the within-cell association. This is an identity, not a
-model, and the driver accumulates both sums \emph{independently} and asserts it; at $10^9$ the
-identity is reproduced to $2\times10^{-17}$ at both moduli. It gives $98.69\%$ (mod $120$) and
-$99.55\%$ (mod $840$) of $\delta$ between joint-residue cells, with within-cell terms
-$-0.000186$ and $-0.000064$.
+model. In a cell where the predecessor's status never varies $\delta_c$ is undefined; under this
+and every convention below such a cell contributes zero within-cell association (equivalently,
+the missing conditional probability is completed by the observed one). The driver accumulates
+each within and each between sum independently and asserts the identities; at $10^9$ they hold
+to machine precision. The covariance form places $98.69\%$ (mod $120$) and $99.55\%$ (mod $840$)
+of $\delta$ between joint-residue cells, with within-cell terms $-0.000186$ and $-0.000064$.
 
-The share depends on the weighting convention, and we state ours explicitly. Under the Kitagawa
-ordering with $P(C{=}c\mid X{=}1)$ weights the between share is $96.1\%$ (mod $120$) and
-$98.4\%$ (mod $840$); with $P(C{=}c\mid X{=}0)$ weights it is $99.2\%$ and $99.7\%$; with
-symmetric weights $97.7\%$ and $99.1\%$. Every convention agrees that more than $96\%$ of the
-anticorrelation at mod $120$, and more than $98\%$ at mod $840$, is attributable to the joint
-residues rather than to association within them. Cells in which the predecessor's status never
-varies carry no identifiable within-cell association; their mass (about half of all pairs at
-mod $120$, where the residue class largely fixes Artin status) lands in the between term, which
-is exactly where a deterministic exclusion belongs. The residual within-cell association,
-$0.000186$ and $0.000064$, is the part a user holding the joint residues fixed would still have
-to model.
+The share depends on the weighting convention. With the Kitagawa ordering and
+$P(C{=}c\mid X{=}1)$ weights, whose between term is
+$\sum_c (w_c^1-w_c^0)\,P(Y{=}1\mid X{=}0, C{=}c)$, it is $96.14\%$ (mod $120$) and $97.81\%$
+(mod $840$); with $P(C{=}c\mid X{=}0)$ weights it is $99.22\%$ and $99.71\%$; with symmetric
+weights $97.68\%$ and $98.76\%$. Across these four conventions the between share lies between
+$96.1\%$ and $99.2\%$ at modulus $120$, and between $97.8\%$ and $99.7\%$ at modulus $840$.
+Cells in which the predecessor's status never varies hold about half of all pairs (a fraction
+$0.49996$ at modulus $120$, all of them cells with no Artin predecessor), and by the convention
+just stated they contribute only to the between term.
 
 \subsection*{Both exclusion laws are computationally redundant}
 An exclusion law can be mathematically correct and computationally useless, and both of ours are
@@ -1631,12 +1649,16 @@ the phenomenon identified by Tinkov\'a--Waxman--Zindulka~\cite{TinkovaWaxmanZind
 and we claim no priority for it; (ii)~a measurement, at the scale of $10^9$ primes, of the
 consecutive-prime Artin correlation, its gap profile, and the $\omega$ repulsion, together
 with the cross-base correlations $\phi(a,b)$ and their joint-density comparison; (iii)~a
-descriptive reduction showing that, on the selected-cell metrics used here, $93$--$97\%$ and
-$95\%$ respectively of both correlations is accounted for by the same elementary structure
+descriptive reduction showing that, depending on the weighting convention, $96.1$--$99.2\%$
+(modulus $120$) and $97.8$--$99.7\%$ (modulus $840$) of the consecutive-prime anticorrelation
+lies between joint-residue cells, and that $95\%$ of the mean
+cross-base correlation is removed by conditioning on the fine signature of $p-1$ --- that is,
+both correlations are largely accounted for by the same elementary structure
 --- the residues of $p$ and the factorisation of $p-1$ --- rather than by an interaction
 (reductions of different estimands on different selected populations, not a complete
 decomposition); and (iv)~a measured audit of the computational content
-of those correlations, which is real but far too small to be usable (\S\ref{sec:content}). The exclusion laws are immediate
+of those correlations, which finds no computational use for them within the estimators and the
+workload tested (\S\ref{sec:content}). The exclusion laws are immediate
 applications of standard quadratic reciprocity; their simplicity is a feature, not a
 limitation, and the same is true of the audit.
 

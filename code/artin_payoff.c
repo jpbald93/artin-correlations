@@ -152,204 +152,83 @@ static void hold_report(ll *fit, ll *test, long ncells, const char *name){
            name, N, ceR, ceRP, ceR-ceRP);
 }
 
-/* ================= within/between decompositions (TWO conventions) =================
- * X = predecessor Artin, Y = successor Artin, C = joint-residue cell. Cell counts are
- * [n00,n01,n10,n11] with the FIRST index the X value.
+/* ================= within/between decompositions (asserted) =================
+ * X = predecessor Artin, Y = successor Artin, C = joint-residue cell; counts [n00,n01,n10,n11],
+ * first index = X. q1_c = P(Y=1|X=1,C=c), q0_c = P(Y=1|X=0,C=c), w1_c = P(C=c|X=1),
+ * w0_c = P(C=c|X=0), p_c = P(Y=1|C=c), pi_c = P(C=c), r_c = P(X=1|C=c).
  *
- * (1) KITAGAWA ordering with w1 weights:
- *       delta = sum_c w1_c*dc_c  +  sum_c (w1_c - w0_c)*q0_c
- *     w1_c = P(C=c|X=1), w0_c = P(C=c|X=0), dc_c = q1_c - q0_c,
- *     q0_c = P(Y=1|X=0,C=c), q1_c = P(Y=1|X=1,C=c).
- * (2) COVARIANCE ordering (law of total covariance, rescaled by Var(X)):
- *       delta = sum_c pi_c*r_c*(1-r_c)*dc_c / Var(X)  +  sum_c (w1_c - w0_c)*p_c
- *     pi_c = n_c/N, r_c = P(X=1|C=c), p_c = P(Y=1|C=c), Var(X)=P(X=1)P(X=0).
- *     The second term is exactly the p_c term printed in the paper.
+ * X-CONSTANT CELLS (only one predecessor status occurs) have no identifiable within-cell
+ * association. Convention used throughout: they contribute ZERO to every within term. This is
+ * implemented by completing the missing conditional with the observed one (q0:=q1 where no X=0
+ * pair occurs, q1:=q0 where no X=1 pair occurs), so dc_c = q1_c - q0_c = 0 there.
+ * With any completion the Kitagawa identities are exact, because the completed terms cancel.
  *
- * BOTH sums are accumulated INDEPENDENTLY from the cell table, so the two identities are
- * genuinely asserted: the assertion can fail and a failure exits non-zero. Cells with an
- * empty X margin have no identifiable within-cell association and land in the between term.
- * k counts cells with BOTH Y margins non-empty -- the only cells where splitting on X adds
- * a free response parameter (boundary cells whose successor can never be Artin gain nothing). */
-static void decomp_report(ll *c, long ncells, const char *name){
+ *   covariance : delta = sum pi r(1-r) dc / Var(X)   + sum (w1-w0) p
+ *   Kitagawa w1: delta = sum w1 dc                    + sum (w1-w0) q0
+ *   Kitagawa w0: delta = sum w0 dc                    + sum (w1-w0) q1
+ *   symmetric  : delta = sum (w1+w0)/2 dc             + sum (w1-w0) (q0+q1)/2
+ *
+ * EVERY within and between sum is accumulated independently from the cell table and each of the
+ * four identities is asserted to 1e-12; any failure exits non-zero.
+ * k = number of cells in which BOTH X and Y vary (the only cells where splitting on X adds an
+ * identifiable response parameter). Reported for the record; not used in the paper's argument. */
+static int decomp_report(ll *c, long ncells, const char *name){
     double n00=0,n01=0,n10=0,n11=0;
     for(long i=0;i<ncells;i++){ n00+=c[4*i]; n01+=c[4*i+1]; n10+=c[4*i+2]; n11+=c[4*i+3]; }
     double N=n00+n01+n10+n11, s1=n10+n11, s0=n00+n01;
-    double delta=n11/s1 - n01/s0;
-    double varX=(s1/N)*(s0/N);
-    double K_W=0,K_B=0,C_W=0,C_B=0,W0_W=0,SYM_W=0,xonly=0,kx=0,kxy=0;
+    double delta=n11/s1 - n01/s0, varX=(s1/N)*(s0/N);
+    double CW=0,CB=0, W1=0,B1=0, W0=0,B0=0, WS=0,BS=0, xconst=0, x0only=0, x1only=0, k=0;
     for(long i=0;i<ncells;i++){
         double a=c[4*i], b=c[4*i+1], g0=c[4*i+2], g1=c[4*i+3];
         double n=a+b+g0+g1; if(n<=0) continue;
-        double pi=n/N, m1=g0+g1, m0=a+b, t1=b+g1;
-        if(m1>0) kx+=1;
-        if(m1>0 && t1>0 && (n-t1)>0) kxy+=1;
-        if(m1==0) xonly+=pi;
-        double w1=m1/s1, w0=m0/s0, p=t1/n, r=m1/n;
-        double q0=(m0>0)? b/m0 : 0.0, q1=(m1>0)? g1/m1 : 0.0;
-        /* Convention: q0_c := 0 when the cell has no X=0 pairs. Then
-         *   delta = sum_c w1_c*(q1_c-q0_c) + sum_c (w1_c-w0_c)*q0_c
-         * holds EXACTLY for any such assignment, because the q0 terms cancel:
-         *   sum a_c q1 - sum a_c q0 + sum a_c q0 - sum b_c q0 = sum a_c q1 - sum b_c q0.
-         * The within sum therefore runs over every cell with m1>0 (a_c>0); cells with
-         * m1=0 have a_c=0 and contribute nothing. X=0-empty cells have r_c=1, so their
-         * covariance contribution vanishes automatically. */
-        double dc=q1-q0;
-        if(m1>0){ K_W += w1*dc; C_W += (pi*r*(1-r)*dc)/varX; W0_W += w0*dc; SYM_W += 0.5*(w1+w0)*dc; }
-        K_B += (w1-w0)*q0;
-        C_B += (w1-w0)*p;
+        double m0=a+b, m1=g0+g1, t1=b+g1;
+        double pi=n/N, r=m1/n, p=t1/n, w1=m1/s1, w0=m0/s0;
+        double q0 = (m0>0)? b/m0 : g1/m1;      /* completion: q0:=q1 if no X=0 pair */
+        double q1 = (m1>0)? g1/m1 : b/m0;      /* completion: q1:=q0 if no X=1 pair */
+        double dc = q1-q0;                      /* exactly 0 in X-constant cells */
+        if(m0==0||m1==0){ xconst+=pi; if(m1==0) x0only+=pi; else x1only+=pi; }
+        if(m0>0 && m1>0 && t1>0 && (n-t1)>0) k+=1;
+        CW += pi*r*(1-r)*dc/varX;   CB += (w1-w0)*p;
+        W1 += w1*dc;                B1 += (w1-w0)*q0;
+        W0 += w0*dc;                B0 += (w1-w0)*q1;
+        WS += 0.5*(w1+w0)*dc;       BS += (w1-w0)*0.5*(q0+q1);
     }
-    double Ke=(K_W+K_B)-delta, Ce=(C_W+C_B)-delta;
-    printf("  \"%s\": {\n", name);
-    printf("    \"N\": %.0f, \"delta\": %.9f,\n", N, delta);
-    printf("    \"kitagawa\":   {\"within\": %.9f, \"between\": %.9f, \"between_share\": %.4f, \"identity_error\": %.2e},\n",
-           K_W, K_B, (delta!=0? K_B/delta:0.0), Ke);
-    printf("    \"covariance\": {\"within\": %.9f, \"between\": %.9f, \"between_share\": %.4f, \"identity_error\": %.2e},\n",
-           C_W, C_B, (delta!=0? C_B/delta:0.0), Ce);
-    printf("    \"between_share_by_convention\": {\"w1\": %.4f, \"w0\": %.4f, \"symmetric\": %.4f, \"covariance\": %.4f},\n",
-           (delta!=0? K_B/delta:0.0), (delta!=0? (delta-W0_W)/delta:0.0),
-           (delta!=0? (delta-SYM_W)/delta:0.0), (delta!=0? C_B/delta:0.0));
-    printf("    \"cells\": {\"x_nondegenerate\": %.0f, \"xy_nondegenerate\": %.0f, \"x_only_mass\": %.3e},\n", kx, kxy, xonly);
-    printf("    \"optimism\": {\"k\": %.0f, \"k_over_2N\": %.3e},\n", kxy, kxy/(2*N));
-    int ok = (fabs(Ke)<1e-12) && (fabs(Ce)<1e-12);
-    printf("    \"ASSERT\": \"%s\"},\n", ok? "both identities hold" : "IDENTITY FAILURE");
-    if(!ok){ printf("  \"ASSERT_FAIL_%s\": true,\n", name); exit(1); }
+    double e[4]={CW+CB-delta, W1+B1-delta, W0+B0-delta, WS+BS-delta};
+    int ok=1; for(int j=0;j<4;j++) if(!(fabs(e[j])<1e-12)) ok=0;
+    double sh[4]={CB/delta, B1/delta, B0/delta, BS/delta};
+    double mn=sh[0],mx=sh[0]; for(int j=1;j<4;j++){ if(sh[j]<mn) mn=sh[j]; if(sh[j]>mx) mx=sh[j]; }
+    printf("  \"%s\": {\"N\": %.0f, \"delta\": %.9f,\n", name, N, delta);
+    printf("    \"covariance\":  {\"within\": %.9f, \"between\": %.9f, \"between_share\": %.6f, \"identity_error\": %.1e},\n", CW,CB,sh[0],e[0]);
+    printf("    \"kitagawa_w1\": {\"within\": %.9f, \"between\": %.9f, \"between_share\": %.6f, \"identity_error\": %.1e},\n", W1,B1,sh[1],e[1]);
+    printf("    \"kitagawa_w0\": {\"within\": %.9f, \"between\": %.9f, \"between_share\": %.6f, \"identity_error\": %.1e},\n", W0,B0,sh[2],e[2]);
+    printf("    \"symmetric\":   {\"within\": %.9f, \"between\": %.9f, \"between_share\": %.6f, \"identity_error\": %.1e},\n", WS,BS,sh[3],e[3]);
+    printf("    \"share_min\": %.6f, \"share_max\": %.6f,\n", mn, mx);
+    printf("    \"x_constant_mass\": %.6f, \"x0_only_mass\": %.6f, \"x1_only_mass\": %.3e, \"k_both_X_and_Y_vary\": %.0f,\n", xconst,x0only,x1only,k);
+    printf("    \"ASSERT\": \"%s\"},\n", ok? "all four identities hold" : "IDENTITY FAILURE");
+    if(!ok){ printf("  \"ASSERT_FAIL_%s\": true\n}\n", name); exit(1); }
+    return ok;
 }
 
-/* pooled-beta held-out model: logit P(Y=1) = alpha_cell + beta*x.
- * alpha is profiled out by Newton, but ONLY for cells whose fit-half margins are all
- * non-empty: a one-sided fit cell has alpha = -/+inf, so its Jeffreys value is retained
- * instead (an unregularised MLE there produced a 136-nat loss in a single cell). */
-static void pool_report(ll *fit, ll *test, long ncells, const char *name){
-    static double al[705600];
+/* ================= in-sample MLE increment and the residue-status null =================
+ * mle_inc: I(Y; X | C) in nats per pair, unsmoothed, from a table of [n00,n01,n10,n11]
+ * (first index X). This is exactly the "in-sample increment" of the conditional-entropy table.
+ * Residue-status null: every prime's Artin status is redrawn independently with probability
+ * equal to the observed Artin rate of its residue class mod Mnull. Statuses are drawn per PRIME,
+ * so each pair (X_n, Y_n) = (status of p_n, status of p_{n+1}) keeps the sequence structure
+ * (Y_n = X_{n+1}). Under this null the predecessor's status carries no information beyond the
+ * residue classes mod Mnull. */
+static double xlogx(double x){ return x>0? x*log(x) : 0.0; }
+static double mle_inc(ll *c, long ncells){
+    double N=0, I=0;
     for(long i=0;i<ncells;i++){
-        double a=fit[4*i],b=fit[4*i+1],g0=fit[4*i+2],g1=fit[4*i+3];
-        double m=b+g1, n=a+g0;
-        double p=(m+0.5)/(m+n+1.0); al[i]=log(p/(1-p));
+        double a=c[4*i], b=c[4*i+1], g0=c[4*i+2], g1=c[4*i+3], n=a+b+g0+g1; if(n<=0) continue; N+=n;
+        double m0=a+b, m1=g0+g1, t0=a+g0, t1=b+g1;
+        /* n*H(Y|c) - sum_x n_x H(Y|c,x) = sum n_xy log n_xy - sum n_x log n_x - sum n_y log n_y + n log n */
+        I += xlogx(a)+xlogx(b)+xlogx(g0)+xlogx(g1) - xlogx(m0)-xlogx(m1) - xlogx(t0)-xlogx(t1) + xlogx(n);
     }
-    double beta=0;
-    for(int it=0;it<200;it++){
-        for(int k=0;k<3;k++){
-            for(long i=0;i<ncells;i++){
-                double a=fit[4*i],b=fit[4*i+1],g0=fit[4*i+2],g1=fit[4*i+3];
-                if((a+b)==0||(g0+g1)==0||(b+g1)==0||(a+g0)==0) continue;   /* one-sided: keep Jeffreys alpha */
-                double p0=1/(1+exp(-al[i])), p1=1/(1+exp(-(al[i]+beta)));
-                double g=(b-(a+b)*p0)+(g1-(g0+g1)*p1);
-                double h=(a+b)*p0*(1-p0)+(g0+g1)*p1*(1-p1)+1e-9;
-                double st=g/h; if(st>2) st=2; if(st<-2) st=-2; al[i]+=st;
-            }
-        }
-        double gb=0,hb=0;
-        for(long i=0;i<ncells;i++){
-            double a=fit[4*i],b=fit[4*i+1],g0=fit[4*i+2],g1=fit[4*i+3];
-            if((g0+g1)==0||(b+g1)==0||(a+g0)==0) continue;
-            double p1=1/(1+exp(-(al[i]+beta)));
-            gb+=(g1-(g0+g1)*p1); hb+=(g0+g1)*p1*(1-p1);
-        }
-        beta+=gb/(hb+1e-12);
-    }
-    double N=0,ceR=0,ceB=0;
-    for(long i=0;i<ncells;i++){
-        double a=test[4*i],b=test[4*i+1],g0=test[4*i+2],g1=test[4*i+3];
-        double s=a+b+g0+g1; if(s<=0) continue; N+=s;
-        double f00=fit[4*i],f01=fit[4*i+1],f10=fit[4*i+2],f11=fit[4*i+3];
-        double pr=(f01+f11+0.5)/(f00+f01+f10+f11+1.0);
-        pr = pr<1e-12?1e-12:(pr>1-1e-12?1-1e-12:pr);
-        ceR-= (b+g1)*log(pr) + (a+g0)*log(1-pr);
-        double q0=1/(1+exp(-al[i])), q1=1/(1+exp(-(al[i]+beta)));
-        if((f10+f11)==0||(f00+f01)==0||(f01+f11)==0||(f00+f10)==0){ q0=pr; q1=pr; }
-        q0=q0<1e-12?1e-12:(q0>1-1e-12?1-1e-12:q0); q1=q1<1e-12?1e-12:(q1>1-1e-12?1-1e-12:q1);
-        ceB-= b*log(q0)+a*log(1-q0) + g1*log(q1)+g0*log(1-q1);
-    }
-    ceR/=N; ceB/=N;
-    printf("  \"%s\": {\"N_test\": %.0f, \"beta\": %.6f, \"CE_residues\": %.9f, \"CE_pooled_beta\": %.9f, \"heldout_gain\": %.3e},\n",
-           name, N, beta, ceR, ceB, ceR-ceB);
+    return I/N;
 }
-
-/* ============== permutation null (fixed margins, hypergeometric draw) ==============
- * Holds both margins of every cell fixed and redraws n11 ~ Hypergeometric(n, m1, t1).
- * Mean and variance are exact; the normal shape is the right approximation for an
- * aggregate over ~10^4 cells. Reports the in-sample gain and BOTH held-out directions. */
-static double gnorm(void){
-    static int have=0; static double spare=0;
-    if(have){ have=0; return spare; }
-    double u,v,ss;
-    do{ u=2.0*rand()/RAND_MAX-1.0; v=2.0*rand()/RAND_MAX-1.0; ss=u*u+v*v; }while(ss>=1.0||ss==0.0);
-    double f=sqrt(-2.0*log(ss)/ss);
-    spare=v*f; have=1; return u*f;
-}
-static void perm_table(ll *c, long ncells, int draw){
-    for(long i=0;i<ncells;i++){
-        double a=c[4*i],b=c[4*i+1],g0=c[4*i+2],g1=c[4*i+3];
-        double n=a+b+g0+g1; if(n<2) continue;
-        double m1=g0+g1, t1=b+g1, hi=(m1<t1?m1:t1), lo=(t1-(n-m1)>0?t1-(n-m1):0);
-        if(hi<=lo) continue;
-        double mu=m1*t1/n;
-        double var=m1*t1*(n-m1)*(n-t1)/(n*n*(n-1));
-        double x = draw? mu+sqrt(var)*gnorm() : mu;
-        double n11r=floor(x+0.5); if(n11r<lo) n11r=lo; if(n11r>hi) n11r=hi;
-        c[4*i]  = n-m1-t1+n11r;
-        c[4*i+1]= t1-n11r;
-        c[4*i+2]= m1-n11r;
-        c[4*i+3]= n11r;
-    }
-}
-static double gain_of(ll *c, long ncells){
-    double s1=0,n11=0,n01=0,N=0,ceR=0,ceRP=0;
-    for(long i=0;i<ncells;i++){ s1+=c[4*i+2]+c[4*i+3]; n11+=c[4*i+3]; n01+=c[4*i+1]; }
-    double pR=(n11+0.5)/(s1+1.0);
-    for(long i=0;i<ncells;i++){
-        double a=c[4*i],b=c[4*i+1],g0=c[4*i+2],g1=c[4*i+3];
-        double n=a+b+g0+g1; if(n<=0) continue; N+=n;
-        double qR=(g1+0.5)/(g0+g1+1.0), rR=(b+0.5)/(a+b+1.0);
-        ceR -= (b+g1)*log(pR) + (a+g0)*log(1-pR);
-        if(g1>0) ceRP-=g1*log(qR); if(g0>0) ceRP-=g0*log(1-qR);
-        if(b>0)  ceRP-=b*log(rR);  if(a>0)  ceRP-=a*log(1-rR);
-    }
-    return (ceR-ceRP)/N;
-}
-static double hold_gain(ll *fit, ll *test, long ncells){
-    double N=0,ceR=0,ceRP=0;
-    for(long i=0;i<ncells;i++){
-        double a=test[4*i],b=test[4*i+1],g0=test[4*i+2],g1=test[4*i+3];
-        double s=a+b+g0+g1; if(s<=0) continue; N+=s;
-        double f00=fit[4*i],f01=fit[4*i+1],f10=fit[4*i+2],f11=fit[4*i+3];
-        double pr=(f01+f11+0.5)/(f00+f01+f10+f11+1.0);
-        double qR=(f11+0.5)/(f10+f11+1.0), rR=(f01+0.5)/(f00+f01+1.0);
-        if((f10+f11)==0||(f00+f01)==0){ qR=pr; rR=pr; }
-        pr=pr<1e-12?1e-12:(pr>1-1e-12?1-1e-12:pr);
-        qR=qR<1e-12?1e-12:(qR>1-1e-12?1-1e-12:qR);
-        rR=rR<1e-12?1e-12:(rR>1-1e-12?1-1e-12:rR);
-        ceR -= (b+g1)*log(pr) + (a+g0)*log(1-pr);
-        if(g1>0) ceRP-=g1*log(qR); if(g0>0) ceRP-=g0*log(1-qR);
-        if(b>0)  ceRP-=b*log(rR);  if(a>0)  ceRP-=a*log(1-rR);
-    }
-    return (ceR-ceRP)/N;
-}
-static void nullsim_one(ll *F, ll *J, ll *K, long ncells, const char *name, int R){
-    double g_obs=hold_gain(F,F,ncells);
-    double h_obs=hold_gain(J,K,ncells);          /* fit = hash bit 0 (even), test = odd  */
-    double hr_obs=hold_gain(K,J,ncells);         /* fit = odd, test = even               */
-    ll *tmp=(ll*)malloc(sizeof(ll)*ncells*4);
-    double si=0,si2=0,sh=0,sh2=0,sr=0,sr2=0;
-    for(int r=0;r<R;r++){
-        memcpy(tmp,F,sizeof(ll)*ncells*4); perm_table(tmp,ncells,1); double gi=hold_gain(tmp,tmp,ncells);
-        si+=gi; si2+=gi*gi;
-        memcpy(tmp,J,sizeof(ll)*ncells*4); perm_table(tmp,ncells,1); double gh=hold_gain(tmp,K,ncells);
-        sh+=gh; sh2+=gh*gh;
-        memcpy(tmp,K,sizeof(ll)*ncells*4); perm_table(tmp,ncells,1); double gr=hold_gain(tmp,J,ncells);
-        sr+=gr; sr2+=gr*gr;
-    }
-    free(tmp);
-    double mi=si/R, mh=sh/R, mr=sr/R;
-    double vi=(si2/R-mi*mi)*R/(R-1), vh=(sh2/R-mh*mh)*R/(R-1), vr=(sr2/R-mr*mr)*R/(R-1);
-    printf("  \"%s\": {\"replicates\": %d,\n", name, R);
-    printf("    \"in_sample\":  {\"observed\": %.6e, \"null_mean\": %.6e, \"null_sd\": %.6e, \"z\": %.2f},\n",
-           g_obs, mi, sqrt(vi), (g_obs-mi)/sqrt(vi));
-    printf("    \"heldout_even_to_odd\": {\"observed\": %.6e, \"null_mean\": %.6e, \"null_sd\": %.6e, \"z\": %.2f},\n",
-           h_obs, mh, sqrt(vh), (h_obs-mh)/sqrt(vh));
-    printf("    \"heldout_odd_to_even\": {\"observed\": %.6e, \"null_mean\": %.6e, \"null_sd\": %.6e, \"z\": %.2f}},\n",
-           hr_obs, mr, sqrt(vr), (hr_obs-mr)/sqrt(vr));
-}
+static inline u64 smix(u64 x){ x+=0x9E3779B97F4A7C15ULL; x=(x^(x>>30))*0xBF58476D1CE4E5B9ULL; x=(x^(x>>27))*0x94D049BB133111EBULL; return x^(x>>31); }
 
 int main(int argc,char**argv){
     if(argc<2){ fprintf(stderr,"usage: %s census LIMIT | search START COUNT\n",argv[0]); return 2; }
@@ -538,7 +417,12 @@ int main(int argc,char**argv){
         return 0;
     }
 
-    if(!strcmp(argv[1],"cepool")){
+    if(!strcmp(argv[1],"dump")){
+        /* Write the complete joint-residue tables (mod 120 and mod 840) for both hash halves.
+         * Every Section-15 statistic is computed from this file by section15.py.
+         * line: modulus half a b n00 n01 n10 n11   (a = p_{n} mod M, b = p_{n+1} mod M,
+         * first index of nXY = predecessor Artin status X, second = successor status Y,
+         * half = hash64(successor) & 1). */
         u64 LIMIT = argc>2 ? strtoull(argv[2],0,10) : 1000000000ULL;
         long lim_small = (long)sqrt((double)LIMIT)+2; build_small(lim_small);
         long n; int *pr = sieve_primes(LIMIT,&n);
@@ -552,72 +436,59 @@ int main(int argc,char**argv){
             ll c=(ll)pr[i-1]%M2, d=(ll)pr[i]%M2;
             (t?K2:J2)[c*M2+d][(art[i-1]<<1)|art[i]]++;
         }
-        printf("{\n  \"limit\": %llu, \"n_primes\": %ld, \"split\": \"hash64(successor) & 1\",\n", LIMIT, n);
-        pool_report(&J1[0][0], &K1[0][0], (long)M1*M1, "pooled_mod120");
-        pool_report(&J2[0][0], &K2[0][0], (long)M2*M2, "pooled_mod840");
-        printf("  \"note\": \"one pooled predecessor logit offset beta on top of the residue cells; alpha_cell profiled out by Newton\"\n}\n");
+        printf("# limit %llu n_primes %ld pairs %ld\n", LIMIT, n, n-1);
+        for(int h=0;h<2;h++) for(long i=0;i<(long)M1*M1;i++){ ll *q=(h?K1:J1)[i];
+            if(q[0]+q[1]+q[2]+q[3]) printf("120 %d %ld %ld %lld %lld %lld %lld\n",h,i/M1,i%M1,q[0],q[1],q[2],q[3]); }
+        for(int h=0;h<2;h++) for(long i=0;i<(long)M2*M2;i++){ ll *q=(h?K2:J2)[i];
+            if(q[0]+q[1]+q[2]+q[3]) printf("840 %d %ld %ld %lld %lld %lld %lld\n",h,i/M2,i%M2,q[0],q[1],q[2],q[3]); }
         return 0;
     }
 
-    if(!strcmp(argv[1],"all")){
-        /* one sieve, every statistic: the paper's §15 numbers in a single pass */
+    if(!strcmp(argv[1],"resnull")){
         u64 LIMIT = argc>2 ? strtoull(argv[2],0,10) : 1000000000ULL;
-        int R = argc>3 ? atoi(argv[3]) : 200;
+        int R = argc>3 ? atoi(argv[3]) : 100;
         long lim_small = (long)sqrt((double)LIMIT)+2; build_small(lim_small);
         long n; int *pr = sieve_primes(LIMIT,&n);
-        char *art = (char*)malloc(n);
+        char *art = (char*)malloc(n), *sim=(char*)malloc(n);
         #pragma omp parallel for schedule(static)
         for(long i=0;i<n;i++) art[i]=(char)artin10((u64)pr[i]);
-        static ll F1[M1*M1][4], F2[M2*M2][4];
-        for(long i=1;i<n;i++){
-            int t=(int)(mix64((u64)pr[i])&1ULL);
-            ll a=(ll)pr[i-1]%M1, b=(ll)pr[i]%M1;
-            (t?K1:J1)[a*M1+b][(art[i-1]<<1)|art[i]]++;
-            ll c=(ll)pr[i-1]%M2, d=(ll)pr[i]%M2;
-            (t?K2:J2)[c*M2+d][(art[i-1]<<1)|art[i]]++;
-            F1[a*M1+b][(art[i-1]<<1)|art[i]]++;
-            F2[c*M2+d][(art[i-1]<<1)|art[i]]++;
+        static ll T1[M1*M1][4], T2[M2*M2][4];
+        /* observed */
+        memset(T1,0,sizeof T1); memset(T2,0,sizeof T2);
+        for(long i=1;i<n;i++){ int k=(art[i-1]<<1)|art[i];
+            T1[(pr[i-1]%M1)*M1+pr[i]%M1][k]++; T2[(pr[i-1]%M2)*M2+pr[i]%M2][k]++; }
+        double o120=mle_inc(&T1[0][0],(long)M1*M1), o840=mle_inc(&T2[0][0],(long)M2*M2);
+        /* Artin rate by p mod 7 (mechanism check: does the rate depend on whether 7 | p-1?) */
+        double c7[7]={0}, a7[7]={0};
+        for(long i=0;i<n;i++){ c7[pr[i]%7]+=1; a7[pr[i]%7]+=art[i]; }
+        printf("{\n  \"limit\": %llu, \"n_primes\": %ld, \"pairs\": %ld, \"replicates\": %d,\n", LIMIT, n, n-1, R);
+        printf("  \"observed_mle_increment\": {\"mod120\": %.6e, \"mod840\": %.6e},\n", o120, o840);
+        printf("  \"artin_rate_by_p_mod7\": [");
+        for(int r=0;r<7;r++) printf("%s%.6f", r?", ":"", c7[r]>0? a7[r]/c7[r] : 0.0);
+        printf("],\n");
+        int Ms[2]={120,840};
+        for(int mi=0;mi<2;mi++){
+            int M=Ms[mi]; double *rate=(double*)calloc(M,sizeof(double)), *cnt=(double*)calloc(M,sizeof(double));
+            for(long i=0;i<n;i++){ cnt[pr[i]%M]+=1; rate[pr[i]%M]+=art[i]; }
+            for(int r=0;r<M;r++) rate[r]= cnt[r]>0? rate[r]/cnt[r] : 0.0;
+            double s1=0,s2=0,t1=0,t2=0; int ge1=0, ge2=0;
+            for(int rep=0;rep<R;rep++){
+                u64 seed=0xA5A5A5A5ULL*(u64)(mi+1) + 0x1000003ULL*(u64)(rep+1);
+                #pragma omp parallel for schedule(static)
+                for(long i=0;i<n;i++){ double u=(smix(seed ^ (u64)i)>>11)*(1.0/9007199254740992.0);
+                    sim[i]=(char)(u<rate[pr[i]%M]); }
+                memset(T1,0,sizeof T1); memset(T2,0,sizeof T2);
+                for(long i=1;i<n;i++){ int k=(sim[i-1]<<1)|sim[i];
+                    T1[(pr[i-1]%M1)*M1+pr[i]%M1][k]++; T2[(pr[i-1]%M2)*M2+pr[i]%M2][k]++; }
+                double g1=mle_inc(&T1[0][0],(long)M1*M1), g2=mle_inc(&T2[0][0],(long)M2*M2);
+                s1+=g1; s2+=g1*g1; t1+=g2; t2+=g2*g2; if(g1>=o120) ge1++; if(g2>=o840) ge2++;
+            }
+            double m1=s1/R, sd1=sqrt((s2/R-m1*m1)*R/(R-1)), m2=t1/R, sd2=sqrt((t2/R-m2*m2)*R/(R-1));
+            printf("  \"null_rates_mod%d\": {\"mod120_increment\": {\"null_mean\": %.6e, \"null_sd\": %.6e, \"n_null_ge_observed\": %d, \"standardized\": %.2f},\n", M, m1, sd1, ge1, (o120-m1)/sd1);
+            printf("                        \"mod840_increment\": {\"null_mean\": %.6e, \"null_sd\": %.6e, \"n_null_ge_observed\": %d, \"standardized\": %.2f}}%s\n", m2, sd2, ge2, (o840-m2)/sd2, mi==0? ",":"");
+            free(rate); free(cnt);
         }
-        srand(20260923);
-        printf("{\n  \"mode\": \"all\", \"limit\": %llu, \"n_primes\": %ld,\n", LIMIT, n);
-        decomp_report(&F1[0][0], (long)M1*M1, "decomp_mod120");
-        decomp_report(&F2[0][0], (long)M2*M2, "decomp_mod840");
-        hold_report(&J1[0][0], &K1[0][0], (long)M1*M1, "holdout_mod120_even_to_odd");
-        hold_report(&J2[0][0], &K2[0][0], (long)M2*M2, "holdout_mod840_even_to_odd");
-        hold_report(&K1[0][0], &J1[0][0], (long)M1*M1, "holdout_mod120_odd_to_even");
-        hold_report(&K2[0][0], &J2[0][0], (long)M2*M2, "holdout_mod840_odd_to_even");
-        pool_report(&J1[0][0], &K1[0][0], (long)M1*M1, "pooled_mod120");
-        pool_report(&J2[0][0], &K2[0][0], (long)M2*M2, "pooled_mod840");
-        nullsim_one(&F1[0][0], &J1[0][0], &K1[0][0], (long)M1*M1, "nullsim_mod120", R);
-        nullsim_one(&F2[0][0], &J2[0][0], &K2[0][0], (long)M2*M2, "nullsim_mod840", R);
-        printf("  \"split\": \"hash64(successor) & 1 : 0 = fit (even), 1 = test (odd)\",\n");
-        printf("  \"note\": \"decomp identities asserted; held-out direction given in each key name\"\n}\n");
-        return 0;
-    }
-
-    if(!strcmp(argv[1],"nullsim")){
-        u64 LIMIT = argc>2 ? strtoull(argv[2],0,10) : 1000000000ULL;
-        int R = argc>3 ? atoi(argv[3]) : 200;
-        long lim_small = (long)sqrt((double)LIMIT)+2; build_small(lim_small);
-        long n; int *pr = sieve_primes(LIMIT,&n);
-        char *art = (char*)malloc(n);
-        #pragma omp parallel for schedule(static)
-        for(long i=0;i<n;i++) art[i]=(char)artin10((u64)pr[i]);
-        for(long i=1;i<n;i++){
-            int t=(int)(mix64((u64)pr[i])&1ULL);
-            ll a=(ll)pr[i-1]%M1, b=(ll)pr[i]%M1;
-            (t?K1:J1)[a*M1+b][(art[i-1]<<1)|art[i]]++;
-            ll c=(ll)pr[i-1]%M2, d=(ll)pr[i]%M2;
-            (t?K2:J2)[c*M2+d][(art[i-1]<<1)|art[i]]++;
-        }
-        srand(20260923);
-        printf("{\n  \"limit\": %llu, \"n_primes\": %ld, \"split\": \"hash64(successor) & 1 (0 = fit, 1 = test)\",\n", LIMIT, n);
-        ll *F1=(ll*)malloc(sizeof(ll)*M1*M1*4), *F2=(ll*)malloc(sizeof(ll)*M2*M2*4);
-        for(long i=0;i<(long)M1*M1*4;i++) F1[i]=(&J1[0][0])[i]+(&K1[0][0])[i];
-        for(long i=0;i<(long)M2*M2*4;i++) F2[i]=(&J2[0][0])[i]+(&K2[0][0])[i];
-        nullsim_one(F1,&J1[0][0],&K1[0][0],(long)M1*M1,"nullsim_mod120",R);
-        nullsim_one(F2,&J2[0][0],&K2[0][0],(long)M2*M2,"nullsim_mod840",R);
-        printf("  \"note\": \"margins fixed per cell; n11 drawn hypergeometric (normal shape); held-out direction fit->test\"\n}\n");
+        printf("}\n");
         return 0;
     }
 

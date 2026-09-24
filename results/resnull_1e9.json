@@ -1,0 +1,9 @@
+{
+  "limit": 1000000000, "n_primes": 50847531, "pairs": 50847530, "replicates": 100,
+  "observed_mle_increment": {"mod120": 9.180854e-06, "mod840": 1.832638e-05},
+  "artin_rate_by_p_mod7": [1.000000, 0.328419, 0.383226, 0.383119, 0.382981, 0.383102, 0.383109],
+  "null_rates_mod120": {"mod120_increment": {"null_mean": 2.526044e-06, "null_sd": 2.069806e-07, "n_null_ge_observed": 0, "standardized": 32.15},
+                        "mod840_increment": {"null_mean": 1.728393e-05, "null_sd": 5.632944e-07, "n_null_ge_observed": 3, "standardized": 1.85}},
+  "null_rates_mod840": {"mod120_increment": {"null_mean": 8.816629e-06, "null_sd": 4.919708e-07, "n_null_ge_observed": 24, "standardized": 0.74},
+                        "mod840_increment": {"null_mean": 1.706208e-05, "null_sd": 6.789901e-07, "n_null_ge_observed": 2, "standardized": 1.86}}
+}

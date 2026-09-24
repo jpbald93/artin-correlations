@@ -34,8 +34,9 @@
 	below $10^{11}$, again with none. Conversely $g \equiv 0 \pmod{40}$ forces equal
 	quadratic-residue status and strong positive dependence ($P(\Art_{n+1}\mid\Art_n)=0.899$
 	at $g=40$). Conditioning on the joint residues of $(p_n,p_{n+1})$ modulo $120$ or
-	$840$ accounts for $96.1\%$ and $97.8\%$ of the global deficit through joint-residue cell
-	composition rather than within-cell association (an exact within/between decomposition). As an intermediate link we report the apparently unreported
+	$840$ places $98.7\%$ and $99.5\%$ of the global deficit between joint-residue cells
+	rather than within them (an exact covariance decomposition; $96.1$--$99.2\%$ and $97.8$--$99.7\%$
+	across the four weighting conventions we report). As an intermediate link we report the apparently unreported
 	anticorrelation $r(\omega(p_n-1),\omega(p_{n+1}-1))=-0.041$.
 
 	Along the second axis we record a second exclusion law: writing $d=\sqf(ab)$ for the
@@ -53,8 +54,11 @@
 
 	Finally we \emph{audit the computational content} of these correlations. In a resubstitution diagnostic the consecutive-prime correlation carries $0.000009$ nats
 	($1.3\times10^{-5}$ bits) of conditional-entropy reduction beyond the elementary
-	joint-residue baseline, which itself carries $0.4195$ nats; a permutation null shows a real but very small predecessor signal at modulus $120$
-	(of order $10^{-6}$ nats) and none detectable at modulus $840$ --- far too small to guide a search.
+	joint-residue baseline, which itself carries $0.4195$ nats. A simulation in which every
+	status depends only on $p \bmod 840$ reproduces the part of that increment which exceeds
+	the mod-$120$ baseline: it is residue information (the prime $7$ of $p-1$), not information
+	carried by the predecessor's status, and in held-out scoring the predecessor's status
+	gives no gain beyond residues mod $840$.
 Both exclusion laws are computationally redundant: the gap law from quadratic reciprocity
 	together with multiplicativity, the same-prime law from multiplicativity alone. The one genuinely usable filter --- a primitive root must be a
 quadratic non-residue --- is elementary, is exactly what the observed conductor-$40$
@@ -153,11 +157,10 @@ and $\sqf(m)$ the squarefree part of $m$.
 	\item \textbf{Gap structure} (\S\ref{sec:gaps}). $\delta(g)$ ranges from $-0.592$ at
 	$g=60$, where the theorem forces exclusion, to $+0.643$ at $g=40$.
 	\item \textbf{Residue conditioning} (\S\ref{sec:decomposition}). Conditioning on the
-	joint residues of $(p_n,p_{n+1})$ modulo $120$ and $840$ gives an exact within/between split
-	of the global deficit in which $96.1\%$ and $97.8\%$ respectively is attributable to cell
-	composition rather than within-cell association; the residual within-cell association
-	($-0.000545$, $-0.000310$) is consistent with further small-modulus channels but has not
-	been shown to vanish.
+	joint residues of $(p_n,p_{n+1})$ modulo $120$ and $840$ gives an exact covariance
+	decomposition of the global deficit, placing $98.69\%$ and $99.55\%$ of it between cells
+	(within-cell terms $-0.000186$ and $-0.000064$); across four weighting conventions the
+	between share lies in $[96.1\%,99.2\%]$ and $[97.8\%,99.7\%]$.
 	\item \textbf{$\omega$ repulsion} (\S\ref{sec:omega}).
 	$r(\omega(p_n-1),\omega(p_{n+1}-1)) = -0.0410$.
 	\item \textbf{Cross-base correlation} (\S\ref{sec:measurement}). Over the $66$ pairs of
@@ -173,9 +176,10 @@ and $\sqf(m)$ the squarefree part of $m$.
 	Matthews--Moree--Stevenhagen predictions match the measured joint densities to a mean
 	relative error of $0.012\%$, with no fitted parameters.
 	\item \textbf{Computational content: a measured negative} (\S\ref{sec:content}). The
-	consecutive-prime correlation carries $0.000009$ nats of conditional-entropy reduction
-	beyond the elementary joint-residue baseline --- real at modulus $120$, not detectable at
-	modulus $840$, and far too small to guide a search; both exclusion laws are computationally
+	consecutive-prime correlation adds $0.000009$ nats of in-sample conditional-entropy
+	reduction to the mod-$120$ joint-residue baseline; a residue-only simulation shows that
+	excess to be residue information mod $840$, and no held-out estimator we tested gains
+	beyond residues mod $840$; both exclusion laws are computationally
 	redundant, the same-prime law from character multiplicativity alone and the gap law from
 	reciprocity together with it;
 	the only usable filter is the elementary non-residue test, which the conductor-$40$
