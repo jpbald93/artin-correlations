@@ -14,17 +14,22 @@ measured negative result is a defensible one.
 
 ## Contents
 
+**The paper:** [`paper/artin_correlations.pdf`](paper/artin_correlations.pdf) (28 pp).
+
 ```
-artin_correlations.tex / .pdf      the paper (28 pp)
-FRONT.tex                          new: title, abstract, intro, summary, preliminaries
-SECTION_content.tex                new: "Computational content: a measured negative"
-DISC.tex                           new: merged discussion + declarations
-assemble.py                        the assembly pipeline (reproducible)
-code/                              C censuses, analysis scripts, the audit driver
-results/                           raw result JSON/logs from both source papers
-lean/                              Lean development for the exclusion laws (+ gate.sh)
-reports/                           adversarial audit reports
-fig_gap_delta.pdf, make_figure.py  the gap-profile figure
+paper/artin_correlations.pdf / .tex   the paper (named manuscript, 28 pp)
+paper/FRONT.tex                       title, abstract, intro, summary, preliminaries
+paper/SECTION_content.tex             "Computational content: a measured negative"
+paper/DISC.tex                        merged discussion + declarations
+paper/fig_gap_delta.pdf               the gap-profile figure
+submission/                           submission set: named PDF, blind_manuscript.pdf,
+                                      source zip, reproduction zip, blind_supplement.zip
+assemble.py, anonymise.py,            build pipeline (run from the source zip; see below)
+  scrub_blind.py, build_submission.sh, make_figure.py
+code/                                 C censuses, analysis scripts, the audit driver
+results/                              result JSON/logs (Section 15: section15_1e9.json etc.)
+lean/                                 Lean development for the exclusion laws (+ gate.sh)
+reports/                              adversarial audit reports, rounds 1-5
 ```
 
 ## How the merge was built
