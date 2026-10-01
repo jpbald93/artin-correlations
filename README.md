@@ -64,6 +64,8 @@ gcc -O3 -fopenmp -o artin_payoff artin_payoff.c -lm
 ./artin_payoff search3 1000000000000000 300   # timed search: naive vs filtered
 ```
 
+`scratch/Satisfiable.lean` gives, for every theorem with hypotheses, a Lean-checked example showing the hypotheses can all be met (compile with `lake env lean scratch/Satisfiable.lean`).
+
 ## What the paper claims
 
 **Two exclusion laws** (both elementary, both proved, both Lean-checked):
